@@ -1,0 +1,260 @@
+ {
+        "id": 5002037,
+        "name": "淘書",
+        "text": "書店老闆找到你，希望你能陪他去一趟上城區，他想去拜訪幾位貴族，試圖從他們手裡收一些值得讀的書。之所以找你幫忙，一方面是因為他認為你真的喜歡讀書，另一方面則因為他實在不擅長應付這些貴族。如果您本人不能來，至少也請派位懂得怎麼跟貴族聊天的人來。”",
+        "tips": "",
+        "mapping_id":8001317,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":3,
+        "waiting_round_end_action":[
+            {
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "",
+                "result":
+                {
+                },
+                "action": {
+                    "event_on":5300175 //重新激活自己
+                }
+            }
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0,
+        "location": "上城區:[7,12]",
+        "icon": "rite_6",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+            "tips":["魅力","社交"],
+            "type":"normal_result"
+        },
+        "tips_text":[
+            "需要4點成功",
+			"浴場、書店、家業、權遊、淘書能加快隨機事件觸發"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"你和這位貴族簡單寒暄了一會兒，準備進入正題",
+                "type":"normal_result",
+                "type_tips":"你的魅力和社交為你提供了完整的骰子數量。",
+                "low_target": 4,
+                "low_target_tips": "你至少4點成功。"
+            }
+        },
+        "settlement_prior": [
+            {
+                "guid":"b249aa4a-bf26-4525-add9-ab780cb5f5de",
+                "condition": {
+                    "!loot":6000005, //掉不出東西
+                },
+                "result_title":"大書蟲",
+                "result_text": "你買了太多書了，短時間內，不會有什麼好書從貴族手裡流落出來了……",
+                "result":
+                {
+                    "s3+回收":1,
+                    "s4+回收":1,
+                },
+                "action": {
+                }
+            },
+        ],
+        "settlement": [
+        ],
+        "settlement_extre": [
+            {
+                "guid":"2dd04f36-534f-45dd-a1cf-2e3a24bf198f",
+                "condition": {
+                },
+                "result_title":"大家都體面",
+                "result_text": "和貴族買書最忌諱表現得是對方需要錢……畢竟，知識與文化是無價的，你只是在為這種無私的分享行為贈送一些回禮而已……",
+                "result":
+                {
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"f393cc2b-cd2f-43bd-bdd7-a6b589498133",
+                "condition": {
+                    "r1:魅力+社交>=":[4,5],
+                    "any":{
+                        "counter.7000331<":3,
+                        "counter.7000331>":3
+                    }
+                },
+                "result_title":"禮尚往來",
+                "result_text": "你們順利地買到了書，幾乎全新，從來沒翻閱過。",
+                "result":
+                {
+                    "loot":6000005,
+                    "counter+7000331": 1  //成功計數
+                },
+                "action": {
+                    "global_counter+7200206":1, //成就-精神股東
+                }
+            },
+            {
+                "guid":"810fe86f-8709-4440-b546-7c4e84afc3fe",
+                "condition": {
+                    "r1:魅力+社交>=":[4,5],
+                    "counter.7000331=":3
+                },
+                "result_title":"禮尚往來",
+                "result_text": "你們順利地買到了書，幾乎全新，從來沒翻閱過。",
+                "result":
+                {
+                    "loot":6000005,
+                    "counter+7000331": 1  //成功計數
+                },
+                "action": {
+                    "global_counter+7200206":1, //成就-精神股東
+                    "event_on":5300177 //激活這不是偷
+                }
+            },
+            {
+                "guid":"edb755bf-1343-4d4f-8eaf-9af2b5bf062c",
+                "condition": {
+                    "r1:魅力+社交<":[4,5]
+                },
+                "result_title":"有毛病吧？",
+                "result_text": "儘管你已經努力交涉，但對方仍然被刺傷了自尊心，這次交易不歡而散。",
+                "result":
+                {
+                    "coin":3  //獲得3金幣
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"769e6782-f673-49a4-a3f6-5e3af706e90d",
+                "condition": {
+                    "r1:魅力+社交>=":[4,5],
+                    "s2.is":2000019 //是珠寶商人
+                },
+                "result_title":"",
+                "result_text": "這次淘書的經歷為熱娜提供了珠寶的設計靈感。",
+                "result":
+                {
+                    "s2+靈感":1 //額外積攢的靈感
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"592fa927-c981-4ef9-9faa-e6139dae7dea",
+                "condition": {
+                    "counter.7000117<":6
+                },
+                "result_title":"",
+                "result_text": "在過去，書曾經是一個逃避現實的好地方，畢竟那裡充滿了故事與虛構之物。而現在，你身在故事中心，在一切紙頁上都只能看到暗喻，諷刺，提醒你現實的荒誕與不講情理。",
+                "result":
+                {
+                    "counter+7000117":1  //聲望彈框計數器
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"0ab6b8c3-0534-47a8-af3a-c8175e611577",
+                "condition": {
+                    "counter.7000117>=":6,
+                    "counter.7000200<":39, //彈框總數總數
+                    "any":{
+                        "counter.7000331<":3,  //避免和專屬彈框事件重疊
+                        "counter.7000331>":3
+                    }
+                },
+                "result_title":"",
+                "result_text": "一件值得注意的事情發生了。",
+                "result":
+                {
+                    "counter=7000117":0,
+                    "counter+7000200":1
+                },
+                "action": {
+                    "event_on": 5300601 //觸發聲望彈框
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+                {
+                    "guid":"65507f25-5360-43b3-bc02-a36958a7a7fb",
+                    "condition":
+                    {
+                        "is":2000199,
+                    },
+                    "open_adsorb":1,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"書店老闆"
+                },
+            "s2":
+                {
+                    "guid":"00a61d0c-d075-418f-b5be-a44eca3613c3",
+                    "condition":
+                    {
+                        "type":"char"
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"派個追隨者跟隨",
+                    "pops":[
+                        {
+                            "condition":{
+                            },
+                            "action":{
+                                "choose":{
+                                    "pop.5002037_s2_01.s1":"你去和他說。"
+                                }
+                            }
+                        }
+                    ]
+                },
+            "s3":
+                {
+                    "guid":"f7bf4241-0b4b-4aa8-bd1c-96f2770487f4",
+                    "condition":
+                    {
+                        "type":"item",
+                        "cost.金幣":3
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"淘書的錢得你來付"
+                },
+            "s4":
+                {
+                    "guid":"b7e9394e-80d1-49c9-aa2a-f89333fe42a4",
+                    "condition":
+                    {
+                        "type":"item",
+                        "any":{
+                            "all":{
+                                "cost.消耗品=":1,
+                                "!金幣":1
+                            }
+                        }
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":1,
+                    "is_enemy":0,
+                    "text":"有些道具或許能在溝通中派上用場"
+                }
+        }
+    }

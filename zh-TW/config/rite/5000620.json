@@ -1,0 +1,89 @@
+ {
+        "id": 5000620,
+        "name": "最後的解惑",
+        "text": "你們來到了監獄，讓他看看愚蠢之人的下場。",
+        "tips": "",
+        "mapping_id":8001241,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":0,
+        "waiting_round_end_action":[ //儀式沒有處理，自動關閉後
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0, //自動執行
+        "location":  "宮廷:[2,6]",
+        "icon": "rite_16",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "扎齊伊：智慧+3",
+            "扎齊伊被帶壞+1"
+        ],
+        "open_conditions": [
+        ],
+        "random_text": {
+        },
+        "random_text_up":{
+        },
+        "random_effect": {
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"5c6d060b-9e32-4569-b141-6b1d1587638e",
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "這裡的氣味和環境令年輕人印象深刻，他以後一定會盡力避免落入此等境地。",
+                "result":
+                {
+                    "s1+智慧":3,
+                    "counter+7000041":1  //帶壞他的計數
+
+                },
+                "action": {
+                    "clean.rite":5000619,
+                    "clean.rite":5000621,
+                    "rite":5000623, // 激活年輕望族的仰慕
+                    "event_on":5300111 //激活下一輪請求
+                }
+            }
+        ],
+        "settlement_extre": [
+
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"06d141bd-3321-4e3f-8b23-a5dbca3100b8",
+                "condition":
+                {
+                    "is":2000063
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"扎齊伊"
+            },
+            "s2":
+            {
+                "guid":"d260c2f2-b4c9-448a-8eb9-9ccb3131dfc6",
+                "condition":
+                {
+                    "type":"char",
+                    "!is":2000063
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"找個人指點他"
+            }
+        }
+    }

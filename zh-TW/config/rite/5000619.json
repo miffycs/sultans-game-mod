@@ -1,0 +1,86 @@
+ {
+        "id": 5000619,
+        "name": "最後的解惑",
+        "text": "你們來到了書店，你告訴他一切謎題的答案，都可以在歷史和書中找到。",
+        "tips": "",
+        "mapping_id":8001225,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":0,
+        "waiting_round_end_action":[ //儀式沒有處理，自動關閉後
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0, //自動執行
+        "location": "商業區:[4,5]",
+        "icon": "rite_16",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "扎齊伊：智慧+2 魅力+2"
+        ],
+        "open_conditions": [
+        ],
+        "random_text": {
+        },
+        "random_text_up":{
+        },
+        "random_effect": {
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"b9df7606-5179-4c24-b449-21d3220fbcd4",
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "書店老闆很歡迎他這樣的新客人，他們言談甚歡，路過的老客人也都紛紛向年輕人推薦自己的書單。這是一個愉快的下午。",
+                "result":
+                {
+                    "s1+智慧":2,
+                    "s1+魅力":2
+                },
+                "action": {
+                    "clean.rite":5000620,
+                    "clean.rite":5000621,
+                    "rite":5000623, // 激活年輕望族的仰慕
+                    "event_on":5300111 //激活寡婦登門
+                }
+            }
+        ],
+        "settlement_extre": [
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"2811ced2-169e-473e-a0a6-393cc6263eb9",
+                "condition":
+                {
+                    "is":2000063
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"扎齊伊"
+            },
+            "s2":
+            {
+                "guid":"ed4a2806-5995-48ae-8279-e88f9f2a9a19",
+                "condition":
+                {
+                    "type":"char",
+                    "!is":2000063
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"找個人指點他"
+            }
+        }
+    }

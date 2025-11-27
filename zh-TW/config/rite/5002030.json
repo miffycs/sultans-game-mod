@@ -1,0 +1,170 @@
+ {
+        "id": 5002030,
+        "name": "緊急結婚",
+        "text": "如果做歡愉之女有辱門風，那麼只要你為夏瑪贖身，讓她成為一名權臣的妾室，她的父親也該沒話說了吧？你可真是個小機靈鬼！",
+        "tips": "",
+        "mapping_id":8001312,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":7,
+        "waiting_round_end_action":[
+            {
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "",
+                "result":
+                {
+                },
+                "action": {
+                    "event_on":5300312
+                }
+            }
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0,
+        "location": "自宅:[2,12]",
+        "icon": "rite_22",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "你必須在限定的時間內開啓這個儀式",
+            "儀式過期：推進劇情BE",
+            "妻子沒死：夏瑪入隊 妻子的不滿 權勢+1",
+            "妻子死了：夏瑪入隊 妻子的不滿 權勢+1"
+        ],
+        "open_conditions": [
+            {
+                "condition": {
+                    "counter.7100003>=":5
+                },
+                "tips": "你的權勢不能小於5點。"
+            }
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"87d423a7-76c2-40f9-ae95-bdacaf4df31e",
+                "condition": {
+                    "counter.7000199<":1 //妻子沒死亡
+                },
+                "result_title":"",
+                "result_text": "夏瑪搬進了你家，隨之而來的是她二十個馬車的首飾、禮服、書籍還有藝術品收藏。這些東西才運到門口妻子就和她大吵了一架，不得已，你只好把她安置到附近的住宅裡。",
+                "result":
+                {
+                    "s1+追隨者":1,
+                    "s1-妓女":1,
+                    "card":2000083,  //妻子的不滿
+                    "s1-鎖定妓女1":1,
+                    "counter+7000419":1, //夏瑪贖身計數器
+                    "counter+7100003":1 //權勢+1
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"6aad3cd5-d8e2-4449-99ca-1c8bd887d855",
+                "condition": {
+                    "counter.7000199>=":1 //妻子死亡
+                },
+                "result_title":"",
+                "result_text": "夏瑪搬進了你家，隨之而來的是她二十個馬車的首飾、禮服、書籍還有藝術品收藏。梅姬已經死了，沒有人能阻止你做這件事，但不知道為什麼，接下來好幾天裡，你還是感覺後背涼颼颼的……",
+                "result":
+                {
+                    "s1+追隨者":1,
+                    "s1-妓女":1,
+                    "card":2000083,  //妻子的不滿
+                    "s1-鎖定妓女1":1,
+                    "counter+7000419":1, //夏瑪贖身計數器
+                    "counter+7100003":1 //權勢+1
+                },
+                "action": {
+                }
+            }
+        ],
+        "settlement_extre": [
+            {
+                "guid":"e13429f2-3cf6-425c-9ad2-589cfce08287",
+                "condition": {
+                    "s4":1
+                },
+                "result_title":"你藉機折斷了一張奢靡卡",
+                "result_text": "蘇丹聽完了你和夏瑪的故事，對這場婚禮非常滿意。畢竟，你戲弄了一位大領主，這樣的機會可不多。",
+                "result":
+                {
+                    "clean.s4":1
+                },
+                "action": {
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"1b0123ad-0768-4c48-a5a7-0efb74f9958b",
+                "condition":
+                {
+
+                    "is":2000082,
+                    "鎖定妓女1":1
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"夏瑪"
+            },
+        "s2":
+            {
+                "guid":"b78c6310-b03b-4923-aa80-821c7b437d16",
+                "condition":
+                {
+                    "主角":1,
+                    "type":"char"
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"你必須親自出面。"
+            },
+        "s3":
+            {
+                "guid":"8cc9edc4-1c83-4de4-a8ec-04c04022da11",
+                "condition":
+                {
+                    "type":"item",
+                    "cost.金幣":30
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"為了給夏瑪贖身、舉辦婚禮，你必須拿出30枚金幣"
+            },
+        "s4":
+            {
+                "guid":"0ab4aba7-eac0-4eaf-a0be-7f8db8a8455e",
+                "condition":
+                {
+                    "type":"sudan",
+                    "奢靡":1,
+                    "f:rare-s1.rare<=":0
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"你可以藉機折斷一張不高於夏瑪品級的奢靡卡"
+            }
+        }
+    }

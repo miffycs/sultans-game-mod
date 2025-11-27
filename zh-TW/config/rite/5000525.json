@@ -1,0 +1,221 @@
+ {
+        "id": 5000525,
+        "name": "靜待時機",
+        "text": "如果時機成熟，你可以給安蘇亞妃傳信，她會為你竊走蘇丹的戒指，為你的弒君計劃製造可乘之機。",
+        "tips": "",
+        "mapping_id":8001283,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":0,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result":0,
+        "location": "宮廷:[2,6]",
+        "icon": "rite_4",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+            "tips":["隱匿","體魄"],
+            "type":"normal_result"
+        },
+        "tips_text":[
+            "你最好確保弒君的其他條件都已成熟，再讓安蘇亞執行計劃。",
+            "隱匿體魄>=1點成功 沒偷過戒指：開啓偷戒指",
+            "隱匿體魄>=1點成功 偷過戒指：隨機金情報",
+            "普通線 檢定失敗：主角去 受傷 安蘇亞不信任+1",
+            "普通線 檢定失敗：隨從去 入獄 安蘇亞不信任+1"
+        ],
+        "open_conditions": [
+        ],
+        "random_text": {
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"偷偷潛入的嘗試機會。",
+                "type":"normal_result",
+                "type_tips":"你的隱匿和體魄為你提供了完整的骰子數量。",
+                "low_target": 1,
+                "low_target_tips": "你至少需要1點成功才能有機會潛入宮廷。"
+            }
+        },
+        "random_effect": {
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"e8a1594a-0020-4aee-b865-04a01d01c11e",
+                "condition": {
+                    "any":{
+                        "s4.is":2000011, //御醫
+                        "s4.is":2000019, //珠寶商
+                        "s5.is":2000283, //密道
+                        "s5.金幣":1,  //賄賂
+                        "r1:隱匿+體魄>=":[1,5]
+                    },
+                    "counter.7000082<":1
+                },
+                "result_title":"",
+                "result_text": "你想辦法再次進入了後宮，並把你的密信帶給了她。她會像承諾的那樣開始行動，而你能做的，唯有等待，唯有相信她。",
+                "result":
+                {
+                    "counter+7000082":1
+                },
+                "action": {
+                    "event_on":5300049 //激活偷戒指
+                }
+            },
+            {
+                "guid":"b1da7bb8-f843-4c54-a0ff-628cc1347254",
+                "condition": {
+                    "any":{
+                        "s4.is":2000011, //御醫
+                        "s4.is":2000019, //珠寶商
+                        "s5.is":2000283, //密道
+                        "s5.金幣":1,  //賄賂
+                        "r1:隱匿+體魄>=":[1,5]
+                    },
+                    "counter.7000082>=":1
+                },
+                "result_title":"",
+                "result_text": "你想辦法再次進入了後宮，並把你的密信帶給了她。她為你帶來了絕密的情報。",
+                "result":
+                {
+                    "loot":6000057 //隨機金情報
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"35dfc5d0-4432-401a-824d-750afc49e9d7",
+                "condition": {
+                    "r1:隱匿+體魄<":[1,5],
+                    "!s4.主角":1  //不是主角
+                },
+                "result_title":"",
+                "result_text": "[s4.name]趁着夜色藏在一輛運送物資的馬車裡試圖混進後宮，但很不幸地失敗了。\n他被守衛團團圍住，逃脫不得，只能束手就擒，被抓進牢中。你應該儘快想辦法救他出來，以免節外生枝……",
+                "result":
+                {
+                    "global_counter+7200145":1, //成就
+                    "s4+equip":2000345,  //變為囚徒
+                    "counter+7000029":1 //有關妃子不信任的計數器，每次失敗或無視都會累計這個計數器
+                },
+                "action": {
+                    "rite":5000525 //重新激活
+                }
+            },
+            {
+                "guid":"c61e1416-286b-4575-9164-54520cf20359",
+                "condition": {
+                    "r1:隱匿+體魄<":[1,5]
+                },
+                "result_title":"",
+                "result_text": "你試圖混進後宮時不小心被禁軍發現了。\n你費了九牛二虎之力才逃脫了守衛們的圍攻，但他們還是在你身上留下了不少傷口……你得儘快找值得信任的醫生治好，否則後患無窮。",
+                "result":
+                {
+                    "s4+equip":2000098,  //受傷
+                    "counter+7000029":1 //有關妃子不信任的計數器，每次失敗或無視都會累計這個計數器
+                },
+                "action": {
+                    "rite":5000525 //重新激活
+                }
+            }
+        ],
+        "settlement_extre": [
+
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"191c336e-4f48-4a72-8052-b7f0bc757004",
+                "condition":
+                {
+
+                    "is": 2000288
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":1,
+                "text":"安蘇亞的貼身侍女"
+            },
+            "s2":
+            {
+                "guid":"363b8d27-2446-4422-be65-f60966de2d87",
+                "condition":
+                {
+                    "is":2000287
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"啞鈴鐺"
+            },
+            "s3":
+            {
+                "guid":"f2eb5769-d852-4aa1-bdcb-d521853f47d8",
+                "condition":
+                {
+                    "any":{
+                        "is":2000172,  //金思潮
+                        "is":2000910,  //革命計劃
+                        "is":2000913  //誓言之證
+                    },
+
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"弒君計劃"
+            },
+            "s4":
+            {
+                "guid":"d2ba57e0-fbb2-461f-8f33-f53d4a6005a7",
+                "condition":
+                {
+                    "type":"char"
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"你可以親自，或派遣任意追隨者去辦這件差事"
+            },
+            "s5":
+            {
+                "guid":"319204ef-a89f-49a9-85d2-ea394f778d55",
+                "condition":
+                {
+                    "any":{
+                        "is":2000283, //後宮密道
+                        "cost.金幣":10 //守衛的承諾
+                    }
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"也許你有入宮的捷徑或者賄賂守衛"
+            },
+            "s6":
+            {
+                "guid":"8f0c6f0e-dce9-491e-9e5c-b127fb39aa22",
+                "condition":
+                {
+                    "type":"item",
+                    "cost.消耗品=":1,
+                        "!金幣":1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"有些東西在潛入中能幫得上忙"
+            }
+        }
+    }

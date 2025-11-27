@@ -1,0 +1,250 @@
+ {
+        "id": 5002503,
+        "name": "遠近聞名的哈馬爾兄弟",
+        "text": "據說盤踞此地的哈馬爾和傑莫爾兩兄弟是以狡猾殘忍著稱的剪徑強盜，據說他們一個要命不要錢，一個要錢不要命，倘若有人不幸碰到他們二人結伴，那便是沒錢又沒命。治安隊警告往來商隊，出行應僱傭足夠的護衛，能避開就儘量避開這片沙丘。",
+        "tips": "",
+        "mapping_id":8001171,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":3,
+        "waiting_round_end_action":[
+            {
+                "condition": {
+
+                },
+                "result_title":"",
+                "result_text": "",
+                "result":
+                {
+
+                },
+                "action": {
+                    "event_on":5300020  //這次錯過了，等下次通過幕後機制刷新出來後再來挑戰
+                }
+            }
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0,
+        "location": "野外:[9,14]",
+        "icon": "rite_17",
+        "tag_tips": [
+            "體魄",
+            "戰鬥"
+        ],
+        "tag_tips_up":{
+            "tips":["體魄","戰鬥"],
+            "type":"fight_result"
+        },
+        "tips_text":[
+            "擊敗惡徒後，他們大多都會被關進蘇丹的監獄",
+            "己方數值-（敵方戰鬥9+敵方體魄8）>=2點成功：善名+1 上陣角色戰鬥+1 兄弟倆入獄",
+            "失敗：上陣角色死亡"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+            "r1":"哈馬爾兄弟的蹤跡已經暴露，不過想將他們捉拿歸案並不容易……"
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"哈馬爾兄弟的蹤跡已經暴露，不過想將他們捉拿歸案並不容易……",
+                "type":"fight_result",
+                "type_tips":"你的戰鬥和體魄為你提供的骰子數量受兄弟倆對應屬性的影響。",
+                "low_target": 2,
+                "low_target_tips": "你至少需要2點成功才能抓住他們。"
+            }
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"ff7a6482-d2f3-4eef-bf85-684f20bb2637",
+                "condition": {
+                  "r1:體魄+戰鬥-e(體魄+戰鬥)>=":[2,5]
+                },
+                "result_title":"",
+                "result_text": "他們各有各的強項，弱點也很明顯。你讓一個同伴僞裝成牽着駱駝獨自上路的吝嗇商人，引誘了貪財的傑莫爾，而失去他聰明的弟弟，莽撞的哈馬爾也變得不足為懼。你將兩人設計分開、各個擊破，將兩人牢牢捆好押送回城的時候，太陽甚至都沒下山。",
+                "result":
+                {
+                    "counter+7100001": 1, //善名+1
+                    "global_counter+7200145":2, //成就
+                    "s1+equip":2000345,  //變為囚徒
+                    "s2+equip":2000345,
+                    "s3+戰鬥":1,
+                    "s4+戰鬥":1,
+                    "counter+7000015":1
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"3ec597d1-5346-4867-b937-cce7a2577f4c",
+                "condition": {
+                  "r1:體魄+戰鬥-e(體魄+戰鬥)<":[2,5]
+                },
+                "result_title":"",
+                "result_text": "你太過輕視自己的敵人，又或者，神的眷顧今日沒有傾注於你身上。夕陽闔上它淌血的眼眸時，死於哈馬爾兄弟刀下的人又多了幾個。",
+                "result":
+                {
+                    "clean.s3":1,
+                    "clean.s4":1
+                },
+                "action": {
+                    "event_on":5300020  //這次失敗了，等下次通過幕後機制刷新出來後再來挑戰
+                }
+            }
+        ],
+        "settlement_extre": [
+            {
+                "guid":"d6ed4725-fb13-40e9-b0fd-6c5e120741fc",
+                "condition": {
+                  "r1:體魄+戰鬥-e(體魄+戰鬥)>=":[2,5],
+                  "s6":1
+                },
+                "result_title":"",
+                "result_text": "蘇丹允許你折斷這張征服卡。之後幾天，你聽說常有衛兵進出城門，似乎在找尋盜賊的寶藏。", //蘇丹的反應
+                "result":
+                {
+                    "clean.s6":1
+                },
+                "action": {
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"f1f7ed7e-8109-4e66-bf3b-9a63a8365e54",
+                "condition":
+                {
+
+                    "is":2000196
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":1,
+                "text":"狡猾的傑莫爾"
+            },
+            "s2":
+            {
+                "guid":"cc6e7424-0144-463e-8bb8-2e7e942295b5",
+                "condition":
+                {
+
+                    "is":2000197
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":1,
+                "text":"兇狠的哈馬爾"
+            },
+            "s3":
+                {
+                    "guid":"ffe19b9d-b9f6-490e-ba24-b7a30cb65251",
+                    "condition":
+                    {
+                        "type":"char"
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"你可以親自，或者派遣足夠強壯的追隨者前往討伐",
+                    "pops":[
+                        {
+                            "condition":{
+                                "f:s6.體魄+s6.戰鬥+s3.體魄+s3.戰鬥+s4.體魄+s4.戰鬥+s5.體魄+s5.戰鬥-s1.體魄-s1.戰鬥-s2.體魄-s2.戰鬥<": 2
+                            },
+                            "action":{
+                                "pop.5002503_s3_01.self":"以目前己方的<b><color=white>【體魄】</color></b>和<b><color=white>【戰鬥】</color></b>能力，就不要去找死了。"
+                            }
+                        },
+                        {
+                            "condition":{
+                                "f:s6.體魄+s6.戰鬥+s3.體魄+s3.戰鬥+s4.體魄+s4.戰鬥+s5.體魄+s5.戰鬥-s1.體魄-s1.戰鬥-s2.體魄-s2.戰鬥>=": 2,
+                                "!s5":1
+                            },
+                            "action":{
+                                "pop.5002503_s3_02.self":"如果有<b><color=white>【情報】</color></b>支持的話，可以多一分勝算。"
+                            }
+                        }
+                    ]
+                },
+            "s4":
+                {
+                    "guid":"9c388a8e-362e-490f-ba3e-5575e6b77669",
+                    "condition":
+                    {
+                        "type":"char"
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":1,
+                    "is_enemy":0,
+                    "text":"多一名同伴，多一點保障",
+                    "pops":[
+                        {
+                            "condition":{
+                                "f:s6.體魄+s6.戰鬥+s3.體魄+s3.戰鬥+s4.體魄+s4.戰鬥+s5.體魄+s5.戰鬥-s1.體魄-s1.戰鬥-s2.體魄-s2.戰鬥<": 2
+                            },
+                            "action":{
+                                "pop.5002503_s4_01.self":"以目前己方的<b><color=white>【體魄】</color></b>和<b><color=white>【戰鬥】</color></b>能力，就不要去找死了。"
+                            }
+                        },
+                        {
+                            "condition":{
+                                "f:s6.體魄+s6.戰鬥+s3.體魄+s3.戰鬥+s4.體魄+s4.戰鬥+s5.體魄+s5.戰鬥-s1.體魄-s1.戰鬥-s2.體魄-s2.戰鬥>=": 2,
+                                "!s5":1
+                            },
+                            "action":{
+                                "pop.5002503_s4_02.self":"如果有<b><color=white>【情報】</color></b>支持的話，可以多一分勝算。"
+                            }
+                        }
+                    ]
+                },
+            "s5":
+                {
+                    "guid":"99185a40-42e0-4268-a2ef-2164e274396e",
+                    "condition":
+                    {
+                        "type":"item",
+                        "cost.消耗品=":1,
+                        "!金幣":1
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":1,
+                    "is_enemy":0,
+                    "text":"有些東西也許能在討伐中派上用場",
+                    "pops":[
+                        {
+                            "condition":{
+                                "f:s6.體魄+s6.戰鬥+s3.體魄+s3.戰鬥+s4.體魄+s4.戰鬥+s5.體魄+s5.戰鬥-s1.體魄-s1.戰鬥-s2.體魄-s2.戰鬥<": 2
+                            },
+                            "action":{
+                                "pop.5002503_s5_01.self":"以目前己方的<b><color=white>【體魄】</color></b>和<b><color=white>【戰鬥】</color></b>能力，就不要去找死了。"
+                            }
+                        }
+                    ]
+                },
+            "s6":
+                {
+                    "guid":"fd333d4f-1bca-4702-b929-3aa342d334c1",
+                    "condition":
+                    {
+                        "type":"sudan",
+                        "征服":1,
+                        "rare<=":3
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":1,
+                    "is_enemy":0,
+                    "text":"你可以藉此折斷一張不高於白銀級別的征服卡"
+                }
+        }
+    }

@@ -1,0 +1,196 @@
+ {
+        "id": 5006681,
+        "name": "審問",
+        "text": "這位異國商人……你的租客，似乎很可疑。也許你需要一點技巧才能撬開他的嘴。",
+        "tips": "",
+        "mapping_id":8001555,
+        "once_new":0,
+        "round_number": 0,
+        "waiting_round":1,
+        "waiting_round_end_action":[
+            {
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "",
+                "result":
+                {
+                    "clean.s1":1,//移除巴拉特
+                    "card":2001190, //獲得一個假幣
+                    "counter+7000713":1, //標識巴拉特畏罪潛逃
+                    "prompt":{
+                        "id":"5006681_prompt_1",
+                        "text":"巴拉特不告而別了，你來到租住給他的房間，在地下室的地上，你發現了一枚“金幣”卡在了石板的縫隙裡……從地面的痕跡上看，他就是在這裡進行的假幣鑄造工作——為了避免給自己惹麻煩，你只好停止了追查，甚至主動幫他銷燬了所有殘存的痕跡。",
+                        "icon":"cards/2000005"
+                    }
+                },
+                "action": {
+                    "event_off":5300088, //關閉異國商人商店
+                }
+            }
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0,
+        "location": "自宅:[2,12]",
+        "icon": "rite_8",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+            "tips":["體魄","社交"],
+            "type":"normal_result"
+        },
+        "tips_text":[
+            "超時：“金幣”+1，異國商人關店",
+            "檢定1：社交>=5",
+            "檢定成功：觸發後續",
+            "檢定失敗，進入檢定2：體魄>=5，觸發後續",
+            "檢定失敗：異國商人關店；觸發後續【跑路的巴拉特】"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"你打算套出巴拉特的話",
+                "type":"normal_result",
+                "type_tips":"你的社交為你提供了完整的骰子數量。",
+                "low_target": 5,
+                "low_target_tips": "你至少需要5點成功"
+            },
+            "r2":{
+                "text":"冥頑不靈的傢伙，看來需要上點手段",
+                "type":"normal_result",
+                "type_tips":"你的體魄為你提供了完整的骰子數量。",
+                "low_target": 5,
+                "low_target_tips": "你至少需要5點成功"
+            }
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+
+        ],
+        "settlement_extre": [
+            {
+                "guid":"611565b5-0844-4fea-9de4-f9bf6bc2b1c3",
+                "condition": {
+                    "r1:社交>=":[5,5]
+                },
+                "result_title":"虛張聲勢",
+                "result_text": "現在是最後的機會了，[s2.name]警告巴拉特——並暗示蘇丹的衛兵隨時都可能會查到這裡。\n他害怕了，雙腿不住顫抖，最後決定向你們坦白一切。",
+                "result":
+                {
+                },
+                "action": {
+                    "rite":5006680, //吐露真相
+                }
+            },
+            {
+                "guid":"e998e4c5-6a8d-4111-8b4c-aabe86a47989",
+                "condition": {
+                    "r1:社交<":[5,5]
+                },
+                "result_title":"他老奸巨猾",
+                "result_text": "任憑[s2.name]怎麼威脅他，這個商人都無動於衷，顯然，他一定是有問題的，普通人在這個時候早該害怕了才對！",
+                "result":
+                {
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"90e481d9-b759-4803-85d4-69c3e298af37",
+                "condition": {
+                    "r1:社交<":[5,5],
+                    "r2:體魄>=":[5,5]
+                },
+                "result_title":"給他點顏色看看",
+                "result_text": "於是，[s3.name]只好掐住了巴拉特的脖子，如果他嘴巴里吐不出一點關於這假幣的事情，那就乾脆不要呼吸好了！\n終於，他在被憋死之前，點頭同意開口……",
+                "result":
+                {
+                },
+                "action": {
+                    "rite":5006680, //吐露真相
+                }
+            },
+            {
+                "guid":"912878c7-59cc-4082-a5ce-171d4d9f5b65",
+                "condition": {
+                    "r1:社交<":[5,5],
+                    "r2:體魄<":[5,5]
+                },
+                "result_title":"裝死",
+                "result_text": "於是，[s3.name]只好掐住了巴拉特的脖子，如果他嘴巴里吐不出一點關於這假幣的事情，那就乾脆不要呼吸好了！\n可惜，巴拉特拼命掙扎，卻是半句話也不肯說……[s2.name]怕真的鬧出人命，只好暫時作罷。",
+                "result":
+                {
+                },
+                "action": {
+                    "event_off":5300088, //關閉異國商人商店
+                    "event_on":5320283, //巴拉特跑路
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"e1a6e044-4f3c-4bbd-94a8-1e66ac133ea4",
+                "condition":
+                {
+                    "is":2000005
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":1,
+                "text":"可疑的巴拉特"
+            },
+            "s2":
+            {
+                "guid":"b9d96bb7-f310-4fd8-bc67-1a313cc87415",
+                "condition":
+                {
+                    "type":"char",
+                    "!怪物":1,
+                    "!動物":1,
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"誰來“詢問”"
+            },
+            "s3":
+            {
+                "guid":"7f3b015e-8644-4e71-8138-f0ce88040f7c",
+                "condition":
+                {
+                    "type":"char",
+                    "!怪物":1,
+                    "!動物":1,
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"誰來“詢問”"
+            },
+            "s4":
+            {
+                "guid":"c33b1117-889b-4f73-aba7-11dd352151dc",
+                "condition":
+                {
+                    "type":"item",
+                    "cost.消耗品=":1,
+                    "!金幣":1,
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"消耗品"
+            }
+        }
+    }

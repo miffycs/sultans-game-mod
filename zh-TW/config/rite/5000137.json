@@ -1,0 +1,69 @@
+ {
+        "id": 5000137,
+        "name": "掛毯長廊",
+        "text": "在這被鋪成迷宮似的掛毯長廊裡，行走在其中，總能不經意聽到掛毯的另一邊影影綽綽的人影和若有若無的交談聲。",
+        "tips": "",
+        "once_new":0,
+        "round_number": 7,
+        "waiting_round":0,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 1,
+        "auto_result":0,
+        "location": "奇珍:1",
+        "type":"TREASURE",
+        "icon": "rite_2000302",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "產出隨機金情報"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"c40c8761-1a53-4fb5-808f-1217b79835b0",
+                "condition":
+                {
+                },
+                "result_title":"世上並無新事",
+                "result_text": "掛毯訴說着古代人的征程與磨難，而古代人的旅途並沒有避免今天的我們重蹈覆轍。",
+                "result":
+                {
+                    "loot":6000057
+                },
+                "action":
+                {
+                    "rite":5000137
+                }
+            }
+        ],
+        "settlement_extre": [
+
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"bc7cffbf-e674-49fc-96c3-c5012f3c6dfd",
+                "condition":
+                {
+                    "is":2000302 // 傳承掛毯
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"傳承掛毯"
+            }
+        }
+    }

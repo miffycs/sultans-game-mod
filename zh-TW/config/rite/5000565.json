@@ -1,0 +1,146 @@
+ {
+        "id": 5000565,
+        "name": "不留後患",
+        "text": "禁衛隊長毫無防備地踏入了你的包圍之中。",
+        "tips": "",
+        "mapping_id":8001115,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":0,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result":0,
+        "location": "野外:[9,14]",
+        "icon": "rite_21",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "上吧！",
+            "賽裡曼死亡 獲得賽裡曼的頭顱 罪證+1",
+            "放殺戮卡無罪證"
+        ],
+        "open_conditions": [
+
+        ],
+        "random_text": {
+        },
+        "random_text_up":{
+        },
+        "random_effect": {
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"4d91333f-f212-451c-aee6-9db52560b6a1",
+                "condition": {
+                    "s2.主角":1
+                },
+                "result_title":"你殺死了賽裡曼",
+                "result_text": "出乎意料地，賽裡曼甚至沒有做任何抵抗。\n他眉心因痛苦而糾纏，眼睛裡卻是一片輕鬆的神色：“是薩達爾尼叫你做的麼？”他以最後的力氣問出這句，卻並不需要從你口中得到一個結果。\n他閉上眼，在蘆葦既鋒利也柔軟的懷抱中釋然地倒下，彷彿這是他能為薩達爾尼做的最後一件事。",
+                "result":
+                {
+                    "clean.s1":1,
+                    "card":[2000177,"已擁有+1"] //獲得禁衛隊長的頭
+                },
+                "action": {
+
+                }
+            },
+            {
+                "guid":"b6e39193-821b-445d-8f3a-7dca316940e8",
+                "condition": {
+                    "!s2.主角":1
+                },
+                "result_title":"你殺死了賽裡曼",
+                "result_text": "出乎意料地，賽裡曼甚至沒有做任何抵抗。\n他眉心因痛苦而糾纏，眼睛裡卻是一片輕鬆的神色：“是薩達爾尼叫你做的麼？”他以最後的力氣問出這句，卻並不需要從你口中得到一個結果。\n他閉上眼，在蘆葦既鋒利也柔軟的懷抱中釋然地倒下，彷彿這是他能為薩達爾尼做的最後一件事。",  //暫時沒有對玩家親自動手或追隨者動手的結果文案做區分，感覺不是很有必要……
+                "result":
+                {
+                    "clean.s1":1,
+                    "card":[2000177,"已擁有+1"] //獲得禁衛隊長的頭
+                },
+                "action": {
+
+                }
+            }
+        ],
+        "settlement_extre": [
+            {
+                "guid":"d860c462-f2dc-4bfa-8018-95592b3f9dca",
+                "condition": {
+                    "s3":1
+                },
+                "result_title":"你使用了殺戮卡",
+                "result_text": "蘇丹似乎對賽裡曼死並不關心。",
+                "result":
+                {
+                    "clean.s3":1
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"71a22698-ca28-4a2f-9b4a-8b6fb1643f26",
+                "condition": {
+                    "!s3":1
+                },
+                "result_title":"",
+                "result_text": "你的行為不可避免地留下了痕跡。",
+                "result":
+                {
+                    "card":2000558 //罪證
+                },
+                "action": {
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"57d4c7a7-b57f-45ab-ab1a-8c0fe3c8477b",
+                "condition":
+                {
+
+                    "is": 2000012
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"賽裡曼毫無防備"
+            },
+            "s2":
+            {
+                "guid":"e1666424-2ec6-4c61-968a-ee64f1f51543",
+                "condition":
+                {
+                    "type":"char"
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"你可以親自或派遣任意追隨者做這件差事"
+            },
+            "s3":
+            {
+                "guid":"200c2ee6-5059-492b-8372-8cfabaa75d16",
+                "condition":
+                {
+                    "type":"sudan",
+                    "殺戮":1,
+                    "f:rare-s1.rare<=":0
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"可以放品級不高於禁衛隊長品級的殺戮蘇丹卡"
+            }
+        }
+    }

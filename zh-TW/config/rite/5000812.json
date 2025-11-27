@@ -1,0 +1,497 @@
+{
+    "id": 5000812,
+    "name": "芮爾的匪幫",
+    "text": "這裡是芮爾的大本營，現在對你完全敞開。她手下的人馬都在這裡，這幫人大多出身低賤，但個個身懷絕技，有不少值得學習的地方。",
+    "tips": "",
+    "mapping_id":8001073,
+    "once_new":0,
+    "round_number": 1,
+    "waiting_round":0,
+    "waiting_round_end_action":[
+    ],
+    "method_settlement": "",
+    "auto_begin": 0,
+    "auto_result":0,
+    "location": "奇珍:11",
+    "type":"TREASURE",
+    "icon": "rite_5000812",
+    "tag_tips": [
+
+    ],
+    "tag_tips_up":{
+
+    },
+    "tips_text":[
+        "如果地盤上出了什麼事，芮爾會帶走她所有的小弟，訓練也會中止……當然經費是不會退的，這可是匪幫",
+        "追隨者無法接受同種訓練多次",
+        "放入新月：觸發劇情 返還訓練費",
+        "角色無法放入已經訓練過的項目",
+        "不給錢無事發生"
+    ],
+    "open_conditions": [
+        {
+            "condition": {
+               "counter.7000465<":1
+            },
+            "tips": "匪幫調動中，無法進行訓練"
+        },
+        {
+            "condition": {
+               "any":{
+                    "s7":1,
+                    "s8":1,
+                    "s9":1,
+                    "s10":1,
+                    "s11":1,
+                    "s12":1
+               }
+            },
+            "tips": "人得過來吧"
+        }
+    ],
+    "random_text": {
+
+    },
+    "random_text_up":{
+
+    },
+    "random_effect": {
+    },
+    "settlement_prior":
+    [
+        {
+            "guid":"cd4a9168-1c3c-4fa6-9a17-0369a03aab43",
+            "condition": {
+                "!s13":1  //經費沒給
+            },
+            "result_title":"嘴巴淡出鳥",
+            "result_text": "你轉了三圈才在泥牆底下找到曬太陽的眾人，他們懶洋洋地說最近沒錢喝酒，幹什麼都提不起勁來。下次吧，下次一定。",
+            "result":
+            {
+
+            },
+            "action": {
+                "rite":5000812  //重啓儀式
+            }
+        },
+        {
+            "guid":"c95b7ace-0a0c-41f8-9c8b-8123cbc9068a",
+            "condition": {
+                //"s1":1,  //存在爛泥眾
+                //"s7.is":2000989, //新月
+                "s13":1,  //經費給了
+                "any":{
+                    "s7.is":2000989,
+                    "s8.is":2000989,
+                    "s9.is":2000989,
+                    "s10.is":2000989,
+                    "s11.is":2000989,
+                    "s12.is":2000989,
+                }
+                //條件改為：s7-s12任意一個是新月
+            },
+            "result_title":"新月來玩了",
+            "result_text": "多可愛的小狗啊！\n芮爾的小弟們出去收保護費的時候也要帶着它，而且堅決不收你的錢。\n在人來人往的黑街裡亂竄，讓新月玩得非常開心。",
+            "result":
+            {
+                "coin":5,
+                "counter+7000557":1 //把新月放進過芮爾健身中心+1
+            },
+            "action": {
+                "rite":5000812  //重啓儀式
+            }
+        }
+    ],
+    "settlement": [
+
+    ],
+    "settlement_extre": [
+        {
+            "guid":"31ed8ea4-36bf-40f6-b954-f4f3a0b836d3",
+            "condition": {
+                "s1":1,  //存在爛泥眾
+                "s7":1,  //存在受訓者
+                "s13":1  //經費給了
+            },
+            "result_title":"活着最重要",
+            "result_text": "第一批聚集到芮爾麾下的人們講不出什麼大道理，他們只是在其他黑幫的壓迫下走投無路，奮力一搏而已。他們教了[s7.name]一些生存智慧，並祝福[s7.name]永遠用不上這些知識。",
+            "result":
+            {
+                "s7+生存":1,
+                "s7+爛泥訓練":1
+            },
+            "action": {
+                //"rite":5000812  //重啓儀式
+            }
+        },
+        {
+            "guid":"2ccf0605-0c4f-4d24-b79b-249ae4fbcbf5",
+            "condition": {
+                "s2":1,  //存在豺狼眾
+                "s8":1,  //存在受訓者
+                "s13":1  //經費給了
+            },
+            "result_title":"扛揍最重要",
+            "result_text": "贏的人是我們最會打架的大當家、還是最會說話的二當家？嘿，都不是，而是最扛揍的兄弟我啊！\n豺狼眾嬉皮笑臉、得意洋洋地誇耀着，紛紛向[s8.name]分享自己用哪裡挨拳頭比較不疼的經驗。",
+            "result":
+            {
+                "s8+體魄":1,
+                "s8+豺狼訓練":1
+            },
+            "action": {
+                //"rite":5000812  //重啓儀式
+            }
+        },
+        {
+            "guid":"fdadf2e0-e35e-49ca-b901-e45cbf104625",
+            "condition": {
+                "s3":1,  //存在槍姬眾
+                "s9":1,  //存在受訓者
+                "s13":1  //經費給了
+            },
+            "result_title":"我們擅長的，你學不會",
+            "result_text": "這些蠻族的女子帶着歉意地向你解釋，她們能夠向祖靈祈求魔力，而這是無法外傳的祕法。為了說明這一點，她們詳細地向你展示了描繪戰妝、舉行儀式的步驟，然而，不管你做得多精確，都沒能得到那種特殊的賜福……最後你只得放棄，但至少，那些狂野的妝容讓[s9.name]平添了幾分懾人的魅力。",
+            "result":
+            {
+                "s9+魅力":1,
+                "s9+槍姬訓練":1
+            },
+            "action": {
+                //"rite":5000812  //重啓儀式
+            }
+        },
+        {
+            "guid":"d4d06578-f44b-40f7-b1d6-ae0a58521444",
+            "condition": {
+                "s4":1,  //存在刀風眾
+                "s10":1,  //存在受訓者
+                "s13":1  //經費給了
+            },
+            "result_title":"如果當時我有一匹馬……",
+            "result_text": "這些被芮爾解救的遊牧民因為無處可去，乾脆留在她的營地裡。她們將騎術傾囊相授，令[s10.name]獲益頗多。",
+            "result":
+            {
+                //"s10+戰鬥":1,
+                "s10+刀風訓練":1,
+                "s10+equip_slot":"animal_handling"
+            },
+            "action": {
+                //"rite":5000812  //重啓儀式
+            }
+        },
+        {
+            "guid":"c67ddbec-d23b-4b96-a349-60818c7d4a90",
+            "condition": {
+                "s5":1,  //存在獵魂眾
+                "s11":1,  //存在受訓者
+                "s13":1  //經費給了
+            },
+            "result_title":"來打一架！",
+            "result_text": "這些被芮爾解救的蠻人一提起打架就興奮得不行，喂，提前說清楚，這只是切磋，就算打敗了[s11.name]也不可以吃掉[s11.gender]的肝哈！",
+            "result":
+            {
+                "s11+戰鬥":1,
+                "s11+獵魂訓練":1
+            },
+            "action": {
+                //"rite":5000812  //重啓儀式
+            }
+        },
+        {
+            "guid":"32965270-7cca-46a5-9459-19fa466e10df",
+            "condition": {
+                "s6":1,  //存在碎紙眾
+                "s12":1,  //存在受訓者
+                "s13":1  //經費給了
+            },
+            "result_title":"韜光養晦",
+            "result_text": "這些被解救的流民總是在說，最漂亮的，最會說話的人總會最先被盯上、被挑走，這可不是什麼好事……在她們的指導下，[s12.name]學會了讓自己變得不那麼起眼的技巧。",
+            "result":
+            {
+                "s12+隱匿":1,
+                "s12+碎紙訓練":1
+            },
+            "action": {
+                //"rite":5000812  //重啓儀式
+            }
+        },
+        {
+            "guid":"21f913b7-6d86-4d52-ac3a-528746dce164",
+            "condition": {
+
+            },
+            "result_title":"",
+            "result_text": "就這樣，時間很快過去了。",
+            "result":
+            {
+
+            },
+            "action": {
+                "rite":5000812  //重啓儀式
+            }
+        }
+
+    ],
+    "cards_slot":
+    {
+        "s1":
+        {
+            "guid":"1383118a-c951-49fe-a910-5bbe4ccda78c",
+            "condition":
+            {
+                "type":"item",
+                "芮爾手下":1,
+                "is":2000965,
+                "counter.7000465<":1  //部隊並未調動
+            },
+            "open_adsorb":1,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":0,
+            "text":"芮爾手下"
+        },
+        "s2":
+        {
+            "guid":"09bf5503-e103-480e-8178-508afa52d575",
+            "condition":
+            {
+                "type":"item",
+                "芮爾手下":1,
+                "is":2000966,
+                "counter.7000465<":1  //部隊並未調動
+            },
+            "open_adsorb":1,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":0,
+            "text":"芮爾手下"
+        },
+        "s3":
+        {
+            "guid":"cc05f952-ce62-4c2d-8602-e7267307fc03",
+            "condition":
+            {
+                "type":"item",
+                "芮爾手下":1,
+                "is":2000967,
+                "counter.7000465<":1  //部隊並未調動
+            },
+            "open_adsorb":1,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":0,
+            "text":"芮爾手下"
+        },
+        "s4":
+        {
+            "guid":"2e6f2642-c73e-4a07-94e1-39049785ced1",
+            "condition":
+            {
+                "type":"item",
+                "芮爾手下":1,
+                "is":2000968,
+                "counter.7000465<":1  //部隊並未調動
+            },
+            "open_adsorb":1,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":0,
+            "text":"芮爾手下"
+        },
+        "s5":
+        {
+            "guid":"eab6183a-48e3-41f9-a2e0-3f0fbcede4d6",
+            "condition":
+            {
+                "type":"item",
+                "芮爾手下":1,
+                "is":2000969,
+                "counter.7000465<":1  //部隊並未調動
+            },
+            "open_adsorb":1,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":0,
+            "text":"芮爾手下"
+        },
+        "s6":
+        {
+            "guid":"66ac3623-cb76-41d1-a11e-9b4b5c1c5c5d",
+            "condition":
+            {
+                "type":"item",
+                "芮爾手下":1,
+                "is":2000970,
+                "counter.7000465<":1  //部隊並未調動
+            },
+            "open_adsorb":1,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":0,
+            "text":"芮爾手下"
+        },
+        "s7":
+        {
+            "guid":"f3905b9b-a46c-4149-aaaf-4e462015f8aa",
+            "condition":
+            {
+                "any":{
+                    "all":{
+                        "type":"char",
+                        "s1":1,
+                        "!爛泥訓練":1
+                    },
+                    "all":{
+                        "type":"item",
+                        "s1":1,
+                        "is":2000989 //新月
+                    }
+            }
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":0,
+            "text":"選擇上面這支匪幫進行訓練\n生存+1 爛泥訓練+1"
+        },
+        "s8":
+        {
+            "guid":"40808473-ea5a-4fc2-b16a-94ab7634ef4d",
+            "condition":
+            {
+                "any":{
+                    "all":{
+                        "type":"char",
+                        "s2":1,
+                        "!豺狼訓練":1
+                    },
+                    "all":{
+                        "type":"item",
+                        "s2":1,
+                        "is":2000989 //新月
+                    }
+                },
+
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":0,
+            "text":"選擇上面這支匪幫進行訓練\n體魄+1 豺狼訓練+1"
+        },
+        "s9":
+        {
+            "guid":"cd51e22d-e16e-462f-842c-262e30d920fa",
+            "condition":
+            {
+                "any":{
+                    "all":{
+                        "type":"char",
+                        "s3":1,
+                        "!槍姬訓練":1
+                    },
+                    "all":{
+                        "type":"item",
+                        "s3":1,
+                        "is":2000989 //新月
+                    }
+                },
+
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":0,
+            "text":"選擇上面這支匪幫進行訓練\n魅力+1 槍姬訓練+1"
+        },
+        "s10":
+        {
+            "guid":"aa94473d-ef92-4dae-af5c-348cec9b35b0",
+            "condition":
+            {
+                "any":{
+                    "all":{
+                        "type":"char",
+                        "s4":1,
+                        "!刀風訓練":1
+                    },
+                    "all":{
+                        "type":"item",
+                        "s4":1,
+                        "is":2000989 //新月
+                    }
+                },
+
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":0,
+            "text":"選擇上面這支匪幫進行訓練\n坐騎槽+1 刀風訓練+1"
+        },
+        "s11":
+        {
+            "guid":"44679398-99d9-423d-ac26-67bafcb7a35e",
+            "condition":
+            {
+                "any":{
+                    "all":{
+                        "type":"char",
+                        "s5":1,
+                        "!獵魂訓練":1
+                    },
+                    "all":{
+                        "type":"item",
+                        "s5":1,
+                        "is":2000989 //新月
+                    }
+                },
+
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":0,
+            "text":"選擇上面這支匪幫進行訓練\n戰鬥+1 獵魂訓練+1"
+        },
+        "s12":
+        {
+            "guid":"0706b246-7821-4cea-87c6-6bb3888fa6a9",
+            "condition":
+            {
+                "any":{
+                    "all":{
+                        "type":"char",
+                        "s6":1,
+                        "!碎紙訓練":1
+                    },
+                    "all":{
+                        "type":"item",
+                        "s6":1,
+                        "is":2000989 //新月
+                    }
+                },
+
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":0,
+            "text":"選擇上面這支匪幫進行訓練\n隱匿+1 碎紙訓練+1"
+        },
+        "s13":
+        {
+            "guid":"e1b3f45e-a518-4f26-930b-dbc64b123316",
+            "condition":
+            {
+                "type":"item",
+                "cost.金幣=":5
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":0,
+            "text":"總得拿出5金幣表示表示誠意。"
+        }
+    }
+}

@@ -1,0 +1,327 @@
+{
+        "id": 5000100,
+        "name": "珠寶設計",
+        "text": "花錢請熱娜設計飾品。",
+        "tips": "",
+        "mapping_id":8001210,
+        "once_new":1,
+        "round_number": 1,
+        "waiting_round":1,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result":0,
+        "location": "自宅:[2,12]",
+        "icon": "rite_12",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+            "tips":["智慧","靈感"],
+            "type":"normal_result"
+        },
+        "tips_text":[
+            "開始後將檢定熱娜的智慧和靈感，根據最終檢定結果產出不同品質的珠寶。",
+            "如果置入特殊的珠寶製作材料則可以跳過檢定。",
+            "不論結果如何，結束後熱娜的靈感都會歸零。",
+            ">=9點成功：隨機金原創系列飾品",
+            ">=6點成功：隨機銀原創系列飾品",
+            ">=3點成功：隨機銅原創系列飾品",
+            ">=1點成功：隨機石原創系列飾品",
+            "<=1點成功：沒有獎勵"
+
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"這次熱娜會有什麼新的想法？她又會帶給你什麼驚喜？",
+                "type":"normal_result",
+                "type_tips":"你的智慧和靈感為你提供了完整的骰子數量。",
+                "low_target": 1,
+                "low_target_tips": "你至少需要1點成功才能設計出新的珠寶。"
+            }
+        },
+        "settlement_prior": [
+            {
+                "guid":"ec1baa87-10e7-46dd-a87a-1f35c5525faf",
+                "condition":
+                {
+                    "s3.is":2000949 //火龍鱗片
+                },
+                "result_title":"你把火龍鱗片交給了熱娜",
+                "result_text": "這樣一件業物，並不符合熱娜的需求，她搖了搖頭，表示它並不適合作為她來製作。",
+                "result":
+                {
+
+                },
+                "action":
+                {
+
+                }
+            },
+            {
+                "guid":"4efdcee3-b16e-4625-92ed-c2a1ea9c51ab",
+                "condition":
+                {
+                    "s3.is":2000778 //精美的藍紗
+                },
+                "result_title":"你把精美的藍紗交給了熱娜",
+                "result_text": "這匹藍色的紗料盪漾着水波一般瀲灩的光澤，她愛不釋手地一遍遍摩挲着，承諾絕不辜負它的美麗。",
+                "result":
+                {
+                    "global_counter+7200184":1, //成就
+                    "s1=靈感":0,
+                    "clean.s3":1,
+                    "card": [2000779,"已擁有+1"]  //湛藍絲巾
+                },
+                "action":
+                {
+                    "event_on":5320576,  //開啓寶石收集
+                    "event_on":5300291  //工匠街區的意外
+                }
+            },
+            {
+                "guid":"309c7446-2e45-4fad-a605-240f0b325e8c",
+                "condition":
+                {
+                    "s3.is":2000691 //帝國之花殘卷
+                },
+                "result_title":"未被磨滅的……",
+                "result_text": "被撕下的那一頁上刻畫着妻子溫柔微笑的臉龐，你請熱娜精心地修復了它，然後將它貼身存放。不論你面對着怎樣的困境，只要她還注視着你，你的心就總能得到片刻寧靜，彷彿世界並沒有那麼糟糕。",
+                "result":
+                {
+                    "global_counter+7200184":1, //成就
+                    "s1=靈感":0,
+                    "clean.s3":1,
+                    "card": [2000693,"已擁有+1"]  //白銀吊墜
+                },
+                "action":
+                {
+                    "event_on":5320576,  //開啓寶石收集
+                }
+            },
+            {
+                "guid":"da1b0c46-efd5-4e7b-bcbc-89584aa6b88c",
+                "condition":
+                {
+                    "s3.is":2000711 //哲巴爾線的狼頭戰利品
+                },
+                "result_title":"殘忍的勳章",
+                "result_text": "熱娜興致高昂地收下這顆狼頭，幾天之後，這條狼頭圍巾就擺在了你的案几上。你試着戴上它出去轉了一圈，不知道是不是錯覺，當天沒人敢直視你……",
+                "result":
+                {
+                    "global_counter+7200184":1, //成就
+                    "s1=靈感":0,
+                    "clean.s3":1,
+                    "card": [2000729,"已擁有+1"],  //狼頭圍巾
+                },
+                "action":
+                {
+                    "event_on":5320576,  //開啓寶石收集
+                }
+            },
+            {
+                "guid":"1eb3a1f6-99b4-41e2-b07f-f9f59315965e",
+                "condition":
+                {
+                    "s3.is":2001199 //夜晚的結晶
+                },
+                "result_title":"封印之晶",
+                "result_text": "熱娜以結晶之中的碎紙，結合偶然讀到的異域咒法為靈感，把它做成了一枚吊墜……嗯……它現在看起來完全像是封印了一個強大而恐怖的怪物，令人望而生畏了。",
+                "result":
+                {
+                    "global_counter+7200184":1, //成就
+                    "s1=靈感":0,
+                    "clean.s3":1,
+                    "card": [2001220,"已擁有+1"],  //    夜晚的結晶的裝備
+                },
+                "action":
+                {
+                    "event_on":5320576,  //開啓寶石收集
+                }
+            }
+        ],
+        "settlement": [
+            {
+                "guid":"d2e67055-f877-49d2-95eb-0cc95d037198",
+                "condition":
+                {
+                    "r1:智慧+靈感>=":[9,5]
+                },
+                "result_title":"",
+                "result_text": "偉大的藝術品誕生了!",
+                "result":
+                {
+                    "global_counter+7200184":1, //成就
+                    "loot.已擁有+1":6000056,
+                    "s1=靈感":0
+                },
+                "action":
+                {
+                    "event_on":5320576,  //開啓寶石收集
+                }
+            },
+            {
+                "guid":"106343b6-7002-4d1c-8724-b7057bac7c30",
+                "condition":
+                {
+                    "r1:智慧+靈感>=":[6,5]
+                },
+                "result_title":"",
+                "result_text": "令人驚歎的藝術品!",
+                "result":
+                {
+                    "global_counter+7200184":1, //成就
+                    "loot.已擁有+1":6000055,
+                    "s1=靈感":0,
+                },
+                "action":
+                {
+                    "event_on":5320576,  //開啓寶石收集
+                }
+            },
+            {
+                "guid":"6a1341cd-8094-4270-8497-1f4b2666dbef",
+                "condition":
+                {
+                    "r1:智慧+靈感>=":[3,5]
+                },
+                "result_title":"",
+                "result_text": "漂亮的飾品！",
+                "result":
+                {
+                    "global_counter+7200184":1, //成就
+                    "loot.已擁有+1":6000054,
+                    "s1=靈感":0,
+                },
+                "action":
+                {
+                    "event_on":5320576,  //開啓寶石收集
+                }
+            },
+            {
+                "guid":"d5413fbf-8fef-4249-86f3-a1571ec86773",
+                "condition":
+                {
+                    "r1:智慧+靈感>=":[1,5]
+                },
+                "result_title":"",
+                "result_text": "勉強可用的飾品。",
+                "result":
+                {
+                    "global_counter+7200184":1, //成就
+                    "loot.已擁有+1":6000053,
+                    "s1=靈感":0,
+                },
+                "action":
+                {
+                    "event_on":5320576,  //開啓寶石收集
+                }
+            },
+            {
+                "guid":"1873de39-95f6-4c59-9e86-e0a23833c59e",
+                "condition":
+                {
+                    "r1:智慧+靈感<":[1,5]
+                },
+                "result_title":"",
+                "result_text": "一無所獲，下次再接再厲",
+                "result":
+                {
+                    "s1=靈感":0
+                },
+                "action":
+                {
+                }
+            }
+        ],
+        "settlement_extre": [
+            {
+                "guid":"fcaac16f-a101-44bf-b4dd-585c01127086",
+                "condition":
+                {
+                    "s3":1,
+                    "s3.消耗品":1,
+                    "!s3.is":2000723, //非理性
+                    "!情報":1
+                },
+                "result_title":"",
+                "result_text": "你提供的製作材料並沒有用處。",
+                "result":
+                {
+                    "s3+回收":1
+                },
+                "action":
+                {
+                }
+            },
+            {
+                "guid":"770573b7-19bb-4492-9632-ab4a85fa3dd1",
+                "condition":
+                {
+                    "s3":1,
+                    "!s3.消耗品":1
+                },
+                "result_title":"",
+                "result_text": "你提供的製作材料並沒有用處。",
+                "result":
+                {
+                },
+                "action":
+                {
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"8e462631-9907-4c39-a595-3d4f1751510f",
+                "condition":
+                {
+                    "type":"char",
+                    "is":2000019 //珠寶商人
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"珠寶商人熱娜"
+            },
+            "s2":
+            {
+                "guid":"42b2023e-f202-4ef6-b3bb-78260030b126",
+                "condition":
+                {
+                    "type":"item",
+                    "cost.金幣":5
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"需要5金幣"
+            },
+            "s3":
+            {
+                "guid":"33e61aa9-a57a-46fa-bbdf-1af9e2142ef1",
+                "condition":
+                {
+                    "type":"item",
+                    "any":{
+                        "!可堆疊":1,
+                        "cost.可堆疊":1,
+                    },
+                    "!部隊":1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"特殊的製作的材料\n精美的藍紗：湛藍絲巾\n帝國之花殘卷：白銀吊墜\n殘忍的勳章：狼頭圍巾"
+            }
+        }
+    }

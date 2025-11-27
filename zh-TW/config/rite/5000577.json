@@ -1,0 +1,258 @@
+ {
+        "id": 5000577,
+        "name": "蘇丹的套子",
+        "text": "全帝國最聰明的人，至少是你能找到的，都聚集了起來，要製造一個足以騙過蘇丹的假套子。",
+        "tips": "",
+        "mapping_id":8001066,
+        "once_new":0,
+        "round_number": 3,
+        "waiting_round":0,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result":0,
+        "location": "商業區:[10,19]",
+        "icon": "rite_19",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+            "tips":["生存","智慧","隱匿","社交"],
+            "type":"normal_result"
+        },
+        "tips_text":[
+            "1.屠夫生存智慧檢定>=5點成功：進下一輪",
+            "2.工匠智慧檢定>=5點成功：進下一輪",
+            "3.助手社交隱匿檢定>=5點成功：仿製避孕套",
+            "任意檢定失敗：儀式重啓"
+        ],
+        "open_conditions": [
+        ],
+        "random_text": {
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"屠夫製造",
+                "type":"normal_result",
+                "type_tips":"你的生存和智慧為你提供了完整的骰子數量。",
+                "low_target": 5,
+                "low_target_tips": "你至少需要5點成功才能成功。"
+            },
+            "r2":{
+                "text":"工匠加工",
+                "type":"normal_result",
+                "type_tips":"你的智慧為你提供了完整的骰子數量。",
+                "low_target": 5,
+                "low_target_tips": "你至少需要5點成功才能成功。"
+            },
+            "r3":{
+                "text":"助手協助收尾",
+                "type":"normal_result",
+                "type_tips":"你的社交和隱匿為你提供了完整的骰子數量。",
+                "low_target": 5,
+                "low_target_tips": "你至少需要5點成功才能成功。"
+            }
+        },
+        "random_effect": {
+        },
+        "settlement_prior": [
+            {
+                "guid":"5d075529-cf85-46fa-b9f7-c908c71c7c62",
+                "condition": {
+                    "any":{
+                        "counter.7000530>=":1, //聖像已經被毀了
+                        "!have.2001019":1, //信物已經無了
+                        "have.2001021":1, //有君王的種子了
+                    }
+                },
+                "result_title":"",
+                "result_text": "已經沒有製作的必要了",
+                "result":
+                {
+                    "s4+回收":1,
+                    "s5+回收":1,
+                },
+                "action": {
+                }
+            }
+        ],
+        "settlement": [
+        ],
+        "settlement_extre": [
+            //--------------解決----------------------------------------
+            {
+                "guid":"7270b5e3-c019-47a1-9849-6daad5071d6f",
+                "condition": {
+                },
+                "result_title":"亂成一鍋粥",
+                "result_text": "首先你們就為了要做什麼東西大吵了一架。\n有人說，要做一個已經裝滿液體的假套子，在蘇丹銷燬它之前掉包，但這樣的東西很難藏在身上……有人說，要做一個有洞的假套子，在使用前給蘇丹掉包，這樣那些液體自然就能漏出來——但又會非常容易被蘇丹發現。還有人說，要做一種假的辣椒粉，即使把精液倒在裡面也不會造成損傷——但怎麼確定這件事呢？自己試試嘛？\n為了這些聽到就令人頭大又狗屁倒竈的東西，你們爭執不休，只能說先把這些玩意兒都造出來，然後再想辦法。",
+                "result":
+                {
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"a498c61b-cc00-4cce-9c6a-8fcb85ea97bd",
+                "condition": {
+                    "r1:s1.生存+s1.智慧+s5.生存+s5.智慧>=":[5,5]
+                },
+                "result_title":"羊成為了最無辜的犧牲者", //屠夫
+                "result_text": "首先，需要很多規整，清潔，新鮮的羊小腸……你不敢大張旗鼓地收購這種東西，只好天天在家裡吃烤全羊宴席……",
+                "result":
+                {
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"54a3c104-b8fc-4bc5-82cf-c3f524dce93d",
+                "condition": {
+                    "r1:s1.生存+s1.智慧+s5.生存+s5.智慧>=":[5,5],
+                    "r2:s2.智慧+s5.智慧>=":[5,5],
+                },
+                "result_title":"奇技淫巧", //工匠
+                "result_text": "你們磨出了與圖紙毫無差別的水晶瓶，又調配出了能夠令羊腸保持彈性的芬香精油，模仿自己能找到的最好的樣品，用最細密的絲線與縫紉手藝讓羊腸舒適貼身又密封……最後，甚至用麥粉，油和乳清調製出了和真的精液毫無差異的液體，連歡愉之館的妓女都沒能分辨出來哩！",
+                "result":
+                {
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"f84f0e69-15d7-4cb1-ad2f-905d9cff1f46",
+                "condition": {
+                    "r1:s1.生存+s1.智慧+s5.生存+s5.智慧>=":[5,5],
+                    "r2:s2.智慧+s5.智慧>=":[5,5],
+                    "r3:s3.隱匿+s3.社交+s5.隱匿+s5.社交>=":[5,5],
+                },
+                "result_title":"完善計劃", //助手
+                "result_text": "最後，你們全套的工具——仿製的液體，幾乎一模一樣的套子，儲藏它們的貼身小瓶……現在只剩下一個問題：哪隻老鼠要親自去給貓繫上鈴鐺呢？",
+                "result":
+                {
+                    "card":[2001022,"已擁有+1"]
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"69fea264-05ca-43eb-8750-ddececd8cc07",
+                "condition": {
+                    "r1:s1.生存+s1.智慧+s5.生存+s5.智慧<":[5,5]
+                },
+                "result_title":"不合規的羊腸",
+                "result_text": "要用最柔軟，最嫩的那一部分羊小腸做，而且得一開始就把羊腸用藥水處理過……否則會非常的……不適與粗糙，不要問我們是怎麼知道的。",
+                "result":
+                {
+                },
+                "action": {
+                    "rite":5000577
+                }
+            },
+            {
+                "guid":"15786c98-fc28-4cfc-9d65-33d286a02d4d",
+                "condition": {
+                    "r1:s1.生存+s1.智慧+s5.生存+s5.智慧>=":[5,5],
+                    "r2:s2.智慧+s5.智慧<":[5,5],
+                },
+                "result_title":"精密工藝",
+                "result_text": "這可以放在下面的東西！去找更細的線！再找個更好的裁縫來試試！",
+                "result":
+                {
+                },
+                "action": {
+                    "rite":5000577
+                }
+            },
+            {
+                "guid":"58e65d67-83ce-4fb7-8aa7-af9ff478e327",
+                "condition": {
+                    "r1:s1.生存+s1.智慧+s5.生存+s5.智慧>=":[5,5],
+                    "r2:s2.智慧+s5.智慧>=":[5,5],
+                    "r3:s3.隱匿+s3.社交+s5.隱匿+s5.社交<":[5,5],
+                },
+                "result_title":"我們需要一個完整的計劃",
+                "result_text": "這可是送死的買賣，做工具的人得想清楚各種情況——用它的人只有一條命，一次機會。",
+                "result":
+                {
+                },
+                "action": {
+                    "rite":5000577
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"33a9226b-2f02-4730-a04e-5511a13fb821",
+                "condition":
+                {
+                    "type": "char",
+                    "生存>=":5,
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"屠夫:生存不小於5"
+            },
+            "s2":
+            {
+                "guid":"9c123416-c98b-4992-9ece-a106cc9f59a4",
+                "condition":
+                {
+                    "type": "char",
+                    "智慧>=":5,
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"工匠:智慧不小於5"
+            },
+            "s3":
+            {
+                "guid":"29987987-fff1-485f-9b64-e3f36b94611e",
+                "condition":
+                {
+                    "type": "char",
+                    "社交>=":5,
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"助手:社交不小於5"
+            },
+            "s4":
+            {
+                "guid":"f4846322-204f-483d-bb4a-355276832030",
+                "condition":
+                {
+                    "type": "item",
+                    "cost.金幣":5
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"經費:5枚金幣"
+            },
+            "s5":
+            {
+                "guid":"98967cbd-1a08-4d53-a602-68cba15dbf9b",
+                "condition":
+                {
+                    "type": "item",
+                    "cost.消耗品":1,
+                    "!金幣":1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"消耗品"
+            }
+        }
+    }

@@ -1,0 +1,169 @@
+{
+    "id": 5002514,
+    "name": "賭馬",
+    "text": "派出自己的騎手和馬參賽，下注，如果勝利，可能會得到獎勵。失敗了就血本無歸",
+    "tips": "",
+    "mapping_id":8001205,
+    "once_new":0,
+    "round_number": 1,
+    "waiting_round":1,
+    "waiting_round_end_action":[
+        {
+            "condition": {
+
+            },
+            "result_title":"",
+            "result_text": "你錯過了這次比賽，不過不要緊，五天之後開始下一次比賽",
+            "result":
+            {
+
+            },
+            "action": {
+                "event_on":5300092 //啓動賭馬幕後
+            }
+        }
+    ],
+    "method_settlement": "",
+    "auto_begin": 0,
+    "auto_result":0,
+    "location": "野外:[1,6]",
+    "icon": "main_new/rite_1",
+    "tag_tips": [
+        "體魄",
+        "生存"
+    ],
+    "tag_tips_up":{
+        "tips":["體魄","生存"],
+        "type":"normal_result"
+    },
+    "tips_text":[
+        "依靠坐騎的體魄和騎手的生存進行檢定。" ,
+        "勝利了贏得雙倍賭注，失敗則血本無歸。",
+        "需要3點成功"
+    ],
+    "open_conditions": [
+    ],
+    "random_text":{
+        "r1":"賭馬檢定"
+    },
+    "random_text_up":{
+        "r1":{
+            "text":"賭馬檢定",
+            "type":"normal_result",
+            "type_tips":"你的生存和坐騎的體魄為你提供了完整的骰子數量。",
+            "low_target": 3,
+            "low_target_tips": "你至少需要3點成功才能獲得勝利。"
+        }
+    },
+    "settlement_prior": [
+    ],
+    "settlement": [
+        {
+            "guid":"ac9c1597-93de-4b41-9428-f6701400d7ff",
+            "condition": {
+              "r1:s1.生存+s2.體魄+s3.生存+s3.體魄>=":[3,5]
+            },
+            "result_title":"",
+            "result_text": "恭喜你獲得了勝利，獲得了雙倍賭注。",
+            "result":
+            {
+                "copy.s4":1,
+                "copy.s4":1,
+                "counter+7000052":1
+            },
+            "action": {
+                "event_on":5300092 //啓動賭馬幕後
+            }
+        },
+        {
+            "guid":"fe6acdb7-5970-43f8-91f5-90451ae5961c",
+            "condition": {
+                "r1:s1.生存+s2.體魄+s3.生存+s3.體魄<":[3,5]
+            },
+            "result_title":"",
+            "result_text": "雖然你失敗了，丟失了全部賭注，但你下次可以贏回來。",
+            "result":
+            {
+
+            },
+            "action": {
+                "event_on":5300092 //啓動賭馬幕後
+            }
+        }
+    ],
+    "settlement_extre": [
+
+    ],
+    "cards_slot":
+    {
+        "s1":
+        {
+            "guid":"90a2fb5a-da38-4b54-91f4-edfd1301bf34",
+            "condition":
+            {
+                "type":"char"
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":0,
+            "is_enemy":0,
+            "text":"派遣生存屬性較高的角色前往參賽"
+        },
+    "s2":
+        {
+            "guid":"f119b754-b63c-4be4-8168-6ae4635bef5e",
+            "condition":
+            {
+                "type": "item",
+                "坐騎":1
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":0,
+            "is_enemy":0,
+            "text":"出賽的坐騎"
+        },
+    "s3":
+        {
+            "guid":"2d0f48e6-52a0-4db4-a5f9-f8fca159f001",
+            "condition":
+            {
+                "type":"item",
+                "cost.消耗品=":1,
+                        "!金幣":1
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":0,
+            "text":"有些東西也許能在比賽中派上用場"
+        },
+    "s4":
+        {
+            "guid":"c0595833-2673-4778-9370-63bc89a4079d",
+            "condition":
+            {
+                "type":"item",
+                "cost.金幣":[1,6]
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":0,
+            "is_enemy":0,
+            "text":"你所下的賭注，最多6金幣"
+        },
+    "s5":
+        {
+            "guid":"a8a12be8-9f2c-471e-9a1b-17a45f1e57a4",
+            "condition":
+            {
+                "is":2000340
+            },
+            "open_adsorb":1,
+            "is_key":0,
+            "is_empty":0,
+            "is_enemy":1,
+            "text":"你的對手"
+        }
+    }
+}

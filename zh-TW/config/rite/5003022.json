@@ -1,0 +1,158 @@
+ {
+        "id": 5003022,
+        "name": "出賣苦力",
+        "text": "市場上時不時就會有這樣的工作，即使並不高貴，但如果你需要更多硬幣來玩蘇丹的遊戲的話……",
+        "tips": "",
+        "mapping_id":8001131,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":1,
+        "waiting_round_end_action":[
+            {
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "",
+                "result":
+                {
+                    "counter=7000115":0 //限制同一時間被激活的次數
+                },
+                "action": {
+                }
+            }
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 1,
+        "location": "商業區:[10,19]",
+        "icon": "rite_19",
+        "tag_tips": [
+            "體魄"
+        ],
+        "tag_tips_up":{
+            "tips":["體魄"],
+            "type":"normal_result"
+        },
+        "tips_text":[
+            "成功數越多，收穫越大。",
+            "失敗並不會帶來負面效果",
+            ">=5點成功：獲得4金幣",
+            ">=3點成功：獲得3金幣",
+            ">=1點成功：獲得2金幣",
+            "0點成功：獲得1金幣"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+            "r1":"汗水滴落……"
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"喜聞樂見的檢定時間",
+                "type":"normal_result",
+                "type_tips":"你的體魄為你提供完整的骰子數量。",
+                "low_target": 1,
+                "low_target_tips": "成功數越多，收益越大。"
+            }
+
+        },
+        "settlement_prior": [
+
+        ],
+        "settlement": [
+            {
+                "guid":"10b9901f-5abe-4f85-9786-cd6e8cf12e1c",
+                "condition": {
+                    "r1:體魄>=":[5,5]
+                },
+                "result_title":"",
+                "result_text": "你賺取了一些辛苦錢。",
+                "result":
+                {
+                    "counter=7000115":0, //限制同一時間被激活的次數
+                    "金幣": 4
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"4bbdb133-0215-4edf-aa94-f0604da9dccd",
+                "condition": {
+                    "r1:體魄>=":[3,5]
+                },
+                "result_title":"",
+                "result_text": "你賺取了一些辛苦錢。",
+                "result":
+                {
+                    "counter=7000115":0, //限制同一時間被激活的次數
+                    "金幣": 3
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"5728c1ca-dcf2-479a-8a78-45f5d925b488",
+                "condition": {
+                    "r1:體魄>=":[1,5]
+                },
+                "result_title":"",
+                "result_text": "你賺取了一些辛苦錢。",
+                "result":
+                {
+                    "counter=7000115":0, //限制同一時間被激活的次數
+                    "金幣": 2
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"39ce091c-fbc9-414b-aac7-fc43a7fac8fe",
+                "condition": {
+                    "r1:體魄<":[1,5]
+                },
+                "result_title":"",
+                "result_text": "你賺取了一些辛苦錢。",
+                "result":
+                {
+                    "counter=7000115":0, //限制同一時間被激活的次數
+                    "金幣": 1
+                },
+                "action": {
+                }
+            }
+        ],
+        "settlement_extre": [
+
+        ],
+        "cards_slot":
+        {
+            "s1":
+                {
+                    "guid":"2019d9fa-52b4-4f5e-bfb9-91b0d5dbf3fc",
+                    "condition":
+                    {
+                        "type":"char"
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0, // 不能為空
+                    "is_enemy":0,
+                    "text":"需要一位強壯的人"
+                },
+            "s2":
+                {
+                    "guid":"0a09e924-020b-4c2c-b8a2-faeee8458c05",
+                    "condition":
+                    {
+                        "type":"item",
+                        "cost.消耗品=":1,
+                        "!金幣":1
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":1,
+                    "is_enemy":0,
+                    "text":"任何你覺得有幫助的東西"
+                }
+        }
+    }

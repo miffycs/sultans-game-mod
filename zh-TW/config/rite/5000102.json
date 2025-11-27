@@ -1,0 +1,181 @@
+ {
+        "id": 5000102,
+        "name": "舞樂之宴",
+        "text": "常常宴請同僚與朋友有很多好處，首先能夠理所當然地折斷一張奢靡卡，其次美麗的舞姬能幫你打聽很多意想不到的消息……",
+        "tips": "",
+        "mapping_id":8001213,
+        "once_new":1,
+        "round_number": 1,
+        "waiting_round":1,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result":0,
+        "location": "自宅:[2,12]",
+        "icon": "rite_12",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "相似的宴會只能折斷一次奢靡卡，除非你能夠提升舞姬的品級",
+            "開啓白銀品級的宴會需要5點權勢，黃金品級的則需10點",
+            "隨機獲得：3張與當前宴會品級相同的情報卡",
+            "固定獲得：惡名-1 權勢+1"
+        ],
+        "open_conditions": [
+            {
+                "condition": {
+                    "any":{
+                        "s1.rare=":2,
+                        "all":{
+                            "s1.rare=":3,
+                            "counter.7100003>=":5
+                        },
+                        "all":{
+                            "s1.rare=":4,
+                            "counter.7100003>=":10
+                        }
+                    }
+                },
+                "tips": "你的權勢不足以舉辦當前品級的宴會。"
+            }
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"f83aec30-eeb9-41c8-9ea1-d43d4d68a2cf",
+                "condition":
+                {
+                    "s1.rare=":2
+                },
+                "result_title":"",
+                "result_text": "阿圖娜爾的初次亮相就驚豔了所有的賓客。他們迷醉地眯着眼，品味着她的美麗容貌和婀娜身姿，開着肆無忌憚的玩笑。而阿圖娜爾只是羞澀地垂首微笑，輕聲細語地應和着。\n一切都進行得非常順利，如此美色之下，人們願意忘記你的一些不當言行，還在不經意之間吐露出了許多你原本不知道的東西。",
+                "result":
+                {
+                    "loot":6000044,
+                    "loot":6000044,
+                    "loot":6000044,
+                    "counter-7100002":1,
+                    "counter+7100003":1,
+                    "clean.s2":1,
+                    "counter+7000079":1
+                },
+                "action":
+                {
+                }
+            },
+            {
+                "guid":"9f1a109d-d862-49d0-bcd6-908a9a12071f",
+                "condition":
+                {
+                    "s1.rare=":3
+                },
+                "result_title":"",
+                "result_text": "阿圖娜爾比以前更美了，這不是歡場上過目即忘的美，它更端莊，更優雅，更靜水深流。人們對她的態度變得更親暱，也更客氣，彷彿突然間頓悟，她不是一介可以隨意賞玩的舞姬，而是雖沒有頭銜，卻依然被你寵愛的，同父異母的妹妹。",
+                "result":
+                {
+                    "loot":6000045,
+                    "loot":6000045,
+                    "loot":6000045,
+                    "counter-7100002":1,
+                    "counter+7100003":1,
+                    "clean.s2":1,
+                    "counter+7000079":1
+                },
+                "action":
+                {
+                }
+            },
+            {
+                "guid":"dbce5c8e-c322-4207-897c-419ceff1c037",
+                "condition":
+                {
+                    "s1.rare=":4
+                },
+                "result_title":"",
+                "result_text": "阿圖娜爾只在壓軸時跳了一支舞，卻收穫了整場最熱烈的掌聲。她落落大方地收下了這些追捧和偏愛，現在，會下意識躲避對方目光的人不再是她，而是在座的客人們。多有趣呀，他們不敢再審視和調侃她的面容，生怕不小心窺見了她和你的相似之處。",
+                "result":
+                {
+                    "loot":6000057,
+                    "loot":6000057,
+                    "loot":6000057,
+                    "counter-7100002":1,
+                    "counter+7100003":1,
+                    "clean.s2":1,
+                    "counter+7000079":1
+                },
+                "action":
+                {
+                }
+            }
+        ],
+        "settlement_extre": [
+
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"34ffca88-00bb-408e-8d1a-509a10f7040d",
+                "condition":
+                {
+                    "type":"char",
+                    "is":2000129 //舞姬
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"阿圖娜爾準備好為客人們獻舞了"
+            },
+            "s2":
+            {
+                "guid":"7f01d985-5638-4e1e-a047-8659c9bd6ad6",
+                "condition":
+                {
+                    "type":"sudan",
+                    "奢靡":1,
+                    "f:rare-s1.rare<=":0
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"你可以藉機折斷一張和舞姬品級相符的奢靡卡"
+            },
+            "s3":
+            {
+                "guid":"87f6a3f5-e308-4c4e-9b8e-6fe0cf5e3658",
+                "condition":
+                {
+                    "type":"item",
+                    "any":{
+                        "all":{
+                            "s1.rare=":2,
+                            "cost.金幣":5
+                        },
+                        "all":{
+                            "s1.rare=":3,
+                            "cost.金幣":8
+                        },
+                        "all":{
+                            "s1.rare=":4,
+                            "cost.金幣":15
+                        }
+                    }
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"青銅品級的宴會需要花費5枚金幣，白銀品級的需要8枚金幣，黃金品級則需15枚金幣"
+            }
+        }
+    }

@@ -1,0 +1,248 @@
+ {
+        "id": 5008091,
+        "name": "有人沒吃到",
+        "text": "舍館裡擠滿了人！好多根本不是來幫你做事的人都混在領飯的隊伍裡，端着碗想嚐嚐哈比卜的手藝。他們很快就被排隊排得心浮氣躁的人們揪了出來，爭吵迅速升級，一場毆鬥一觸即發！",
+        "tips": "",
+        "mapping_id":8001127,
+        "once_new":0,
+        "round_number": 1, //立即執行
+        "waiting_round":5,
+        "waiting_round_end_action":[
+            {
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "",
+                "result":
+                {
+                },
+                "action": {
+                    "counter-7100004":2, //俠名-2
+                    "prompt":{
+                        "id":"5008091_prompt_01",
+                        "text":"由於你的疏忽，大家的不滿愈演愈烈，最後你的舍館簡直就像被人砸了一樣，真是一場無妄之災。",
+                        "icon":"cards/2000001"
+                    }
+                }
+            }
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0,
+        "location": "商業區:[10,19]",
+        "icon": "rite_18",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+            "tips":["體魄","魅力"],
+            "type":"normal_result"
+        },
+        "tips_text":[
+            "3金幣：無獎勵",
+            "大餐：俠名+1 體魄+1",
+            "只派了貴族：受傷 俠名-2",
+            "只派了非貴族 魅力體魄檢定>=3點：俠名+1",
+            "只派了非貴族 魅力體魄檢定<3點：俠名-1",
+            "儀式過期：俠名-2"
+        ],
+        "open_conditions": [
+        ],
+        "random_text": {
+            "r1":"你的追隨者需要檢定魅力和體魄來控制住場面"
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"都給我住手！",
+                "type":"normal_result",
+                "type_tips":"你的魅力和體魄為你提供了完整的骰子數量。",
+                "low_target":3,
+                "low_target_tips": "你至少需要3點成功才能控制場面。"
+            }
+        },
+        "settlement_prior": [
+            {
+                "guid":"062bbd50-b422-40e1-bef4-c0643daaebd0",
+                "condition": {
+
+
+                    "s2.金幣=":3
+
+                },
+                "result_title":"管夠",
+                "result_text": "你拿出了一點小錢——當然，在黑街居民的眼裡，已經是一筆難以想象的鉅款——你向他們承諾，好好排隊的人，餐食管夠，鬧事的人，誰也別想再踏進你的舍館。\n大家就這樣迅速地偃旗息鼓，端碗等飯了。",
+                "result":
+                {
+
+                },
+                "action": {
+
+                    "card":2001004,
+                    "delay": {  //延遲3回合執行
+                        "id":50080911,
+                        "round": 3,
+                        "rite":5008092 //貴族也想吃
+                    }
+
+                }
+            },
+            {
+                "guid":"389e5390-325b-473a-aead-904a8c7dcb7c",
+                "condition": {
+
+
+                    "s2.大餐":1  //大餐
+
+                },
+                "result_title":"真香",
+                "result_text": "你讓哈比卜端上了雙倍的飯，又告誡大家不排隊、敢鬧事的人一口都吃不上。於是，在飯菜的香味裡，所有人都忘記了此前的怒火和憤怒。",
+                "result":
+                {
+                    "clean.s2":1,
+                    "counter+7100004":1, //俠名+1
+                    "s3+體魄":1
+                },
+                "action": {
+
+                    "card":2001004,
+                    "delay": {  //延遲3回合執行
+                        "id":50080912,
+                        "round": 3,
+                        "rite":5008092 //貴族也想吃
+                    }
+                }
+            }
+        ],
+        "settlement": [
+            {
+                "guid":"460a757c-d630-4bb2-9a72-1e3d7c525147",
+                "condition": {
+
+
+                    "s3.貴族":1,
+                    "!s2":1     //  沒放錢,沒放飯,派了貴族
+
+                },
+                "result_title":"打的就是你",
+                "result_text": "[s3.name]說的話沒有一個人在聽，飢腸轆轆的人們被[s3.gender]身上漂亮的首飾、健康的臉色激怒，於是，所有人的拳頭都揮向了[s3.gender]……\n[s3.name]雙拳難敵四手，雖說努力從圍毆中逃了出來，但姿勢終究頗有損威名……",
+                "result":
+                {
+
+                "s3+equip":2000098,  //受傷
+                "counter-7100004":2 //俠名-2
+
+
+                },
+                "action": {
+
+                    "card":2001004,
+                    "delay": {  //延遲3回合執行
+                        "id":50080913,
+                        "round": 3,
+                        "rite":5008092 //貴族也想吃
+                    }
+                }
+            },
+            {
+                "guid":"9bd1641c-bcda-4306-b6a5-1ecb4fbf8361",
+                "condition": {
+
+
+                    "!s3.貴族":1,
+                    "!s2":1,
+                    "r1:魅力+體魄>=":[3,5]     //  沒放錢,沒放飯,派了非貴族，檢定成功
+                },
+                "result_title":"不敢動，根本不敢動",
+                "result_text": "[s3.name]一聲怒喝，鎮住了整個場子。在斗大的拳頭的威懾下，人們迅速找回了理智，鵪鶉似的縮起脖子，乖乖排起隊來……",
+                "result":
+                {
+                    "counter+7100004":1 //俠名+1
+                },
+                "action": {
+
+                    "card":2001004,
+                    "delay": {  //延遲3回合執行
+                    "id":50080914,
+                    "round": 3,
+                    "rite":5008092 //貴族也想吃
+                }
+                }
+            },
+            {
+                "guid":"ed8069ad-9888-4df5-97cf-a863b370f3af",
+                "condition": {
+
+                    "!s3.貴族":1,
+                    "!s2":1,                //  沒放錢,沒放飯,派了非貴族，檢定失敗
+                    "r1:魅力+體魄<":[3,5]
+
+                },
+                "result_title":"天大地大吃飯最大",
+                "result_text": "[s3.name]維持秩序的聲音被淹沒在無盡的吵嚷和髒話裡，無人在意。雞飛狗跳的一天之後，你的舍館就像剛被人砸了一樣。",
+                "result":
+                {
+                    "counter-7100004":1 //俠名-1
+
+                },
+                "action": {
+
+                }
+            }
+
+        ],
+        "settlement_extre": [
+
+
+
+
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"8ae8372d-aa97-4ea8-8f70-71dc3079e94a",
+                "condition":
+                {
+                    "type":"char",
+                    "is":2000931
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"鬧事的黑街的居民們"
+            },
+            "s2":
+            {
+                "guid":"e9192e67-7580-41ed-9f4c-50453b804f5a",
+                "condition":
+                {
+                    "type":"item",
+                    "any":{
+                    "cost.金幣":3,
+                    "大餐": 1
+                    }
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"更簡單的解決之道：一頓大餐，或者3枚金幣"
+            },
+            "s3":
+            {
+                "guid":"0b436787-6e56-4e43-94fc-612e5bdd5a7a",
+                "condition":
+                {
+
+                    "type":"char",
+                    "!主角":1
+
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"你必須派人去鎮住場子"
+            }
+        }
+    }

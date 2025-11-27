@@ -1,0 +1,158 @@
+ {
+        "id": 5003025,
+        "name": "酒館拳鬥",
+        "text": "雖然場地骯髒又低俗，但很多貴族都會來看錶演。如果足夠瘋狂或者愚蠢，親自參與也不是不可以。",
+        "tips": "",
+        "mapping_id":8001153,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":1,
+        "waiting_round_end_action":[
+            {
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "",
+                "result":
+                {
+                    "counter=7000115":0 //限制同一時間被激活的次數
+                },
+                "action": {
+                }
+            }
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 1,
+        "location": "商業區:[10,19]",
+        "icon": "rite_17",
+        "tag_tips": [
+            "戰鬥"
+        ],
+        "tag_tips_up":{
+            "tips":["戰鬥"],
+            "type":"normal_result"
+        },
+        "tips_text":[
+            "成功數越多，收穫越大。",
+            "失敗可能會受傷。",
+            ">=5點成功：金幣+3",
+            ">=3點成功：金幣+2",
+            ">=1點成功：金幣+1",
+            "0點成功：受傷"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+            "r1":"比賽開始了……"
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"比賽開始了",
+                "type":"normal_result",
+                "type_tips":"你的戰鬥為你提供完整的骰子數量。",
+                "low_target": 1,
+                "low_target_tips": "你至少需要1點成功才能有收益，成功數越多，收益越大。"
+            }
+
+        },
+        "settlement_prior": [
+
+        ],
+        "settlement": [
+            {
+                "guid":"18c32edb-c2c0-44f6-b896-492143b47770",
+                "condition": {
+                    "r1:戰鬥>=":[5,5]
+                },
+                "result_title":"",
+                "result_text": "一場會在酒杯與吊燈之間傳說許久的勝利。",
+                "result":
+                {
+                    "counter=7000115":0, //限制同一時間被激活的次數
+                    "金幣": 3
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"ba144b83-0b43-4750-ab01-b041df35faed",
+                "condition": {
+                    "r1:戰鬥>=":[3,5]
+                },
+                "result_title":"",
+                "result_text": "精彩的戰鬥，所有觀眾都覺得值回了票價，而且你沒有被擊倒。",
+                "result":
+                {
+                    "counter=7000115":0, //限制同一時間被激活的次數
+                    "金幣": 2
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"f6a90916-0950-4440-afc1-a8d3c84c77f4",
+                "condition": {
+                    "r1:戰鬥>=":[1,5]
+                },
+                "result_title":"",
+                "result_text": "作為失敗的小丑，[s1.name]成功地娛樂了大家。",
+                "result":
+                {
+                    "counter=7000115":0, //限制同一時間被激活的次數
+                    "金幣": 1
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"a8aa436c-b376-4b11-a311-6d8287470d22",
+                "condition": {
+                    "r1:戰鬥<":[1,5]
+                },
+                "result_title":"",
+                "result_text": "流血也是娛樂觀眾的一種方式……但並沒有報酬。",
+                "result":
+                {
+                    "counter=7000115":0, //限制同一時間被激活的次數
+                    "s1+equip": 2000098 //受傷
+                },
+                "action": {
+                }
+            }
+        ],
+        "settlement_extre": [
+
+        ],
+        "cards_slot":
+        {
+            "s1":
+                {
+                    "guid":"b26085d1-c5ff-44ef-a634-6bfe957b696f",
+                    "condition":
+                    {
+                        "type":"char"
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0, // 不能為空
+                    "is_enemy":0,
+                    "text":"需要一位身經百戰的人"
+                },
+            "s2":
+                {
+                    "guid":"e967d452-6633-4f9d-bae6-96944ba8bb9b",
+                    "condition":
+                    {
+                        "type":"item",
+                        "cost.消耗品=":1,
+                        "!金幣":1
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":1,
+                    "is_enemy":0,
+                    "text":"有些東西能讓你強大。"
+                }
+        }
+    }

@@ -1,0 +1,87 @@
+ {
+        "id": 5002034,
+        "name": "昇華",
+        "text": "夏瑪是那片領地合法的繼承人了——即使她曾是一名妓女，即使她有一副畸形的身軀、從未被父親承認——現在，不光是你如此認為，天底下所有人都不得不承認這一點了。",
+        "tips": "",
+        "mapping_id":8001008,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":0,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 1,
+        "auto_result": 0,
+        "location": "宮廷:[2,6]",
+        "icon": "rite_22",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "夏瑪升品質 支持+3 金貓戰士雕像 權勢+3"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+        ],
+        "settlement_extre": [
+            {
+                "guid":"5633e2d8-723e-45b7-b10e-9e83e40fa481",
+                "condition": {
+                },
+                "result_title":"夏瑪不得不回到她的領地去了",
+                "result_text": "再次見面的時候，你發現，夏瑪一點也沒有變，倒不如說，一直以來，她比任何一名貴族都溫和有禮、舉止妥帖。\n“謝謝您為我做的一切……說真的，我從沒想過，會有人這樣對我……”她柔情脈脈朝你微笑着，說到這裡，又微微一嘆，過了一會兒才接着說道：“我也從未想過，我再次踏上那片土地，將會是以領主的身份，離開這裡，竟然會讓我這樣不捨……命運還真是奇怪呢，[player.name]。”",
+                "result":
+                {
+                    "s1.uprare":1,
+                    "s1=圖片":1,  //夏瑪替換立繪
+                    "s1-縱慾的痕跡":1,
+                    "s1+貴族":1,
+                    "s1-妓女":1,
+                    "s1=反對":0,
+                    "s1+支持":3,
+                    "counter+7000419":1, //夏瑪贖身計數器
+                    "global_counter=7200164":1 //成就
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"f190ea90-99c1-47b6-91da-725fce2f94d3",
+                "condition": {
+                },
+                "result_title":"請收下吧",
+                "result_text": "夏瑪從懷裡拿出一枚小小的黃金雕像，放在你的手心：“它很可愛，也很有趣，是不是？這是我的祕密還未被發現之前，母親送給我的小玩意兒。這麼多年來，它一直陪伴着我——我以為那是愛呢！”\n她望着你，微笑道：“現在，我不需要它提醒了。我得到了更多、更多更多的、真正的愛。”",
+                "result":
+                {
+                    "card":[2000402,"已擁有+1"], //金貓奇珍
+                    "counter+7100003": 3  //權勢+3
+                },
+                "action": {
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+                {
+                    "guid":"1f79ccb5-a8ff-45a9-aa26-6b4904f372b3",
+                    "condition":
+                    {
+                        "is":2000082
+                    },
+                    "open_adsorb":1,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"夏瑪即將走馬上任"
+                }
+        }
+    }

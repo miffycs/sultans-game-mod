@@ -1,0 +1,86 @@
+ {
+        "id": 5000635,
+        "name": "少女審視自己",
+        "text": "阿迪萊在審視自己的成長……",
+        "tips": "",
+        "mapping_id":8001008,
+        "once_new":0,
+        "round_number": 0,
+        "waiting_round":0,
+        "waiting_round_end_action":[ //儀式沒有處理，自動關閉後
+        ],
+        "method_settlement": "",
+        "auto_begin": 1,
+        "auto_result": 0, //自動執行
+        "location": "上城區:[7,12]",
+        "icon": "rite_8",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "如果你沒有讓她經歷足夠多的戰鬥，她將會離開你",
+            "戰鬥的痕跡>=2：戰鬥+1 體魄+1"
+        ],
+        "open_conditions": [
+        ],
+        "random_text": {
+        },
+        "random_text_up":{
+        },
+        "random_effect": {
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"44d39958-665a-4ee4-8bf8-2f8ca9fa48df",
+                "condition": {
+                    "s1.戰鬥的痕跡<":2
+                },
+                "result_title":"她很失望",
+                "result_text": "本來，她期待能夠在你這裡得到更多戰鬥的機會，但看起來她並沒有被當做重要的戰士來使用……於是她悄然離開了你，離開了這座城市，前往遠方尋找冒險。",
+                "result":
+                {
+                    "counter-7000166":1,  //阿迪萊追隨者計數器-1
+                    "clean.s1":1
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"37be2797-0c16-4531-8d72-7a00895e752d",
+                "condition": {
+                    "s1.戰鬥的痕跡>=":2
+                },
+                "result_title":"她很滿意",
+                "result_text": "和你一起戰鬥是個正確的選擇，她正走在偉大戰士的道路上！",
+                "result":
+                {
+                    "s1+戰鬥":1,
+                    "s1+體魄":1
+                },
+                "action": {
+                    "event_on":5300125
+                }
+            }
+        ],
+        "settlement_extre": [
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"a0fda992-0ef1-47bd-adb5-a5558b583a2d",
+                "condition":
+                {
+                    "is":2000061
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"阿迪萊審視着自己"
+            }
+        }
+    }

@@ -1,0 +1,123 @@
+{
+    "id": 5000789,
+    "name": "紡織教室",
+    "text": "哈布娜重新燃起了希望，決心開辦一間紡織教室，傳授自己非凡的技藝。但一人之力終究有限，你可以幫幫她。",
+    "tips": "",
+    "mapping_id":8001276,
+    "once_new":0,
+    "round_number": 5,
+    "waiting_round":0,
+    "waiting_round_end_action":[
+
+    ],
+    "method_settlement": "",
+    "auto_begin": 0,
+    "auto_result":0,
+    "location": "上城區:[7,12]",
+    "icon": "rite_12",
+    "tag_tips": [
+
+    ],
+    "tag_tips_up":{
+
+    },
+    "tips_text":[
+        "操辦起來還是需要一位盟友的幫助。",
+        "嫺熟>=2：觸發藍巾儀式",
+        "放追隨者：金幣+7 哈布娜嫺熟+1 循環此儀式",
+        "放奈布哈尼額外獲得：金幣+3"
+    ],
+    "open_conditions": [
+    ],
+    "random_text": {
+
+    },
+    "random_text_up":{
+
+    },
+    "random_effect": {
+    },
+    "settlement_prior":
+    [
+
+    ],
+    "settlement": [
+        {
+            "guid":"1f08c17d-2c6c-401d-8396-69f047b0b276",
+            "condition": {
+                "counter.7000329>=":2, //嫺熟到了2
+                "counter.7000427<":1 //藍巾軍未觸發過
+            },
+            "result_text": "越來越多的女人來到哈布娜的紡織間裡，她們技藝越來越嫺熟，織出來的紗越來越精美。她們還會把一些織壞的試驗品，或者沒法拿出去賣的邊角料能用的部分剪成細細的長條，纏在自己腰上、辮進自己的辮子裡。她們能輕易認出誰是自己共同學習的姐妹，人們也輕易地就能認出，她們有着怎樣不凡的手藝。",
+            "result":
+            {
+
+            },
+            "action": {
+                "rite":5000790
+            }
+        },
+        {
+            "guid":"6681c0b8-95d1-4e25-8de4-f2e8faa58a30",
+            "condition": {
+
+            },
+            "result_text": "在[s2.name]的協助下，很多猶豫不決、不知道這是不是騙局的女孩邁進了紡織間的門檻。\n哈布娜將自己所學所得毫無保留地傾囊相授，那些女孩們拼命地學啊、織啊，你親眼看見這間教室流出的布匹變得精細、變得工整、變得暗蘊流光，那美麗的光澤，就像人們總是想抓住又抓不住的自由和希望。",
+            "result":
+            {
+                "coin":7,
+                "counter+7000329":1 //嫺熟計數器+1
+            },
+            "action": {
+                "rite":5000789
+            }
+        }
+    ],
+    "settlement_extre": [
+        {
+            "guid":"f78f91e5-21ff-4c2c-b4fa-78652690a48c",
+            "condition": {
+                "s2.is":2000064 //s2是奈布哈尼
+            },
+            "result_text": "奈布哈尼總有辦法用這些繽紛的布料將自己打扮得風流倜儻，雖然是那張英俊的臉起到了絕大部分的作用，但貴族們才不管這個哩，他們依然爭相效仿，於是，落在你錢袋裡的金子也變多了。",
+            "result":
+            {
+                "coin":3
+            },
+            "action": {
+
+            }
+        }
+
+    ],
+    "cards_slot":
+    {
+        "s1":
+        {
+            "guid":"9c4dc3fd-d2b5-484a-9d8f-db5681855baa",
+            "condition":
+            {
+                "is": 2000773
+            },
+            "open_adsorb":1,
+            "is_key":0,
+            "is_empty":0,
+            "is_enemy":1,
+            "text":"哈布娜"
+        },
+        "s2":
+        {
+            "guid":"a5f4917e-aa8a-4289-9476-52fabca87a7d",
+            "condition":
+            {
+                "type":"char",
+                "智慧>=":4
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":0,
+            "is_enemy":0,
+            "text":"一位智慧不小於4的盟友"
+        }
+    }
+}

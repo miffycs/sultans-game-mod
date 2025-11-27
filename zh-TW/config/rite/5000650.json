@@ -1,0 +1,142 @@
+ {
+        "id": 5000650,
+        "name": "虛榮作祟",
+        "text": "娜依拉的虛榮心與她的魅力一樣享譽宮廷。她送信來暗示你，可以對她使用一張蘇丹卡……這樣她就可以再次成為宮廷話題的中心——而你當然也會獲得無上的快樂。",
+        "tips": "",
+        "mapping_id":8001180,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":7,
+        "waiting_round_end_action":[
+            {
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "",
+                "result":
+                {
+                    "s1=支持":0,
+                    "s1+反對":5,
+                    "counter+7000058":1
+                },
+                "action": {
+                    "prompt": {
+                        "id": "prompt_5000650_01",
+                        "text": "你的無視徹底激怒了她，據說，她一邊喊着你的名字，一邊殺死了兩個男奴泄憤。",
+                        "icon":"cards/2000055"
+                    }
+                }
+            }
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0, //自動執行
+        "location": "上城區:[7,12]",
+        "icon": "rite_12",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "她顯然認為你只有與她縱慾這一個選擇，但你知道並非如此",
+            "縱慾線：激情+1 支持+1 妻子的不滿",
+            "殺戮線：娜依拉死亡",
+            "儀式過期：娜依拉反對+5"
+        ],
+        "open_conditions": [
+        ],
+        "random_text": {
+        },
+        "random_text_up":{
+        },
+        "random_effect": {
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"7d2a4626-a1b5-401a-bf18-b79a030a7dbf",
+                "condition": {
+                    "s3.殺戮":1
+                },
+                "result_title":"",
+                "result_text": "當你拿出亮閃閃的蘇丹卡後，她興奮地抓過來，欣賞着那魔力流動的圖案。\n為什麼上面畫着一個自殺的女人？她一邊提問，一邊脫下外衣，露出被金絲與刺繡裝飾的身體。\n因為性與死是連接在一起的，你這樣解釋道，摩挲着她的雙乳，然後把匕首送進了心臟的位置。",
+                "result":
+                {
+                    "clean.s1":1,
+                    "clean.s3":1
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"dc04c314-26a7-4268-a008-243d46a1c178",
+                "condition": {
+                    "s3.縱慾":1
+                },
+                "result_title":"",
+                "result_text": "她迫不及待地把蘇丹卡和你的手一起拉到了兩腿之間，\n和傳說中一樣,她的激情如海潮與暗礁一樣澎湃，複雜，令人難以脫身……\n第二天，全城的人就知道了你和她的故事，她甚至親自在宮廷上讚美這卡牌帶來的無盡激情與快感。蘇丹很喜歡這個故事，但你的妻子就不太滿意了。",
+                "result":
+                {
+                    "s1+激情":1,
+                    "clean.s3":1,
+                    "s1+縱慾的痕跡":1,
+                    "card":2000083,
+                    "s1+支持":1
+                },
+                "action": {
+                    "event_on":5300115 //激活後續儀式
+                }
+            }
+        ],
+        "settlement_extre": [
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"d8dff0ec-1f84-46a0-81ab-c2ce03777978",
+                "condition":
+                {
+                    "is":2000055
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"她在透明的絲綢床幔之後等待着你"
+            },
+            "s2":
+            {
+                "guid":"c24d1a65-2558-479b-b80e-690fa1c205a0",
+                "condition":
+                {
+                    "主角":1,
+                    "type":"char"
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"你必須親自前往"
+            },
+            "s3":
+            {
+                "guid":"31247e0d-ca87-4939-a50a-483fbbd86888",
+                "condition":
+                {
+                    "type":"sudan",
+                    "f:rare-s1.rare<=":0,
+                    "any":{
+                        "縱慾":1,
+                        "殺戮":1
+                    }
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"縱慾或者……殺戮"
+            }
+        }
+    }

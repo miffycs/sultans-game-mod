@@ -1,0 +1,91 @@
+ {
+        "id": 5008101,
+        "name": "冷淡的消遣",
+        "text": "最近，妻子對你相當不滿。你能感覺到那種冷冷的怒意，而你卻沒能及時的取悅她。",
+        "tips": "",
+        "mapping_id":8001077,
+        "once_new":0,
+        "round_number": 1, //立即執行
+        "waiting_round":0,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 1,  //自動執行
+        "auto_result": 0,
+        "location": "自宅:[2,12]",
+        "icon": "rite_18",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+
+        ],
+        "settlement_extre": [
+            {
+                "guid":"3c421e53-3cdb-4224-8ed9-99123570d7c3",
+                "condition": {
+
+
+                },
+                "result_title":"這天，梅姬很晚才回來",
+                "result_text": "你問她去哪兒了，她卻當你不存在，徑自從你身邊走了過去。\n她已經學會了無視你，彷彿這樣就不必面對你們之間的問題，彷彿那些橫亙在你們之間的隔閡便也可以當做不存在一般。\n你從她身上聞到了淡淡的藏紅花的香氣……大概是去舍館吃飯了吧？最近舍館在哈比卜的運作下一切順利，確實有不少貴婦喜歡去那裡消遣。\n應該沒問題……吧？",
+                "result":
+                {
+                    "clean.s1":1,
+                    "s2+出軌":1  //標識妻子是否出軌了
+                },
+                "action": {
+                    "counter+7000402":1, //標識妻子出軌開始，以及記錄出軌次數+1
+                    "delay": {  //延遲2回合執行
+                    "id":50081011,
+                    "round": 2,
+                    "event_on":5321105 //和顏悅色的哈比卜
+                }
+                }
+            }
+
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"f21f3736-1bb0-4bec-8ca4-61417d945bcf",
+                "condition":
+                {
+                    "type":"item",
+                    "is":2000083
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"妻子的不滿"
+            },
+            "s2":
+            {
+                "guid":"0cb01903-7119-4278-9b22-c54734b52513",
+                "condition":
+                {
+                    "type":"char",
+                    "妻子":1
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"冷淡的梅姬"
+            }
+        }
+    }

@@ -1,0 +1,237 @@
+{
+    "id": 5008006,
+    "name": "鼓勵",
+    "text": "最近，你的名聲在王都越來越響了，需要你處理的事情、需要你見的人都越來越多，而法拉傑自然也幫了越來越多的忙。有時候，當他向你彙報今日事務之後，會用一種期待的眼神看着你……",
+    "mapping_id":8001079,
+    "tips": "",
+    "once_new":0,
+    "round_number": 1,
+    "waiting_round":3,
+    "waiting_round_end_action":[
+    ],
+    "method_settlement": "",
+    "auto_begin": 0,
+    "auto_result":0,
+    "location": "自宅:[2,12]",
+    "icon": "rite_16",
+    "tag_tips": [
+    ],
+    "tag_tips_up":{},
+    "tips_text":[
+        "法拉傑渴望得到你的肯定",
+        "你可以選擇誇讚他的不同優點",
+        "此事件可以妻子主角一起去"
+    ],
+    "open_conditions": [
+        {
+            "condition": {
+                    "主角=":1
+            },
+            "tips": "法拉傑渴望得到你的肯定——你的。"
+        }
+
+    ],
+    "random_text":{
+
+    },
+    "random_text_up":{},
+    "settlement_prior": [],
+    "settlement": [],
+    "settlement_extre": [
+        {
+            "guid":"1b93ef50-3fd8-4a7d-a954-36e10e79ba55",
+            "condition": {
+                "all":{
+                    "!s2":1,
+                    "s3":1,
+                    "s4":1
+            }
+            },
+            "result_title":"你們三人一同共進午餐",
+            "result_text": "顯然，如此正式的招待讓法拉傑受寵若驚……他甚至有點緊張，不過，這也讓他顯得很可愛——甚至梅姬都難得地笑了幾次。",
+            "result":
+            {
+                "s1+社交":1,
+                "counter+7000348":1,   //使用妻子激勵法拉傑
+                "s1+隱匿":1
+
+            },
+            "action": {
+
+            }
+        },
+        {
+            "guid":"cc338047-dbd6-43de-bd7d-47a0744e60ff",
+            "condition": {
+                "all":{
+                    "s2":1,
+                    "!s3":1,
+                    "s4":1
+            }
+            },
+            "result_title":"你們三人一同共進午餐",
+            "result_text": "顯然，如此正式的招待讓法拉傑受寵若驚……他甚至有點緊張，不過，這也讓他顯得很可愛——甚至梅姬都難得地笑了幾次。",
+            "result":
+            {
+                "s1+社交":1,
+                "counter+7000348":1,   //使用妻子激勵法拉傑
+                "s1+戰鬥":1
+
+            },
+            "action": {
+
+            }
+        },
+        {
+            "guid":"cd173f2f-f9b5-4414-8e0d-c1661c363eba",
+            "condition": {
+                "all":{
+                    "s3":1,
+                    "s2":1,
+                    "!s4":1
+            }
+            },
+            "result_title":"你們三人一同共進午餐",
+            "result_text": "顯然，如此正式的招待讓法拉傑受寵若驚……他甚至有點緊張，不過，這也讓他顯得很可愛——甚至梅姬都難得地笑了幾次。",
+            "result":
+            {
+                "s1+隱匿":1,
+                "counter+7000348":1,   //使用妻子激勵法拉傑
+                "s1+戰鬥":1
+
+            },
+            "action": {
+
+            }
+        },
+        {
+            "guid":"8051419b-7715-4a81-a92a-59f50bab6823",
+            "condition": {
+                "all":{
+                    "s2":1,
+                    "!s3":1,
+                    "!s4":1
+            }
+            },
+            "result_title":"我的後背就交給你了",
+            "result_text": "法拉傑大受鼓舞，他激動地拉着你拿起木劍演練了一番，想象着背靠背被敵人包圍時戰鬥的場景。",
+            "result":
+            {
+                "s1+戰鬥":1
+
+            },
+            "action": {
+
+            }
+        },
+        {
+            "guid":"31b2ef86-c4c3-4f7a-a965-b3d201abaa46",
+            "condition": {
+                "all":{
+                "!s2":1,
+                "s3":1,
+                "!s4":1
+        }
+    },
+            "result_title":"你就是我的眼睛",
+            "result_text": "你讚美了他三處細緻入微，勝過自己的地方，有兩個是真的，有一個則是你額外的褒美。法拉傑大受鼓舞，離開你家的時候，他還眯着眼睛嚴厲地審視周圍的街道——彷彿想立即發現一些值得注意的狀況。",
+            "result":
+            {
+                "s1+隱匿":1
+
+            },
+            "action": {
+
+            }
+        },
+        {
+            "guid":"92e5d4ca-ce87-4344-a66a-0f9830f8077d",
+            "condition": {
+                 "all":{
+                "!s2":1,
+                "!s3":1,
+                "s4":1
+        }
+    },
+            "result_title":"你就是我的代言人",
+            "result_text": "他聽到你這樣說，立即站起來整了整衣裳，認真地詢問你自己是否需要一個更穩重的飾品……\n你笑着告訴他，最好的飾品已經被他帶在身上了，那就是自信。",
+            "result":
+            {
+                "s1+社交":1
+
+            },
+            "action": {
+
+            }
+        }
+
+    ],
+    "cards_slot":
+    {
+        "s1":
+            {
+                "guid":"a3e1ed97-a747-4265-b979-48ce3cfd2d14",
+                "condition":
+                {
+                    "法拉傑": 1
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"法拉傑等待着你的誇獎。"
+            },
+
+        "s2":
+            {
+                "guid":"7d65d25f-5cc5-47cd-a714-1eb346223b3b",
+                "condition":
+                {
+                    "type":"char",
+                    "any":{
+                        "妻子":1,
+                        "主角":1
+                    }
+            },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"讚美其勇武\n戰鬥+1"
+            },
+         "s3":
+            {
+                "guid":"47de1bd9-c102-4f5e-9009-5c6176b93fd7",
+                "condition":
+                {
+                    "type":"char",
+                    "any":{
+                        "妻子":1,
+                        "主角":1
+                    }
+            },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"讚美其機警\n隱匿+1"
+            },
+         "s4":
+            {
+                "guid":"4c6370ef-5dc9-404c-867e-8779132fda76",
+                "condition":
+                {
+                    "type":"char",
+                    "any":{
+                        "妻子":1,
+                        "主角":1
+                    }
+            },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"讚美其風度\n社交+1"
+            }
+    }
+}

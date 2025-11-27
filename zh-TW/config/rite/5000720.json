@@ -1,0 +1,119 @@
+ {
+        "id": 5000720,
+        "name": "宰相的召見",
+        "text": "阿卜德派僕人來，召你到府上一敘。他的事未必十分要緊，但他不喜歡被人忽視。",
+        "tips": "",
+        "mapping_id":8001165,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":5,
+        "waiting_round_end_action":[
+            {
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "",
+                "result":
+                {
+                    "s1=支持":0,
+                    "s1+反對":1,
+                    "counter-7100003":1, //權勢-1
+                    "prompt":{
+                        "id":"5000720_prompt_01",
+                        "text":"宰相阿卜德討厭被忽視的感覺，這讓他覺得很沒面子。他一定會在宮廷中抓住一切機會向蘇丹進讒言的，你要當心了。",
+                        "icon":"cards/2000349"
+                    }
+                },
+                "action": {
+                }
+            }
+        ],
+        "method_settlement": "",
+        "auto_begin": 0, //1回合後自動結算
+        "auto_result":0,
+        "location": "宮廷:[2,6]",
+        "icon": "rite_14",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "如果不去的話，恐怕日後宮廷中會遭到宰相的攻訐。",
+            "去的話：石內幕",
+            "沒去的話：權勢-1 宰相反對+1"
+        ],
+        "open_conditions": [
+        ],
+        "random_text": {
+        },
+        "random_text_up":{
+        },
+        "random_effect": {
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"7b806493-6527-4c9a-ab17-beb7406e3bb1",
+                "condition": {
+                    "counter.7000067>=":1 //第一天你派人去上過朝了
+                },
+                "result_title":"你及時地響應了他的傳喚",
+                "result_text": "阿卜德很滿意你的殷勤。燒了半支蠟燭那麼久的東拉西扯後，他終於漫不經心地告訴你，穆爾臺茲今天沒有按時出現在宮廷裡。阿卜德微笑着，眼睛裡卻閃着惡意的光輝。“穆爾臺茲是陛下最關心的臣子。你去找他談談吧。明天我希望能在蘇丹的黃金宮殿上見到他——今後的每天都要。可不要讓我失望啊。”",
+                "result":
+                {
+                    "card": 2000035 //岩石品質內幕情報
+                },
+                "action": {
+                    "rite":5000721 //啓動無故缺勤的臣子
+                }
+            },
+            {
+                "guid":"ffd76487-6cfe-4194-bfe5-a9ae068b31e6",
+                "condition": {
+                    "counter.7000067<":1 //第一天你真沒派人去上朝
+                },
+                "result_title":"你及時地響應了他的傳喚",
+                "result_text": "阿卜德很滿意你的殷勤。燒了半支蠟燭那麼久的東拉西扯後，他終於漫不經心地告訴你，穆爾臺茲今天沒有按時出現在宮廷裡。阿卜德審視着你，話聲中帶着敲打的意味，眼睛裡閃着惡意的光輝。“穆爾臺茲是陛下最關心的臣子。你去找他談談吧。明天我要在蘇丹的黃金宮殿上見到他——今後的每天都要。你可不要讓我失望啊。”",
+                "result":
+                {
+                    "card": 2000035 //岩石品質內幕情報
+                },
+                "action": {
+                    "rite":5000721 //啓動無故缺勤的臣子
+                }
+            }
+        ],
+        "settlement_extre": [
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"ba8985f3-4319-462b-9e21-0691a7db39b7",
+                "condition":
+                {
+                    "is": 2000349  //宰相
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"宰相阿卜德正在傳喚你"
+            },
+            "s2":
+            {
+                "guid":"4c0c7dbf-396d-4748-b609-0d95bc55b11d",
+                "condition":
+                {
+                    "type": "char",
+                    "主角" :1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"你必須親自前去"
+            }
+        }
+    }

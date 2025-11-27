@@ -1,0 +1,169 @@
+{
+    "id": 5002513,
+    "name": "賭馬",
+    "text": "派出自己的騎手和馬參賽，下注，如果勝利，可能會得到獎勵。失敗了就血本無歸",
+    "tips": "",
+    "mapping_id":8001205,
+    "once_new":0,
+    "round_number": 1,
+    "waiting_round":1,
+    "waiting_round_end_action":[
+        {
+            "condition": {
+
+            },
+            "result_title":"",
+            "result_text": "你錯過了這次比賽，不過不要緊，五天之後開始下一次比賽",
+            "result":
+            {
+
+            },
+            "action": {
+                "event_on":5300092 //啓動賭馬幕後
+            }
+        }
+    ],
+    "method_settlement": "",
+    "auto_begin": 0,
+    "auto_result":0,
+    "location": "野外:[1,6]",
+    "icon": "main_new/rite_1",
+    "tag_tips": [
+        "體魄",
+        "生存"
+    ],
+    "tag_tips_up":{
+        "tips":["體魄","生存"],
+        "type":"normal_result"
+    },
+    "tips_text":[
+        "依靠坐騎的體魄和騎手的生存進行檢定。" ,
+        "勝利了贏得雙倍賭注，失敗則血本無歸。",
+        "需要2點成功"
+    ],
+    "open_conditions": [
+    ],
+    "random_text":{
+        "r1":"賭馬檢定"
+    },
+    "random_text_up":{
+        "r1":{
+            "text":"賭馬檢定",
+            "type":"normal_result",
+            "type_tips":"你的生存和坐騎的體魄為你提供了完整的骰子數量。",
+            "low_target": 2,
+            "low_target_tips": "你至少需要2點成功才能獲得勝利。"
+        }
+    },
+    "settlement_prior": [
+    ],
+    "settlement": [
+        {
+            "guid":"522552ed-da68-49b0-b086-7e2a82ca92dd",
+            "condition": {
+              "r1:s1.生存+s2.體魄+s3.生存+s3.體魄>=":[2,5]
+            },
+            "result_title":"",
+            "result_text": "恭喜你獲得了勝利，獲得了雙倍賭注。",
+            "result":
+            {
+                "copy.s4":1,
+                "copy.s4":1,
+                "counter+7000052":1
+            },
+            "action": {
+                "event_on":5300092 //啓動賭馬幕後
+            }
+        },
+        {
+            "guid":"e2b03ec3-200a-43f2-bbc8-b71741729e50",
+            "condition": {
+                "r1:s1.生存+s2.體魄+s3.生存+s3.體魄<":[2,5]
+            },
+            "result_title":"",
+            "result_text": "雖然你失敗了，丟失了全部賭注，但你下次可以贏回來。",
+            "result":
+            {
+
+            },
+            "action": {
+                "event_on":5300092 //啓動賭馬幕後
+            }
+        }
+    ],
+    "settlement_extre": [
+
+    ],
+    "cards_slot":
+    {
+        "s1":
+        {
+            "guid":"ca22979e-b438-41e5-b840-db37a094ca20",
+            "condition":
+            {
+                "type":"char"
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":0,
+            "is_enemy":0,
+            "text":"派遣生存屬性較高的角色前往參賽"
+        },
+    "s2":
+        {
+            "guid":"50cdb1e5-b407-498b-aa83-e4b0de4ca32b",
+            "condition":
+            {
+                "type": "item",
+                "坐騎":1
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":0,
+            "is_enemy":0,
+            "text":"出賽的坐騎"
+        },
+    "s3":
+        {
+            "guid":"335c57cb-0e48-4b40-9e39-aa9068724e2e",
+            "condition":
+            {
+                "type":"item",
+                "cost.消耗品=":1,
+                        "!金幣":1
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":0,
+            "text":"有些東西也許能在比賽中派上用場"
+        },
+        "s4":
+            {
+                "guid":"dd5e06a7-b295-4dbb-b8e1-393d532997a2",
+                "condition":
+                {
+                    "type":"item",
+                    "cost.金幣":[1,4]
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"你所下的賭注，最多4金幣"
+            },
+            "s5":
+                {
+                    "guid":"837bd9e4-2a53-434f-867d-aef48befd6d7",
+                    "condition":
+                    {
+                       "is":2000339
+                    },
+                    "open_adsorb":1,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":1,
+                    "text":"你的對手"
+                }
+    }
+}

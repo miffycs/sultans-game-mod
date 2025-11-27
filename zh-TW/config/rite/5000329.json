@@ -1,0 +1,237 @@
+ {
+        "id": 5000329,
+        "name": "謀逆的思想",
+        "text": "你告訴了[xiaochou.name]征服的代價，現在，是時候親自給[xiaochou.gender]看一下了：你已經為了效法上一位征服者走到了何種境地。",
+        "tips": "",
+        "mapping_id":8001002,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":0,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result":0,
+        "location": "自宅:[2,12]",
+        "icon": "rite_16",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "需要放入合適的思潮",
+            "權勢+1",
+
+        ],
+        "open_conditions": [
+
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+
+            {
+                "guid":"4f99de63-10dd-4b1b-afe7-f1834f576041",
+                "condition":
+                {
+                    "s2.is":2000100  //1級謀反思潮
+                },
+                "result_title":"恐懼吞噬人心",
+                "result_text": "你讓[xiaochou.name]直視自己的內心，[xiaochou.gender]看到了你心中的恐懼……\n“真有趣，我原本以為，恐懼只能折磨弱者，沒想到，最後當強者被恐懼環繞後，自己也會被反過來受苦呢！你們人類啊，真的是善於互相折磨的生物啊。”",
+                "result":
+                {
+                    "s1+魅力":1,
+                    "counter+7000706":1  //人性
+                },
+                "action":
+                {
+                }
+            },
+            {
+                "guid":"344ccddd-cada-481c-b442-5f3a0669d8c3",
+                "condition":
+                {
+                    "s2.is":2000541 //2級謀反思潮
+                },
+                "result_title":"擊碎恐懼的是什麼呢？",
+                "result_text": "你讓[xiaochou.name]直視自己的內心，[xiaochou.gender]看到了你心中的希望……\n“真有趣啊，你心裡能夠同時想象着最美好的東西，又想象着最骯髒的手段——你能通過這種方式得到自由麼？人類啊，真是善於製造一個個的循環。",
+                "result":
+                {
+                    "s1+魅力":1,
+                    "counter+7000706":1  //人性
+                },
+                "action":
+                {
+                }
+            },
+             {
+                "guid":"71770dc4-3072-4f56-8d6a-e6d75d1cf8c5",
+                "condition":
+                {
+                    "s2.is":2000171 //3級謀反思潮
+                },
+                "result_title":"你還要拖多少人下水？",
+                "result_text": "你讓[xiaochou.name]直視自己的內心，[xiaochou.gender]看到了你心中的陰謀……\n“真有趣啊，你心裡已經有了一個計劃——但還沒有足夠的棋子。”[xiaochou.name]揮揮手，鏡子裡開始一個個閃現你的朋友，追隨者，僕人，盟友……“你已經準備好要犧牲他們中的哪些了嗎？什麼？你想要大家都活下來？哈哈哈！那您還沒準備好呢——但願這只是虛僞的客套話！我可等着看一出好戲呢！”",
+                "result":
+                {
+                    "s1+社交":1,
+                    "counter+7000706":1  //人性
+                },
+                "action":
+                {
+                }
+            },
+            {
+                "guid":"8d0bb0dd-86aa-4ea2-a16f-ea61d89b6f02",
+                "condition":
+                {
+
+                    "s2.is":2000172,  //4級謀反思潮
+                },
+                "result_title":"你還在等待什麼？",
+                "result_text": "你讓[xiaochou.name]直視自己的內心，[xiaochou.gender]看到了你心中的已然萬全的安排……\n“真有趣啊，你已經讓那麼多人相信了你的安排，但你卻仍沒有走出最後一步——您還在等待其他的選擇，其他的可能性吧？還是您仍然停留在對蘇丹的恐懼之中呢？千萬不要讓我失望啊，[player.name]主人！”",
+                "result":
+                {
+                    "s1+魅力":2,
+                    "counter+7000706":1  //人性
+                },
+                "action":
+                {
+                }
+            },
+            {
+                "guid":"c5d451c8-46bf-4ff2-a7e9-fae5df5ee5de",
+                "condition":
+                {
+                    "s2.is":2000913 //誓言之證
+                },
+                "result_title":"征服的循環",
+                "result_text": "你給[xiaochou.name]看了誓言之證，那屬於前朝的虛僞文書……“哈，在古語中，模仿與重複是同一個詞呢！看起來，這點運用到征服之事上也同樣合適……我還以為[player.name]老爺會有更有創意的方式呢！畢竟，你是需要去打破循環的，不是麼？”",
+                "result":
+                {
+                    "s1+魔力":1,
+                    "counter+7000707":1  //物性
+                },
+                "action":
+                {
+                }
+            },
+            {
+                "guid":"4ba03a3e-25e3-431d-b1ac-2bbcbd1dbbaf",
+                "condition":
+                {
+                    "s2.is":2000884  //革命的構思
+                },
+                "result_title":"鏡花水月",
+                "result_text": "你讓[xiaochou.name]直視自己的內心，讓[xiaochou.gender]看到了自己與奈費勒的理想……\n“哈哈哈哈！怎麼會有這樣天真的人！我好沮喪啊，我發現我完全不了解你呢，[player.name]大人！會有人類願意為了其他人，而改變這個世界嗎？或者說，不是極端自我的人，能完成征服的偉業嗎？您真是講了一個非常有意思的笑話呢。”",
+                "result":
+                {
+                    "s1+智慧":1,
+                    "counter+7000707":2  //物性
+                },
+                "action":
+                {
+                }
+            },
+            {
+                "guid":"c84f0161-011e-429f-b5e8-1968207d12d7",
+                "condition":
+                {
+                    "s2.is":2000910  //革命的計劃
+                },
+                "result_title":"從未有過之事",
+                "result_text": "你讓[xiaochou.name]直視自己的內心，讓[xiaochou.gender]看到了自己與奈費勒的理想……\n[xiaochou.gender]震驚了……甚至忍不住在你的注視下後退了兩步：“從陽光照耀第一滴露珠的時候開始，我就注視着一切……任何已經發生的時候，都曾經發生過，而任何要做的事情，都早已被做過……但你居然向我展示了一件不曾被太陽所見證的事業……果然，變化為人，就是可以體驗如此多的樂趣！我太感謝你了！[player.name]主人！”",
+                "result":
+                {
+                    "s1+智慧":2,
+                    "counter+7000706":3  //人性
+                },
+                "action":
+                {
+                }
+            },
+            {
+                "guid":"fa9238fb-a5ea-4505-bbd2-e25fb160cd66",
+                "condition":
+                {
+                    "s2.is":2010016  //金征服
+                },
+                "result_title":"這就是遊戲的精髓",
+                "result_text": "你給[xiaochou.name]看了那張金色的征服卡。[xiaochou.gender]哈哈大笑，你果然學會了像蘇丹一樣使用這個遊戲的卡片了！這真的是一個非常好的征服的循環……請一定要完成這個事業！[xiaochou.gender]會追隨你到最後的！[player.name]主人！",
+                "result":
+                {
+                    "s1+智慧":1,
+                    "counter+7000707":2  //物性
+                },
+                "action":
+                {
+                }
+            },
+        ],
+        "settlement_extre": [
+            {
+                "guid":"48138038-5873-4dc2-95dd-a13767e36acf",
+                "condition":
+                {
+
+                },
+                "result_title":"既見代價，已明得失",
+                "result_text": "在關於這些征服的代價的談話之後，[xiaochou.name]暫時沉寂了，而你也時不時會想起在跟[xiaochou.gender]說過的事。幾乎是下意識的，你對僕從和奴隸們的態度更和藹了一些；在與權臣們對話時，你所考慮的事情也略多了幾分。這一切都對你產生了微妙而又明顯的影響……你認為自己變強了。",
+                "result":
+                {
+                   "counter+7100003": 1 //權勢+1
+                },
+                "action":
+                {
+                    "event_on":5300816 //開啓小籌征服第四次問答
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+                {
+                    "guid":"fb8b5e68-a00f-4196-a754-2e08d79464ce",
+                    "condition":
+                    {
+                        "type":"char",
+                        "小籌":1
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"鏡中的生靈，最後能夠理解人類嗎？"
+                },
+            "s2":
+                {
+                    "guid":"575b6878-35ac-411f-82c8-285c7ac8180a",
+                    "condition":
+                    {
+                        "any":{
+                            "type":"item",
+                            "type":"sudan"
+                        },
+                        "any":{
+                            "is":2000100,
+                            "is":2000541,
+                            "is":2000171,
+                            "is":2000172,
+                            "is":2000913,
+                            "is":2000884,
+                            "is":2000910,
+                            "is":2010016
+                        }
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"一種思想的範例\n對蘇丹的恐懼：人性+1，小籌魅力+1\n免於恐懼的自由：人性+1，小籌魅力+1\n謀反的意圖：人性+1，小籌社交+1\n弒君的計劃：人性+1，小籌魅力+2\n革命的計劃：人性+3，小籌智慧+2\n誓言之證：物性+1，小籌魔力+1\n革命的構思：物性+2，小籌智慧+1\n金征服：物性+2，小籌智慧+1"
+                }
+        }
+    }

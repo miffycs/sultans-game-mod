@@ -1,0 +1,117 @@
+ {
+        "id": 5006560,
+        "name": "修建舍館",
+        "text": "對於黑街居民來說，“食客”意味着平時不用勞動，關鍵時刻給主家賣命的行當。當然更多時候都是豢養一批不務正業的流氓以壯聲勢的幫派行為……但這些底層人中確實有某種約定俗成的道德與義務，足以成為你的助力。考慮到你的俠名早已傳遍黑街，何妨用多餘的金錢招募一些幫手呢？",
+        "tips": "",
+        "mapping_id":8001210,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":0,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0,
+        "location": "商業區:[10,19]",
+        "icon": "rite_19",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "修建岩石品級的舍館需要消耗10金幣",
+            "你可以藉此消解一張岩石奢靡卡",
+            "必定獲得：讒言+1",
+            "奢靡卡額外效果：權勢+1"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"f5ff1292-5c17-4d41-80bc-200898639d21",
+                "condition": {
+                },
+                "result_title":"一處有食物，飲水與安全的地方。",
+                "result_text": "天啊，貧民窟的人們居然需要你專門花錢才能擁有一個這樣的地方——並且願意為之賣命？你突然意識到有什麼不對，周圍人稱讚自己的聲音都逐漸變得沒那麼動聽了……",
+                "result":
+                {
+                    "clean.s1":1,
+                    "counter+7000380":1, //激活舍館的計數器
+                    "counter+7100003":1 //權勢+1
+                },
+                "action": {
+                    "event_on": 5320077 //激活岩石舍館的刷新機制
+                }
+            }
+        ],
+        "settlement_extre": [
+            {
+                "guid":"da705484-f645-499b-81df-a0915fb102a7",
+                "condition": {
+                    "s3":1
+                },
+                "result_title":"蘇丹覺得很有趣",
+                "result_text": "有人藉機說你在貧民窟裡豢養死士，圖謀不軌……蘇丹根本不信，但看得出來，他喜歡看你難堪的樣子。",
+                "result":
+                {
+                "card":2000168, //讒言
+                "clean.s3":1
+                },
+                "action": {
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+                {
+                    "guid":"dff2f873-d03b-4752-82d8-bfb65312157b",
+                    "condition":
+                    {
+                        "type":"item",
+                        "空屋":1
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"空置的房間或宅邸"
+
+                },
+            "s2":
+                {
+                    "guid":"8b77c743-18ee-4945-81f2-e1a510035b2a",
+                    "condition":
+                    {
+                        "type":"item",
+                        "cost.金幣":10
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"修建費用"
+                },
+            "s3":
+                {
+                    "guid":"757849a7-c645-4590-8d5c-de34ca54e6db",
+                    "condition":
+                    {
+                        "type":"sudan",
+                        "奢靡":1,
+                        "rare=":1
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":1,
+                    "is_enemy":0,
+                    "text":"一張岩石奢靡卡"
+                }
+        }
+    }

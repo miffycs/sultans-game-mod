@@ -1,0 +1,208 @@
+ {
+        "id": 5006684,
+        "name": "滿足蘇丹",
+        "text": "果然，你的君主仍然懷疑你在假幣事件中有所隱瞞……再給他一點什麼，去滿足他的貪婪，他的施虐慾望。",
+        "tips": "",
+        "mapping_id":8001557,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":3,
+        "waiting_round_end_action":[
+            {
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "",
+                "result":
+                {
+                },
+                "action": {
+                    "prompt":{
+                        "id":"5006684_prompt_1",
+                        "text":"你忽視了蘇丹的傳喚，毫無意外地，你被處死了。",
+                        "icon":"cards/sudan"
+                    },
+                    "over":8,
+                }
+            }
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0,
+        "location": "宮廷:[2,6]",
+        "icon": "rite_14",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+            "tips":["魅力","社交"],
+            "type":"normal_result"
+        },
+        "tips_text":[
+            "你可以通過上交一些物品來滿足蘇丹，也可以試試用自己的嘴。",
+            "上交戒指可能會導致相關人士受苦",
+            "超時：進入結局【伴君如伴虎】",
+            "什麼都不放，檢定：魅力+社交>=3",
+            "檢定成功：金預兆+1",
+            "檢定失敗：進入結局【無名人之死】",
+
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"陛下，請聽我狡辯",
+                "type":"normal_result",
+                "type_tips":"你的魅力和社交為你提供了完整的骰子數量。",
+                "low_target": 3,
+                "low_target_tips": "你至少需要3點成功"
+            },
+        },
+        "settlement_prior": [
+            {
+                "guid":"756205bc-e50c-4080-acc3-f796727ee43a",
+                "condition": {
+                    "!s2":1,
+                    "!s3":1,
+                    "!s4":1,
+                    "r1:魅力+社交>=":[3,5]
+                },
+                "result_title":"你的花言巧語逗笑了蘇丹",
+                "result_text": "蘇丹真的在乎這件事情麼？其實你也不知道……但你的醜態與謙卑已經讓他暫時得到了滿足。",
+                "result":
+                {
+                    "card":2000417,
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"9fdec961-abe3-46f2-ba64-90eb6f47dc05",
+                "condition": {
+                    "!s2":1,
+                    "!s3":1,
+                    "!s4":1,
+                    "r1:魅力+社交<":[3,5]
+                },
+                "result_title":"你的死相逗笑了蘇丹",
+                "result_text": "最後，他切開了你的肚子——終於相信，[player.name]並沒有私吞蘇丹的任何一枚金幣。",
+                "result":
+                {
+                    "clean.s1":1,
+                },
+                "action": {
+                }
+            },
+        ],
+        "settlement": [
+        ],
+        "settlement_extre": [
+            {
+                "guid":"6f625567-30e0-4a0f-ab91-2699d8a7a45c",
+                "condition": {
+                    "s2":1 //上交金幣
+                },
+                "result_title":"這些錢哪來的並不重要",
+                "result_text": "你再次向蘇丹請罪，表示又罪犯遺留的贓物中查抄出了這批金子……偉大而仁慈的蘇丹當然原諒了你這小小的疏忽。",
+                "result":
+                {
+                    "card":2000415,
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"85ef9adc-5830-4d50-af83-c31d0bf9469e",
+                "condition": {
+                    "s3":1 //上交假金幣
+                },
+                "result_title":"這真的是最後的一點了",
+                "result_text": "經過[player.name]的不懈努力，更多有損王家信譽的假幣被查抄了出來……這些功績，這些財富，當然可以令偉大的蘇丹原諒你之前的可疑行徑。",
+                "result":
+                {
+                    "card":2000416,
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"b1e8559d-d2d4-4855-a9b1-2b202560ad90",
+                "condition": {
+                    "s4":1 //上交戒指
+                },
+                "result_title":"只要不是你，誰都行",
+                "result_text": "最後，你還是得交出這個東西……你相信蘇丹會明白這枚戒指中所蘊含祕密……你在暗示，是他身邊人的女人，而不是你，對蘇丹不忠誠，偷蘇丹的財富……",
+                "result":
+                {
+                    "card":2000414,
+                    "clean.s4":1,
+                },
+                "action": {
+                    "event_on":5320288,//噩耗
+                }
+            },
+
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"50e422c9-9833-412f-a82b-416b687c8c18",
+                "condition":
+                {
+                    "type":"char",
+                    "主角":1,
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"你需要親自應付君主"
+            },
+            "s2":
+            {
+                "guid":"0eecb73e-55cf-4372-a043-2c65a99f1cda",
+                "condition":
+                {
+                    "type":"item",
+                    "is":2000029,
+                    "cost.金幣":10,
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"呈上請罪的罰金\n金機遇+1"
+            },
+            "s3":
+            {
+                "guid":"a40e10da-af5c-45ff-8143-25988d25cc0e",
+                "condition":
+                {
+                    "type":"item",
+                    "is":2001190,
+                    "cost.金幣":10,
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"呈上收穫的假幣\n金內幕+1"
+            },
+            "s4":
+            {
+                "guid":"26292cb1-72f1-4a76-bbb1-e54265dea7ba",
+                "condition":
+                {
+                    "type":"item",
+                    "is":2001191,
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"呈上足以轉移蘇丹注意力的證物\n金洞察+1"
+            }
+        }
+    }

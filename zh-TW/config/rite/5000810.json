@@ -1,0 +1,339 @@
+{
+    "id": 5000810,
+    "name": "幫派鬥爭",
+    "text": "你的勢力已經深入黑街，需要一個代言人，豺狼眾是這裡的傳統勢力，而芮爾……最近不知道從哪突然冒出來的野蠻人，正帶着一群人和他們鬥。你打算支持誰呢？",
+    "tips": "",
+    "mapping_id":8001284,
+    "once_new":0,
+    "round_number": 1,
+    "waiting_round":3,
+    "waiting_round_end_action":[
+        {
+            "condition": {
+            },
+            "result_title":"",
+            "result_text": "",
+            "result":
+            {
+                "clean.s1":1,  //芮爾死
+                "clean.s2":1   //爛泥眾死
+            },
+            "action": {
+                "prompt":{
+                    "id":"5000810_prompt_01",
+                    "text":"黑街的幫派爭鬥跟你有什麼關係？你選擇了袖手旁觀。不久後，你從偶然閒談中得知那個不知天高地厚的女蠻子死在了一次火拼中，她的勢力自然也隨之土崩瓦解。",
+                    "icon":"cards/2000001"
+                }
+            }
+        }
+    ],
+    "method_settlement": "",
+    "auto_begin": 0,
+    "auto_result":0,
+    "location": "黑街:[2,5]",
+    "icon": "rite_17",
+    "tag_tips": [
+
+    ],
+    "tag_tips_up":{
+        "tips":["戰鬥"],
+        "type":"fight_result"
+    },
+    "tips_text":[
+        "投資你想投資的幫派勢力吧",
+        "袖手旁觀：芮爾死亡",
+        "幫芮爾 己方戰鬥+5-6>=2點成功：開芮爾線 開匪幫",
+        "幫豺狼：開財狼幫奇珍儀式",
+        "注意事項：放錢沒有加成，只能證明你幫了某一方"
+    ],
+    "open_conditions": [
+    ],
+    "random_text": {
+
+    },
+    "random_text_up":{
+        "r1":{
+            "text":"事到如今已經無人關心對錯",
+            "type":"fight_result",
+            "type_tips":"芮爾和她的匪幫的戰鬥屬性所提供的骰子數量受到豺狼幫的影響",
+            "low_target": 2,
+            "low_target_tips": "芮爾至少需要2點成功才能擊敗豺狼幫。"
+        }
+    },
+    "random_effect": {
+    },
+    "settlement_prior":
+    [
+
+    ],
+    "settlement": [
+
+    ],
+    "settlement_extre": [
+        {
+            "guid":"82546bf4-68ee-4d66-8eae-45e03dfbfbbf",
+            "condition": {
+                    "!s3":1,
+                    "!s4":1,
+                    "!s5":1,
+                    "!s6":1,
+                    "!s7":1,
+                    "!s8":1 //啥也沒放
+            },
+            "result_title":"你選擇了袖手旁觀",
+            "result_text": "黑街的幫派爭鬥跟你有什麼關係？不久後，你從偶然閒談中得知那個不知天高地厚的女蠻子死在了一次火拼中，她的勢力自然也隨之土崩瓦解。",
+            "result":
+            {
+                "clean.s1":1,  //芮爾死
+                "clean.s2":1   //爛泥眾死
+            },
+            "action": {
+
+            }
+        },
+        {
+            "guid":"8cf23fda-b523-488f-b5a9-2316946fe26e",
+            "condition": {
+                "any":{
+                    "s3":1,
+                    "s4":1,
+                    "s5":1,
+                    "s6":1,
+                    "s7":1,
+                    "s8":1
+                }  //一旦投資，即刻開打
+            },
+            "result_title":"一個麥餅引發的血案",
+            "result_text": "誰也說不清楚這場風波最開始源於怎樣雞毛蒜皮的小事，在你注意到的時候，它已經演化成了黑街新舊勢力不死不休的戰爭。",
+            "result":
+            {
+
+            },
+            "action": {
+
+            }
+        },
+        {
+            "guid":"5bf2355a-15ae-45a1-9e47-e15d6b86151e",
+            "condition": {
+                "any":{
+                    "s3":1,
+                    "s4":1,
+                    "s5":1,
+                    "s6":1,
+                    "s7":1,
+                    "s8":1
+                },  //一旦投資，即刻開打
+                "r1:戰鬥-e(戰鬥)>=":[2,5]  //芮爾成功
+            },
+            "result_title":"誰還敢看不起爛泥巴",
+            "result_text": "那個女人簡直就是個瘋子。她一邊砍人，一邊挖肝，就這麼熱騰騰血淋淋地塞進嘴裡，喊着誰也聽不懂的話，豺狼幫被她嚇得聞風喪膽，一個比一個逃得快，他們老大在後面氣得破口大罵，喊得聲嘶力竭，最後還是成了女蠻子的補品。現在誰還敢惹爛泥幫的人啊，先摸摸自己有幾個肝吧。",
+            "result":
+            {
+
+            },
+            "action": {
+
+            }
+        },
+        {
+            "guid":"99e280b4-7aa9-4bde-85a1-c1426bcdae0a",
+            "condition": {
+                "any":{
+                    "s3":1,
+                    "s4":1,
+                    "s5":1,
+                 //   "s6":1,
+                 //   "s7":1,
+                 //   "s8":1
+                },  //一旦投資，即刻開打
+                "r1:戰鬥-e(戰鬥)>=":[2,5]  //芮爾成功 //投資豺狼幫芮爾也會和玩家建立友誼嗎感覺不會……
+            },
+            "result_title":"謝了！",
+            "result_text": "一戰成名之後，芮爾找到了你。“我又欠你一個人情了！”她非常豪爽地拍着你的肩膀，大咧咧地把你攬到一邊，領着你去見自己那幫瘦弱但是兇狠的小弟，讓他們認認你的臉，大有“以後大姐頭罩你”之意。",
+            "result":
+            {
+                "counter+7000466":1 //芮爾匪幫成立的計數器
+            },
+            "action": {
+                "rite":5000812,  //開啓芮爾的匪幫
+                "event_on":[5300540,5300542,5300545,5300550]  //開啓芮爾系列事件啓動幕後
+            }
+        },
+        {
+            "guid":"5b2e0bec-62a8-4541-9636-2535f769a35d",
+            "condition": {
+                "any":{
+                    "s3":1,
+                    "s4":1,
+                    "s5":1,
+                    "s6":1,
+                    "s7":1,
+                    "s8":1
+                },  //一旦投資，即刻開打
+                "r1:戰鬥-e(戰鬥)<":[2,5]  //芮爾失敗
+            },
+            "result_title":"你算老幾",
+            "result_text": "豺狼幫的勢力在這幾條街區早已根深蒂固，芮爾再怎麼兇狠，可她的每一個動向都被豺狼幫掌握，每一次突擊都像打在了棉花上。最後，她的手下被各個擊破、徹底吞沒，她本人亦已筋疲力竭，被豺狼幫的人活捉……這之後的下場，還用猜嗎。",
+            "result":
+            {
+                "clean.s1":1,  //芮爾死
+                "clean.s2":1   //爛泥眾死
+            },
+            "action": {
+
+            }
+        },
+        {
+            "guid":"ff974f21-0fd5-456e-af0b-963d3ca27d06",
+            "condition": {
+                "any":{
+                    "s7":1,
+                    "s8":1,
+                    "s9":1
+                },  //一旦投資，即刻開打。投資過豺狼眾
+                "r1:戰鬥-e(戰鬥)<":[2,5]  //芮爾失敗
+            },
+            "result_title":"你很有眼光",
+            "result_text": "儘管你的幫助在這場戰鬥中的影響微乎其微（他這麼認為），事後，豺狼幫的老大還是向你表達了謝意：“有機會的話，期待下次合作。”",
+            "result":
+            {
+                "s6+納入收藏":1
+            },
+            "action": {
+                "global_counter+7210025": 1,//成就-奇珍之家
+                "rite":5000811  //開啓豺狼眾奇珍儀式
+            }
+        }
+
+    ],
+    "cards_slot":
+    {
+        "s1":
+        {
+            "guid":"44ad5d31-cd2c-4052-a5ed-3b38650c82f4",
+            "condition":
+            {
+                "is":2000771,
+                "芮爾":1
+            },
+            "open_adsorb":1,
+            "is_key":0,
+            "is_empty":0,
+            "is_enemy":0,
+            "text":"芮爾"
+        },
+        "s2":
+        {
+            "guid":"daa09eee-f45e-4b41-a308-bc0918091ea0",
+            "condition":
+            {
+                "type":"item",
+                "is":2000965
+            },
+            "open_adsorb":1,
+            "is_key":0,
+            "is_empty":0,
+            "is_enemy":0,
+            "text":"芮爾麾下的匪幫"
+        },
+        "s3":
+        {
+            "guid":"ce28fec4-ad2e-4f27-b713-97a10b094207",
+            "condition":
+            {
+                "type":"item",
+                "cost.消耗品=":1,
+                "!金幣":1
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":0,
+            "text":"你可以為芮爾提供一些有用的物資"
+        },
+        "s4":
+        {
+            "guid":"855e5447-d21d-47bd-a8e6-1e01be0d0b32",
+            "condition":
+            {
+                "type":"item",
+                "cost.金幣=":5
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":0,
+            "text":"你可以為芮爾提供一些金幣"
+        },
+        "s5":
+        {
+            "guid":"c17602af-c47b-4641-9959-b11a9ee1f1e2",
+            "condition":
+            {
+                "type":"char"
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":0,
+            "text":"你可以為芮爾提供一些人手"
+        },
+        "s6":
+        {
+            "guid":"c634cd99-dbd8-4c8b-8260-ff3295697345",
+            "condition":
+            {
+                "type":"item",
+                "is":2001057
+            },
+            "open_adsorb":1,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":1,
+            "text":"盤踞在黑街根深蒂固的幫派"
+        },
+        "s7":
+        {
+            "guid":"2486d256-643f-4e02-b50b-891d5ef4132f",
+            "condition":
+            {
+                "type":"item",
+                "cost.消耗品=":1,
+                "!金幣":1
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":1,
+            "text":"你可以為豺狼幫提供一些有用的物資"
+        },
+        "s8":
+        {
+            "guid":"b42325be-914f-4382-acca-b481cbfd3fee",
+            "condition":
+            {
+                "type":"item",
+                "cost.金幣=":5
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":1,
+            "text":"你可以為豺狼幫提供一些金幣"
+        },
+        "s9":
+        {
+            "guid":"f67cc394-0ba2-43ba-8423-355b6341c060",
+            "condition":
+            {
+                "type":"char"
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":1,
+            "text":"你可以為豺狼幫提供一些人手"
+        }
+    }
+}

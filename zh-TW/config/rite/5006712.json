@@ -1,0 +1,133 @@
+ {
+        "id": 5006712,
+        "name": "奇怪的流言",
+        "text": "你讀那本怪書的當天聽到了一些流言：有人在黑街目擊到了某位被迫玩牌、位高權重的老爺（也就是你）一個人深夜躑躅在街頭，身邊還有三四條黑乎乎的影子……鑑於這事你真的一點印象都沒有，而阿薩爾又靠不住，也許你應該靠自己調查調查那些影子是誰，或者說，是什麼東西？",
+        "tips": "",
+        "mapping_id":8001058,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":3,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0,//需要手動啓動
+        "location": "黑街:[2,9]",
+        "icon": "rite_4",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+            "tips":["智慧","社交"],
+            "type":"normal_result"
+        },
+        "tips_text":[
+            "這種事還是派別人去打聽比較好",
+            "放了金幣，無需檢定：放入角色智慧+1，銅預兆+1",
+            "沒放金幣，檢定：智慧+社交+俠名>=5",
+            "檢定成功：放入角色智慧+1，銅預兆+1",
+            "檢定失敗：銅預兆+1"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"[s1.name]旁敲側擊",
+                "type":"normal_result",
+                "type_tips":"[s1.gender]的智慧、社交屬性和你的俠名為你提供了完整的骰子數量。",
+                "low_target": 5,
+                "low_target_tips": "你至少需要5點成功"
+            }
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+        ],
+        "settlement_extre": [
+            {
+                "guid":"3963e791-f105-4499-88fd-046ebddab85c",
+                "condition": {
+                    "s2.金幣":1
+                },
+                "result_title":"這點小事，只要花錢就容易",
+                "result_text": "在金錢攻勢下，人們紛紛把自己知道的都說了出來。在他們口中，黑影有着各自不同的形象，就像是照鏡子一樣，每個人都會見到自己最害怕的投影……\n這讓你想到書中提起過的異界之物，那些非人的存在似乎最喜歡這樣玩弄人心，或許，這兩件事之間會有所勾連……",
+                "result":
+                {
+                    "s1+智慧":1,
+                    "card":2000042, //預兆情報
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"db515fbe-43f4-437a-a6f4-dee1ede7976f",
+                "condition": {
+                    "!s2.金幣":1,
+                    "r1:智慧+社交+counter.7100004>=":[5,5]
+                },
+                "result_title":"[s1.name]成功了",
+                "result_text": "[s1.gender]與許多所謂的目擊者談過之後，發現在他們口中，黑影有着各自不同的形象。就像是照鏡子一樣，每個人都會見到自己最害怕的投影……\n這讓你想起書中提起過的異界之物，那些非人的存在似乎最喜歡這樣玩弄人心。或許，這兩件事之間會有所勾連……",
+                "result":
+                {
+                    "s1+智慧":1,
+                    "card":2000042, //預兆情報
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"b033af8f-64e6-4f96-8e90-d678101a7e9a",
+                "condition": {
+                    "!s2.金幣":1,
+                    "r1:智慧+社交+counter.7100004<":[5,5]
+                },
+                "result_title":"見[s1.name]如見你",
+                "result_text": "那些目擊者一見到[s1.name]就作鳥獸散了，關着門怎麼也不肯出來，也是，在這裡哪有人敢當面說你壞話的。",
+                "result":
+                {
+                    "card":2000042, //預兆情報
+                },
+                "action": {
+                }
+            },
+        ],
+        "cards_slot":
+        {
+            "s1":
+                {
+                    "guid":"a4e25858-c2d8-4a76-b90e-c6a3f716f887",
+                    "condition":
+                    {
+                        "type":"char",
+                        "!主角":1
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"你可以派人去調查一番"
+                },
+            "s2":
+                {
+                    "guid":"9228b5a5-7017-4730-b8fb-662091b86928",
+                    "condition":
+                    {
+                        "type":"item",
+                        "any":{
+                            "all":{
+                                "!金幣":1,
+                                "cost.消耗品=":1
+                            },
+                            "cost.金幣":3,
+                        }
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":1,
+                    "is_enemy":0,
+                    "text":"能夠協助調查的消耗品"
+                }
+        }
+    }

@@ -1,0 +1,103 @@
+ {
+        "id": 5000664,
+        "name": "暗潮湧動",
+        "text": "麥娜爾找到了那座傳說中的富庶城市，而蘇丹對此極有興趣。有一些事在暗中進行，令一切滑向深淵，而你對此無能為力。",
+        "tips": "",
+        "mapping_id":8001203,
+        "once_new":0,
+        "round_number": 3,
+        "waiting_round":0,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 1,
+        "auto_result": 0,
+        "location": "野外:[9,14]",
+        "icon": "rite_17",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "你可以先下手為強，也可以置之不理，但不論如何，沒有人能改變蘇丹的主意。",
+            "征服線：惡名+1 金幣+10"
+        ],
+        "open_conditions": [
+        ],
+        "random_text": {
+        },
+        "random_text_up":{
+        },
+        "random_effect": {
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"52fff8d0-8ef9-4dfb-a920-5558b0de3cbc",
+                "condition": {
+                    "s2":1
+                },
+                "result_title":"你決定使用征服卡",
+                "result_text": "你已經觀察到軍隊的異動，知道蘇丹已經向那座城市派兵了。毀滅已經無法逆轉，既然如此，何不令它發揮最後一點作用？\n你拿出一張刻畫着王權的卡片，懇請蘇丹給你一個為他開疆擴土的機會。蘇丹哈哈大笑着同意了。\n你作為指揮官，拿到了麥娜爾獻給蘇丹的地圖——你忽然注意到，地圖上標註的地點是錯誤的，但這難不倒親歷了那場探險的你。你命令大軍把那座頑固的城市團團圍困，直等到城內山窮水盡，才終於攻破了它。為了報復他們無謂的拖延，你將市民屠戮殆盡，財物洗劫一空。而這片被踐踏的土地，再也沒有任何被標記在地圖上的價值。",
+                "result":
+                {
+                    "clean.s1":1,
+                    "clean.s2":1,
+                    "counter+7100002": 1, //惡名+1
+                    "coin":10
+                },
+                "action": {
+                    "event_on":5300170 //激活製圖師的後續死亡結局--彈框文本
+                }
+            },
+            {
+                "guid":"22276638-3678-4be9-a933-54547023537f",
+                "condition": {
+                    "!s2":1
+                },
+                "result_title":"你沒有趁火打劫",
+                "result_text": "你聽聞蘇丹的軍隊出征了，但他們費盡千辛萬苦找到那座城市、潛入其中時，那裡早已人去樓空，彷彿你們所見的繁榮是一場海市蜃樓。你忽然想起離開之前麥娜爾曾和商人們說過很久的話。一個近乎不可能的猜想在你腦海中盤旋……也許不久之後，會得到驗證。",
+                "result":
+                {
+                    "clean.s1":1
+                },
+                "action": {
+                    "event_on":5300155 //激活後續儀式麥娜爾的道別
+                }
+            }
+        ],
+        "settlement_extre": [
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"a16d4007-978c-4515-8253-4418366a82cb",
+                "condition":
+                {
+                    "is":2000365
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"繁榮的城市"
+            },
+            "s2":
+            {
+                "guid":"da13ffde-ee8f-4894-8e1d-b0c45d7bf93a",
+                "condition":
+                {
+                    "type":"sudan",
+                    "征服":1,
+                    "f:rare-s1.rare<=":0
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"也許你可以藉機用掉一張征服卡，但……"
+            }
+        }
+    }

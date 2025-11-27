@@ -1,0 +1,247 @@
+ {
+        "id": 5006685,
+        "name": "造幣",
+        "text": "王權在天上的表徵為神明的祝福，在地上是宮殿與紀念碑，在人間則為鑄幣權。",
+        "tips": "",
+        "mapping_id":8001302,
+        "once_new":0,
+        "round_number": 3,
+        "waiting_round":0,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0,
+        "location": "自宅:[2,12]",
+        "icon": "rite_4",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+            "tips":["體魄","智慧","社交","隱匿"],
+            "type":"normal_result"
+        },
+        "tips_text":[
+            "工匠與助手的智慧與體魄決定了能造出多少枚假幣",
+            "善後者的社交與隱匿決定了是否會走漏風聲",
+            "工匠/助手是瑪希爾和巴拉特時：無需檢定1，“金幣”+20",
+            "檢定1：（工匠+助手）體魄+智慧",
+            ">=8，“金幣”+20",
+            ">=5，“金幣”+15",
+            ">=3，“金幣”+10",
+            "<3，“金幣”+1",
+            "檢定2：（善後人）社交+隱匿>=3",
+            "檢定成功：重啓本儀式",
+            "檢定失敗：罪證+1，重啓本儀式"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"操弄火與鉛，就彷彿在對蘇丹處刑……",
+                "type":"normal_result",
+                "type_tips":"你的體魄和智慧為你提供了完整的骰子數量。",
+                "low_target": 3,
+                "low_target_tips": "你至少需要3點成功"
+            },
+            "r2":{
+                "text":"遮掩煙塵，掩蔽進出貨物，處理垃圾……",
+                "type":"normal_result",
+                "type_tips":"你的社交和隱匿為你提供了完整的骰子數量。",
+                "low_target": 2,
+                "low_target_tips": "你至少需要2點成功"
+            },
+        },
+        "settlement_prior": [
+            {
+                "guid":"69597102-f347-4aba-aa89-85bea8cc8407",
+                "condition": {
+                     "any":{
+                        "all":{
+                            "s1.is":2000352, //瑪希爾
+                            "s2.is":2000005 //巴拉特
+                        },
+                        "all":{
+                            "s2.is":2000352, //瑪希爾
+                            "s1.is":2000005 //巴拉特
+                        }
+                    }
+                },
+                "result_title":"假作真時真亦假",
+                "result_text": "豐富的造假經驗與極致工藝的結合……你們不得不用小錘“糾正”一下這些假幣，否則它們看起來比蘇丹的真幣質量還好了……",
+                "result":
+                {
+                    "card":[2001190,"數量+20"]
+                },
+                "action": {
+                    "rite":5006685, //重新生成自己
+                }
+            },
+        ],
+        "settlement": [
+            {
+                "guid":"fc9bacf2-8ea8-4717-9ddb-71506e775c6c",
+                "condition": {
+                    "r1:s1.體魄+s1.智慧+s2.體魄+s2.智慧+s5.體魄+s5.智慧>=":[8,5] //大成功
+                },
+                "result_title":"這就是鍊金術",
+                "result_text": "把鉛變成黃金，好像也沒那麼難啊……你從水裡撈起一枚金幣，它還是溫熱的，彷彿剛剛降生的嬰兒……多麼可愛啊，每一枚都是從蘇丹的大腿上割下來的肉！",
+                "result":
+                {
+                    "card":[2001190,"數量+20"]
+                },
+                "action": {
+                    "rite":5006685, //重新生成自己
+                }
+            },
+            {
+                "guid":"a7f40911-c018-4c46-aad9-856761d47179",
+                "condition": {
+                    "r1:s1.體魄+s1.智慧+s2.體魄+s2.智慧+s5.體魄+s5.智慧>=":[5,5]
+                },
+                "result_title":"黃金逐漸稀薄，宛如貴血一般",
+                "result_text": "據說人類最初是有黃金的族裔統帥，最後，因為貪婪與慾望，那受祝福的血脈逐漸混雜，於是諸多惡劣之人也能盤踞王座……就彷彿你現在做的一樣，在黃金之中摻雜鉛塊與鐵錫，然後讓它們遊蕩人間。",
+                "result":
+                {
+                    "card":[2001190,"數量+15"]
+                },
+                "action": {
+                    "rite":5006685, //重新生成自己
+                }
+            },
+            {
+                "guid":"4002eb55-d6bc-49dd-b194-85330b6f1f93",
+                "condition": {
+                    "r1:s1.體魄+s1.智慧+s2.體魄+s2.智慧+s5.體魄+s5.智慧>=":[3,5]
+                },
+                "result_title":"就圖一個給蘇丹添亂",
+                "result_text": "形狀不規則，鍍金層太厚，蘇丹的浮雕太醜……等種種原因，你們浪費了幾乎同等價值的真金幣，才做出了這批假幣……",
+                "result":
+                {
+                    "card":[2001190,"數量+10"]
+                },
+                "action": {
+                    "rite":5006685, //重新生成自己
+                }
+            },
+            {
+                "guid":"c42dbe2d-27bd-4804-8c47-b3833906f412",
+                "condition": {
+                    "r1:s1.體魄+s1.智慧+s2.體魄+s2.智慧+s5.體魄+s5.智慧<":[3,5]
+                },
+                "result_title":"手滑了",
+                "result_text": "你們做出了一坨鉛和黃金混合起來的垃圾，現在，還要花十倍的力氣把它們給分離開……這次算是虧大了，得讓專業一點的人來做這件事！",
+                "result":
+                {
+                    "card":2001190, //就1枚
+                },
+                "action": {
+                    "rite":5006685, //重新生成自己
+                }
+            },
+        ],
+        "settlement_extre": [
+            {
+                "guid":"95e9d7c0-1835-4fd9-b4ad-31ec78dc92ba",
+                "condition": {
+                    "r2:s4.社交+s4.隱匿+s5.社交+s5.社交>=":[2,5]
+                },
+                "result_title":"神不知鬼不覺",
+                "result_text": "這可是[player.name]大人的宅邸！能有什麼問題？誰敢查他的問題？",
+                "result":
+                {
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"2aa40050-ee93-4584-a02f-7243aa9fdd46",
+                "condition": {
+                    "r2:s4.社交+s4.隱匿+s5.社交+s5.社交<":[2,5]
+                },
+                "result_title":"似乎有風聲泄露出去了",
+                "result_text": "可能是某一個多嘴的僕人，也可能是你們偷偷倒出了太多的爐渣，亦或是那有毒的廢水污染了周圍的井……總之，你們的行動引起了捉賊人的注意。",
+                "result":
+                {
+                    "card":2000558, //罪證
+                },
+                "action": {
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"c3f30cf7-23bd-401f-837e-2dacfe2c06f4",
+                "condition":
+                {
+                    "type":"char",
+                    "!怪物":1,
+                    "!動物":1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"工匠"
+            },
+            "s2":
+            {
+                "guid":"2522a347-91d4-49a8-8ad4-89d469d680fb",
+                "condition":
+                {
+                    "type":"char",
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"助手"
+            },
+            "s3":
+            {
+                "guid":"44035c8e-2b75-448e-a077-6a25b01c3e31",
+                "condition":
+                {
+                    "type":"item",
+                    "is":2000029,
+                    "cost.金幣":10,
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"總得有點真金吧…10枚金幣"
+            },
+            "s4":
+            {
+                "guid":"9872aa20-1bc9-4927-be61-ec719ba17965",
+                "condition":
+                {
+                    "type":"char",
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"善後者"
+            },
+            "s5":
+            {
+                "guid":"c4555c41-4f5f-45ca-aa2d-d1773c5c1f75",
+                "condition":
+                {
+                    "type":"item",
+                    "cost.消耗品=":1,
+                    "!金幣":1,
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"消耗品"
+            }
+        }
+    }

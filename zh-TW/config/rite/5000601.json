@@ -1,0 +1,304 @@
+ {
+        "id": 5000601,
+        "name": "襲擊者的巢穴",
+        "text": "在法圖娜的指引下，你來到一處貴族酒莊……一處看起來非常寧靜的酒莊。這是襲擊者的老巢？也許吧。你看了看法圖娜……顯然，此事涉及了貴族之間的財產糾紛，但在蘇丹的遊戲中，你本就可以肆意妄為。",
+        "tips": "",
+        "mapping_id":8001183,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":7,
+        "waiting_round_end_action":[ //儀式沒有處理，自動關閉後
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0, //自動執行
+        "location": "野外:[9,14]",
+        "icon": "rite_17",
+        "tag_tips": [
+            "體魄",
+            "戰鬥"
+        ],
+        "tag_tips_up":{
+            "tips":["戰鬥","體魄"],
+            "type":"normal_result"
+        },
+        "tips_text":[
+            "使用征服卡可以讓你出師有名",
+            "戰鬥體魄>=3點成功：金幣+5 主角魅力+1 法圖娜支持+1",
+            "普通線額外獎勵：權勢-1 俠名+1 空置的宅邸",
+            "征服線額外獎勵：權勢+2 空置的宅邸"
+        ],
+        "open_conditions": [
+        ],
+        "random_text": {
+            "r1":""
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"你襲擊了這個莊園",
+                "type":"normal_result",
+                "type_tips":"你的戰鬥和體魄為你提供了完整的骰子數量。",
+                "low_target": 3,
+                "low_target_tips": "你至少需要3點成功才能渡過危機。"
+            }
+        },
+        "random_effect": {
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"c4769546-df82-4575-8332-dfcb12343e9c",
+                "condition": {
+                    "r1:戰鬥+體魄>=":[3,5]
+                },
+                "result_title":"",
+                "result_text": "這裡的衛兵顯然稱不上訓練有素，戰鬥並不困難。",
+                "result":
+                {
+                },
+                "action": {
+                    "event_on":5300101,
+                    "event_on":5300108 //激活年輕望族的請求
+                }
+            },
+            {
+                "guid":"8bdacd33-f6f6-4508-88ca-0d25d5e9ea5a",
+                "condition": {
+                    "r1:戰鬥+體魄<":[3,5]
+                },
+                "result_title":"戰鬥失敗",
+                "result_text": "你沒能攻破衛兵的防線，好不容易才帶傷逃出包圍，而那位夫人也在衝突中不知所蹤。",
+                "result":
+                {
+                    "s2+equip":2000098,
+                    "s3+equip":2000098,
+                    "s4+equip":2000098,
+                    "clean.s1":1 //移除寡婦
+                },
+                "action": {
+                    "event_on":5300107 //激活移除年輕望族
+                }
+            }
+        ],
+        "settlement_extre": [
+            {
+                "guid":"e99c3fa8-fedb-4a78-a88a-2b7029bfdd00",
+                "condition": {
+                    "r1:戰鬥+體魄>=":[3,5]
+                },
+                "result_title":"",
+                "result_text": "法圖娜在衛兵們的屍體邊，表情看起來像是在忍耐着什麼，又像是釋懷了什麼。最後，她只是搖搖頭，露出一絲微笑，“謝謝你。”她說着，如約將一筆不菲的酬金交到了你的手中。",
+                "result":
+                {
+                    "coin":5 //獲得了金幣報酬
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"0cb98dd8-6a68-4e70-a2fa-d6064dd8afd6",
+                "condition": {
+                    "r1:戰鬥+體魄>=":[3,5]
+                },
+                "result_title":"",
+                "result_text": "法圖娜感念你的幫助，你獲得了她的支持",
+                "result":
+                {
+                    "s2+魅力":1, //魅力提升
+                    "s1+支持":1
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"ceaa0377-9fa4-4a56-96e0-2eae6225a7c6",
+                "condition": {
+                    "r1:戰鬥+體魄>=":[3,5],
+                    "!s6":1 //沒有放蘇丹卡
+                },
+                "result_title":"出師無名的代價",
+                "result_text": "然而很快，你無緣無故侵佔了他人酒莊的事流傳了出去。沒有人關心你這麼做的緣由，貴族們都擔憂自己的莊園遭到這樣莫名的襲擊，紛紛投訴你的不義之舉。",
+                "result":
+                {
+                    "card":2000662, //空置宅邸
+                    "counter-7100003": 1, //權勢-1
+                    "counter+7100004": 1 //俠名+1
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"eefa2ce7-f6a5-4e2d-b29a-85635c96a549",
+                "condition": {
+                    "r1:戰鬥+體魄>=":[3,5],
+                    "s6":1 //放蘇丹卡
+                },
+                "result_title":"蘇丹的遊戲也不錯",
+                "result_text": "隔天，你向蘇丹陳述了你做過的事，並請求抵消一張蘇丹卡。貴族們都悄悄鬆了口氣，還好他們不是那個被你盯上、用來完成遊戲的倒霉鬼。",
+                "result":
+                {
+                    "card":2000662, //空置宅邸
+                    "clean.s6":1,
+                    "counter+7100003": 2 //權勢+2
+                },
+                "action": {
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"0a258a99-e8c6-46f0-8f8e-f1cbe571d5da",
+                "condition":
+                {
+                    "is":2000062
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"法圖娜希望你能幫她"
+            },
+            "s2":
+            {
+                "guid":"423c9828-7eee-485f-9f44-c640c37c5f72",
+                "condition":
+                {
+                    "type": "char",
+                    "主角":1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"你必須親自處理這件事",
+                "pops":[
+                    {
+                        "condition":{
+                            "f:s1.體魄+s1.戰鬥+s2.體魄+s2.戰鬥+s3.體魄+s3.戰鬥+s4.體魄+s4.戰鬥+s5.體魄+s5.戰鬥+s6.體魄+s6.戰鬥<": 3
+                        },
+                        "action":{
+                            "pop.5000601_s2_01.self":"你該意識到，以你目前的<b><color=white>【體魄】</color></b>和<b><color=white>【戰鬥】</color></b>能力，你需要更多的準備。"
+                        }
+                    },
+                    {
+                        "condition":{
+                            "f:s1.體魄+s1.戰鬥+s2.體魄+s2.戰鬥+s3.體魄+s3.戰鬥+s4.體魄+s4.戰鬥+s5.體魄+s5.戰鬥+s6.體魄+s6.戰鬥>=": 3,
+                            "!s5":1
+                        },
+                        "action":{
+                            "pop.5000601_s2_02.self":"如果有<b><color=white>【情報】</color></b>支持的話，可以多一分勝算。"
+                        }
+                    }
+                ]
+            },
+            "s3":
+            {
+                "guid":"30d64edd-8a9a-42bc-88c8-0001d83912a8",
+                "condition":
+                {
+                    "!主角":1,
+                    "type":"char"
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"你可以帶上任意追隨者，只要能幫上忙",
+                "pops":[
+                    {
+                        "condition":{
+                            "f:s1.體魄+s1.戰鬥+s2.體魄+s2.戰鬥+s3.體魄+s3.戰鬥+s4.體魄+s4.戰鬥+s5.體魄+s5.戰鬥+s6.體魄+s6.戰鬥<": 3
+                        },
+                        "action":{
+                            "pop.5000601_s3_01.self":"你該意識到，以你目前的<b><color=white>【體魄】</color></b>和<b><color=white>【戰鬥】</color></b>能力，你需要更多的準備。"
+                        }
+                    },
+                    {
+                        "condition":{
+                            "f:s1.體魄+s1.戰鬥+s2.體魄+s2.戰鬥+s3.體魄+s3.戰鬥+s4.體魄+s4.戰鬥+s5.體魄+s5.戰鬥+s6.體魄+s6.戰鬥>=": 3,
+                            "!s5":1
+                        },
+                        "action":{
+                            "pop.5000601_s3_02.self":"如果有<b><color=white>【情報】</color></b>支持的話，可以多一分勝算。"
+                        }
+                    }
+                ]
+            },
+            "s4":
+            {
+                "guid":"82b7fd73-8a59-45e7-b3a0-dddb0eaf7453",
+                "condition":
+                {
+                    "!主角":1,
+                    "type":"char"
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"你可以帶上任意追隨者，只要能幫得上忙",
+                "pops":[
+                    {
+                        "condition":{
+                            "f:s1.體魄+s1.戰鬥+s2.體魄+s2.戰鬥+s3.體魄+s3.戰鬥+s4.體魄+s4.戰鬥+s5.體魄+s5.戰鬥+s6.體魄+s6.戰鬥<": 3
+                        },
+                        "action":{
+                            "pop.5000601_s4_01.self":"你該意識到，以你目前的<b><color=white>【體魄】</color></b>和<b><color=white>【戰鬥】</color></b>能力，你需要更多的準備。"
+                        }
+                    },
+                    {
+                        "condition":{
+                            "f:s1.體魄+s1.戰鬥+s2.體魄+s2.戰鬥+s3.體魄+s3.戰鬥+s4.體魄+s4.戰鬥+s5.體魄+s5.戰鬥+s6.體魄+s6.戰鬥>=": 3,
+                            "!s5":1
+                        },
+                        "action":{
+                            "pop.5000601_s4_02.self":"如果有<b><color=white>【情報】</color></b>支持的話，可以多一分勝算。"
+                        }
+                    }
+                ]
+            },
+            "s5":
+            {
+                "guid":"7acfcd98-7d40-4e44-a4e9-71e2b87751d0",
+                "condition":
+                {
+                    "type":"item",
+                    "cost.消耗品=":1,
+                        "!金幣":1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"有些東西在戰鬥中能派得上用場",
+                "pops":[
+                    {
+                        "condition":{
+                            "f:s1.體魄+s1.戰鬥+s2.體魄+s2.戰鬥+s3.體魄+s3.戰鬥+s4.體魄+s4.戰鬥+s5.體魄+s5.戰鬥+s6.體魄+s6.戰鬥<": 3
+                        },
+                        "action":{
+                            "pop.5000601_s5_01.self":"你該意識到，以你目前的<b><color=white>【體魄】</color></b>和<b><color=white>【戰鬥】</color></b>能力，你需要更多的準備。"
+                        }
+                    }
+                ]
+            },
+            "s6":
+            {
+                "guid":"a0c406cf-d1d6-4227-ba57-5f7af2fd584e",
+                "condition":
+                {
+                    "type":"sudan",
+                    "征服":1,
+                    "rare<=":3
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"你可以抵消一張白銀及以下品質的征服卡"
+            }
+        }
+    }

@@ -1,0 +1,70 @@
+ {
+        "id": 5000131,
+        "name": "天文臺",
+        "text": "天象儀緩緩轉動，在一張輕薄的銅板上，用鋼針與滾輪，壓刻出複雜的圖形——可以稱之為真理的痕跡，也可以稱之為命運的軌跡。",
+        "tips": "",
+        "once_new":0,
+        "round_number": 7,
+        "waiting_round":0,
+        "waiting_round_end_action":[
+
+        ],
+        "method_settlement": "",
+        "auto_begin": 1,
+        "auto_result":0,
+        "location": "奇珍:8",
+        "type":"TREASURE",
+        "icon": "rite_5000131",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "7天后會獲得觀測後的天象",
+            "從10種天象卡里面隨機抽取1張"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+        ],
+        "settlement_extre": [
+            {
+                "guid":"2414336a-6b37-4564-97a2-49775cb40d3d",
+                "condition":
+                {
+                },
+                "result_title":"記錄完成了",
+                "result_text": "天象儀的乙太平衡器會自動與目前最值得注意的天象同頻——這意味着影響魔力，影響命運最強烈的星象，也可以理解為最容易觀測到的。",
+                "result":
+                {
+                    "loot.已擁有+1":6000100
+                },
+                "action":
+                {
+                    "rite":5000131 //生成自己
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"cbff7d3f-633a-4bb4-a373-4020b7c9513f",
+                "condition":
+                {
+                    "is":2000380 //望遠鏡
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"天象儀"
+            }
+        }
+    }

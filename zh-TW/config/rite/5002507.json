@@ -1,0 +1,90 @@
+ {
+        "id": 5002507,
+        "name": "兇獅肆虐",
+        "text": "因為始終無人敢前往獵殺獅子，它變得愈發肆無忌憚。兇獅食人的消息時時傳來，但這一次，你發現受害者似乎是你認識的朋友……",
+        "tips": "",
+        "mapping_id":8001173,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":0,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 1,
+        "auto_result": 0,
+        "location": "野外:[1,6]",
+        "icon": "rite_21",
+        "tag_tips": [
+
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "這是一樁不幸的事故，你無法阻止",
+            "殺死山獅可以終止這樣的事情發生",
+            "隨機死一個非主角的追隨者"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+
+        },
+        "random_text_up":{
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+
+        ],
+        "settlement_extre": [
+            {
+                "guid":"6a421158-2027-4aad-a5a7-eceeaaa4f6eb",
+                "condition": {
+                    "s1":1 // s1非空，吸到人了
+                },
+                "result_title":"",
+                "result_text": "屍體支離破碎、面目全非，但你從破碎的衣料和飾品勉強分辨出受害者是[s1.name]，他也確實失蹤好幾天了。那隻該死的畜生……你還要繼續忍耐嗎？還是決心為[s1.name]報仇？",
+                "result":
+                {
+                    "clean.s1":1,
+                    "counter=7000022":0           //山獅計數器歸零，下次吃人重新計數
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"dc8d024d-ffb7-48b5-b983-dbb48b8c4a37",
+                "condition": {
+                    "!s1":1 // s1空，沒吸到人
+
+                },
+                "result_title":"",
+                "result_text": "屍體支離破碎、面無全非，不過好在和你的朋友身形上有微妙的差別。這次只是虛驚一場，但，下次呢？獅子很快就會再度變得飢餓，你能袖手旁觀到什麼時候？",
+                "result":
+                {
+                    "counter=7000022":0           //山獅計數器歸零，下次吃人重新計數
+                },
+                "action": {
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"e65ae935-06f7-48af-8865-2354bae6101c",
+                "condition":
+                {
+
+                    "type":"char",//不能吸到主角
+                    "!主角":1,
+                    "追隨者":1
+                },
+                "open_adsorb":1, //自動吸一個盟友
+                "is_key":0,
+                "is_empty":1, //可以為空
+                "is_enemy":0,
+                "text":"你有一名追隨者似乎遇害了"
+            }
+        }
+    }

@@ -1,0 +1,178 @@
+ {
+        "id": 5006683,
+        "name": "蘇丹的質詢",
+        "text": "你需要向蘇丹解釋這一切——當然，也許只要獻上足夠的“收穫”，就能證明自己的忠誠。",
+        "tips": "",
+        "mapping_id":8001557,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":3,
+        "waiting_round_end_action":[
+            {
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "",
+                "result":
+                {
+                },
+                "action": {
+                    "prompt":{
+                        "id":"5006683_prompt_1",
+                        "text":"你忽視了蘇丹的傳喚，毫無意外地，你被處死了。",
+                        "icon":"cards/sudan"
+                    },
+                    "over":8,
+                }
+            }
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0,
+        "location": "宮廷:[2,6]",
+        "icon": "rite_14",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "每多上交一類物品，就更可能讓蘇丹滿意",
+            "你也許不需要上交全部物品",
+            "上交戒指可能會導致相關人士受苦",
+            "超時：進入結局【伴君如伴虎】",
+
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+        ],
+        "settlement_extre": [
+            {
+                "guid":"fe6dde9b-1a48-4d58-aed4-d97901dfc29a",
+                "condition": {
+                    "s2":1 //上交金幣
+                },
+                "result_title":"你請求蘇丹寬恕自己的無能",
+                "result_text": "雖然你沒有抓到僞造金幣的惡賊，但你獻上了更實際的東西——真正的金幣！蘇丹不置可否，但至少你的腦袋在說話的時候還跟頭是連着的。",
+                "result":
+                {
+                    "card":2000415,
+                    "counter+7000717":1,//計數，用來是否觸發後續追問的檢定
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"1c0015c7-b130-4d88-8720-b74e95356db5",
+                "condition": {
+                    "s3":1 //上交假金幣
+                },
+                "result_title":"這是我找到的全部假幣了",
+                "result_text": "你告訴蘇丹，自己用盡了各種辦法，才把這些僞造的金幣都收繳起來……當然，現在它們都是偉大的蘇丹的戰利品了。\n蘇丹非常認真地檢查了這些金幣……並且吩咐宦官把它們收集了起來——你懷疑最後蘇丹會把它們當做真幣花出去。",
+                "result":
+                {
+                    "card":2000416,
+                    "counter+7000717":1,//計數，用來是否觸發後續追問的檢定
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"2b7c1ecf-d52e-405c-8d65-bdc5015f2e67",
+                "condition": {
+                    "s4":1 //上交戒指
+                },
+                "result_title":"只要不是你，誰都行",
+                "result_text": "你相信蘇丹會明白這枚戒指中所蘊含祕密……你在暗示，是他身邊人的女人，而不是你，對蘇丹不忠誠，偷蘇丹的財富……",
+                "result":
+                {
+                    "card":2000414,
+                    "counter+7000717":1,//計數，用來是否觸發後續追問的檢定
+                    "clean.s4":1,
+                },
+                "action": {
+                    "event_on":5320288,//噩耗
+                }
+            },
+            {
+                "guid":"c2eddf30-3de9-4816-aff1-816063ce24f6",
+                "condition": {
+                },
+                "result_title":"你讓君主滿意了嗎？",
+                "result_text": "今天，你得以活着完成了覲見，但你總是擔心，某一天，蘇丹又會想起什麼……當然，活在蘇丹王座下的每一個貴族，每一天，都是這樣過來的，所以今天仍然只是平凡的一天。",
+                "result":
+                {
+                },
+                "action": {
+                    "event_on":5320287//蘇丹的追問
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"27c17f26-86fa-4e20-86b4-d25f98180b9b",
+                "condition":
+                {
+                    "type":"char",
+                    "主角":1,
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"你需要親自應付君主"
+            },
+            "s2":
+            {
+                "guid":"eeef7941-5368-4b4a-a891-cc0ea31c2774",
+                "condition":
+                {
+                    "type":"item",
+                    "is":2000029,
+                    "cost.金幣":10,
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"呈上請罪的罰金\n金機遇+1"
+            },
+            "s3":
+            {
+                "guid":"c309a01c-4cb7-4604-b2e2-90f5a04b81f0",
+                "condition":
+                {
+                    "type":"item",
+                    "is":2001190,
+                    "cost.金幣":10,
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"呈上收穫的假幣\n金內幕+1"
+            },
+            "s4":
+            {
+                "guid":"af66f545-84dc-4346-b6e8-701ecf59f255",
+                "condition":
+                {
+                    "type":"item",
+                    "is":2001191,
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"呈上足以轉移蘇丹注意力的證物\n金洞察+1"
+            }
+        }
+    }

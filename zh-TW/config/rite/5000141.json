@@ -1,0 +1,72 @@
+ {
+        "id": 5000141,
+        "name": "承陽武士",
+        "text": "這是一個威武雄壯的武士雕塑。生命權杖被加工成了一柄長劍，握在雕塑的手上……劍柄中的乙太仍然活躍，會隨着日升月落而流轉、發光，令劍刃顫動、低鳴……",
+        "tips": "",
+        "once_new":0,
+        "round_number": 7,
+        "waiting_round":0,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 1,
+        "auto_result":0,
+        "location": "奇珍:5",
+        "type":"TREASURE",
+        "icon": "rite_5000141",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "它似乎時刻在變強",
+            "當時候來臨了，它會回應你的呼喚",
+            "生命權杖每7回合戰鬥+3，結局時可以拔出使用"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"a3a532b1-bc1f-4c2f-8a1d-c471666fb818",
+                "condition":
+                {
+                },
+                "result_title":"性力",
+                "result_text": "生命權杖內彷彿還有魔力在流動，那到底是人類永無止境的慾望呢？還是某種即使是暴君也無法阻斷的生命力？",
+                "result":
+                {
+                    "s1+戰鬥":3
+                },
+                "action":
+                {
+                    "rite":5000141
+                }
+            }
+        ],
+        "settlement_extre": [
+
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"7c9edcf5-4288-4970-aca7-fa07b9df520c",
+                "condition":
+                {
+                    "type":"item",
+                    "is":2000959  // 走到結局的時候可以將其拔出
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"承陽劍"
+            }
+        }
+    }

@@ -1,0 +1,110 @@
+{
+    "id": 5008208,
+    "name": "哲瓦德的笑容",
+    "text": "能夠幫助流民得到一個工作的機會當然是好事……",
+    "tips": "",
+    "mapping_id":8001121,
+    "once_new": 0,
+    "round_number": 1,
+    "waiting_round": 3,
+    "waiting_round_end_action": [],
+    "method_settlement": "",
+    "auto_begin": 0,
+    "auto_result": 0,
+    "location": "商業區:[10,19]",
+    "icon": "rite_1",
+    "tag_tips": [],
+    "tag_tips_up": {},
+    "tips_text": [
+        "放入足夠的情報，讓哲瓦德驅使流民進行統計，精算業務",
+        "隨機贓物商人盲盒+1"
+    ],
+    "open_conditions": [],
+    "random_text": {},
+    "random_text_up": {},
+    "random_effect": {},
+    "settlement_prior": [],
+    "settlement": [
+        {
+            "guid": "a602dfc5-5242-43a8-9ad7-9836cd9f4a8b",
+            "condition": {},
+            "result_title": "他開心就好",
+            "result_text": "哲瓦德帶着一些識字的流民去學習整理市場情報與貨物的資料。哲瓦德仔細教他們怎麼記錄，怎麼列條目，怎麼精算，怎麼做假賬………“老爺說，他習慣了，如果沒有兩本賬簿的話他晚上睡不踏實。”\n最後，那些算數最好，並且親手幫他做假賬的流民成為了哲瓦德的親信，而其他人，有了這些工作經驗，也很容易找到其他商行的工作了——很少看到哲瓦德對其他人這麼友善過，原來是咱們數學不好的緣故啊。",
+            "result": {
+                "loot": 6000083 //隨機盲盒
+            },
+            "action": {}
+        }
+    ],
+    "settlement_extre": [],
+    "cards_slot": {
+        "s1": {
+            "guid": "2db36556-be4b-4759-961b-e466c722f4c2",
+            "condition": {
+                "type": "char",
+                "is": 2000057
+            },
+            "open_adsorb": 1,
+            "is_key": 0,
+            "is_empty": 0,
+            "is_enemy": 0,
+            "text": "哲瓦德可不放心把事情交給別人"
+        },
+        "s2": {
+            "guid": "82dc0ebf-66c7-4c27-9fc2-7aea38b2c310",
+            "condition": {
+                "type": "item",
+                "情報": 1,
+                "rare>=": 3,
+                "cost.消耗品=":1
+            },
+            "open_adsorb": 0,
+            "is_key": 0,
+            "is_empty": 0,
+            "is_enemy": 0,
+            "text": "不低於白銀品級的情報"
+        },
+        "s3": {
+            "guid": "649c3559-f458-402c-a9b5-8ffb3bad203c",
+            "condition": {
+                "type": "item",
+                "情報": 1,
+                "rare>=": 3,
+                "cost.消耗品=":1
+            },
+            "open_adsorb": 0,
+            "is_key": 0,
+            "is_empty": 0,
+            "is_enemy": 0,
+            "text": "不低於白銀品級的情報"
+        },
+        "s4": {
+            "guid": "11bd67f6-d4d0-4ad0-b7fe-a32f67f6071e",
+            "condition": {
+                "type": "item",
+                "情報": 1,
+                "rare>=": 3,
+                "cost.消耗品=":1
+            },
+            "open_adsorb": 0,
+            "is_key": 0,
+            "is_empty": 0,
+            "is_enemy": 0,
+            "text": "不低於白銀品級的情報"
+        },
+        "s5": {
+            "guid": "a258025d-e7fb-4d6d-8b21-d557ae6f5c67",
+            "condition": {
+                "type": "item",
+                "情報": 1,
+                "rare>=": 3,
+                "cost.消耗品=":1
+            },
+            "open_adsorb": 0,
+            "is_key": 0,
+            "is_empty": 0,
+            "is_enemy": 0,
+            "text": "不低於白銀品級的情報"
+        }
+    }
+}

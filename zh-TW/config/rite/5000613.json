@@ -1,0 +1,158 @@
+ {
+        "id": 5000613,
+        "name": "狩獵實戰",
+        "text": "只有在真正的狩獵中才能鍛煉出真正的戰士。你決定帶着扎齊伊去見見血。",
+        "tips": "",
+        "mapping_id":8001250,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":0,
+        "waiting_round_end_action":[ //儀式沒有處理，自動關閉後
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0, //自動執行
+        "location": "野外:[1,6]",
+        "icon": "rite_15",
+        "tag_tips": [
+            "體魄",
+            "生存"
+        ],
+        "tag_tips_up":{
+            "tips":["體魄","生存"],
+            "type":"normal_result"
+        },
+        "tips_text":[
+            "扎齊伊和指導的人體魄和生存越高，訓練的效果越好。",
+            "上陣角色體魄生存檢定>=5點：扎齊伊體魄+3 生存+2",
+            "上陣角色體魄生存檢定>=3點：扎齊伊體魄+2 生存+1",
+            "上陣角色體魄生存檢定<3點：扎齊伊體魄+1 受傷",
+            "扎齊伊被帶壞+1"
+        ],
+        "open_conditions": [
+        ],
+        "random_text": {
+            "r1":"你們跑到野外開始打獵"
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"你帶着扎齊伊來到荒野，試着開始打獵",
+                "type":"normal_result",
+                "type_tips":"你的體魄和生存為你提供了完整的骰子數量。",
+                "low_target": 3,
+                "low_target_tips": "你至少需要3點成功。"
+            }
+        },
+        "random_effect": {
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"9f981adb-348e-4639-a3d9-668b1c12a781",
+                "condition": {
+                    "r1:體魄+生存>=":[5,5]
+                },
+                "result_title":"狩獵非常成功",
+                "result_text": "你們一起獵殺、剝皮、公正地分配肉與內臟、在篝火下享受野味，這才是年輕人應該享受的生活。",
+                "result":
+                {
+                    "s1+體魄":3,
+                    "s1+生存":2,
+                    "counter+7000041":1  //帶壞他的計數
+
+                },
+                "action": {
+                    "clean.rite":5000611,
+                    "clean.rite":5000612,
+                    "event_on":5300109 //激活下一輪請求
+                }
+            },
+            {
+                "guid":"93e16612-59db-4852-acb6-6ffb8d4e5a11",
+                "condition": {
+                    "r1:體魄+生存>=":[3,5]
+                },
+                "result_title":"狩獵的成果還不錯",
+                "result_text": "他親自射中了一頭鹿，然後花了一整天去追蹤它……雖然累得精疲力盡，但看得出來他還挺開心的。",
+                "result":
+                {
+                    "s1+體魄":2,
+                    "s1+生存":1,
+                    "counter+7000041":1
+                },
+                "action": {
+                    "clean.rite":5000611,
+                    "clean.rite":5000612,
+                    "event_on":5300109 //激活下一輪請求
+                }
+            },
+            {
+                "guid":"6732bb38-91b5-4df8-a8d6-52d165bbcb75",
+                "condition": {
+                    "r1:體魄+生存<":[3,5]
+                },
+                "result_title":"狩獵出了點意外",
+                "result_text": "他過於專注於眼前的獵物，結果被一匹狼偷襲，還好只被咬了一口，沒受重傷。",
+                "result":
+                {
+                    "s1+體魄":1,
+                    "s1+equip":2000098,
+                    "counter+7000041":1
+                },
+                "action": {
+                    "clean.rite":5000611,
+                    "clean.rite":5000612,
+                    "event_on":5300109 //激活下一輪請求
+                }
+            }
+        ],
+        "settlement_extre": [
+
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"c7be6c0f-fc68-4b5b-9567-c8c79c98c36b",
+                "condition":
+                {
+                    "is":2000063
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"扎齊伊"
+            },
+            "s2":
+            {
+                "guid":"dfd48520-a8f4-42f1-9200-5903daf85594",
+                "condition":
+                {
+                    "type":"char",
+                    "!is":2000063
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"你可以親自，或者拜託任意追隨者訓練他"
+            },
+            "s3":
+            {
+                "guid":"30ab3dbb-d414-4d08-ad5f-bff3c26008fc",
+                "condition":
+                {
+                    "type":"item",
+                    "cost.消耗品=":1,
+                        "!金幣":1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"協助訓練的消耗品"
+            }
+        }
+    }

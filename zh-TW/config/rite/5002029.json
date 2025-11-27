@@ -1,0 +1,93 @@
+ {
+        "id": 5002029,
+        "name": "夏瑪的葬禮",
+        "text": "由於那名大領主拒絕出席，蘇丹對這個葬禮迅速失去了興致。壓抑的沉默和恐慌中，沒有任何人在真心憑弔這美麗生命的逝去。\n但你知道該去哪裡為她獻上一束鮮花、一些生前喜愛過的東西、些微遲來的慰藉。",
+        "tips": "",
+        "mapping_id":8001140,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":7,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0,
+        "location": "商業區:[10,19]",
+        "icon": "rite_22",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "你可以為她帶去一件祭品——黃金品級的裝備、書籍，又或者，只是單純的一捧花束。",
+            "當然，你也可以不這麼做，夏瑪不會介意。",
+            "放置祭品：金貓戰士雕像+1"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+
+        ],
+        "settlement_extre": [
+            {
+                "guid":"43d3dc8a-553e-4a60-899b-8ff963d9359f",
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "很快，夏瑪的死訊傳遍全城，再後來，有謠言說，她被蘇丹虐待致死的。\n隨着謠言的流轉，懷念她的人自發在書店附近的一個街角放置禮物哀悼她——據說她以前喜歡坐在這裡看書。\n你過去的時候，那裡已經堆滿了鮮花、珠寶、書籍，有一些價值連城，卻沒人去碰……",
+                "result":
+                {
+
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"669aa687-c8c3-44d0-8d12-4ee2476b72fe",
+                "condition": {
+                },
+                "result_title":"你留下了自己的紀念品",
+                "result_text": "離開之前，一位蒙面女奴攔住了你。她說，夏瑪留給了你一件禮物。",
+                "result":
+                {
+                    "clean.s1":1,
+                    "card":[2000402,"已擁有+1"] //金貓戰士雕像
+                },
+                "action": {
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+                {
+                    "guid":"8f5f0eb7-5d7b-4194-bb21-4a20350affc8",
+                    "condition":
+                    {
+                        "type":"item",
+                        "any":{
+                            "all":{
+                                "rare=":4,
+                                "讀物":1
+                            },
+                            "all":{
+                                "rare=":4,
+                                "裝備":1
+                            },
+                            "is":2000266
+                        }
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"祭品"
+                }
+        }
+    }

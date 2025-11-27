@@ -1,0 +1,141 @@
+ {
+        "id": 5006679,
+        "name": "可疑的金幣",
+        "text": "這枚金幣感覺有點不對勁……",
+        "tips": "",
+        "mapping_id":8001005,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":1,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0,
+        "location": "自宅:[2,12]",
+        "icon": "rite_19",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "某些擅長工藝的角色也許可以幫上忙",
+
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"c1ddc058-98bd-4a6c-9fb5-28bcd31153ab",
+                "condition": {
+                    "s2.is":2000352 //瑪希爾
+                },
+                "result_title":"別拆，我還要留着用呢",
+                "result_text": "她用小錘子敲了敲，告訴你這個和真的金幣的合金比例不一樣……你拒絕了她想要剪開這枚金幣的要求，也拒絕繼續聽她講解合金的鑄造知識。",
+                "result":
+                {
+                    "s1+回收":1
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"93ce2425-777f-40c3-b188-135abb264f66",
+                "condition": {
+                    "s2.is":2000022 //拜鈴耶
+                },
+                "result_title":"謊言的味道",
+                "result_text": "你還沒來得及阻止，拜鈴耶就把這枚金幣吃進了嘴裡……也許還吞了下去！？\n“瞧您這貪心的樣子，不過是一枚假幣罷了！密神們是不會要這種東西的！”她大笑着，從兩腿之間把那枚硬幣變了出來，叮地一聲彈向你——出於本能，你還是一把接住了這有味的金幣。",
+                "result":
+                {
+                    "s1+回收":1
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"5beaad0f-91f8-44c4-b0b9-a62d617b3187",
+                "condition": {
+                    "s2.is":2000123 //魯梅拉
+                },
+                "result_title":"你擔心她記得自己看過的任何東西",
+                "result_text": "魯梅拉向你索要了尺子，石墨與細線，盡力標註出了五處細節，與真幣不同，但也只有她親自指給你看的時候，你才能發現。",
+                "result":
+                {
+                    "s1+回收":1
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"e14c920e-b30a-4a78-a818-91915af8a381",
+                "condition": {
+                    "s2.is":2000005 //異國商人，此時巴拉特是主角的追隨者
+                },
+                "result_title":"你還是找上門了",
+                "result_text": "巴拉特接過硬幣，在手裡掂了掂，嘆了口氣，“我正在找時機和你說清楚，方便的話，請大人隨我來吧。”",
+                "result":
+                {
+                    "s1+回收":1,
+                    "counter+7000715":1
+                },
+                "action": {
+                    "rite":5006680, //吐露真相
+                }
+            },
+            {
+                "guid":"01840f33-5333-4628-b1e8-d1412c505452",
+                "condition": {
+                     //通用角色
+                },
+                "result_title":"想來足夠騙過大部分人了",
+                "result_text": "你們一起看了半天，雖然說從直覺來說，好像是有點問題，但如果混在普通金幣裡，也幾乎看不出什麼毛病……如果這是一個假幣的話，那它的做工真的非常精細。",
+                "result":
+                {
+                    "s1+回收":1
+                },
+                "action": {
+
+                }
+            },
+        ],
+        "settlement_extre": [
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"b0718fd1-cebb-435c-941a-c23423aa873d",
+                "condition":
+                {
+                    "is":2001190
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"可疑的金幣"
+            },
+            "s2":
+            {
+                "guid":"cebbcc2a-aa88-47dc-b903-e4813699cc32",
+                "condition":
+                {
+                    "type":"char",
+                    "!怪物":1,
+                    "!動物":1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"讓誰來檢查\n瑪希爾/拜鈴耶/魯梅拉：有角色文本\n巴拉特：觸發後續"
+            }
+        }
+    }

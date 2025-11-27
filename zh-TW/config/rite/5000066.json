@@ -1,0 +1,130 @@
+{
+    "id": 5000066,
+    "name": "否認現實",
+    "text": "長時間默唸這些詞句，能令人精神恍惚……這可能並不舒適，但也是珍貴的神祕體驗。",
+    "tips": "",
+    "mapping_id":8001005,
+    "once_new":0,
+    "round_number": 1,
+    "waiting_round":1,
+    "waiting_round_end_action":[
+    ],
+    "method_settlement": "",
+    "auto_begin": 0,
+    "auto_result":0,
+    "location": "自宅:[2,12]",
+    "icon": "rite_7",
+    "tag_tips": [
+    ],
+    "tag_tips_up":{
+    },
+    "tips_text":[
+        "對一般人來說，這也許能提升他們的魔力",
+        "你收集了越多的詞句，這份手稿的力量就越大",
+        "判詞計數器<5：",
+        "角色魔力+1；命運詩集-1，異樣的存在-1；靈視+1；治理家業線斷線",
+        "判詞計數器>=5：",
+        "角色魔力+3；命運詩集-1，異樣的存在-1；靈視+3；治理家業線斷線"
+    ],
+    "open_conditions": [
+    ],
+    "random_text":{
+    },
+    "random_text_up":{
+    },
+    "settlement_prior": [
+    ],
+    "settlement": [
+        {
+            "guid":"fdfdfa14-eee7-4f6d-84f3-a7db4bc99325",
+            "condition":
+            {
+                "!s2.is":2000460,
+                "counter.7000733<":5, //獲得判詞
+            },
+            "result_title":"[s2.name]看見了織錦之間的裂隙",
+            "result_text": "現實是可以被編織的，可以修改的！而這些詞句正是某個偉大存在曾經使用過的鉤針與圖紙……",
+            "result":
+            {
+                "clean.s1":1,
+                "clean.s3":1,
+                "s2+魔力":1,
+                "counter+7100005":1,
+            },
+            "action":
+            {
+            }
+        },
+        {
+            "guid":"fc3aacb4-6079-454a-aa39-3a2c4d378e34",
+            "condition":
+            {
+                "!s2.is":2000460,
+                "counter.7000733>=":5, //獲得判詞
+            },
+            "result_title":"[s2.name]學到了一些修改現實的技藝",
+            "result_text": "現實是可以被編織的，可以修改的！而這些詞句正是某個偉大存在曾經使用過的鉤針與圖紙……你們幾乎重新發明了一種魔力的流派。",
+            "result":
+            {
+                "clean.s1":1,
+                "s2+魔力":3,
+                "clean.s3":1,
+                "counter+7100005":3,
+            },
+            "action":
+            {
+            }
+        }
+
+    ],
+    "settlement_extre": [
+    ],
+    "cards_slot":
+    {
+        "s1":
+            {
+                "guid":"ca832414-6a0e-4d7d-9de3-c0950d0c9cd1",
+                "condition":
+                {
+                    "type":"item",
+                    "is":2001209,
+                    "正在閱讀":1
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":1,
+                "text":"你收集的特殊詩句"
+            },
+        "s2":
+            {
+                "guid":"9e50db9d-7598-45ef-bce8-dc220b10c6ef",
+                "condition":
+                {
+                    "type":"char",
+                    "!動物":1,
+                    "!怪物":1,
+                    "!is":2000460
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"閱讀者\n非動物、非怪物、非哈桑"
+            },
+        "s3":
+            {
+                "guid":"05f53f07-743f-4b48-a9f9-35f6d68a7066",
+                "condition":
+                {
+                    "type":"item",
+                    "is":2001208
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"一番不可思議的奇遇"
+            }
+    }
+}

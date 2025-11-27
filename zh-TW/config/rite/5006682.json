@@ -1,0 +1,246 @@
+ {
+        "id": 5006682,
+        "name": "搜刮",
+        "text": "巴拉特已經不在了，但你仍然來得及包圍他租借的宅邸——那裡面的東西全都應該是你的！",
+        "tips": "",
+        "mapping_id":8001556,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":0,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0,
+        "location": "自宅:[2,12]",
+        "icon": "rite_4",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+            "tips":["生存","隱匿"],
+            "type":"normal_result"
+        },
+        "tips_text":[
+            "未獲得過部落遺物：金幣+10，“金幣”+10",
+            "放入奢靡卡：折斷；未放入奢靡卡：讒言+1",
+            "檢定1：生存>=5",
+            "檢定成功：金幣+10，“金幣”+10，隨機巴拉特貨物+1",
+            "檢定失敗：金幣+10，“金幣”+10",
+            "檢定2：隱匿>=5",
+            "檢定成功：未獲得過珍寶，髮絲誓約戒指+1，亡國的珍寶+1；獲得過珍寶，髮絲誓約戒指+1",
+            "檢定失敗：無掉落"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"抓住逃跑的夥計",
+                "type":"normal_result",
+                "type_tips":"你的生存為你提供了完整的骰子數量。",
+                "low_target": 5,
+                "low_target_tips": "你至少需要5點成功"
+            },
+            "r2":{
+                "text":"還藏着什麼好東西？",
+                "type":"normal_result",
+                "type_tips":"你的隱匿為你提供了完整的骰子數量。",
+                "low_target": 5,
+                "low_target_tips": "你至少需要5點成功"
+            }
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"ace82632-dc1a-4640-a4d6-b156a6bcb666",
+                "condition": {
+                    "!table_have.2000296.已擁有":1,
+                    "!table_have.2000297.已擁有":1,
+                    "!table_have.2000298.已擁有":1,
+                    "!table_have.2000299.已擁有":1,
+                    "!table_have.2000300.已擁有":1,
+                    "!table_have.2000301.已擁有":1,
+                    "!table_have.2000302.已擁有":1,
+                    "!table_have.2001149.已擁有":1,
+                    "!table_have.2001161.已擁有":1,
+                },
+                "result_title":"晦氣",
+                "result_text": "這裡的人在離開之前毀掉了，或者轉移了大部分的財物，一些半成品的“金幣”散落在垃圾中——看來他真的是在你家裡造假幣！這個可惡的傢伙……你命令僕人在那些殘存的假幣裡挑出了一些還算比較真的。",
+                "result":
+                {
+                    "coin":10,
+                    "card":[2001190,"數量+10"]
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"67c5c7a1-ad0d-4fca-8824-2bbb672ab2cf",
+                "condition": {
+                    "r1:生存>=":[5,5],
+                },
+                "result_title":"你堵住了他們",
+                "result_text": "商行裡的人還在轉移那些最有價值的寶物——現在都落入了你的手裡。\n經過簡單的審問，你可以確定他真的是在你家裡造假幣！這個可惡的傢伙……不過，你也回收了一部分他沒有帶走的產品。",
+                "result":
+                {
+                    "loot.已擁有+1":6000200,
+                    "coin":10,
+                    "card":[2001190,"數量+10"]
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"0e5b0bfa-8fd3-40b4-8c0d-fe5006d81ec7",
+                "condition": {
+                    "r1:生存<":[5,5],
+                },
+                "result_title":"晦氣",
+                "result_text": "這裡的人在離開之前毀掉了，或者轉移了大部分的財物，一些半成品的“金幣”散落在垃圾中——看來他真的是在你家裡造假幣！這個可惡的傢伙……你命令僕人在那些殘存的假幣裡挑出了一些還算比較真的。",
+                "result":
+                {
+                    "coin":10,
+                    "card":[2001190,"數量+10"]
+                },
+                "action": {
+                }
+            }
+        ],
+        "settlement_extre": [
+            {
+                "guid":"666284d5-b4fa-447e-a931-bb645ddf2463",
+                "condition": {
+                    "r2:隱匿>=":[5,5],
+                    "counter.7000716<":1, //玩家之前沒獲得過亡國的珍寶
+                },
+                "result_title":"被遺忘的國度與故事",
+                "result_text": "你還發現了兩件有趣的東西：一個不起眼的雕像，應該屬於某個被滅亡的信仰……以及一隻戒指，用金絲混着柔順的髮絲編織而成，而這髮絲的獨特的顏色讓你想起了蘇丹身邊的某個美麗身影……戒指內側刻着一行字，“可憎的命運讓你我分離”。",
+                "result":
+                {
+                    "card":[2001191,"已擁有+1"],
+                    "card":[2000280,"已擁有+1"]
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"8cc01b09-5473-4179-8944-95bddcaa2af5",
+                "condition": {
+                    "r2:隱匿>=":[5,5],
+                    "counter.7000716>=":1, //玩家之前獲得過亡國的珍寶
+                },
+                "result_title":"被遺忘的故事",
+                "result_text": "你還發現了一件有趣的東西：一隻戒指，用金絲混着柔順的髮絲編織而成，而這髮絲的顏色讓你想起了蘇丹身邊的某個美麗身影……戒指內側刻着一行字，“可憎的命運讓你我分離”。",
+                "result":
+                {
+                    "card":[2001191,"已擁有+1"],
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"2c3b24d9-3a13-43c4-bc99-be716a5faffb",
+                "condition": {
+                    "r2:隱匿<":[5,5],
+                },
+                "result_title":"只剩下一些垃圾",
+                "result_text": "這些人暗中改造了你的房舍，加上最後跑的匆忙，現場亂得像垃圾堆……如果徹底搜查，你感覺還能找到一些什麼，但現在沒那個時間了……",
+                "result":
+                {
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"2744cc8c-9c7c-4d5e-b03f-d73a9119a26f",
+                "condition": {
+                    "s4":1
+                },
+                "result_title":"消滅證據",
+                "result_text": "為了避免假幣事件和自己扯上關係，你只好燒掉了這棟房子……好掩蓋那些痕跡，以及你房客的失蹤……順便你還折斷了一張奢靡卡呢！這讓一切都看起來很合理了。",
+                "result":
+                {
+                    "clean.s4":1
+                },
+                "action": {
+                    "event_on":5320286,//蘇丹的問詢提示彈框
+                }
+            },
+                        {
+                "guid":"a437b8e9-55e4-4752-bd63-b5a689fd33b5",
+                "condition": {
+                    "!s4":1
+                },
+                "result_title":"",
+                "result_text": "為了避免假幣事件和自己扯上關係，你只好燒掉了這棟房子……好掩蓋那些痕跡，以及你房客的失蹤……這些反常的舉動，讓人們議論紛紛",
+                "result":
+                {
+                    "card":2000168, //獲得讒言
+                },
+                "action": {
+                    "event_on":5320286,//蘇丹的問詢提示彈框
+                }
+            },
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"55ba20a6-f575-487e-b59e-a64ef3cbd59a",
+                "condition":
+                {
+                    "type":"char"
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"協助搜刮的人"
+            },
+            "s2":
+            {
+                "guid":"805a7585-4ecd-4759-8e6e-1bcef22c9a9c",
+                "condition":
+                {
+                    "type":"char"
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"協助搜刮的人"
+            },
+            "s3":
+            {
+                "guid":"029aacb4-83aa-42f0-b863-e0c3a6b73354",
+                "condition":
+                {
+                    "type":"item",
+                    "cost.消耗品=":1,
+                    "!金幣":1,
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"消耗品"
+            },
+            "s4":
+            {
+                "guid":"d32b1e00-6c1b-4494-a670-96675134a94b",
+                "condition":
+                {
+                    "type":"sudan",
+                    "奢靡":1,
+                    "rare<=":2,
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"用不高於青銅品級的奢靡卡掩飾你的行動"
+            }
+        }
+    }

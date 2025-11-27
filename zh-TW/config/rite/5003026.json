@@ -1,0 +1,157 @@
+ {
+        "id": 5003026,
+        "name": "狩獵遊戲",
+        "text": "一次成功的狩獵不僅能夠獲得獵物，還能獲得聲望與人脈。",
+        "tips": "",
+        "mapping_id":8001250,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":1,
+        "waiting_round_end_action":[
+            {
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "",
+                "result":
+                {
+                    "counter=7000115":0 //限制同一時間被激活的次數
+                },
+                "action": {
+                }
+            }
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 1,
+        "location": "野外:[1,6]",
+        "icon": "rite_21",
+        "tag_tips": [
+            "生存"
+        ],
+        "tag_tips_up":{
+            "tips":["生存"],
+            "type":"normal_result"
+        },
+        "tips_text":[
+            "成功數越多，收穫越大。",
+            "失敗並不會帶來負面效果",
+            ">=5點成功：權勢+1 金幣+5",
+            ">=3點成功：金幣+3",
+            ">=1點成功：金幣+1"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+            "r1":"拉開弓弦，屏住呼吸……"
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"拉開弓弦，屏住呼吸……",
+                "type":"normal_result",
+                "type_tips":"你的生存為你提供完整的骰子數量。",
+                "low_target": 1,
+                "low_target_tips": "你至少需要1點成功，成功數越多，收益越大。"
+            }
+
+        },
+        "settlement_prior": [
+
+        ],
+        "settlement": [
+            {
+                "guid":"67a58725-8767-4710-89af-07292b7f32f7",
+                "condition": {
+                    "r1:生存>=":[5,5]
+                },
+                "result_title":"",
+                "result_text": "一隻足以製成標本裝飾廳堂的獵物。",
+                "result":
+                {
+                    "counter=7000115":0, //限制同一時間被激活的次數
+                    "counter+7100003": 1, //權勢+1
+                    "金幣": 5
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"38f6eacb-c8dc-4047-881a-523f2a8c3add",
+                "condition": {
+                    "r1:生存>=":[3,5]
+                },
+                "result_title":"",
+                "result_text": "獵獲足以製作一頓大餐。",
+                "result":
+                {
+                    "counter=7000115":0, //限制同一時間被激活的次數
+                    "金幣": 3
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"fb5cb6aa-7a5a-48c4-b213-9ba88299020f",
+                "condition": {
+                    "r1:生存>=":[1,5]
+                },
+                "result_title":"",
+                "result_text": "很難說這些小動物都有什麼用，但總之不算空手而歸。",
+                "result":
+                {
+                    "counter=7000115":0, //限制同一時間被激活的次數
+                    "金幣": 1
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"305a43ba-6c29-4407-92a2-ad74d9389a82",
+                "condition": {
+                    "r1:生存<":[1,5]
+                },
+                "result_title":"",
+                "result_text": "一無所獲，但至少縱馬奔騰令人愉悅。",
+                "result":
+                {
+                    "counter=7000115":0  //限制同一時間被激活的次數
+                },
+                "action": {
+                }
+            }
+        ],
+        "settlement_extre": [
+
+        ],
+        "cards_slot":
+        {
+            "s1":
+                {
+                    "guid":"2406ac3d-4bd5-4d56-97ae-d718e2b0b9d2",
+                    "condition":
+                    {
+                        "type":"char"
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0, // 不能為空
+                    "is_enemy":0,
+                    "text":"生存技能有利於狩獵"
+                },
+            "s2":
+                {
+                    "guid":"0fa528d2-e57d-4cce-91e6-3dc7650ea6c3",
+                    "condition":
+                    {
+                        "type":"item",
+                        "cost.消耗品=":1,
+                        "!金幣":1
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":1,
+                    "is_enemy":0,
+                    "text":"有些東西能讓你搜尋獵物。"
+                }
+        }
+    }

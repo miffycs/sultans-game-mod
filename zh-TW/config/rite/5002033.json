@@ -1,0 +1,101 @@
+ {
+        "id": 5002033,
+        "name": "我的主人",
+        "text": "你討伐了夏瑪的父親，向蘇丹要到了那片領地的繼承權。出於意料，它的任命文書是夏瑪送來的。",
+        "tips": "",
+        "once_new":0,
+        "mapping_id":8001316,
+        "round_number": 1,
+        "waiting_round":0,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0,
+        "location": "宮廷:[2,6]",
+        "icon": "rite_14",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "這也是蘇丹的意志，沒有人能夠阻止。",
+            "金貓戰士雕像 主角升金 權勢+3 夏瑪變奴隸降品質 成為追隨者"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+        ],
+        "settlement_extre": [
+            {
+                "guid":"be2d3a22-fba3-486a-a2d1-e53a8ecb8ae9",
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "作為原本領主家族最後的“兒子”，夏瑪大大方方地向你跪拜，親吻了你的雙腳——如同她之前做過的那樣。\n終於，你也成為了與最古老的家族並駕齊驅的領主，至於夏瑪……指派一名熟悉當地情況的幫手給你，偉大的蘇丹是多麼體貼呀。",
+                "result":
+                {
+                    "counter+7100003":3, //權勢+3
+                    "s1.uprare":1, //主角升金
+                    "s2-妓女":1,
+                    "s2+奴隸":1,
+                    "s2.uprare":-1,
+                    "s2=圖片":2,  //夏瑪替換立繪
+                    "s2-縱慾的痕跡":1,
+                    "s2+追隨者":1
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"643620f1-d39b-4335-b0d4-1135e1fd712d",
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "身為奴隸，她不配擁有“屬於自己”的東西。這是你的了。",
+                "result":
+                {
+                    "card":[2000402,"已擁有+1"] //金貓戰士雕像
+                },
+                "action": {
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+                {
+                    "guid":"f7e12e13-c6aa-4aee-b671-44fe17ca50f9",
+                    "condition":
+                    {
+                        "type":"char",
+                        "主角":1
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"領地的主人，夏瑪的主人"
+                },
+            "s2":
+                {
+                    "guid":"2e0f235b-85ac-4890-a9bb-d079397744f4",
+                    "condition":
+                    {
+                        "type":"char",
+                        "is":2000082
+                    },
+                    "open_adsorb":1,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"夏瑪"
+                }
+        }
+    }

@@ -1,0 +1,109 @@
+ {
+        "id": 5008100,
+        "name": "等待一餐",
+        "text": "你承諾讓這些流浪的乞丐們吃上飯——而且是一頓好飯。",
+        "tips": "",
+        "mapping_id":8001131,
+        "once_new":0,
+        "round_number": 1, //立即執行
+        "waiting_round":7,
+        "waiting_round_end_action":[
+            {
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "",
+                "result":
+                {
+
+                },
+                "action": {
+                    "prompt":{
+                        "id":"5008100_prompt_01",
+                        "text":"飢腸轆轆的乞兒們意識到你只是說說而已，談不上失望，他們只是認命地離開了。",
+                        "icon":"cards/2000935"
+                    }
+                }
+            }
+
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,  //自動執行
+        "auto_result": 0,
+        "location": "商業區:[10,19]",
+        "icon": "rite_18",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+          "哈比卜很樂意為孩子們準備大餐，如果沒有大餐的話，可以讓他尋思尋思",
+          "善名+1 觸發後續事件"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+
+        ],
+        "settlement_extre": [
+            {
+                "guid":"c5a6506f-a228-4554-9154-cb390b15764c",
+                "condition": {
+                    "s2":1
+                },
+                "result_title":"",
+                "result_text": "這些孩子從沒見過如此美味，他們幾乎被嚇壞了，而你摸着他們的小腦袋，告訴他們，這些真的都可以放開吃。\n於是，舍館裡的所有人都見證了這幾個小孩是如何消滅掉七個成年人都未必吃得完的大餐。你的善良與慷慨又一次給人們留下了深刻印象。",
+                "result":
+                {
+                    "counter+7100001": 1, //善名
+                    "clean.s2":1
+
+                },
+                "action": {
+                    "delay": {  //延遲1回合執行
+                        "id":50081001,
+                        "round": 1,
+                        "event_on":5321103 //想做人
+                    }
+                }
+            }
+
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"9699aa22-e6b5-409d-a28a-c3597f70e232",
+                "condition":
+                {
+                    "type":"char",
+                    "is":2000935
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"飢腸轆轆的人們"
+            },
+            "s2":
+            {
+                "guid":"934b3fd0-da92-41c9-b56e-5f63ef5cdaf9",
+                "condition":
+                {
+                    "type":"item",
+                    "大餐":1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"哈比卜做的任意大餐"
+            }
+        }
+    }

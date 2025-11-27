@@ -1,0 +1,147 @@
+{
+    "id": 5000783,
+    "name": "金屋藏嬌",
+    "text": "索拉薇兒住在你名下一處不甚祕密的房產內，每日過得愜意瀟灑——當然，這建立在你定期給她一筆錢的基礎上。",
+    "tips": "",
+    "once_new":0,
+    "round_number": 5 ,
+    "waiting_round":0,
+    "waiting_round_end_action":[
+    ],
+    "method_settlement": "",
+    "auto_begin": 1,
+    "auto_result":0,
+    "location": "奇珍:12",
+    "type":"TREASURE",
+    "icon": "rite_5000783",
+    "tag_tips": [
+
+    ],
+    "tag_tips_up":{
+
+    },
+    "tips_text":[
+        "每七天，她會吸取你3枚金幣，併為你提供1點俠名。",
+		"如果多次沒有獲得金幣，她會逃離這作宅邸。",
+        "給3金幣：俠名+1",
+        "不給錢超2次：俠名-5 妻子不滿 索拉薇兒離隊"
+    ],
+    "open_conditions": [
+    ],
+    "random_text": {
+
+    },
+    "random_text_up":{
+
+    },
+    "random_effect": {
+    },
+    "settlement_prior":
+    [
+
+    ],
+    "settlement": [
+        {
+            "guid":"baa68ea8-a575-407e-926c-92679ffee2ce",
+            "condition": {
+                "s3":1,
+                "s3.金幣":3
+            },
+            "result_text": "索拉薇兒快樂地生活在自己的房子裡。不知道是不是錯覺，有幾次你好像看到有陌生男人出入其中。",
+            "result":
+            {
+               "counter+7100004":1  //俠名+1
+            },
+            "action": {
+               "rite":5000783
+            }
+        },
+        {
+            "guid":"af25d734-725e-46ec-b5f7-16d6d333ffdb",
+            "condition": {
+                "any":{
+                    "!s3":1,
+                    "s3.金幣<":3
+                },
+                "counter.7000324>=":2
+            },
+            "result_text": "見你不願意支持她奢侈的生活，索拉薇兒自然是去另謀出路了。",
+            "result":
+            {
+                "counter-7100004":5, //俠名-5
+
+               "s1-納入收藏":1,
+               "s1-追隨者":1,
+               "s2-金屋藏嬌":1,
+               "card":2000083 //妻子的不滿
+            },
+            "action": {
+               "event_on":5300286  //開啓歡愉之館的新人幕後
+            }
+        },
+        {
+            "guid":"3a2f4aea-a085-486e-a591-9c98c38435f5",
+            "condition": {
+                "any":{
+                    "!s3":1,
+                    "s3.金幣<":3
+                }
+            },
+            "result_text": "拜託！我只要3枚金幣而已！\n索拉薇兒對你沒有支持她的生活表示十分不滿。",
+            "result":
+            {
+               "counter+7000324":1  //逃跑計數器加一
+            },
+            "action": {
+               "rite":5000783
+            }
+        }
+    ],
+    "settlement_extre": [
+    ],
+    "cards_slot":
+    {
+        "s1":
+        {
+            "guid":"688f6f86-a9ec-4180-8f8a-de63bcb4ab3c",
+            "condition":
+            {
+                "is": 2000772,
+                "納入收藏":1
+            },
+            "open_adsorb":1,
+            "is_key":0,
+            "is_empty":0,
+            "is_enemy":0,
+            "text":"索拉薇兒"
+        },
+        "s2":
+        {
+            "guid":"4ff434ef-5139-451e-8694-3c88d59b4fa7",
+            "condition":
+            {
+                "type":"item",
+                "金屋藏嬌":1
+            },
+            "open_adsorb":1,
+            "is_key":0,
+            "is_empty":0,
+            "is_enemy":0,
+            "text":"金屋藏嬌"
+        },
+        "s3":
+        {
+            "guid":"ba412f7b-8136-4203-8dc6-a86f7ee2791a",
+            "condition":
+            {
+                "type":"item",
+                "cost.金幣":3
+            },
+            "open_adsorb":1,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":0,
+            "text":"你必須拿出3枚金幣作為她的每週開銷"
+        }
+    }
+}

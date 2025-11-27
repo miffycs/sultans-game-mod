@@ -1,0 +1,89 @@
+ {
+        "id": 5000636,
+        "name": "少女審視自己",
+        "text": "阿迪萊在審視自己的成長……",
+        "tips": "",
+        "mapping_id":8001008,
+        "once_new":0,
+        "round_number": 0,
+        "waiting_round":0,
+        "waiting_round_end_action":[ //儀式沒有處理，自動關閉後
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0, //自動執行
+        "location": "上城區:[7,12]",
+        "icon": "rite_8",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "如果你沒有讓她經歷足夠多的戰鬥，她將會離開你",
+            "戰鬥的痕跡>=5：戰鬥+1 體魄+1 阿迪萊稀有度提升"
+        ],
+        "open_conditions": [
+        ],
+        "random_text": {
+        },
+        "random_text_up":{
+        },
+        "random_effect": {
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+	            {
+                "guid":"fb6afd10-9a32-457c-88cd-7b328e7d4545",
+                "condition": {
+                    "s1.戰鬥的痕跡<":5
+                },
+                "result_title":"她很失望",
+                "result_text": "本來，她期待能夠在你這裡得到更多戰鬥的機會，但看起來她並沒有被當做重要的戰士來使用……於是她悄然離開了你，離開了這座城市，前往遠方尋找冒險。",
+                "result":
+                {
+                    "counter-7000166":1,  //阿迪萊追隨者計數器-1
+                    "clean.s1":1
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"45399ecc-7c1e-4c6a-81af-64e5601456b6",
+                "condition": {
+                    "s1.戰鬥的痕跡>=":5
+                },
+                "result_title":"她很滿意",
+                "result_text": "她喜歡戰鬥，喜歡冒險。她渴望證明自己，渴望迎接挑戰，而她渴望的這一切，你都滿足了她。現在，可以說，她真的是一位偉大的戰士了。",
+                "result":
+                {
+                    "s1.uprare":1,  //品級提升1級
+                    "s1+戰鬥":1,
+                    "s1+體魄":1,
+                    "s1-縱慾的痕跡":1,
+                    "counter+7000170":1 //少女成功審視自己2
+                },
+                "action": {
+                    //"event_on":5300126
+                }
+            }
+        ],
+        "settlement_extre": [
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"4e9fbfc6-e7ad-4f48-b73a-e149a124e281",
+                "condition":
+                {
+                    "is":2000061
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"阿迪萊審視着自己"
+            }
+        }
+    }

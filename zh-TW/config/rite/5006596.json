@@ -1,0 +1,67 @@
+ {
+        "id": 5006596,
+        "name": "心有餘悸",
+        "text": "因為之前的襲擊和綁架，梅姬一連好幾天都不敢出門了。",
+        "tips": "",
+        "mapping_id":8001213,
+        "once_new":0,
+        "round_number": 3,
+        "waiting_round":1,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 1,
+        "auto_result": 0,//需要手動啓動
+        "location": "自宅:[2,12]",
+        "icon": "rite_10",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "現在安慰已經太晚了",
+            "妻子禁用3回合且社交-1"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"8712068b-9c0a-48aa-b7a3-41720b3a1492",
+                "condition": {
+                },
+                "result_title":"時間治癒了一切",
+                "result_text": "也許吧。至少，她看起來似乎好多了，只是變得不太願意與人交流了。",
+                "result":
+                {
+                    "s1-社交":1
+                },
+                "action": {
+                }
+            }
+        ],
+        "settlement_extre": [
+        ],
+        "cards_slot":
+        {
+            "s1":
+                {
+                    "guid":"96ed1a3e-03a6-4227-9e94-696bf97a7773",
+                    "condition":
+                    {
+                        "妻子":1,
+                        "type":"char"
+                    },
+                    "open_adsorb":1,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"梅姬對之前發生的事心有餘悸"
+                }
+        }
+    }

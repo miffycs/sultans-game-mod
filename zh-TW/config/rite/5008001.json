@@ -1,0 +1,161 @@
+{
+    "id": 5008001,
+    "name": "妻子的憂慮",
+    "text": "現在，人人都在議論，蘇丹卡解放了你的本性——讓你做自己最喜歡的那些事情：姦淫，殺戮……別人怎麼想不太重要，但梅姬的想法呢？",
+    "mapping_id":8001077,
+    "tips": "",
+    "once_new":0,
+    "round_number": 1,
+    "waiting_round":3,
+    "waiting_round_end_action":[
+        {
+            "condition": {
+            },
+            "result_title":"你無視了妻子",
+            "result_text": "梅姬等了你好幾天。在一同入睡的時候，在共進晚餐的時候，在你試圖觸碰她雙脣的時候……而你一言不發，留給她的只有深深的失望。",
+            "result":
+            {
+                "card": 2000083   //獲得妻子的不滿
+            },
+            "action": {
+                "prompt": {
+                    "id": "prompt_5008001_01",
+                    "text": "梅姬等了你好幾天。在一同入睡的時候，在共進晚餐的時候，在你試圖觸碰她雙脣的時候……而你一言不發，留給她的只有深深的失望。",
+                    "icon":"cards/2000006"
+                }
+            }
+        }
+    ],
+    "method_settlement": "",
+    "auto_begin": 0,
+    "auto_result":0,
+    "location": "自宅:[2,12]",
+    "icon": "rite_10",
+    "tag_tips": [
+    ],
+    "tag_tips_up":{
+        "tips":["魅力","社交"],
+        "type":"normal_result"
+    },
+    "tips_text":[
+        "需要靠自己的魅力與社交安撫妻子。",
+        "檢定不通過將會產生妻子的不滿。",
+        "魅力+社交>=4點成功：妻子的幸福感",
+        "魅力+社交>=2點成功：無事發生",
+        "魅力+社交<2點成功：妻子的不滿",
+        "儀式過期：妻子的不滿"
+    ],
+    "open_conditions": [
+    ],
+    "random_text":{
+
+    },
+    "random_text_up":{
+        "r1":{
+            "text":"你嘗試安慰妻子",
+            "type":"normal_result",
+            "type_tips":"你的魅力和社交為你提供了完整的骰子數量。",
+            "low_target": 2,
+            "low_target_tips": "你至少需要2點成功才能避免妻子的不滿。"
+        }
+
+    },
+    "settlement_prior": [
+    ],
+    "settlement": [
+        {
+            "guid":"8932e825-e24f-4596-97d3-8cd3dde9f6ac",
+            "condition": {
+                "r1:魅力+社交>=":[4,5]
+            },
+            "result_title":"重要的是你在意她的態度",
+            "result_text": "你當然明白梅姬的憂慮。在梳妝鏡前，你從身後抱住她，一邊嗅聞她的長髮，一邊向她訴說自己內心的掙扎。\n也許這些花言巧語並不完全出自真心，但梅姬感到了她最需要的東西……那就是你對她的需要與尊重。\n她回過頭，用鼻樑和臉頰磨蹭着你的面容，告訴你，無論你選擇怎樣的道路，她都會與你同行。",
+            "result":
+            {
+
+                "card":2000689 //獲得妻子的幸福感
+            },
+            "action": {
+
+            }
+        },
+        {
+            "guid":"c8cbbd5f-5db7-40cb-bc9b-f70615732ae2",
+            "condition": {
+                "r1:魅力+社交>=":[2,5]
+            },
+            "result_title":"她選擇信任你",
+            "result_text": "梅姬是因為善良而在意現在的罪？還是因恐懼而憂慮未來的罰？你感覺都不是，但你知道，這個女人不會拋棄你，暫時不會，在你真正犯下那些想象中的錯誤前，還不會。",
+            "result":
+            {
+
+            },
+            "action": {
+
+            }
+        },
+        {
+            "guid":"32a44445-7c15-4d7e-8775-8ffba876ae52",
+            "condition": {
+                "r1:魅力+社交<":2
+            },
+            "result_title":"原來你真是這樣的人",
+            "result_text": "你認罪的態度反而反映出了自己對罪行的漫不經心……或者說，對妻子的漫不經心。梅姬深感失望。",
+            "result":
+            {
+                "card": 2000083 //獲得妻子的不滿
+
+            },
+            "action": {
+            }
+        }
+    ],
+    "settlement_extre": [
+
+    ],
+    "cards_slot":
+    {
+        "s1":
+            {
+                "guid":"334944b1-1cc2-4108-8dc1-62497e8b66d8",
+                "condition":
+                {
+                    "妻子":1
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":1,
+                "text":"憂慮的妻子"
+            },
+            "s2":
+            {
+                "guid":"6a95f79d-94da-4a2e-92f4-0e68f53953ce",
+                "condition":
+                {
+                    "type":"char",
+                    "主角":1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"這種事一般不能假手於人，還得自己上"
+            },
+            "s3":
+            {
+                "guid":"52dc3af1-69fe-4b2c-ad2a-c2e9fa09d82c",
+                "condition":
+                {
+                    "type":"item",
+                    "cost.消耗品=":1,
+                    "!金幣":1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"任何你覺得有幫助的東西"
+            }
+    }
+}

@@ -1,0 +1,103 @@
+ {
+        "id": 5000661,
+        "name": "暗潮湧動",
+        "text": "你和製圖人麥娜爾發現的綠洲，似乎引起了蘇丹的興趣。有一些事在暗中進行，令一切滑向深淵，而你對此無能為力。",
+        "tips": "",
+        "mapping_id":8001203,
+        "once_new":0,
+        "round_number": 3,
+        "waiting_round":0,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 1,
+        "auto_result": 0,
+        "location": "野外:[9,14]",
+        "icon": "rite_17",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "你可以先下手為強，也可以置之不理，但不論如何，沒有人能改變蘇丹的主意。",
+            "征服線：惡名+1 金幣+10"
+        ],
+        "open_conditions": [
+        ],
+        "random_text": {
+        },
+        "random_text_up":{
+        },
+        "random_effect": {
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"c6f1c63f-9768-48ed-8b07-772ccdfe6dc8",
+                "condition": {
+                    "s2":1
+                },
+                "result_title":"你決定使用征服卡",
+                "result_text": "你已經觀察到軍隊的異動，知道蘇丹已經向那片綠洲派兵了。毀滅已經無法逆轉，既然如此，何不令它發揮最後一點作用？\n你拿出一張刻畫着王權的卡片，懇請蘇丹給你一個為他開疆擴土的機會。蘇丹哈哈大笑着同意了。於是，你率領大軍將綠洲屠戮殆盡，洗劫一空，因為只有這樣才配得上“征服”二字。\n而這片被踐踏的土地，再也沒有任何被標記在地圖上的價值。",
+                "result":
+                {
+                    "clean.s1":1,
+                    "clean.s2":1,
+                    "counter+7100002": 1, //惡名+1
+                    "coin":10
+                },
+                "action": {
+                    "event_on":5300151 //激活製圖師的後續死亡結局--彈框文本
+                }
+            },
+            {
+                "guid":"1dfa5efc-bc88-4c18-a076-eb22f3bd84e3",
+                "condition": {
+                    "!s2":1
+                },
+                "result_title":"你沒有趁火打劫",
+                "result_text": "你在無盡的焦灼中聽說蘇丹的軍隊踏平了新綠洲，帶回來了無盡的財富。\n蘇丹在他的黃金宮殿擺下宴席，邀請了大臣們慶祝。席間，你也看到了麥娜爾。她的臉上只剩下苦澀的笑容，以一種近乎哽咽的聲音說，“我不知道事情會變成這樣。”\n沒有人能揣度蘇丹的暴虐。你們彷彿又回到冒險時那個森冷的寒夜，被野獸窺伺的荒原上，只有你們守着火堆，依偎着取暖。",
+                "result":
+                {
+                    "clean.s1":1
+                },
+                "action": {
+                    "event_on":5300153 //激活後續儀式絕地探索
+                }
+            }
+        ],
+        "settlement_extre": [
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"8c09290a-4e92-4589-a66f-357896109bc9",
+                "condition":
+                {
+                    "is":2000364
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"你們發現的綠洲已為蘇丹所知"
+            },
+            "s2":
+            {
+                "guid":"84bbb496-9745-449b-8b3b-ab806db539ba",
+                "condition":
+                {
+                    "type":"sudan",
+                    "征服":1,
+                    "f:rare-s1.rare<=":0
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"也許你可以藉機用掉一張征服卡，但……"
+            }
+        }
+    }

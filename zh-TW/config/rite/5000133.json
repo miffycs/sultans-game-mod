@@ -1,0 +1,143 @@
+ {
+        "id": 5000133,
+        "name": "黃金鳥屋",
+        "text": "一個可以讓黃金鳥自由出入的小屋子。",
+        "tips": "",
+        "once_new":0,
+        "round_number": 7,
+        "waiting_round":0,
+        "waiting_round_end_action":[
+
+        ],
+        "method_settlement": "",
+        "auto_begin": 1,
+        "auto_result":0,
+        "location": "奇珍:2",
+        "type":"TREASURE",
+        "icon": "rite_2000540",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "每7天黃金鳥會為你帶來1點好運。",
+            "珍貴的黃金鳥最好有人看守。",
+            "貝姬夫人：黃金鳥銷燬 貓貓魔力+2 重投+1 金幣+10 超級貝姬夫人線開啓",
+            "放人看守：金骰子+1",
+            "沒放人看守：金骰子+1 3次不放人，黃金鳥被盜"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+        },
+        "settlement_prior": [
+            {
+                "guid":"f026b118-7754-4b7d-bdd6-04714df5365e",
+                "condition":
+                {
+                    "!s2":1,
+                    "counter.7000201>=":2
+                },
+                "result_title":"破碎的籠子",
+                "result_text": "因為長期無人看守，有人伺機剪開了黃金鳥的籠子，當然鳥兒也不知所蹤——樊籠已破，這是否也算得上一種自由呢？",
+                "result":
+                {
+                    "clean.s1":1
+                },
+                "action":
+                {
+                }
+            }
+        ],
+        "settlement": [
+            {
+                "guid":"2a00f657-a072-4472-a98b-14e9020337b4",
+                "condition":
+                {
+                    "s2.is":2000461 //你讓貝姬夫人去看守
+                },
+                "result_title":"小貓咪有什麼壞心思",
+                "result_text": "你該料到的，黃金鳥被貝姬夫人拆成了完全無法復原的樣子……剩下的這些碎片還能換點錢，但總覺得少了一些的樣子——貝姬夫人不會鬧肚子吧？",
+                "result":
+                {
+                    "clean.s1":1,
+                    "s2+魔力":2,
+                    "s2+重投":1,
+                    "coin":10,
+                    "counter+7000680":1,//超級貝姬夫人前置標識
+                },
+                "action":
+                {
+                }
+            },
+            {
+                "guid":"6334ee01-8bd8-4f0c-9dde-1beb80f814fc",
+                "condition":
+                {
+                    "s2":1
+                },
+                "result_title":"同命相憐",
+                "result_text": "偶爾，你進入籠中，而鳥兒會棲息在你的手上——如果最終能脫出樊籠，它願意與你分享金子一般的幸運。",
+                "result":
+                {
+                    "counter+7100006":1 //金骰子+1
+                },
+                "action":
+                {
+                    "rite":5000133 //生成自己
+                }
+            },
+            {
+                "guid":"9ac57cb0-3fa6-42f4-9d7a-64a01f9d9b71",
+                "condition":
+                {
+                    "!s2":1
+                },
+                "result_title":"金子的誘惑",
+                "result_text": "你在黃金鳥的籠子裡撿到了一片羽毛——彷彿太陽的碎屑，充滿着令人振奮的魔力。\n你應該想到，這樣美麗的事物，如果無人看守，終將引來宵小之徒……",
+                "result":
+                {
+                    "counter+7000201":1, //累計3次沒人看守，在第3次就會被盜
+                    "counter+7100006":1 //金骰子+1
+                },
+                "action":
+                {
+                    "rite":5000133 //生成自己
+                }
+            }
+        ],
+        "settlement_extre": [
+
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"80cfb112-1029-4a16-a6e9-6b53780a32aa",
+                "condition":
+                {
+                    "is":2000540 //黃金鳥
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"黃金鳥"
+            },
+            "s2":
+            {
+                "guid":"b02a3f57-9ee3-430b-888a-dccec9d71f89",
+                "condition":
+                {
+                    "type":"char"
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"你需要一個人去看守它"
+            }
+        }
+    }

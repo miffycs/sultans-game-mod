@@ -1,0 +1,188 @@
+ {
+        "id": 5002007,
+        "name": "書店密會",
+        "text": "書把人與人分開，讓他們無法看見你們，那是獨屬於你們二人的天地。",
+        "tips": "",
+        "mapping_id":8001307,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":1,
+        "waiting_round_end_action":[
+            {
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "",
+                "result":
+                {
+                },
+                "action": {
+                    "event_on":5300026
+                }
+            }
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0,
+        "location": "商業區:[4,5]",
+        "icon": "rite_22",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "對主角具有激情的角色，會被約會類事件吸引",
+            "推進約會類事件可以增加激情，觸發更多劇情",
+            "你可以不參與這類事件",
+            "每個約會地點只能消耗一次蘇丹卡"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+        },
+        "settlement_prior": [
+            {
+                "guid":"f83391a4-69da-4689-a743-86702e7cc24a",
+                "condition": {
+                    "!s2":1
+                },
+                "result_title":"",
+                "result_text": "你沒有去赴約，可憐的人啊，被孤獨的留在了那裡，還好有書陪伴着她。",
+                "result":
+                {
+                    "s1-激情":1
+                },
+                "action": {
+                    "event_on":5300026
+                }
+            },
+            {
+                "guid":"fdf12eb6-ea5a-498d-8367-c2fcd0d34a40",
+                "condition": {
+                    "!s3":1
+                },
+                "result_title":"",
+                "result_text": "事後，你們一起收拾被晃到地上的書籍，看到有趣的東西就互相分享，輕拍對方的臉頰微笑。",
+                "result":
+                {
+                    "s1+激情":1
+                },
+                "action": {
+                    "event_on":5300026
+                }
+            }
+        ],
+        "settlement": [
+		           {
+                "guid":"8acd7800-cb55-4cfa-bd27-5b13173956a1",
+                "condition": {
+                    "s2":1
+                },
+                "result_title":"",
+                "result_text": "事後，你們一起收拾被晃到地上的書籍，看到有趣的東西就互相分享，輕拍對方的臉頰微笑。",
+                "result":
+                {
+                    "s1+激情":1   //待修改：以後可能需要給不同人引入不同約會劇情，同時增加妻子的不滿
+                },
+                "action": {
+                    "event_on":5300026
+                }
+            }
+
+        ],
+        "settlement_extre": [
+            {
+                "guid":"94a786ef-b271-4ca3-a832-e41fe7d2545b",
+                "condition": {
+                  "s3":1,
+                  "!s4":1
+                },
+                "result_title":"",
+                "result_text": "蘇丹很欣賞這種浪漫，聽說後來他自己也去了幾趟皇家圖書館。",
+                "result":
+                {
+                    "card":2000200,
+                    "clean.s3":1
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"de084986-3128-4b6f-92b5-3ea6e312af3d",
+                "condition": {
+                    "s3":1,
+                    "s4":1
+                },
+                "result_title":"",
+                "result_text": "很可惜，你無法用同一個方式取悅蘇丹兩次。",
+                "result":
+                {
+                },
+                "action": {
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+                {
+                    "guid":"88cff4d9-c978-45a9-be76-d21936142cea",
+                    "condition":
+                    {
+
+                        "type":"char", //待修改：能需要添加愛書人標籤
+                        "激情":1,
+                        "妻子":1
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"對你動情的妻子"
+                },
+            "s2":
+                {
+                    "guid":"def326bc-5ee7-49ca-8746-dd79748c39b7",
+                    "condition":
+                    {
+                        "主角":1,
+                        "type":"char"
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"準點赴約，當然是你"
+                },
+            "s3":
+                {
+                    "guid":"6649e16a-2e9f-4d72-ac19-8be85669b424",
+                    "condition":
+                    {
+                        "type":"sudan",
+                        "縱慾":1,
+                        "f:rare-s1.rare<=":0
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":1,
+                    "is_enemy":0,
+                    "text":"縱慾卡，品級不要高於約會人\n縱慾卡：激情+1"
+                },
+            "s4":
+                {
+                    "guid":"1103a873-5d7c-482d-9759-333db2fd5a7e",
+                    "condition":
+                    {
+                        "is":2000200
+                    },
+                    "open_adsorb":1,
+                    "is_key":0,
+                    "is_empty":1,
+                    "is_enemy":0,
+                    "text":"每個地點都只能滿足一次蘇丹的卡片，但你仍然可以赴約。"
+                }
+        }
+    }

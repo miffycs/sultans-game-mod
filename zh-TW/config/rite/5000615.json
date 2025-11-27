@@ -1,0 +1,149 @@
+ {
+        "id": 5000615,
+        "name": "社交教習",
+        "text": "想要有所成就，一定得在宮廷裡吃得開，年輕人早點來見見世面是最好的。",
+        "tips": "",
+        "mapping_id":8001008,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":0,
+        "waiting_round_end_action":[ //儀式沒有處理，自動關閉後
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0, //自動執行
+        "location":  "宮廷:[2,6]",
+        "icon": "rite_8",
+        "tag_tips": [
+            "社交"
+        ],
+        "tag_tips_up":{
+            "tips":["社交"],
+            "type":"normal_result"
+        },
+        "tips_text":[
+            "扎齊伊和指導的人社交越高，訓練的效果越好。",
+            "上陣角色社交檢定>=5點：扎齊伊社交+3",
+            "上陣角色社交檢定>=3點：扎齊伊社交+2",
+            "上陣角色社交檢定<3點：扎齊伊社交+1"
+        ],
+        "open_conditions": [
+        ],
+        "random_text": {
+            "r1":"你帶着扎齊伊來到了宮廷"
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"你帶着扎齊伊來到了宮廷",
+                "type":"normal_result",
+                "type_tips":"你的社交為你提供了完整的骰子數量。",
+                "low_target": 3,
+                "low_target_tips": "你至少需要3點成功。"
+            }
+        },
+        "random_effect": {
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"efbb7af6-1a7b-4329-904e-7343e4ec5ed2",
+                "condition": {
+                    "r1:社交>=":[5,5]
+                },
+                "result_title":"訓練非常成功",
+                "result_text": "人們不再擔心扎齊伊的家族後繼無人。你們一起向宮廷展示了這個年輕人最好的一面。",
+                "result":
+                {
+                    "s1+社交":3
+                },
+                "action": {
+                    "clean.rite":5000616,
+                    "clean.rite":5000617,
+                    "event_on":5300110 //激活下一輪請求
+                }
+            },
+            {
+                "guid":"32d251b4-94cb-4f71-b58c-ba3ddf44b6fa",
+                "condition": {
+                    "r1:社交>=":[3,5]
+                },
+                "result_title":"訓練成效尚可。",
+                "result_text": "他還是有點緊張，但依然能正確地與貴族們對答，假以時日，他也能在宮廷謀個差事。",
+                "result":
+                {
+                    "s1+社交":2
+                },
+                "action": {
+                    "clean.rite":5000616,
+                    "clean.rite":5000617,
+                    "event_on":5300110 //激活下一輪請求
+                }
+            },
+            {
+                "guid":"a5bd171b-63b2-4e2a-ad92-b7734e3f9d9b",
+                "condition": {
+                    "r1:社交<":[3,5]
+                },
+                "result_title":"出了點簍子",
+                "result_text": "你們不小心撞到了扎齊伊家族之前的政敵，兩邊冷嘲熱諷，也算是給年輕人上了一堂不愉快的課程。",
+                "result":
+                {
+                    "s1+社交":1
+                },
+                "action": {
+                    "clean.rite":5000616,
+                    "clean.rite":5000617,
+                    "event_on":5300110 //激活下一輪請求
+                }
+            }
+        ],
+        "settlement_extre": [
+
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"24320c54-44d1-407a-96a0-400c02df1309",
+                "condition":
+                {
+                    "is":2000063
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"扎齊伊"
+            },
+            "s2":
+            {
+                "guid":"1cd1d1d5-28c6-48cb-9714-7ad29741dccd",
+                "condition":
+                {
+                    "type":"char",
+                    "!is":2000063
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"你可以親自，或者派遣任意追隨者指導他"
+            },
+            "s3":
+            {
+                "guid":"5eddc9f9-d26f-409d-b2cd-c63833d1f4b5",
+                "condition":
+                {
+                    "type":"item",
+                    "cost.消耗品=":1,
+                        "!金幣":1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"協助訓練的消耗品"
+            }
+        }
+    }

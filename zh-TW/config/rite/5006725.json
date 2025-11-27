@@ -1,0 +1,184 @@
+ {
+        "id": 5006725,
+        "name": "一本書的誕生",
+        "text": "你決定親自解囊，資助魯梅拉的新書問世。",
+        "tips": "",
+        "mapping_id":8001063,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":3,
+        "waiting_round_end_action":[
+            {
+                "condition":
+                {
+                },
+                "result_title":"",
+                "result_text": "",
+                "result":
+                {
+                },
+                "action":
+                {
+                    "event_on":5320354,// 大麥
+                    "prompt":{
+                        "id":"5006725_prompt_01",
+                        "text":"儘管你沒能拿出錢，但至少，你確實口頭上表示了支持，阿薩爾好像早就習慣了這種事，他一點也沒有指望你，熟練地安排人去按部就班地製版、印刷去了。",
+                        "icon":["pic/2000001","pic/2000123"]
+                    }
+                }
+            }
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result":0,
+        "location": "商業區:[10,19]",
+        "icon": "rite_4",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "實在沒錢也沒關係。",
+            "超時：無減損",
+
+        ],
+        "open_conditions": [
+            {
+                "condition": {
+                    "any":{
+                        "all":{
+                            "s1":1,
+                            "!s2":1,
+                        },
+                        "all":{
+                            "s1.金幣":10,
+                            "s2":1,
+                        },
+                    },
+                },
+                "tips": "如果想要藉此折斷奢靡卡，則需拿出10枚金幣"
+            }
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+
+            {
+                "guid":"e5efb54c-a320-4e51-b10f-abd7b40fd3d1",
+                "condition":
+                {
+                    "s1":1,
+                    "!s2":1, //沒用奢靡卡
+                },
+                "result_title":"",
+                "result_text": "你拿出一筆錢給阿薩爾，囑咐他找更好的雕版師，更多製版的人手。你希望這本書出得又快又好。\n阿薩爾連連許諾一定照辦，又祝福魯梅拉，說她有一個“最好的主人”。\n到他走的時候，魯梅拉的小臉蛋紅彤彤的，她小聲對你說了許多句“謝謝”。",
+                "result":
+                {
+                    "counter+7100004":1,//俠名
+                },
+                "action":
+                {
+                    "event_on":5320354
+                }
+            },
+            {
+                "guid":"03170f61-e8de-48fc-b18f-8bcf67a0c702",
+                "condition":
+                {
+                    "s1":1,
+                    "s2":1, //用奢靡卡
+                },
+                "result_title":"",
+                "result_text": "你用實際行動告訴魯梅拉，她的作品值得最好的一切。你不但出錢讓阿薩爾找更好的雕版師、更多製版的人手，甚至還親自去工坊裡視察、監工，讓阿薩爾給你解釋每一道工序的意義，考量是否有可以改進的地方。你拿出的這一大捧金幣全都落到了實處，阿薩爾拿着樣品來找你們的時候說，這一定會是一本讓世人震驚的名作。魯梅拉的小臉蛋更紅了，她低下頭，向你一次又一次地說着謝謝。",
+                "result":
+                {
+                    "counter+7100004":1,//俠名
+                    "card":2001249,
+                },
+                "action":
+                {
+                    "event_on":5320354
+                }
+            }
+        ],
+        "settlement_extre": [
+            {
+                "guid":"e90c25e8-bd8e-4401-be82-b1b4c242bfb9",
+                "condition":
+                {
+                    "s2":1, //用奢靡卡
+                },
+                "result_title":"",
+                "result_text": "蘇丹聽說你竟然一擲千金地給一個曾是奴隸的女孩出了書，於是要來了這本書的手抄本。不過，他只是稍微翻了幾頁，就覺得實在是很無趣，隨手把它丟給了一邊的閹奴。\n當天晚上，在前殿打掃的閹奴和女奴們聚在一起，聽識字的夥伴讀那本書，直到深夜，直到黎明……",
+                "result":
+                {
+                    "clean.s2":1,
+                },
+                "action":
+                {
+                    "event_on":5320354
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+                {
+                    "guid":"dd03511d-5f2a-496c-a32c-520d6ffb8326",
+                    "condition":
+                    {
+                        "type":"item",
+                        "cost.金幣":[5,10]
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"你可以拿5枚金幣資助本次印刷。如果想要折奢靡卡，則需10枚。",
+                    "pops":[
+                        {
+                            "condition":{
+                                "金幣": 10,
+                                "!s2":1,
+                            },
+                            "action":{
+                                "choose":{
+                                    "pop.5006725_s1_01.self":"不打算藉機折奢靡卡的話，沒必要花那麼多錢。"
+                                }
+                            }
+                        }
+                    ]
+                },
+            "s2":
+                {
+                    "guid":"f5ac18bf-40d1-44cf-bbfb-b7d8eb657c5e",
+                    "condition":
+                    {
+                        "type":"sudan",
+                        "奢靡":1,
+                        "rare<=":2
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":1,
+                    "is_enemy":0,
+                    "text":"你可以藉機折斷一張不高於青銅品級的奢靡卡\n折斷，俠名+1，印刷方略+1\n未放奢靡卡：俠名+1",
+                    "pops":[
+                        {
+                            "condition":{
+                                "s1.金幣<": 10
+                            },
+                            "action":{
+                                "choose":{
+                                    "pop.5006725_s2_01.self":"想要折斷奢靡卡，則需拿出10枚金幣"
+                                }
+                            }
+                        }
+                    ]
+                }
+        }
+    }

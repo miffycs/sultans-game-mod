@@ -1,0 +1,171 @@
+{
+    "id": 5006117,
+    "name": "醫典第二篇",
+    "text": "為了完成這一篇章，薩米爾需要一些獸骨的樣本……",
+    "tips": "",
+    "mapping_id":8001550,
+    "once_new":0,
+    "round_number": 1,
+    "waiting_round":0,
+    "waiting_round_end_action":[
+
+    ],
+    "method_settlement": "",
+    "auto_begin": 1,
+    "auto_result":0,
+    "location": "上城區:[1,12]",
+    "icon": "rite_7",
+    "tag_tips": [
+    ],
+    "tag_tips_up":{
+
+    },
+    "tips_text":[
+        "10金幣、戰鬥或隱匿不小於5的追隨者或者特定的角色可以對薩米爾提供幫助"
+    ],
+    "open_conditions": [
+    ],
+    "random_text": {
+    },
+    "random_text_up":{
+
+    },
+    "random_effect": {
+    },
+    "settlement_prior": [
+
+    ],
+    "settlement": [
+         {
+            "guid":"f3a6a0a8-4baa-47a9-8c8f-16259df74c0b",
+            "condition": {
+                "s2.is":2000014  //哈比卜
+            },
+            "result_title":"沒有人比他更懂",
+            "result_text": "哈比卜帶了很多獸骨去找薩米爾，這有效地提升了編纂的效率。嗯……只是這兩天舍館的菜單上少了一道鮮美的骨頭湯，引來了不少抱怨。",
+            "result":
+            {
+
+            },
+            "action": {
+                "rite":5006119  //醫典第三章
+            }
+        },
+         {
+            "guid":"cff7d2ba-1701-4ad5-bb43-4c79618b7ea6",
+            "condition": {
+                "s2.金幣":10  //放了金幣
+            },
+            "result_title":"沒有什麼是錢解決不了的",
+            "result_text": "新鮮的獸骨很便宜，古老而珍貴的獸骨嘛……也有薩米爾幫你甄別，不至於被人騙了錢。總之，在你的幫助下，編纂的效率大大提升了！",
+            "result":
+            {
+
+            },
+            "action": {
+                "rite":5006119  //醫典第三章
+            }
+        },
+         {
+            "guid":"c6b4a51e-bfbb-448f-bc0e-5906c881c53e",
+            "condition": {
+                "s2.type":"char"  //放了追隨者，哈比卜不會進入這條
+            },
+            "result_title":"你想要誰的骨頭？",
+            "result_text": "[s2.name]拍着胸脯說，要獅子還是老虎，要羚羊還是駿馬，[s2.gender]都能幫忙獵來！不過人骨的話就要麻煩一點了……薩米爾連忙說這個不用。總之，[s2.gender]做到了自己的承諾，給薩米爾提供了非常好的參考。",
+            "result":
+            {
+
+            },
+            "action": {
+                "rite":5006119  //醫典第三章
+            }
+        },
+
+        {
+            "guid":"6193e6f1-8483-4ce6-86bd-75b20a6efe8a",
+            "condition": {
+                "!s2":1,  //沒放協助但卡帕爾活着且能協助
+                "have.2001194":1,
+                "counter.7000738<":1
+            },
+            "result_title":"你沒能幫上忙",
+            "result_text": "這位御醫忙起來就不知日月，幸好，他的身邊還有卡帕爾幫他肩負起與人溝通啊、跑腿啊之類的雜活。就在薩米爾忙得焦頭爛額的時候，卡帕爾帶着一個皮袋回來了，裡面裝滿了各式各樣的獸骨。薩米爾高興極了，他用力地抱了一下卡帕爾，然後抓着獸骨又投入緊張的編纂工作之中。唉！這傢伙……",
+            "result":
+            {
+
+            },
+            "action": {
+                "rite":5006119  //醫典第三章
+            }
+        },
+        {
+            "guid":"12a69c7c-0ea1-42dc-8faa-36df44bbec97",
+            "condition": {
+                "!s2":1,  //沒放協助且卡帕爾死了或沒死但無法協助了
+                "any":{
+                    "!have.2001194":1,
+                    "counter.7000738>=":1
+                },
+
+            },
+            "result_title":"你沒能幫上忙",
+            "result_text": "你只能眼看着薩米爾一個人忙得團團轉，恨不得長出三個腦袋八隻手來完成這項艱辛的編修任務……也許忙一點也好吧，這樣就能暫時忘掉那些不開心的事了。",
+            "result":
+            {
+
+            },
+            "action": {
+                "rite":5006120  //醫典第三章前置
+            }
+        }
+    ],
+    "settlement_extre": [
+
+
+    ],
+    "cards_slot":
+    {
+        "s1":
+        {
+            "guid":"b4ef2218-33f5-4f2d-9dd5-0bef5a5b8640",
+            "condition":
+            {
+                "is":2000011,
+                "醫典鎖定":1
+            },
+            "open_adsorb":1,
+            "is_key":0,
+            "is_empty":0,
+            "is_enemy":1,
+            "text":"薩米爾"
+        },
+        "s2":
+        {
+            "guid":"01bbec2f-6980-4e99-912e-878b0a638c7a",
+            "condition":
+            {
+                "any":{
+                    "type":"char",
+                    "type":"item"
+                },
+                "any":{
+                    "is":2000014, //哈比卜
+                    "cost.金幣=":10,
+                    "all":{
+                        "type":"char",
+                        "any":{
+                            "戰鬥>=":5,
+                            "隱匿>=":5
+                        }  //追隨者
+                    }
+                },
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":0,
+            "text":"也許你能幫幫他\n特定角色：哈比卜"
+        }
+    }
+}

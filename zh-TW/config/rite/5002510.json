@@ -1,0 +1,146 @@
+ {
+        "id": 5002510,
+        "name": "下水道的鱷魚",
+        "text": "行腳商中相傳，遙遠的森林河流地帶有名為鱷魚的珍獸。而如今因為某個富翁的失誤，導致一隻鱷魚幼崽溜入了下水道中。如今不知道這隻鱷魚是否還活着",
+        "tips": "",
+        "mapping_id":8001131,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":0,
+        "waiting_round_end_action":[
+
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0,
+        "location": "野外:[1,6]",
+        "icon": "rite_15",
+        "tag_tips": [
+            "生存",
+            "戰鬥"
+        ],
+        "tag_tips_up":{
+            "tips":["生存","戰鬥"],
+            "type":"normal_result"
+        },
+        "tips_text":[
+            "運氣好的話，說不定可以活捉到鱷魚。"  ,
+            "下水道十分狹窄，只能夠容納一人順利進出。",
+            "己方生存戰鬥>=3點成功：獲得小鱷魚 生存+1",
+            "己方生存戰鬥>=1點成功：戰鬥+1 受傷"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+            "r1":"檢定時間。"
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"檢定時間。",
+                "type":"normal_result",
+                "type_tips":"你的生存和戰鬥為你提供了完整的骰子數量。",
+                "low_target": 1,
+                "low_target_tips": "你獲得3點成功時有機會抓獲鱷魚。"
+            }
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"9f7a7fe6-ffbc-4ef0-833c-314a06b87d52",
+                "condition": {
+                  "r1:生存+戰鬥-e(戰鬥)>=":[3,5]
+                },
+                "result_title":"",
+                "result_text": "鱷魚被皮帶纏住了嘴，生生地從水渠中拽了出來，人們都驚訝於它純白的身體。",
+                "result":
+                {
+                    "s1+生存":1,
+                    "counter+7000036":1,       //鱷魚不再刷新
+                    "card" :[2000304,"已擁有+1"] //抓獲鱷魚
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"421dac7a-2239-4eb2-bc90-7703c1f84760",
+                "condition": {
+                  "r1:生存+戰鬥-e(戰鬥)>=":[1,5]
+                },
+                "result_title":"",
+                "result_text": "這是一場困獸之鬥，還好最後是我們贏了。這個吃人的畜生以後再也沒法害人了。",
+                "result":
+                {
+                    "s1+equip":2000098,  //受傷
+                    "s1+戰鬥":1,
+                    "counter+7000036":1        //鱷魚不再刷新
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"f65d8b23-ce7f-4b13-b69f-3ab7ecee3464",
+                "condition": {
+                  "r1:體魄+戰鬥-e(戰鬥)<":[1,5]
+                },
+                "result_title":"探索失敗",
+                "result_text": "顯然，踏入鱷魚的領地不是一個聰明的決定 ，好在最後只留下了一排齒痕，而沒有丟掉性命。",
+                "result":
+                {
+                    "s1+equip":2000098 //受傷
+                },
+                "action": {
+                    "event_on":5300080 //這次失敗了，等下次通過幕後機制刷新出來後再來挑戰
+                }
+            }
+        ],
+        "settlement_extre": [
+            {
+                "guid":"85aa69aa-dbcb-431e-a351-e95cc7b7cddd",
+                "condition": {
+                    "r1:生存+戰鬥-e(戰鬥)>=":[3,5],
+                    "counter.7000547>=":1 //標識奴隸其實已經被小鱷魚吃掉了
+
+                },
+                "result_title":"意外發現",
+                "result_text": "鱷魚的牙齒上卡着一塊閹奴的頭巾……看起來蘇丹真的會把處死的奴隸扔進水渠裡呢！",
+                "result":
+                {
+                    "counter=7000547":0, //避免重複觸發這段文本
+                },
+                "action": {
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"13d84004-737d-4cfe-abb9-f7a7cbbe9c8b",
+                "condition":
+                {
+                    "type":"char"
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"你可以親自，可以派遣擁有足夠技藝的追隨者前往"
+            },
+        "s2":
+            {
+                "guid":"1867774a-2a4d-4b98-90a7-0c0b7f597795",
+                "condition":
+                {
+                    "type":"item",
+                    "cost.消耗品=":1,
+                        "!金幣":1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"有些東西也許能派上用場"
+            }
+        }
+    }

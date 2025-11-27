@@ -1,0 +1,173 @@
+ {
+        "id": 5003019,
+        "name": "孤高之人",
+        "text": "沒有一兵一卒，又有什麼土地可供征服？唯有那高聳的山峯，那終年被冰雪覆蓋的純淨之地，你可以用生命征服它——每個人都只能有自己的生命去征服它，因此這是蘇丹也無法做到的征服。",
+        "tips": "",
+        "mapping_id":8001320,
+        "once_new":0,
+        "round_number": 2,
+        "waiting_round":1,
+        "waiting_round_end_action":[
+            {
+                "condition":
+                {
+                },
+                "result_title":"",
+                "result_text": "",
+                "result":
+                {
+                    "counter=7000113":0
+                },
+                "action":
+                {
+                }
+            }
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0,
+        "location": "野外:[1,6]",
+        "icon": "rite_11",
+        "tag_tips": [
+            "生存"
+        ],
+        "tag_tips_up":{
+            "tips":["生存"],
+            "type":"normal_result"
+        },
+        "tips_text":[
+            "失敗會導致死亡。",
+            "主角生存檢定>=1點成功：消卡 生存+1",
+            "生存檢定失敗：主角死亡"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+            "r1":"先是騎馬，然後徒步，加上柺杖，鐵鉤與繩索，最後是手腳並用的爬行……"
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"先是騎馬，然後徒步，加上柺杖，鐵鉤與繩索，最後是手腳並用的爬行……",
+                "type":"normal_result",
+                "type_tips":"你的生存為你提供完整的骰子數量。",
+                "low_target": 1,
+                "low_target_tips": "你至少需要1點成功。"
+            }
+
+        },
+        "settlement_prior": [
+
+        ],
+        "settlement": [
+            {
+                "guid":"85df51f6-ceb5-4a9f-b0ae-31beca4e942e",
+                "condition": {
+                    "r1:生存<":[1,5]
+                },
+                "result_title":"",
+                "result_text": "你走進了雪山，再也沒有回來，這不失為一個比較好的結局。", //死亡
+                "result":
+                {
+
+                },
+                "action": {
+                    "over":13
+                }
+            },
+            {
+                "guid":"0f92b1b1-03a9-4ee4-a7fb-d5c3a04abee9",
+                "condition": {
+                    "r1:生存>=":[1,5]
+                },
+                "result_title":"",
+                "result_text": "從山頂鳥瞰城市，這個蘇丹的遊戲棋盤，不過爾爾，你覺得自己能贏。",
+                "result":
+                {
+                    "s1+生存":1,
+                    "clean.s3":1,
+                    "counter+7000092":1
+                },
+                "action": {
+                }
+            }
+        ],
+        "settlement_extre": [
+
+        ],
+        "cards_slot":
+        {
+            "s1":
+                {
+                    "guid":"4160b800-7747-4c3c-9c0b-4e2687f1a2b8",
+                    "condition":
+                    {
+                        "type":"char",
+                        "主角":1
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0, // 不能為空
+                    "is_enemy":0,
+                    "text":"當然是你親自上陣",
+                    "pops":[
+                        {
+                            "condition":{
+                                "f:s1.生存+s2.生存+s3.生存<": 1
+                            },
+                            "action":{
+                                "pop.5003019_s1_01.self":"以目前己方的<b><color=white>【生存】</color></b>能力，就不要去找死了。"
+                            }
+                        },
+                        {
+                            "condition":{
+                                "f:s1.生存+s2.生存+s3.生存<": 1,
+                                "!s2":1
+                            },
+                            "action":{
+                                "pop.5003019_s1_02.self":"如果有<b><color=white>【情報】</color></b>支持的話，可以多一分勝算。"
+                            }
+                        }
+                    ]
+                },
+            "s2":
+                {
+                    "guid":"3d4b8af4-6711-4194-a8e9-875d5ea9134f",
+                    "condition":
+                    {
+                        "type":"item",
+                        "cost.消耗品=":1,
+                        "!金幣":1
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":1,
+                    "is_enemy":0,
+                    "text":"任何可以幫到你的消耗品",
+                    "pops":[
+                        {
+                            "condition":{
+                                "f:s1.生存+s2.生存+s3.生存<": 1
+                            },
+                            "action":{
+                                "pop.5003019_s2_01.self":"以目前己方的<b><color=white>【生存】</color></b>能力，就不要去找死了。"
+                            }
+                        }
+                    ]
+                },
+            "s3":
+                {
+                    "guid":"1130ded6-c71f-4477-bf39-d8697941f518",
+                    "condition":
+                    {
+                        "type":"sudan",
+                        "征服":1,
+                        "rare<=":2
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"可以折斷一張青銅或者以下的征服卡"
+                }
+        }
+    }

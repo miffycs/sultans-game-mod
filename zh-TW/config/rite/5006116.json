@@ -1,0 +1,173 @@
+{
+    "id": 5006116,
+    "name": "醫典第一篇",
+    "text": "這部醫典還需補上很多藥草的圖樣，薩米爾正在全力繪製。",
+    "tips": "",
+    "mapping_id":8001550,
+    "once_new":0,
+    "round_number": 1,
+    "waiting_round":0,
+    "waiting_round_end_action":[
+
+    ],
+    "method_settlement": "",
+    "auto_begin": 1,
+    "auto_result":0,
+    "location": "上城區:[1,12]",
+    "icon": "rite_7",
+    "tag_tips": [
+    ],
+    "tag_tips_up":{
+
+    },
+    "tips_text":[
+        "10金幣、生存或智慧不小於5的追隨者、部分特定的書籍可以為薩米爾提供幫助"
+    ],
+    "open_conditions": [
+    ],
+    "random_text": {
+    },
+    "random_text_up":{
+
+    },
+    "random_effect": {
+    },
+    "settlement_prior": [
+
+    ],
+    "settlement": [
+         {
+            "guid":"08c8d846-3f64-4477-9d58-5808b302af6f",
+            "condition": {
+                "s2.金幣":10  //放了金幣
+            },
+            "result_title":"你拿出了一大筆錢",
+            "result_text": "在金錢的激勵下，一大批畫師響應了你的徵召，你不得不又多分了些心力篩選掉一些渾水摸魚的、根本沒有畫過植物圖鑑的……但不論如何，你的幫助讓醫典的編纂順利多了。",
+            "result":
+            {
+
+            },
+            "action": {
+                "rite":5006117  //醫典第二章
+            }
+        },
+         {
+            "guid":"07e67a5b-6893-45f6-b64f-68380bebda2d",
+            "condition": {
+                "s2.type":"char"  //放了追隨者
+            },
+            "result_title":"你讓[s2.name]做薩米爾的助手",
+            "result_text": "[s2.gender]懂得辨識草藥，也很會抓它們的特徵，在[s2.gender]的幫助下，醫典的編纂工作順利多了。",
+            "result":
+            {
+
+            },
+            "action": {
+                "rite":5006117  //醫典第二章
+            }
+        },
+        {
+            "guid":"cc583b2c-6087-4ddb-bc78-eafbfd156360",
+            "condition": {
+                "any":{
+                    "s2.is":2000224,
+                    "s2.is":2000226,
+                    "s2.is":2000801,
+                    "s2.is":2000803,  //放了書
+                }
+            },
+            "result_title":"你帶來了參考資料",
+            "result_text": "[s2.name]就是薩米爾一直想找的資料！它為薩米爾省下了大量的精力和時間。",
+            "result":
+            {
+
+            },
+            "action": {
+                "rite":5006117  //醫典第二章
+            }
+        },
+        {
+            "guid":"1d262251-4c4a-43e2-9afd-34ff57868637",
+            "condition": {
+                "!s2":1,  //沒放協助但卡帕爾活着
+                "have.2001194":1
+            },
+            "result_title":"你沒能幫上忙",
+            "result_text": "但卡帕爾一直陪伴在薩米爾身邊，除了照料這位忙起來就不知日月的御醫之外，通過經年累月的耳濡目染，他在藥草、醫理方面也略有研究……總之，在他的幫助下，薩米爾很快就完成了這部分編修。",
+            "result":
+            {
+                "counter+7000738":1  //卡帕爾已經協助過編修了
+            },
+            "action": {
+                "rite":5006117  //醫典第二章
+            }
+        },
+        {
+            "guid":"c5094b68-5b6d-42af-91ba-d72e257e42ea",
+            "condition": {
+                "!s2":1,  //沒放協助且卡帕爾死了
+                "!have.2001194":1
+            },
+            "result_title":"你沒能幫上忙",
+            "result_text": "你只能眼看着薩米爾一個人忙得團團轉，恨不得長出三個腦袋八隻手來完成這項艱辛的編修任務……也許忙一點也好吧，這樣就能暫時忘掉那些不開心的事了。",
+            "result":
+            {
+
+            },
+            "action": {
+                "rite":5006118  //醫典第二章前置
+            }
+        }
+    ],
+    "settlement_extre": [
+
+
+    ],
+    "cards_slot":
+    {
+        "s1":
+        {
+            "guid":"580f0728-fb15-414f-adfa-c184a8eb0790",
+            "condition":
+            {
+                "is":2000011,
+                "醫典鎖定":1
+            },
+            "open_adsorb":1,
+            "is_key":0,
+            "is_empty":0,
+            "is_enemy":1,
+            "text":"薩米爾"
+        },
+        "s2":
+        {
+            "guid":"345f6a0a-67cb-4dd9-8ac4-a504619d65e5",
+            "condition":
+            {
+                "any":{
+                    "type":"char",
+                    "type":"item"
+                },
+                "any":{
+                    "cost.金幣=":10,
+                    "all":{
+                        "type":"char",
+                        "any":{
+                            "生存>=":5,
+                            "智慧>=":5
+                        }  //追隨者
+                    },
+                    "is":2000224,
+                    "is":2000226,
+                    "is":2000801,
+                    "is":2000803  //四種書
+                }
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":0,
+            "text":"也許你能幫幫他\n特定書籍：《動物與植物圖鑑》《沙漠之書》《雨林！雨林！》《荒野集》"
+        }
+    }
+}

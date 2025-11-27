@@ -1,0 +1,222 @@
+ {
+        "id": 5000652,
+        "name": "黃金的贈禮",
+        "text": "娜依拉寫信說，她越來越無法滿足自己只相當於一張銀色卡牌……我的愛人，她懇求你，把一件最頂級的奇珍獻給她，這樣宮廷將會見證她的榮耀，而你也能消耗掉一張金色蘇丹卡。",
+        "tips": "",
+        "mapping_id":8001177,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":7,
+        "waiting_round_end_action":[
+            {
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "",
+                "result":
+                {
+                    "s1=支持":0,
+                    "s1+反對":5,
+                    "s1=激情":0,
+                    "counter+7000058":1
+                },
+                "action": {
+                    "prompt": {
+                        "id": "prompt_5000652_01",
+                        "text": "她不再寫信了，也不願意見你。在宮廷上，她稱你為成不了大事的男人。"
+                    }
+                }
+            }
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0, //自動執行
+        "location": "上城區:[7,12]",
+        "icon": "rite_12",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "一個金色的奇珍會允許你使用金色的蘇丹卡",
+			"當然你也可以用銀色的殺戮卡結束這段關係",
+            "銀殺戮線 沒放任何東西：娜依拉死亡",
+            "金殺戮線 放了金飾品或衣服：娜依拉死亡",
+            "奢靡線：娜依拉昇金 激情+1 支持+6 金幣+10",
+            "儀式過期：娜依拉反對+5"
+        ],
+        "open_conditions": [
+        ],
+        "random_text": {
+        },
+        "random_text_up":{
+        },
+        "random_effect": {
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+        ],
+        "settlement_extre": [
+            {
+                "guid":"d2622073-2068-4dbc-9f92-eece29069a95",
+                "condition": {
+                    "s3":1
+                },
+                "result_title":"",
+                "result_text": "為了迎接你送來的珍寶，她敲掉了一整面牆壁，好做成一個足以容納半數宮廷要人的宴會通道，讓他們可以看着那寶物被奴隸們扛着送進她的宅邸。\n雖然這些表演浮誇而浪費金錢，但你不可否認，那些貴族看你們的眼神都不一樣了，娜依拉從此將成為第一流的貴婦……",
+                "result":
+                {
+                    "s1-縱慾的痕跡":1,
+                    "clean.s3":1,
+                    "s1.uprare":1 //品級提升了
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"e090b5ff-d491-4dee-a6b0-930ac456a540",
+                "condition": {
+                    "s4.奢靡":1
+                },
+                "result_title":"",
+                "result_text": "即使蘇丹也不得不承認這是一場高規格的奢華演出。",
+                "result":
+                {
+                    "clean.s4":1
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"becc592b-7dfb-41e5-9c5a-0e39aaf05601",
+                "condition": {
+                    "s4.奢靡":1
+                },
+                "result_title":"",
+                "result_text": "宴會結束之後，她的侍女給你送來了一些報酬……以及一些撩人的口信，期待你下次正式的造訪。",
+                "result":
+                {
+                    "s1+激情":1,
+                    "coin":10,
+                    "s1=反對":0,
+                    "s1=支持":6
+                },
+                "action": {
+                    "event_on":5300117 //你可以徹底收付她了
+                }
+            },
+            {
+                "guid":"01b75dbb-2338-4505-b162-cf7ad1fab624",
+                "condition": {
+                    "s3":1, //放了金飾品或衣服
+                    "s4.殺戮":1,
+                    "s4.rare=":4
+                },
+                "result_title":"",
+                "result_text":"為了迎接你送來的珍寶，她敲掉了一整面牆壁，好做成一個足以容納半數宮廷要人的宴會通道，讓他們可以看着那寶物被奴隸們扛着送進她的宅邸。\n雖然這些表演浮誇而浪費金錢，但當你切開她喉嚨的時候，賓客們的表情還是非常令人滿足。\n蘇丹極為欣賞這場表演，他允許你折斷這張黃金品級的殺戮卡——娜依拉終於如願以償，成為了配得上金色蘇丹卡的女人。",
+                "result":
+                {
+                    "clean.s1":1,
+                    "clean.s4":1
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"da258301-2f2b-4c5b-b716-4fa2b8042339",
+                "condition": {
+                    "s4.殺戮":1,
+                    "s4.rare=":3
+                },
+                "result_title":"",
+                "result_text": "你騙她，禮物已經準備好了，現在只差一些細節……\n她穿着半透明的絲質長袍在臥室接待了你，於是，你順勢用旁邊的帷幕束帶勒死了她，和袍子的顏色很搭配。",
+                "result":
+                {
+                    "clean.s1":1,
+                    "clean.s4":1
+                },
+                "action": {
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"32b88fc6-c44a-4362-baf2-2ff0f83eb4b1",
+                "condition":
+                {
+                    "is":2000055
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"娜依拉的野心愈發膨脹。"
+            },
+            "s2":
+            {
+                "guid":"dd1961fb-80e2-452b-aebf-b2ecc0cba70f",
+                "condition":
+                {
+                    "主角":1,
+                    "type":"char"
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"她只肯見你本人。"
+            },
+            "s3":
+            {
+                "guid":"70684ced-dd89-4a5b-a61b-08596d1c0631",
+                "condition":
+                {
+                    "type":"item",
+                    "rare=":4,
+                    "any":{
+                        "奇珍":1,
+                        "飾品":1
+                    },
+                    "!is":2001022        //排除碧雲套
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"一件黃金品級的奇珍或飾品"
+            },
+            "s4":
+            {
+                "guid":"f9827d59-9d03-4b11-a44b-b4c2a9b5a8f6",
+                "condition":
+                {
+
+                    "any":{
+                        "all":{
+                            "s3":1,
+                            "type":"sudan",
+                            "rare=":4,
+                            "any":{
+                                "殺戮":1,
+                                "奢靡":1
+                            }
+                        },
+                        "all":{
+                            "rare=":3,
+                            "type":"sudan",
+                            "殺戮":1
+                        }
+                    }
+
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"一場奢靡的表演，或者一個死亡"
+            }
+        }
+    }

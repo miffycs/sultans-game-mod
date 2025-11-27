@@ -1,0 +1,145 @@
+ {
+        "id": 5000572,
+        "name": "黃金體驗",
+        "text": "在你們眼神交匯的瞬間，莎姬看到了你摧毀聖主雕像的場景——而你看到了她曾經被聖主折磨的幻象——那些鐵籠，那些惡犬，都隨着聖像的毀滅而煙消雲散：你無意間的行為拯救了這名寵妃。",
+        "tips": "",
+        "mapping_id":8001034,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":3,
+        "waiting_round_end_action":[
+            {
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "",
+                "result":
+                {
+
+                },
+                "action": {
+                    "counter-7100003":1,//權勢-1
+                    "prompt":{
+                        "id":"5000572_prompt_01",
+                        "text":"她是想要報答你的，但你的忽視同樣刺傷了她的自尊。",
+                        "icon":"cards/2000010"
+                    }
+                }
+            }
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result":0,
+        "location": "自宅:[2,12]",
+        "icon": "rite_13",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "為了報答你，她將給你最美妙的一夜。",
+            "儀式過期：權勢-1",
+            "主角：莎姬激情+1 主角魅力+2 可以消除瘋狂",
+            "會觸發莎姬禮物事件：金幣+50 支持+2 權勢+2"
+        ],
+        "open_conditions": [
+        ],
+        "random_text": {
+        },
+        "random_text_up":{
+        },
+        "random_effect": {
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"1d8fc1fe-4381-4b58-8992-186c781fa557",
+                "condition": {
+                },
+                "result_title":"快樂的巔峯",
+                "result_text": "莎姬什麼都沒說，只是張開雙臂抱住了你，而後，她蠕動着，向下求索着……當她的肉體包裹住你的肉體，你的靈魂也接納了她的靈魂……你看到她曾經被神明一遍遍折磨的噩夢，看到她無知而貪婪地向未知的存在獻祭許願，看到她侍奉蘇丹，看到她在妓院裡攀附權貴，看到她在奴隸市場中挺起雙乳，看到她逃離父親的房間……\n你體驗到了她的生命，體驗到了這隻有蘇丹，宰相，妓院的打手，奴隸主，人販子，她的父親……才享受過的肉體技藝——每個男人對她來說都是階梯，她踏過他們，變得更強大，更熟練，更完美，而你和她一起，沿着這階梯達到了最高處。",
+                "result":
+                {
+                    "s2+魅力":2,
+                    "s1+激情":1,
+                    "counter+7000644":1, //標識觸發了黃金體驗
+                },
+                "action": {
+                    "event_on":5320256, //莎姬的禮物
+                }
+            }
+        ],
+        "settlement_extre": [
+            {
+                "guid":"5067cef1-873b-4764-b6c4-a514243384c8",
+                "condition": {
+                    "s3":1
+                },
+                "result_title":"最後，只剩下寧靜",
+                "result_text": "只有今晚，你忘卻了一切，因為你已經飲下甘露，那是以凡人的生命與夢所釀造的瓊漿，即便是神明，也可以從中得到一份慰藉。",
+                "result":
+                {
+                    "clean.s3":1
+                },
+                "action": {
+                    "event_on":5320256, //莎姬的禮物
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"01fe34a0-abf0-4661-a9ee-4af218ff5fc3",
+                "condition":
+                {
+                    "type": "char",
+                    "is":2000010
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"莎姬"
+            },
+            "s2":
+            {
+                "guid":"5ebc0ffe-240f-4290-b78c-1a2099d64e2a",
+                "condition":
+                {
+                    "type":"char",
+                    "主角":1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"只有你可以",
+                "pops":[
+                    {
+                        "condition":{
+                        },
+                        "action":{
+                            "pop.5000572_01.s1":"什麼都不要問……"
+                        }
+                    }
+                ]
+            },
+            "s3":
+            {
+                "guid":"946f0fff-4467-407a-a073-5a9d7b005888",
+                "condition":
+                {
+                    "type":"item",
+                    "is":2000326,
+                    "cost.瘋狂":1, //只吸一張
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"給予你某種平靜"
+            }
+        }
+    }

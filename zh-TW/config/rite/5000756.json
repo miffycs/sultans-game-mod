@@ -1,0 +1,108 @@
+ {
+        "id": 5000756,
+        "name": "猙獰美味",
+        "text": "你把那顆狼頭塞給了小圓，不久之後，你家的後院飄來了一陣誘人的肉香……",
+        "tips": "",
+        "mapping_id":8001246,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":2,
+        "waiting_round_end_action":[
+            {
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "",
+                "result":
+                {
+                },
+                "action": {
+                    "prompt":{
+                        "id":"5000756_prompt_01",
+                        "text":"因為放置久了湯已經壞了，小圓十分失落地離去",
+                        "icon":"cards/2000371"
+                    }
+                }
+            }
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result":0,
+        "location": "自宅:[2,12]",
+        "icon": "rite_12",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+
+        },
+        "tips_text":[
+            "儀式過期：無事發生",
+            "上陣角色體魄+1"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+
+        },
+        "settlement_prior": [
+
+        ],
+        "settlement": [
+            {
+                "guid":"f4756763-f70f-4214-8541-29f2e12f59f9",
+                "condition":
+                {
+
+                },
+                "result_title":"竟然很好喝",
+                "result_text": "小圓哼着小調把這鍋巨大的狼頭湯端了上來。憑心而論，她的手藝非常好，這湯味道別具特色，尤其是那顆慘白的、被細心削去每一寸血肉的頭骨就臥在大碗的正中間，空洞地注視着處置它的人和享用它的人……",
+                "result":
+                {
+                    "s1+體魄":1,  //獲得1點體魄
+                    "s2+體魄":1   //1點體魄
+                },
+                "action":
+                {
+
+                }
+            }
+        ],
+        "settlement_extre": [
+
+        ],
+        "cards_slot":
+        {
+            "s1":
+                {
+                    "guid":"1af9844e-724f-49b1-96b0-f54aaba9fefa",
+                    "condition":
+                    {
+                        "type":"char",
+                        "!怪物":1,
+                        "!動物":1
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"你可以讓任何人來喝這碗湯，包括自己"
+                },
+            "s2":
+                {
+                    "guid":"ceb2dfc4-e4e1-4dc1-89a8-c92ff79a7f70",
+                    "condition":
+                    {
+                        "type":"char",
+                        "!怪物":1,
+                        "!動物":1
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":1,
+                    "is_enemy":0,
+                    "text":"你可以讓任何人來喝這碗湯，包括自己"
+                }
+        }
+    }

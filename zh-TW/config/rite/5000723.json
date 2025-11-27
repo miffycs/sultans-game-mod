@@ -1,0 +1,104 @@
+ {
+        "id": 5000723,
+        "name": "宰相的召見",
+        "text": "阿卜德再次派僕人來，召你到府上一敘。他的事未必十分要緊，但他不喜歡被人忽視。",
+        "tips": "",
+        "mapping_id":8001165,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":5,
+        "waiting_round_end_action":[
+            {
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "",
+                "result":
+                {
+                    "s1=支持":0,
+                    "s1+反對":1,
+                    "counter-7100003":1, //權勢-1
+                    "prompt":{
+                        "id":"5000723_prompt_01",
+                        "text":"宰相阿卜德討厭被忽視的感覺，這讓他覺得很沒面子。他一定會在宮廷中抓住一切機會向蘇丹進讒言的，你要當心了。",
+                        "icon":"cards/2000349"
+                    }
+                },
+                "action": {
+                }
+            }
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,  //1回合後自動結算
+        "auto_result":0,
+        "location": "宮廷:[2,6]",
+        "icon": "rite_14",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "如果不去的話，恐怕日後宮廷中會遭到宰相的攻訐。",
+            "去的話：銅機遇",
+            "沒去的話：權勢-1 宰相反對+1"
+        ],
+        "open_conditions": [
+        ],
+        "random_text": {
+        },
+        "random_text_up":{
+        },
+        "random_effect": {
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"9bce59d2-347d-419a-816a-619812fc9d88",
+                "condition": {
+                    "s2":1 //派人去見宰相
+                },
+                "result_title":"",
+                "result_text": "你猜到阿卜德一定是為穆爾臺茲來找你的，事實也確乎如此。那個懦夫不知哪裡來的膽子，竟敢揚言要報復蘇丹，即使是一句酒後的戲言，作為蘇丹最忠誠的僕人，阿卜德也決不允許這樣僭越的事發生。他決定派你去給穆爾臺茲一個教訓——一個一生一次的教訓。",
+                "result":
+                {
+                    "card": 2000040 //銅機遇情報
+                },
+                "action": {
+                    "rite":5000724
+                }
+            }
+        ],
+        "settlement_extre": [
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"bacb59fb-99fc-4b6d-9550-ab01560fe189",
+                "condition":
+                {
+                    "is": 2000349  //宰相
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"阿卜德怒火中燒"
+            },
+            "s2":
+            {
+                "guid":"a438bb22-6872-4a51-a182-1fca598fce9c",
+                "condition":
+                {
+                    "type": "char",
+                    "主角":1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"你必須親自前去"
+            }
+        }
+    }

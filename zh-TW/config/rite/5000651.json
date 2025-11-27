@@ -1,0 +1,179 @@
+ {
+        "id": 5000651,
+        "name": "血的妝造",
+        "text": "娜依拉又想到了新的玩法——她邀請你用一張殺戮蘇丹卡來處決自己手下最桀驁不馴的男奴。這想必能為你們倆增添無窮的情趣。",
+        "tips": "",
+        "mapping_id":8001176,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":7,
+        "waiting_round_end_action":[
+            {
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "",
+                "result":
+                {
+                    "s1=支持":0,
+                    "s1+反對":5,
+                    "counter+7000058":1
+                },
+                "action": {
+                    "counter+7100002": 1, //惡名+1
+                    "prompt": {
+                        "id": "prompt_5000651_01",
+                        "text": "她寫了一封辭藻華麗，充滿挑逗的信件，與那遊牧民的頭顱一起寄給你，但你明白，之後再遇見她可就不妙了。"
+                    }
+                }
+            }
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0, //自動執行
+        "location": "上城區:[7,12]",
+        "icon": "rite_12",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "石殺戮可以殺死一位奴隸，而銀殺戮則可以……",
+            "銅以上殺戮：娜依拉死亡 古利斯入隊",
+            "石殺戮：古利斯死亡 娜依拉入隊 激情+1 支持+1",
+            "儀式過期：娜依拉反對+5 主角惡名+1"
+        ],
+        "open_conditions": [
+        ],
+        "random_text": {
+        },
+        "random_text_up":{
+        },
+        "random_effect": {
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"2e7242bf-0f64-46af-b4c5-f27efbe65d16",
+                "condition": {
+                    "s4.rare=":1
+                },
+                "result_title":"",
+                "result_text": "她彷彿一位女修士，謙卑又神聖，除去了你們的衣衫，拉着你的手，用金刀切開了那奴隸健壯而多毛的胸膛。切口平滑、美麗，宛若敬神的祭禮。\n她捧起鮮血，在自己身體上勾勒出妝容與衣衫，又掏出那還在跳動的心臟，踮起腳來，舉過你的頭頂，好似在膏一位加冕的國王。\n血液順着你的額頭流下，迷濛了你的雙眼，你只聽得到心臟被擠壓的噗噗聲，你只感覺到她的雙乳與呼吸在你皮膚上的摩擦聲。",
+                "result":
+                {
+                    "clean.s2":1
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"bc973816-6460-4d6d-9e9c-cfe99823cf81",
+                "condition": {
+                    "s4.rare>=":2
+                },
+                "result_title":"",
+                "result_text": "這是一張配得上你的殺戮卡，你這樣告訴她，順勢拿走了她手上的金刀，然後用鎖鏈扣住了她的脖頸。\n隨後，你解開了那遊牧民奴隸的繩索，把武器與時間留給了他。",
+                "result":
+                {
+                    "clean.s1":1
+                },
+                "action": {
+                }
+            }
+        ],
+        "settlement_extre": [
+            {
+                "guid":"343fcd07-9ead-4802-bea9-2f8048b7619c",
+                "condition": {
+                    "s4.rare=":1
+                },
+                "result_title":"",
+                "result_text": "當你回過神來之後，你們已經氣喘吁吁，躺在內臟與血泊之中，精疲力盡……\n她輕柔地舔掉你耳朵裡的血塊，低聲言語道：我好像有點愛上你了。",
+                "result":
+                {
+                    "s1+激情":1,
+                    "s1+支持":1,
+                    "clean.s4":1,
+                    "s1+追隨者":1
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"e5fe5993-e0f4-4a0d-ba09-56deed371c2b",
+                "condition": {
+                    "s4.rare>=":2
+                },
+                "result_title":"",
+                "result_text": "很意外，過了很久，房間之內也並沒有更多聲音傳出……\n直到你等得不耐煩的時候，那名奴隸打開了門，他把染血的彎刀扔在地上，跟你說他需要一把趁手的弓箭才能更好地為你效力。",
+                "result":
+                {
+                    "clean.s2":1,
+                    "card":[2000114,"追隨者+1"],  //獲得神箭手
+                    "clean.s4":1
+                },
+                "action": {
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"d829dea6-20f3-4003-8943-00fac59ca323",
+                "condition":
+                {
+                    "is":2000055
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"貴婦"
+            },
+            "s2":
+            {
+                "guid":"8c9003b3-f4ab-4f17-9b60-8e9b83eecc28",
+                "condition":
+                {
+                    "is": 2000115
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"目光銳利的奴隸"
+            },
+            "s3":
+            {
+                "guid":"a87898e7-b6ac-4146-83ae-cb9429ba2619",
+                "condition":
+                {
+                    "主角":1,
+                    "type":"char"
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"你需要親自前往"
+            },
+            "s4":
+            {
+                "guid":"409e1943-54b6-4064-899b-c096ebd44ab2",
+                "condition":
+                {
+                    "type":"sudan",
+                    "rare<=":3,
+                    "殺戮":1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"殺戮卡……但是應該放入哪一品級？"
+            }
+        }
+    }

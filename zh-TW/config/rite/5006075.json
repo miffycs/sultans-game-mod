@@ -1,0 +1,134 @@
+{
+    "id": 5006075,
+    "name": "被魔鬼蠱惑之人",
+    "text": "比起你，他更像是被魔鬼蠱惑的人吧！你決心讓這個胡言亂語的人付出代價",
+    "tips": "",
+    "mapping_id":8001115,
+    "once_new":0,
+    "round_number": 1,
+    "waiting_round":3,
+    "waiting_round_end_action":[
+        {
+            "condition": {
+            },
+            "result_title":"",
+            "result_text": "",
+            "result":
+            {
+            },
+            "action": {
+                "counter+7100005":1, //靈視
+                "prompt":{
+                    "id":"5006075_prompt_01",
+                    "text":"你舉刀之前突然放棄了：你竟然和一個神經病認真計較！算了吧，你趕走了這人，然而，不知道是不是自己胡思亂想的緣故，你那幾天一直過得很不好，甚至在深夜時分，常常聽見自己的心跳在房間裡發出空洞的迴響，彷彿誰在輕叩你靈魂的門扉，咚咚、咚咚、咚咚……",
+                    "icon":"common/position_guizu_2"
+                }
+            }
+        }
+    ],
+    "method_settlement": "",
+    "auto_begin": 0,
+    "auto_result":0,
+    "location": "自宅:[2,12]",
+    "icon": "rite_21",
+    "tag_tips": [
+    ],
+    "tag_tips_up":{
+    },
+    "tips_text":[
+        "快!殺了他！殺了他！",
+        "殺戮線：妖言惑眾之人死亡 上陣角色詛咒+1 魔力-1",
+        "普通線：妖言惑眾之人死亡 上陣角色詛咒+1 魔力-1"
+    ],
+    "open_conditions": [
+
+    ],
+    "random_text":{
+
+    },
+    "random_text_up":{
+    },
+    "settlement_prior": [
+    ],
+    "settlement": [
+        {
+            "guid":"93e611ce-2350-4561-a63b-aafedadc00cf",
+            "condition": {
+                "s3":1 //用了殺戮卡
+            },
+            "result_title":"",
+            "result_text": "[s2.name]的刀刃刺穿他胸膛的時候，他臉上沒什麼表情，然而，當你拿出殺戮卡的時候，這顆頭顱僵硬的面龐上竟然綻放出某種詭異的笑容，令人不寒而慄。\n有什麼東西永遠地流逝了。[s2.name]一連好幾天都倍感虛弱。",
+            "result":
+            {
+                "clean.s1":1,
+                "clean.s3":1,
+                "s2+equip":2000163, //詛咒
+                "s2-魔力":1
+            },
+            "action": {
+            }
+        },
+        {
+            "guid":"a9efdec0-6917-48a9-8e83-6b22c3d7ffb9",
+            "condition": {
+                "!s3":1 //沒有用殺戮卡
+            },
+            "result_title":"",
+            "result_text": "[s2.name]的刀刃刺穿他胸膛的時候，他臉上沒什麼表情，彷彿這世界上沒什麼東西能令他動容。只是，他的眼珠始終盯着[s2.name]的胸膛，似乎期待着將之剖開……\n這之後，[s2.name]一連做了好幾天噩夢，彷彿真的被什麼魔鬼纏身了一般。",
+            "result":
+            {
+                "clean.s1":1,
+                "s2+equip":2000163 //詛咒
+            },
+            "action": {
+            }
+        }
+    ],
+    "settlement_extre": [
+    ],
+    "cards_slot":
+    {
+        "s1":
+            {
+                "guid":"5169e0ed-1211-45ac-a652-9d0a9d2fee04",
+                "condition":
+                {
+                    "type":"char",
+                    "is":2000849
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"妖言惑眾之人"
+            },
+        "s2":
+            {
+                "guid":"faaad701-038a-4249-b11d-732300cd6d19",
+                "condition":
+                {
+                    "type":"char"
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"你可以親自，或者派人殺了他"
+            },
+        "s3":
+            {
+                "guid":"17794f20-9d16-4e33-93fb-8b5468cda4ff",
+                "condition":
+                {
+                    "type":"sudan",
+                    "殺戮":1,
+                    "rare<=":3
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"你可以藉機折斷一張不高於白銀品級的殺戮卡"
+            }
+    }
+}

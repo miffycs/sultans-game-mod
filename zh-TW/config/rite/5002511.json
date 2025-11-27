@@ -1,0 +1,167 @@
+ {
+        "id": 5002511,
+        "name": "毒蛇山谷",
+        "text": "有人告訴你，城外有一處風沙漫布的山谷，出沒着不少毒蛇，黑市正在高價收購它們的毒腺。但取得它們並不容易……首先，你得從蛇牙的圍攻中活下來。",
+        "tips": "",
+        "mapping_id":8001174,
+        "once_new":0,
+        "round_number": 2,
+        "waiting_round":0,
+        "waiting_round_end_action":[
+
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0,
+        "location": "野外:[1,6]",
+        "icon": "rite_15",
+        "tag_tips": [
+            "體魄",
+            "生存",
+            "智慧"
+        ],
+        "tag_tips_up":{
+            "tips":["體魄","生存","智慧"],
+            "type":"normal_result"
+        },
+        "tips_text":[
+            "你需要有足夠的生存知識和強健的體魄，才能獵得毒蛇。" ,
+            "足夠的智慧和知識，說不定能為你帶來意外之喜。",
+            "體魄+生存>=1點成功：上陣角色生存+1 毒蛇毒液 金幣+5",
+            "智慧+生存>=2點成功：療傷草藥"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+            "r1":"抓毒蛇的檢定",
+            "r2":"找草藥的檢定"
+
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"荒涼的谷地，你聽見嘶嘶的蛇信聲正向你靠近……",
+                "type":"normal_result",
+                "type_tips":"你的體魄和生存為你提供了完整的骰子數量。",
+                "low_target": 1,
+                "low_target_tips": "你至少需要1點成功才能捕獵毒蛇。"
+            },
+            "r2":{
+                "text":"離開山谷的時候，你注意到一叢低矮的喬木……",
+                "type":"normal_result",
+                "type_tips":"你的智慧和生存為你提供了完整的骰子數量。",
+                "low_target": 2,
+                "low_target_tips": "你至少需要2點成功才能找到療傷的草藥。"
+            }
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"f6da8a9a-03c4-49b8-9c66-e8cb94891ddc",
+                "condition": {
+                  "r1:體魄+生存>=":[1,5]
+                },
+                "result_title":"",
+                "result_text": "你熟悉這些毒蛇的習性，也有足夠的經驗和技巧。你以迅雷不及掩耳之勢狠狠壓住蛇頭、鉗住它的頸部，然後將之迅速塞進準備好的麻袋裡。活着的毒蛇能賣上更好的價錢，你彷彿聽見金幣落袋的聲音。",
+                "result":
+                {
+                    "s1+生存":1,
+                    "s2+生存":1,
+                    "card":[2000305,"已擁有+1"], //毒蛇毒液
+                    "金幣": 5,      //蛇賣錢
+                    "counter+7000037":1         //一次性抓太多蛇了，之後找不到這麼多蛇了
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"f90be08a-73da-44be-b3a6-ea83f4abcf14",
+                "condition": {
+                  "r1:體魄+生存<":[1,5]
+                },
+                "result_title":"",
+                "result_text": "天吶，蛇，那麼多蛇，它們密密麻麻地湧來，猶如潮水。你渾身汗毛倒豎，那一刻，除了本能的怯意，你幾乎什麼都感覺不到了。你瘋狂地逃離了山谷，自然，也一無所獲。",
+                "result":
+                {
+
+                },
+                "action": {
+                    "event_on":5300081  //這次失敗了，等下次通過幕後機制刷新出來後再來挑戰
+                }
+            }
+        ],
+        "settlement_extre": [
+            {
+                "guid":"f25ae52d-acd7-40dd-95a4-81ff68eec6ac",
+                "condition": {
+                  "r2:智慧+生存>=":[2,5]
+                },
+                "result_title":"",
+                "result_text": "你被它羽毛似的細葉和皺巴巴的黃色小花所吸引，馬上，你想起了曾在草藥圖鑑中見過的一種療傷草藥，據說，它的汁液甚至可解竹葉青的蛇毒。你小心翼翼地採了一些帶回去，以備他日之用，也算是意外之喜。",
+                "result":
+                {
+                    "card":[2000306,"已擁有+1" ]//療傷草藥
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"1fdf5780-afaa-4cba-baae-3d5e3b81c6cb",
+                "condition": {
+                  "r2:智慧+生存<":[2,5]
+                },
+                "result_title":"",
+                "result_text": "喬木細瘦的枝幹上開着皺巴巴的小黃花，沒什麼尋常的地方。如果開得再鮮豔一點、盛大一點，也許你可以摘下它帶給梅姬，她會喜歡的。可惜……你輕輕搖搖頭，趁着夜幕降臨之前快步往家裡趕去。",
+                "result":
+                {
+
+                },
+                "action": {
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"3ab29e8d-67e0-4391-a978-aea3c4f1df57",
+                "condition":
+                {
+                    "type":"char"
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"你可以親自，可以派遣足夠經驗豐富的追隨者前往探索"
+            },
+        "s2":
+            {
+                "guid":"726f355c-643e-41b6-90bf-bb8b60b14fcf",
+                "condition":
+                {
+                    "type":"char"
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"多一個同伴，多一點勝算"
+            },
+        "s4":
+            {
+                "guid":"df7d9aad-ef41-41d6-9429-0fa323fdc722",
+                "condition":
+                {
+                    "type":"item",
+                    "cost.消耗品=":1,
+                        "!金幣":1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"有些東西也許能在搜尋中派上用場"
+            }
+        }
+    }

@@ -1,0 +1,132 @@
+ {
+        "id": 5000602,
+        "name": "酒莊的歸屬",
+        "text": "有人找上門來，聲稱自己是那天被你襲擊的酒莊的主人，想要找你聊聊……看起來，他沒有明顯的惡意。",
+        "tips": "",
+        "mapping_id":8001077,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":3,
+        "waiting_round_end_action":[ //儀式沒有處理，自動關閉後
+        {
+            "condition": {
+            },
+            "result_text": "又過了幾天，他又來了",
+            "result":
+            {
+                "event_on":5300101
+            },
+            "action": {
+            }
+        }
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0, //自動執行
+        "location": "自宅:[2,12]",
+        "icon": "rite_16",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "接待：迷藥+1 觸發劇情",
+            "不接待：觸發再次來訪",
+            "扎奇伊來接待：小劇情 觸發再次來訪"
+        ],
+        "open_conditions": [
+        ],
+        "random_text": {
+        },
+        "random_text_up":{
+        },
+        "random_effect": {
+        },
+        "settlement_prior": [
+            {
+                "guid":"827ff15a-8f32-4127-aa3e-a70332fb0187",
+                "condition": {
+                    "s2.is":2000063 //讓扎奇伊來接待的特殊分支
+                },
+                "result_title":"",
+                "result_text": "一見到扎齊伊，酒莊主人就發出一串大笑，“這不是我的好侄子嗎，扎齊伊？你怎麼在這？”\n少年猝不及防地被他熱情地一把摟住，有點不自在地低下頭去，“老師今天有事外出，叮囑我幫忙接待客人……大伯，您找他有什麼事？我可以代為轉述。”\n“哈哈，我們扎齊伊還真是長大了……”酒莊主人端起酒盞，掩去臉上意味深長的微笑。寒暄了幾句之後，他就向扎齊伊告辭了，“我還會來拜訪的，你就這樣告訴你的老師就行。”",
+                "result":
+                {
+                "event_on":5300101
+                },
+                "action": {
+                }
+            }
+        ],
+        "settlement": [
+        ],
+        "settlement_extre": [
+            {
+                "guid":"059bb22b-ad2a-4545-93b8-d61168b5b2cb",
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "這個看起來頗有些陰冷的男人不是來追究責任的。他自稱是法圖娜女士的丈夫的哥哥，而隨着丈夫突然病逝，這名未亡人繼承了一大筆財產……",
+                "result":
+                {
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"13c311ed-513b-4bb8-9b16-244ceb3d3f08",
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "“那些財產不該屬於她……”他摩挲着拇指上的扳指，遞給你一個意味深長的眼神。他提出希望與你合作，利用法圖娜的信任把她騙出來，將她綁架……事成之後你可以分到那份財產的一半——這會是非常優厚的報償。",
+                "result":
+                {
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"fdc3149a-8bd2-4394-b38b-87e7b194fdac",
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "貪念佔據了你的腦海一瞬間，那人眯着眼睛，滿意地取出一瓶迷藥放在了你桌上，勸誘道，“對你來說這很簡單，不是嗎？她相信你。”\n你知道他是對的，法圖娜相信你。可她是那樣地相信你啊……你的良知又開始作祟了……",
+                "result":
+                {
+                    "card":[2000316,"已擁有+1"]  //迷藥
+                },
+                "action": {
+                    "event_on":5300102 //激活邀請寡婦的儀式
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"92180b13-2a4c-49ca-a9a7-7ea8eb8c0b5d",
+                "condition":
+                {
+                    "is":2000314
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"酒莊的前主人"
+            },
+            "s2":
+            {
+                "guid":"55d51fa7-dfef-4fa9-ba34-7c2603165d15",
+                "condition":
+                {
+                    "type":"char"
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"你可以親自或者派任意追隨者接待他"
+            }
+        }
+    }

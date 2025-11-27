@@ -1,0 +1,160 @@
+ {
+        "id": 5003017,
+        "name": "超級大撒幣",
+        "text": "只有蠢貨才會在貧民窟做慈善，根據學者的研究可知，財產少於二十個硬幣的人根本不具有心靈，它們不會知道感恩也無法理解同情……嗯……總而言之，這應該是一種足夠奢靡的行為了吧！",
+        "tips": "",
+        "mapping_id":8001204,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":1,
+        "waiting_round_end_action":[
+            {
+                "condition":
+                {
+                },
+                "result_title":"",
+                "result_text": "",
+                "result":
+                {
+                    "counter=7000112":0
+                },
+                "action":
+                {
+                }
+            }
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0,
+        "location": "黑街:[2,5]",
+        "icon": "rite_3",
+        "tag_tips": [
+            "隱匿"
+        ],
+        "tag_tips_up":{
+            "tips":["隱匿"],
+            "type":"normal_result"
+        },
+        "tips_text":[
+            "你必須很懂怎麼壞，才能乾點好事",
+            "失敗會導致資金被搶",
+            "主角隱匿檢定>=1點成功：消卡 隱匿+1 虔信+1",
+            "生存檢定失敗：主角受傷"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+            "r1":"喜聞樂見的檢定時間"
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"你與管理黑街的幫派周旋，交涉……",
+                "type":"normal_result",
+                "type_tips":"你的隱匿為你提供完整的骰子數量。",
+                "low_target": 1,
+                "low_target_tips": "你至少需要1點成功。"
+            }
+
+        },
+        "settlement_prior": [
+
+        ],
+        "settlement": [
+            {
+                "guid":"8dc3af3d-9251-4bd8-9ddc-472863d915f9",
+                "condition": {
+                    "r1:隱匿<":[1,5]
+                },
+                "result_title":"",
+                "result_text": "黑幫完全不相信有人會來貧民窟做慈善，他們從背後用木棍打暈了你，搶走了你帶來的錢。",
+                "result":
+                {
+                    "s1+equip":2000098  //受傷
+                },
+                "action": {
+                    "event_on":5300222 //重新啓動本儀式的幕後
+                }
+            },
+            {
+                "guid":"f86a8b7a-43a0-4a80-a3a7-7bcf331b156d",
+                "condition": {
+                    "r1:隱匿>=":[1,5]
+                },
+                "result_title":"",
+                "result_text": "你說服了幫派協助你救助一些孤兒與老人，這對他們的威望也有幫助。蘇丹在宮廷上嘲笑了你，但還是允許你這樣折斷一張蘇丹卡。",
+                "result":
+                {
+                    "s1+隱匿":1,
+                    "s1+虔信":1,
+                    "clean.s3":1,
+                    "counter+7000091":1
+                },
+                "action": {
+                }
+            }
+        ],
+        "settlement_extre": [
+
+        ],
+        "cards_slot":
+        {
+            "s1":
+                {
+                    "guid":"53909998-f98a-46ce-aa14-5dc32a0c3698",
+                    "condition":
+                    {
+                        "type":"char",
+                        "主角":1
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0, // 不能為空
+                    "is_enemy":0,
+                    "text":"當然是你親自上陣。"
+                },
+            "s2":
+                {
+                    "guid":"68a7f5f0-3994-4ebb-88d9-d740cf6e8a74",
+                    "condition":
+                    {
+                        "type":"item",
+                        "cost.消耗品=":1,
+                        "!金幣":1
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":1,
+                    "is_enemy":0,
+                    "text":"有些東西能讓你的行動更得心應手。"
+                },
+            "s3":
+                {
+                    "guid":"9c22bc5c-caaf-4658-a424-563d5e3fa557",
+                    "condition":
+                    {
+                        "type":"sudan",
+                        "奢靡":1,
+                        "rare<=":2
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"可以折斷一張青銅或者以下的奢靡卡。"
+                },
+                "s4":
+                {
+                    "guid":"478685c8-8087-4274-a60e-83217c96a3ac",
+                    "condition":
+                    {
+                        "type":"item",
+                        "cost.金幣":10
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"一筆善款，10個金幣。"
+                }
+        }
+    }

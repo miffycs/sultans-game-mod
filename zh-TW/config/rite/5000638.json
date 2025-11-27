@@ -1,0 +1,152 @@
+ {
+        "id": 5000638,
+        "name": "女戰士的挑戰",
+        "text": "一名戰士裝扮的女性堵在了你的家門口，氣勢洶洶地要求你給個說法。她宣稱那頭白犀牛是她盯上很久的獵物，好不容易設下陷阱讓白犀牛受傷，結果因為你的輕舉妄動，害得她徹底失去了白犀牛的蹤跡！阿迪萊越說越生氣，最後解下佩劍擲在地上，指着你的鼻子要求和你決鬥！",
+        "tips": "",
+        "mapping_id":8001107,
+        "once_new":0,
+        "round_number": 0,
+        "waiting_round":0,
+        "waiting_round_end_action":[ //儀式沒有處理，自動關閉後
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0, //自動執行
+        "location": "自宅:[2,12]",
+        "icon": "rite_17",
+        "tag_tips": [
+            "戰鬥",
+            "體魄"
+        ],
+        "tag_tips_up":{
+            "tips":["戰鬥","體魄"],
+            "type":"fight_result"
+        },
+        "tips_text":[
+            "找個人應對她的挑戰。",
+            "戰鬥+體魄-阿迪萊戰鬥+體魄>=2點成功：戰鬥+1",
+            "戰鬥+體魄-阿迪萊戰鬥+體魄<=2點成功：受傷"
+        ],
+        "open_conditions": [
+        ],
+        "random_text": {
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"此刻你唯有迎戰。",
+                "type":"fight_result",
+                "type_tips":"你的體魄和戰鬥為你提供的骰子數量受敵方對應屬性的影響。",
+                "low_target": 2,
+                "low_target_tips": "你至少需要2點成功才能獲得勝利。"
+            }
+        },
+        "random_effect": {
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+        ],
+        "settlement_extre": [
+            {
+                "guid":"4afbaee5-7f05-4746-a24a-2a6c8344a628",
+                "condition": {
+                    "r1:戰鬥+體魄-e(戰鬥+體魄)>=":[2,5]
+                },
+                "result_title":"你贏了",
+                "result_text": "甫一交手你就知道，這名女戰士有着精湛的劍術，身法極為靈活，絕不是那種花花架子。怒火和戰意在她眼睛裡熊熊燃燒，不過你也不比她差，而且你更冷靜、更理智，也更陰險。你聰明地利用了她的怒火，你隨口撩撥了幾句，她就急躁起來，露出破綻……還是少了些經驗吶。你吹了個輕浮的口哨，現在，她成為了你的俘虜。",
+                "result":
+                {
+                    "s2+戰鬥":1
+                },
+                "action": {
+                    "rite":5000639
+                }
+            },
+            {
+                "guid":"71cf2c1e-4231-4e9d-b563-018d9ce50f90",
+                "condition": {
+                    "r1:戰鬥+體魄-e(戰鬥+體魄)<":[2,5]
+                },
+                "result_title":"你輸了",
+                "result_text": "甫一交手你就知道，這名女戰士有着精湛的劍術，身法極為靈活，絕不是那種花花架子。怒火和戰意在她眼睛裡熊熊燃燒，壓過了你的氣勢。\n一開始你還能勉力抵擋她的進攻，到後來，你就只剩捱揍的份了。你節節敗退，大聲說這都是因為她用的武器太強力了！女戰士聞言笑了。她一劍劈在你的脖子上，你慘叫一聲跪倒在地，捂住脖子，卻發現根本沒有血流出來。\n原來不知何時，那把劍早已回到鞘中。",
+                "result":
+                {
+                    "s2+equip":2000098
+                },
+                "action": {
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"a83896dd-8d7e-4ca4-bcf7-2f87e0d039a4",
+                "condition":
+                {
+                    "is":2000061
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":1,
+                "text":"怒不可遏的女戰士"
+            },
+            "s2":
+            {
+                "guid":"84650853-edea-4da8-92f1-9590369f113d",
+                "condition":
+                {
+                    "type":"char"
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"你可以親自，或者派遣追隨者應戰",
+                "pops":[
+                    {
+                        "condition":{
+                            "f:s2.體魄+s2.戰鬥+s3.體魄+s3.戰鬥-s1.體魄-s1.戰鬥<": 2
+                        },
+                        "action":{
+                            "pop.5000638_s2_01.self":"你該意識到，以你目前的<b><color=white>【體魄】</color></b>和<b><color=white>【戰鬥】</color></b>能力只能捱揍。"
+                        }
+                    },
+                    {
+                        "condition":{
+                            "f:s2.體魄+s2.戰鬥+s3.體魄+s3.戰鬥-s1.體魄-s1.戰鬥>=": 2,
+                            "!s3":1
+                        },
+                        "action":{
+                            "pop.5000638_s2_02.self":"如果有<b><color=white>【情報】</color></b>支持的話，可以多一分勝算。"
+                        }
+                    }
+                ]
+            },
+            "s3":
+            {
+                "guid":"f7f0db86-0590-4702-b3ea-9969fb1c3dd2",
+                "condition":
+                {
+                    "type":"item",
+                    "cost.消耗品=": 1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"有些消耗品在戰鬥中派得上用場",
+                "pops":[
+                    {
+                        "condition":{
+                            "f:s2.體魄+s2.戰鬥+s3.體魄+s3.戰鬥-s1.體魄-s1.戰鬥<": 2
+                        },
+                        "action":{
+                            "pop.5000638_s3_01.self":"你該意識到，以你目前的<b><color=white>【體魄】</color></b>和<b><color=white>【戰鬥】</color></b>能力只能捱揍。"
+                        }
+                    }
+                ]
+            }
+        }
+    }

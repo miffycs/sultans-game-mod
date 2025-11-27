@@ -1,0 +1,165 @@
+ {
+        "id": 5006728,
+        "name": "也許應該分享給她",
+        "text": "阿薩爾給你分潤了三枚金幣，你在考慮是否應該把這些錢全部交給魯梅拉。",
+        "tips": "",
+        "mapping_id":8001106,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":3,
+        "waiting_round_end_action":[
+            {
+                "condition":
+                {
+                },
+                "result_title":"",
+                "result_text": "",
+                "result":
+                {
+                },
+                "action":
+                {
+                    "prompt":{
+                        "id":"5006728_prompt_01",
+                        "text":"嗯……還是算了。魯梅拉的錢就是你的錢！你把它們偷偷全部裝進自己的口袋。",
+                        "icon":"cards/2000029"
+                    }
+                }
+            }
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result":0,
+        "location": "自宅:[2,12]",
+        "icon": "rite_8",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "給或者不給都沒關係",
+            "超時：無後續",
+
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+
+        ],
+        "settlement_extre": [
+            {
+                "guid":"6a72473e-d40e-4515-a227-ed2e587c968c",
+                "condition":
+                {
+
+                },
+                "result_title":"",
+                "result_text": "你把魯梅拉叫到身邊，把裝着金幣的小袋子放在你們中間，告訴了她這些錢的由來。\n她仰頭望着你，神情依舊平靜：“這些財富理應歸您所有，我所擁有的一切，都是有賴於您的善意。我不能拿。”",
+                "result":
+                {
+                },
+                "action":
+                {
+                }
+            },
+            {
+                "guid":"9c45f79c-b37d-4e41-b03e-38da7a8d113a",
+                "condition":
+                {
+                    "!s1":1,
+                },
+                "result_title":"正合我意",
+                "result_text": "你點點頭，稱讚她懂事。而她溫順地衝你行禮，而後就繼續回去讀她的書了。",
+                "result":
+                {
+                },
+                "action":
+                {
+                }
+            },
+            {
+                "guid":"a31f93ee-4347-460c-aff6-6e59bcd01e25",
+                "condition":
+                {
+                    "s1.金幣>=":1,
+                    "s1.金幣<":3,
+                },
+                "result_title":"那怎麼行",
+                "result_text": "你搖搖頭，告訴她，這是她寫作應得的報酬，她可以隨意支配這些財富。\n“隨意支配……我……隨意支配金幣？”魯梅拉有些驚訝，她舉起金幣，對着光望着，像是在觀察什麼小動物一般，“我從沒想過這樣的事……我會好好想想的，謝謝您，主人。”\n她恭順地衝你鞠躬，而後帶着若有所思的神情離開了。",
+                "result":
+                {
+                    "s2+智慧":1,
+                },
+                "action":
+                {
+                    "event_on":5320359, //思考之後
+                }
+            },
+            {
+                "guid":"5cf42f85-6709-4a88-a8e2-cdde3dd5f62a",
+                "condition":
+                {
+                    "s1.金幣>=":3,
+                },
+                "result_title":"你將金幣袋整個塞進了她手裡",
+                "result_text": "你告訴她，這個故事來自於她的心、她的命運、她的靈魂，這些東西是不可讓渡的。所以，這筆錢完全應該屬於她。\n她呆呆地望着你，而後，略微垂下了頭，似乎有些無措：“我真的……我真的可以這麼幸福嗎？我寫出來的文字被印成了書，被那麼多人讀到……然後，您還要給我金幣……”\n“你說錯了，”你摸了摸她的腦袋，“這不是我給你的金幣，而是你自己掙來的。”\n“但這些金幣是順着您的善意溜進我的手心的。”她攤開手，繼續望着那幾枚金燦燦的小東西，“我會……我會好好想想，我會想個辦法，把幸福分享給更多人……就像您做的這樣。”",
+                "result":
+                {
+                    "s2+智慧":1,
+                    "counter+7100001":1, //善名
+                },
+                "action":
+                {
+                    "event_on":5320359, //思考之後
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+                {
+                    "guid":"13d71a0c-0daa-45ae-a62d-3af1ae89cb9f",
+                    "condition":
+                    {
+                        "type":"item",
+                        "cost.金幣":[1,3]
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":1,
+                    "is_enemy":0,
+                    "text":"你一共得到了3枚金幣，要全部給魯梅拉麼？還是隻給她一部分？\n未放金幣：印書線斷線\n只放部分金幣：魯梅拉智慧+1\n放入全部金幣：魯梅拉智慧+1；善名+1"
+                },
+            "s2":
+                {
+                    "guid":"e0c15d7d-850e-4b3e-bf83-a127efb71cf3",
+                    "condition":
+                    {
+                        "type":"char",
+                        "is":2000123,
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"你打算把這些錢交給魯梅拉",
+                    "pops":[
+                        {
+                            "condition":{
+                            },
+                            "action":{
+                                "choose":{
+                                    "pop.5006728_s2_01.self":"老爺？"
+                                }
+                            }
+                        }
+                    ]
+                }
+        }
+    }

@@ -1,0 +1,177 @@
+ {
+        "id": 5001503,
+        "name": "浴場約會",
+        "text": "一個渴望你肉體的愛人在召喚你。",
+        "tips": "",
+        "mapping_id":8001500,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":1,
+        "waiting_round_end_action":[
+            {
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "",
+                "result":
+                {
+                },
+                "action": {
+                    "event_on":5300010
+                }
+            }
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0,//需要手動啓動
+        "location": "上城區:[1,6]",
+        "icon": "rite_22",
+        "tag_tips": [
+            "激情"
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "你可以根據自己的“喜好”使用縱慾或者殺戮，當然什麼也不放也是可以的。"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"7ae12aaa-e7bf-420d-a009-e3e10a8249a6",
+                "condition": {
+                    "s3.縱慾":1,
+                    "!s4":1
+                },
+                "result_title":"",
+                "result_text": "你們大膽的行為引發了關於混浴浴場的呼聲，蘇丹覺得非常有趣。",
+                "result":
+                {
+                    "clean.s3": 1,
+                    "s1+激情":1,
+                    "s1+支持":1,
+                    "card" :2000192
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"ed296c57-42ec-4235-87e9-c4ee199a09bb",
+                "condition": {
+                    "s3.縱慾":1,
+                    "s4":1
+                },
+                "result_title":"",
+                "result_text": "很可惜，你無法用同一個方式取悅蘇丹兩次。",
+                "result":
+                {
+                    "s1+激情":1,
+                    "s1+支持":1
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"d1bd17ef-c22f-418d-ad8e-2dbddc903bcf",
+                "condition": {
+                    "s3.殺戮":1
+                },
+                "result_title":"",
+                "result_text": "你在浴場中溺死了自己的愛人，蘇丹非常喜歡這個故事，他要求在現場的水池中雕一座屍體的人像，做成溺斃的姿勢，最後大臣們好說歹說終於讓他勉強接受了雕像的下體可以不要噴水。",
+                "result":
+                {
+                    "counter+7000056":1,
+                    "clean.s1":1,
+                    "clean.s3":1,
+                    "counter+7100002": 1  //惡名+1 //惡名
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"008dcb4f-513e-45ef-a8c0-dd9f3b6d30ff",
+                "condition": {
+                    "!s3":1
+                },
+                "result_title":"",
+                "result_text": "你們進行了一場美妙的約會，彼此增進了感情",
+                "result":
+                {
+                    "s1+激情":1
+                },
+                "action": {
+                }
+            }
+        ],
+        "settlement_extre": [
+        ],
+        "cards_slot":
+        {
+            "s1":
+                {
+                    "guid":"591a494d-0d7c-4969-84f5-8adeeaf5409c",
+                    "condition":
+                    {
+                        "type":"char",
+                        "妻子":1,
+                        "激情":1
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"渴望你肉體的妻子"
+                },
+            "s2":
+                {
+                    "guid":"75718908-1bd6-4993-aa69-87e9a27e8491",
+                    "condition":
+                    {
+                        "主角":1,
+                        "type":"char"
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"當然是你"
+                },
+            "s3":
+                {
+                    "guid":"0150afcb-c7d0-43c6-b16d-8ffffcfe3f13",
+                    "condition":
+                    {
+                        "type":"sudan",
+                        "f:rare-s1.rare<=":0,
+                        "any":{
+                            "縱慾":1,
+                            "殺戮":1
+                        }
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":1,
+                    "is_enemy":0,
+                    "text":"縱慾或者殺戮\n縱慾卡：支持+1 激情+1\n殺戮卡：惡名+1 妻子死亡"
+                },
+            "s4":
+                {
+                    "guid":"e351bde0-23d1-417e-bd47-8750fee30c44",
+                    "condition":
+                    {
+                        "is":2000192
+                    },
+                    "open_adsorb":1,
+                    "is_key":0,
+                    "is_empty":1,
+                    "is_enemy":0,
+                    "text":"縱慾的痕跡--浴場"
+                }
+        }
+    }

@@ -1,0 +1,161 @@
+ {
+        "id": 5000166,
+        "name": "石之天平的研究",
+        "text": "按照《天牛之血》中的記載，按照你的直覺……這顆形似心臟的石頭裡蘊藏着龐大的生命之力，足以令死者復生……又或者……你突然意識到，也許……可能，甚至，萬一，它能令你永生……？",
+        "tips": "",
+        "mapping_id":8001551,
+        "once_new":0,
+        "round_number": 5,
+        "waiting_round":1,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result":0,
+        "location": "上城區:[1,6]",
+        "icon": "rite_19",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "你只能選擇一種研究方向",
+            "瑪希爾，拜鈴耶或者魯梅拉都是好的研究者"
+        ],
+        "open_conditions": [
+            {
+                "condition": {
+                    "any":{
+                        "s2":1,
+                        "s3":1,
+                    },
+                },
+                "tips": "你必須選擇一個研究方向"
+            }
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"f01397d5-9e13-4421-8317-f570d50d7d10",
+                "condition":
+                {
+                    "s2":1,
+                },
+                "result_title":"歸來吧，我的愛人！",
+                "result_text": "哪怕有半分希望，你都願意嘗試。你願意傾盡所有，去換回那些業已失去的愛，或者，去保護那尚未失去的愛……\n於是，恍惚間，你又回憶起了那個夢——天平的一端擺放着你的愛，那麼，另一端是什麼？無常的命運會將什麼從你手心裡取走？",
+                "result":
+                {
+                    "clean.s1":1,
+                    "card":[2001155,"已擁有+1"],
+                },
+                "action":
+                {
+                }
+            },
+            {
+                "guid":"578f8078-c291-4293-8e22-f451bb836b7d",
+                "condition":
+                {
+                    "s3":1,
+                },
+                "result_title":"沒有人能夠經受永生的誘惑",
+                "result_text": "如果你能永生不死，你該會有多幸福？！你再也不用害怕蘇丹的猜忌和戲弄，再也不必憂心妻子的不滿，世間的強權不再壓榨你，眾生的道德不再約束你，你可以去嘗試一切你想到過或是沒敢想過的東西！\n在如此渴念的驅使之下，這顆石頭心臟被重鑄了。它那樣熠熠生輝，無比璀璨。",
+                "result":
+                {
+                    "clean.s1":1,
+                    "card":[2001156,"已擁有+1"],
+                },
+                "action":
+                {
+                }
+            },
+        ],
+        "settlement_extre": [
+        ],
+        "cards_slot":
+        {
+            "s1":
+                {
+                    "guid":"1b40e6cb-db53-4f5f-8436-28fcaa7bb5be",
+                    "condition":
+                    {
+                        "is":2001154,
+                    },
+                    "open_adsorb":1,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"石之天平"
+                },
+            "s2":
+                {
+                    "guid":"1203cb33-3c4b-4051-beb9-48b6c30fcf54",
+                    "condition":
+                    {
+                        "any":{
+                            "is":2000352, //瑪希爾
+                            "is":2000123, //魯梅拉
+                            "is":2000022, //拜鈴耶
+                        },
+                        "!s3":1,
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":1,
+                    "is_enemy":0,
+                    "text":"你希望進行令死者復活的研究\n生命之心+1"
+                },
+            "s3":
+                {
+                    "guid":"6185e22a-b872-4780-8c48-d6fa9e8e9745",
+                    "condition":
+                    {
+                        "any":{
+                            "is":2000352, //瑪希爾
+                            "is":2000123, //魯梅拉
+                            "is":2000022, //拜鈴耶
+                        },
+                        "!s2":1,
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":1,
+                    "is_enemy":0,
+                    "text":"你希望進行令自身永生的研究\n永恆之心+1"
+                },
+            "s4":
+                {
+                    "guid":"585c1668-9ac1-4391-99b9-86235047e406",
+                    "condition":
+                    {
+                        "type":"item",
+                        "is":2000986,  //乙太
+                        "cost.可堆疊=":1
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"乙太"
+                },
+            "s5":
+                {
+                    "guid":"8a2863d3-7a48-47af-801b-c479943d068b",
+                    "condition":
+                    {
+                        "type":"item",
+                        "cost.金幣":9
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"這項研究需要花費9枚金幣"
+                }
+    }
+    }

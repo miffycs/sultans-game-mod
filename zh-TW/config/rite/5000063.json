@@ -1,0 +1,213 @@
+ {
+        "id": 5000063,
+        "name": "召喚龍捲風",
+        "text": "透過風之護符，你可以嘗試束縛一個強大的空氣精魂，在你需要的時候，它會為了自由而施放出狂風。",
+        "tips": "",
+        "mapping_id":8001244,
+        "once_new":0,
+        "round_number": 3,
+        "waiting_round":1,
+        "waiting_round_end_action":[
+
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result":0,
+        "location": "自宅:[2,12]",
+        "icon": "rite_23",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+            "tips":["魔力"],
+            "type":"normal_result"
+        },
+        "tips_text":[
+            "選擇助手，投入資金，進行魔力檢定，召喚龍捲風！",
+            "使用三次之後，風之護符會耗盡破碎",
+            "龍捲風可以作為軍隊進行戰鬥，擁有強大的力量。",
+            "己方魔力檢定>=10：超大龍捲風",
+            "己方魔力檢定>=7：大龍捲風 使用次數+1",
+            "己方魔力檢定>=4：中龍捲風 使用次數+1",
+            "己方魔力檢定>=1：小龍捲風 使用次數+1",
+            "己方魔力檢定失敗：使用次數+1"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"喜聞樂見的檢定時間",
+                "type":"fight_result",
+                "type_tips":"你的魔力為你提供的骰子數量",
+                "low_target": 1,
+                "low_target_tips": "你至少需要1點成功來召喚龍捲風，成功越多，龍捲風可能越強。"
+            }
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"6047dc79-c757-44b4-9996-d77370f93425",
+                "condition": {
+                    "r1:魔力>=":[10,5]
+                },
+                "result_title":"風之王族的精魂",
+                "result_text": "一位風元素王子響應了你的召喚，透過你的許可，他將撕裂天地，在物質世界盡情發泄自己的慾望。",
+                "result":
+                {
+                    "card":[2000431,"已擁有+1"], //獲得超大龍捲風
+                    "counter+7000501":1,  //使用次數+1
+                    "global_counter+7200024":1  //完成劇情目標【颶風營救】
+                },
+                "action": {
+                }
+            },{
+                "guid":"d8a5fc56-e4b2-43e7-9b5e-f8cc8cdd3d91",
+                "condition": {
+                    "r1:魔力>=":[7,5]
+                },
+                "result_title":"強大的風元素精魂",
+                "result_text": "這名桀驁不馴的風元素被你的儀式困住了，把他放出來的時候你可得小心點！",
+                "result":
+                {
+                    "card":[2000430,"已擁有+1"], //獲得大龍捲風
+                    "counter+7000501":1,  //使用次數+1
+                    "global_counter+7200024":1  //完成劇情目標【颶風營救】
+                },
+                "action": {
+                }
+            },{
+                "guid":"23703e3c-768b-4ea6-875e-6a504ea7be90",
+                "condition": {
+                    "r1:魔力>=":[4,5]
+                },
+                "result_title":"風元素之魂",
+                "result_text": "原本，他只是計劃去沙漠裡揚起一片沙暴，現在，你把他關了起來——那不吹走一些房頂和駱駝就說不過去了。",
+                "result":
+                {
+                    "card":[2000429,"已擁有+1"], //獲得中龍捲風
+                    "counter+7000501":1,  //使用次數+1
+                    "global_counter+7200024":1  //完成劇情目標【颶風營救】
+                },
+                "action": {
+                }
+            },{
+                "guid":"68b15f5b-85ae-4761-96d7-79364415aba4",
+                "condition": {
+                    "r1:魔力>=":[1,5]
+                },
+                "result_title":"害羞的風元素",
+                "result_text": "這個弱小的風元素精魂非常不好意思，因為他的威力可能達不到召喚者的預期——你使勁地鼓勵了這孩子一番，總是能派上點用處的！",
+                "result":
+                {
+                    "card":[2000428,"已擁有+1"], //獲得小龍捲風
+                    "counter+7000501":1,  //使用次數+1
+                    "global_counter+7200024":1  //完成劇情目標【颶風營救】
+                },
+                "action": {
+                }
+            },{
+                "guid":"4601647f-b105-4a5c-bbe3-e86c95309465",
+                "condition": {
+                    "r1:魔力<":[1,5]
+                },
+                "result_title":"召喚失敗",
+                "result_text": "風從你的手指縫裡溜走，吹散了昂貴的金粉，寶石碎屑和香料……",
+                "result":
+                {
+                    "counter+7000501":1,  //使用次數+1
+                },
+                "action": {
+                }
+            }
+        ],
+        "settlement_extre": [
+            {
+                "guid":"530233d6-eb91-487b-8989-6f859caec618",
+                "condition": {
+                    "counter.7000501>=":2 //第三次使用時
+                },
+                "result_title":"契約失效",
+                "result_text": "這個護符中的契約只允許你束縛風之精魂三次，現在，你已經將其耗盡，於是護符緩緩燃燒起來，最後如煙塵一般消散在風中。",
+                "result":
+                {
+                    "clean.s1":1  //消除風之護符
+                },
+                "action": {
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"eaeee98b-f89e-4f0a-a98a-36be8eb3f5d8",
+                "condition":
+                {
+                    "type":"item",
+                    "is":2000318 //風之護符
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"風之護符"
+            },
+            "s2":
+            {
+                "guid":"4526f2e5-6366-4e26-b736-bbe231125695",
+                "condition":
+                {
+                    "type":"char"
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"舉行儀式的人"
+            },
+            "s3":
+            {
+                "guid":"784441c1-86de-4e55-82bf-7cac4dc082e3",
+                "condition":
+                {
+                    "type":"char"
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"協助儀式的人"
+            },
+            "s4":
+            {
+                "guid":"6b38fb2a-e585-4748-bb06-b01e51616b09",
+                "condition":
+                {
+                    "type":"item",
+                    "cost.金幣":7
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"7枚金幣購買儀式材料"
+            },
+            "s5":
+            {
+                "guid":"763f424f-2a8f-4f30-b13c-2081175ae162",
+                "condition":
+                {
+                    "type":"item",
+                    "cost.消耗品=":1,
+                        "!金幣":1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"增幅魔力的消耗品"
+            }
+        }
+    }

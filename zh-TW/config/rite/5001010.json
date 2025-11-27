@@ -1,0 +1,69 @@
+ {
+        "id": 5001010,
+        "name": "黑街線人",
+        "text": "你在黑街打聽到了那個囚犯口中說的人，並向他說明了來意。他思索了片刻，總算搞明白了，“啊哈，是有這麼回事。哲瓦德要的證據是吧？不過這不是免費的，而且概不賒欠。你得先替他付錢才行。”他報了個價格，“五金幣，一個子兒都不能少。”",
+        "tips": "",
+        "mapping_id":8001063,
+        "once_new":0,
+        "round_number": 3,
+        "waiting_round":0,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result":0,
+        "location": "黑街:[2,5]",
+        "icon": "rite_16",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "給錢就行，概不賒欠。",
+            "獲得廉潔的僞證"
+        ],
+        "open_conditions": [
+        ],
+        "random_text": {
+        },
+        "random_text_up":{
+        },
+        "random_effect": {
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+        ],
+        "settlement_extre": [
+            {
+                "guid":"b99ffca6-b21a-4968-a232-f29c2e41f0ba",
+                "condition": {
+                },
+                "result_title":"雖然很無奈，但你還是幫忙先行墊付了這筆錢",
+                "result_text": "再見面時，他塞給你一個裹好的卷軸。“帶去給那個倒霉鬼吧。”他的手指上甚至還沾着古怪的油墨，“期待下次合作愉快。”\n你可不想再跟這些傢伙有什麼瓜葛了。",
+                "result":
+                {
+                    "card":[2000359,"已擁有+1"]
+                },
+                "action": {
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"56177fd6-28f6-4061-8b38-44995b60e2c6",
+                "condition":
+                {
+                    "cost.金幣":5,
+                    "type":"item"
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"5金幣，一個子兒都不能少"
+            }
+        }
+    }

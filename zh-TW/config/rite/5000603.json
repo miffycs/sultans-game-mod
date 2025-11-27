@@ -1,0 +1,114 @@
+ {
+        "id": 5000603,
+        "name": "致命的邀約",
+        "text": "你邀請法圖娜女士在一個僻靜之處密會……從常理來說，這樣的邀請對未亡人而言是一種侮辱，但也許是因為你，她欣然赴約。",
+        "tips": "",
+        "mapping_id":8001049,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":1,
+        "waiting_round_end_action":[ //儀式沒有處理，自動關閉後
+        {
+            "condition": {
+            },
+            "result_text": "",
+            "result":
+            {
+            },
+            "action": {
+                "prompt":{
+                    "id":"5000603_prompt_1",
+                    "text":"你幾番猶豫，在最後關頭還是放棄了做這件惡事。法圖娜一直等到日暮時分才困惑地離開了，她不知道自己躲過了怎樣的一劫。",
+                    "icon":"cards/2000001"
+                },
+                "event_on":5300173 //激活刺殺
+            }
+        }
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0, //自動執行
+        "location": "上城區:[7,12]",
+        "icon": "rite_12",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "儀式過期：法圖娜和扎齊伊離開 會遭到刺殺",
+            "殺死法圖娜：扎齊伊離開 會遭到刺殺"
+        ],
+        "open_conditions": [
+        ],
+        "random_text": {
+        },
+        "random_text_up":{
+        },
+        "random_effect": {
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"083f10cb-4e9f-45ba-8c03-612c576ebe73",
+                "condition": {
+                },
+                "result_title":"你決心綁架法圖娜",
+                "result_text": "你很輕鬆地迷暈了法圖娜，將她帶到了和酒莊主人約定的地方。他非常滿意地帶走了這昏迷中的女人，並承諾處理完遺產的事後，事先說好的分賬一分也不會少的。\n你知道，從此以後，你再也不會見到這個女人了，而她年幼的孩子也將失去依靠，很快消失蹤跡。",
+                "result":
+                {
+                    "clean.s1":1
+                },
+                "action": {
+                    "event_on":5300107, //激活移除年輕望族
+                    "event_on": 5300103 //激活刺殺
+                }
+            }
+        ],
+        "settlement_extre": [
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"0d18863e-1df4-4364-a2db-c9b96e3419d0",
+                "condition":
+                {
+                    "is":2000062
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"法圖娜已在約定地點等候"
+            },
+            "s2":
+            {
+                "guid":"5c97c7bd-b1b4-420c-8dd6-238ba5f6f857",
+                "condition":
+                {
+                    "主角":1,
+                    "type":"char"
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"你必須親自赴約"
+            },
+            "s3":
+            {
+                "guid":"6d3cdc5f-1fbb-4762-92e6-58abf4a41e06",
+                "condition":
+                {
+                    "is":2000316,
+                    "type":"item"
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"使用迷藥"
+            }
+        }
+    }

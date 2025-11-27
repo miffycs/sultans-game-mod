@@ -1,0 +1,214 @@
+{
+        "id": 5000106,
+        "name": "史詩",
+        "text": "史詩？講述了什麼故事？",
+        "tips": "",
+        "mapping_id":8001212,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":3,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result":0,
+        "location": "自宅:[2,12]",
+        "icon": "rite_12",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+            "tips":["智慧","靈感"],
+            "type":"normal_result"
+        },
+        "tips_text":[
+            "開始後將檢定智慧和靈感，根據最終檢定結果產出不同品質的詩歌。",
+            "如果置入特殊的物品則可以跳過檢定。",
+            "不論結果如何，結束後詩人的靈感都會歸零。",
+            "10點成功：金詩",
+            "7點成功：銀詩",
+            "4點成功：銅詩",
+            "1點成功：石詩"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"這次詩人會有什麼新的想法？他又會帶給你什麼驚喜？",
+                "type":"normal_result",
+                "type_tips":"你的智慧和靈感為你提供了完整的骰子數量。",
+                "low_target": 1,
+                "low_target_tips": "你至少需要1點成功才能設計出新的詩歌。"
+            }
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"7102f66c-fedb-4af2-a968-bd21d6b3e0ce",
+                "condition":
+                {
+                    "r1:智慧+靈感>=":[10,5]
+                },
+                "result_title":"",
+                "result_text": "啊，原來這就是史詩！",
+                "result":
+                {
+                    "loot":[6000065,6000067],
+                    "s1=靈感":0,
+                    "counter+7000836":1,//哈桑成功作詩的次數
+                },
+                "action":
+                {
+                }
+            },
+            {
+                "guid":"48401187-fd0c-4f68-8b9b-2b6cf948fbe7",
+                "condition":
+                {
+                    "r1:智慧+靈感>=":[7,5]
+                },
+                "result_title":"",
+                "result_text": "啊，原來這就是史詩！",
+                "result":
+                {
+                    "loot":[6000068,6000070],
+                    "s1=靈感":0,
+                    "counter+7000836":1,//哈桑成功作詩的次數
+                },
+                "action":
+                {
+                }
+            },
+            {
+                "guid":"38548a37-5d6f-42f3-882c-a77521a3ccc4",
+                "condition":
+                {
+                    "r1:智慧+靈感>=":[4,5]
+                },
+                "result_title":"",
+                "result_text": "啊，原來這就是史詩！",
+                "result":
+                {
+                    "card":2000474,
+                    "s1=靈感":0,
+                    "counter+7000836":1,//哈桑成功作詩的次數
+                },
+                "action":
+                {
+                }
+            },
+            {
+                "guid":"062acfaf-0fa5-451b-ae7e-eb3ae1ae2ee7",
+                "condition":
+                {
+                    "r1:智慧+靈感>=":[1,5]
+                },
+                "result_title":"",
+                "result_text": "啊，原來這就是史詩！",
+                "result":
+                {
+                    "card":2000473,
+                    "s1=靈感":0,
+                    "counter+7000836":1,//哈桑成功作詩的次數
+                },
+                "action":
+                {
+                }
+            },
+            {
+                "guid":"fbd07b25-3a84-4c34-8105-78fd8eafcf53",
+                "condition":
+                {
+                    "r1:智慧+靈感<":[1,5]
+                },
+                "result_title":"",
+                "result_text": "一無所獲，下次再接再厲",
+                "result":
+                {
+                    "s1=靈感":0
+                },
+                "action":
+                {
+                }
+            }
+        ],
+        "settlement_extre": [
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"3fb66a08-46d5-4b59-aa5f-b714e1b61c7e",
+                "condition":
+                {
+                    "type":"char",
+                    "is":2000460 //詩人
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"詩人"
+            },
+            "s2":
+            {
+                "guid":"da2ec6eb-30ee-4c2c-a469-c61f0a7289b6",
+                "condition":
+                {
+                    "type":"item",
+                    "cost.消耗品=":1,
+                    "!金幣":1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"情報"
+            },
+            "s3":
+            {
+                "guid":"729cbbe6-c61d-4c3e-a5c1-259cf196700e",
+                "condition":
+                {
+                    "type":"item",
+                    "cost.消耗品=":1,
+                    "!金幣":1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"情報"
+            },
+            "s4":
+            {
+                "guid":"7a21dbcd-dcd5-464b-b4cb-4dc98f64fc34",
+                "condition":
+                {
+                    "type":"item",
+                    "cost.消耗品=":1,
+                    "!金幣":1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"情報"
+            },
+            "s5":
+            {
+                "guid":"4f09c27e-6ffb-4871-a6bc-04338a8e15aa",
+                "condition":
+                {
+                    "type":"item"
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"特殊道具"
+            }
+        }
+    }

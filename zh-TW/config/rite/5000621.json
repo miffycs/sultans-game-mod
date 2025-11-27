@@ -1,0 +1,89 @@
+ {
+        "id": 5000621,
+        "name": "最後的解惑",
+        "text": "你們各自身攜利刃，摘掉了身上華而不實的東西，走入下城區的暗巷……",
+        "tips": "",
+        "mapping_id":8001131,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":0,
+        "waiting_round_end_action":[ //儀式沒有處理，自動關閉後
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0, //自動執行
+        "location": "黑街:[2,5]",
+        "icon": "rite_16",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "扎齊伊：智慧+2 體魄+2",
+            "扎齊伊被帶壞+3"
+        ],
+        "open_conditions": [
+        ],
+        "random_text": {
+        },
+        "random_text_up":{
+        },
+        "random_effect": {
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"63724553-2f8c-4d60-8dd6-732c782d83de",
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "你花費了很大的力氣才阻止他回頭去幫助那個殘疾的乞丐女孩。等你能夠放倒三個士兵的時候再說吧，你這樣的勸誡着，而想來他會以此為目標。",
+                "result":
+                {
+                    "s1+智慧":2,
+                    "s1+體魄":2,
+                    "counter+7000041":3
+                },
+                "action": {
+                    "clean.rite":5000619,
+                    "clean.rite":5000620,
+                    "rite":5000623, // 激活年輕望族的仰慕
+                    "event_on":5300111 //激活下一輪請求
+                }
+            }
+        ],
+        "settlement_extre": [
+
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"4f52cfb5-bf96-4bc2-9f12-396bf3b741df",
+                "condition":
+                {
+                    "is":2000063
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"扎齊伊"
+            },
+            "s2":
+            {
+                "guid":"bdbdf9b2-a44b-40fc-b759-2c3658940bed",
+                "condition":
+                {
+                    "type":"char",
+                    "!is":2000063
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"找個人指點他"
+            }
+        }
+    }

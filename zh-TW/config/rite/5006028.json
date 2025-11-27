@@ -1,0 +1,161 @@
+{
+    "id": 5006028,
+    "name": "浴場的焦點",
+    "text": "梅姬約好了和阿迪萊一起去浴場，如果沒有什麼特別的事，她可不願意爽約。",
+    "tips": "",
+     "mapping_id":8001500,
+    "once_new":0,
+    "round_number": 1,
+    "waiting_round":5,
+    "waiting_round_end_action":[
+        {
+            "condition":
+            {
+
+            },
+            "result_title":"",
+            "result_text": "",
+            "result":
+            {
+
+            },
+            "action":
+            {
+                "prompt": {
+                    "id": "prompt_5006028_01",
+                    "text": "一連好幾天，梅姬都忙於你安排的種種事務無法抽身。阿迪萊失望地離開了，後來，她也識趣地不再來邀請梅姬了。"
+                },
+                "event_off": 5320520 //關閉傷痕與友情
+            }
+        }
+    ],
+    "method_settlement": "",
+    "auto_begin": 0,
+    "auto_result":0,
+    "location": "上城區:[1,6]",
+    "icon": "rite_8",
+    "tag_tips": [
+    ],
+    "tag_tips_up":{
+    },
+    "tips_text":[
+        "替梅姬準備一份禮物，能讓梅姬忘記一些不開心的事。",
+        "錯過的話，阿迪萊就不會再來打擾你們了。",
+        "放了禮物：權勢+1 消除妻子的不滿 精緻的匕首",
+        "沒放禮物：銅祕氛"
+    ],
+    "open_conditions": [
+
+    ],
+    "random_text":{
+    },
+    "random_text_up":{
+    },
+    "settlement_prior": [
+
+    ],
+    "settlement": [
+        {
+            "guid":"7340f645-d81c-4a05-a6e7-8453b5cea078",
+            "condition":
+            {
+                "s3":1   //放了禮物
+            },
+            "result_title":"你為梅姬準備了一份禮物",
+            "result_text": "梅姬把你給她的禮物高調地穿戴在身上，一進浴室，就吸引了眾人的目光，女客們嘰嘰喳喳地驚羨你們的闊綽、恩愛，連不通人情的阿迪萊都忍不住讚歎梅姬那與珠寶相得益彰的美貌和風情。梅姬聽得開心極了，她隨手將價值不菲的[s3.name]戴在阿迪萊身上，阿迪萊臉色泛起紅來，在一眾嫉妒的聲音中，她游到池邊，鄭重地將自己貼身攜帶的精緻匕首回贈給梅姬。\n在場的所有人都見證了這段珍貴友誼的誕生。",
+            "result":
+            {
+                "counter+7100003": 1, //權勢+1
+                "clean.s4":1, //消除妻子的不滿
+                "card":[2000663,"已擁有+1"], //獲得精緻的匕首
+                "counter+7000168":1 ,//洗澡計數
+                "clean.s3":1  //清除禮物
+            },
+            "action":
+            {
+            }
+        },
+        {
+            "guid":"48624f4d-e278-492a-b299-176f0ef0c2b1",
+            "condition":
+            {
+                "!s3":1   //沒放禮物
+            },
+            "result_title":"一切如常",
+            "result_text": "一見到梅姬，阿迪萊就迎上前來，笑容既熱情，又隱隱有些害羞。梅姬微笑着挽起她的手，一起往浴池走去。對人們來說，這只是很尋常的一天。",
+            "result":
+            {
+                "card":2000419, //獲得祕氛
+                "counter+7000168":1  //洗澡計數
+            },
+            "action":
+            {
+
+            }
+        }
+    ],
+    "settlement_extre": [
+
+    ],
+    "cards_slot":
+    {
+        "s1":
+        {
+            "guid":"1dccb0db-04a6-421e-b314-f1e843806f96",
+            "condition":
+            {
+                "type":"char",
+                "is":2000061
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":0,
+            "is_enemy":0,
+            "text":"阿迪萊等着梅姬一起去浴場"
+        },
+        "s2":
+        {
+            "guid":"d189e33a-20e5-4484-beb0-49cf4fadc107",
+            "condition":
+            {
+                "type":"char",
+                "妻子":1
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":0,
+            "is_enemy":0,
+            "text":"梅姬想要前去赴約"
+        },
+        "s3":
+        {
+            "guid":"58eea7f2-503e-4965-9971-4ee0f8071c76",
+            "condition":
+            {
+                "type":"item",
+                "飾品":1,
+                "rare>=":3,
+                "!is":2001022        //排除碧雲套
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":0,
+            "text":"你可以為妻子準備一件禮物，銀色或更高品質的飾品會很合適"
+        },
+        "s4":
+        {
+            "guid":"1ceab3d0-cb3c-4652-9490-1800d7406e7a",
+            "condition":
+            {
+                "type":"item",
+                "cost.不滿=":1
+            },
+            "open_adsorb":1,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":0,
+            "text":"如果有，想想你曾做過些什麼；如果沒有，想想你該做些什麼。"
+        }
+    }
+}

@@ -1,0 +1,87 @@
+ {
+        "id": 5000561,
+        "name": "消除隱患",
+        "text": "薩達爾尼告訴你，蘇丹臨幸她的那天，因宮廷主管的疏忽，起居記錄上有意無意地漏掉了至關重要的幾筆，而這對她腹中的孩子而言幾乎是致命的。她希望你能幫她修正它，避免孩子的血統遭人懷疑。",
+        "tips": "",
+        "mapping_id":8001077,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":0,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result":0,
+        "location": "自宅:[2,12]",
+        "icon": "rite_16",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "金幣+10 薩達爾尼支持+3"
+        ],
+        "open_conditions": [
+        ],
+        "random_text": {
+        },
+        "random_text_up":{
+        },
+        "random_effect": {
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"f8e94aec-72e6-409b-8cfc-6eee3286493e",
+                "condition": {
+
+                },
+                "result_title":"你不負所託",
+                "result_text": "你已如約為薩達爾尼更正了蘇丹的起居記錄，她不必再擔心有人質疑孩子的血脈正統。\n你得到了一大筆酬謝，不過不要忘了，這不是你幫助她的真正目的。你想說服她幫助你弒君謀反，但這些話不方便對一名侍女說。",
+                "result":
+                {
+                    "global_counter+7200019":1,  //完成劇情目標【繼承人】
+                    //"table.2000009+支持": 3, //妃子B支持+3放到幕後裡進行增加
+                    "金幣": 10,              //獲得一筆錢
+                    "clean.s2":1            //移除修改的證明
+                },
+                "action": {
+                    "event_on":     5300059, //幕後真正的報償
+                    "event_on":     5300251 //加支持3的幕後
+                }
+            }
+        ],
+        "settlement_extre": [
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"f21e82bf-0764-4f6b-8d9e-23a5624481ff",
+                "condition":
+                {
+
+                    "is": 2000176
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"薩達爾尼的侍女隨時等候你的迴音"
+            },
+            "s2":
+            {
+                "guid":"8b7f5bec-cd1e-4d6c-8fa6-55eae148d9d6",
+                "condition":
+                {
+                    "is": 2000285  //必須放入修改的證明
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"你必須放入【修改的證明】"
+            }
+        }
+    }

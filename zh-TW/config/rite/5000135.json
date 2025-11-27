@@ -1,0 +1,115 @@
+ {
+        "id": 5000135,
+        "name": "熱氣球升降場",
+        "text": "在地上，它就是一個簡陋的籃子與乾癟的布袋子。由此可見，神性存在於烈焰之中，存在於高空之中……",
+        "tips": "",
+        "once_new":0,
+        "round_number": 7,
+        "waiting_round":0,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result":0,
+        "location": "奇珍:6",
+        "type":"TREASURE",
+        "icon": "rite_2000388",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+            "tips":["體魄"],
+            "type":"normal_result"
+        },
+        "tips_text":[
+            "必須派人上熱氣球才會有收益。",
+            "上陣角色體魄檢定>=2點成功：高空偵查 生存+2",
+            "上陣角色體魄檢定 失敗：高空偵查 受傷"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"能否在高空的寒風中撐過去？",
+                "type":"normal_result",
+                "type_tips":"你的體魄為你提供了完整的骰子數量。",
+                "low_target": 2,
+                "low_target_tips": "你至少需要2點成功才不會生病。"
+            }
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"bef829c5-c3ab-4665-abb8-5f4dba4386e3",
+                "condition":
+                {
+                    "r1:s2.體魄>=":[2,5]
+                },
+                "result_title":"一次壯舉",
+                "result_text": "在熱氣球上，你能自由地收集整個王都，以及周邊的情報……",
+                "result":
+                {
+                    "s2+生存":2,
+                    "card":2000396 //高空偵察
+                },
+                "action":
+                {
+                    "rite":5000135 //生成自己
+                }
+            },
+            {
+                "guid":"f76d118f-bc38-437c-840d-a899196891f7",
+                "condition":
+                {
+                    "r1:s2.體魄<":[2,5]
+                },
+                "result_title":"熱氣球平安無事，但駕駛員有點麻煩",
+                "result_text": "雖然沾着嘔吐物，但從高空得到的情報永遠是有用的。",
+                "result":
+                {
+                    "s2+equip":2000194,
+                    "card":2000396 //高空偵察
+                },
+                "action":
+                {
+                    "rite":5000135 //生成自己
+                }
+            }
+        ],
+        "settlement_extre": [
+
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"e3a8513a-90a3-453f-af81-c0a5a35aafac",
+                "condition":
+                {
+                    "is":2000388 //熱氣球
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"熱氣球"
+            },
+            "s2":
+            {
+                "guid":"6cd1b296-69a4-41a6-938c-16d5cd336f99",
+                "condition":
+                {
+                    "type":"char",
+                    "!動物":1,
+                    "!怪物":1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"讓誰上熱氣球？"
+            }
+        }
+    }

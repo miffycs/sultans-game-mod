@@ -1,0 +1,131 @@
+ {
+        "id": 5000103,
+        "name": "阿圖娜爾的請求",
+        "text": "最近，阿圖娜爾越來越感覺，人們對她的美麗失去了新鮮感。她需要你的幫助。",
+        "tips": "",
+        "mapping_id":8001213,
+        "once_new":1,
+        "round_number": 1,
+        "waiting_round":7,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result":0,
+        "location": "自宅:[2,12]",
+        "icon": "rite_12",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "你提供的裝備的魅力之和不能小於5點",
+            "裝備被銷燬,阿圖娜爾升銀",
+            "魅力+1 體質+1 社交+1",
+            "每次升品質可以重新對其使用縱慾卡"
+        ],
+        "open_conditions": [
+            {
+                "condition": {
+                    "counter.7100003>=":5,
+                    "f:s2.魅力+s3.魅力>=":5
+                },
+                "tips": "你的權勢不能小於5點。裝備的魅力之和不能小於5。"
+            }
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"5fcadfed-3c14-448b-b441-f997b0bf4b2d",
+                "condition":
+                {
+                },
+                "result_title":"",
+                "result_text": "首飾和衣裝只能襯託外在的美麗，而更輕巧的舞姿、更優雅的談吐則是阿圖娜爾通過這段時間的不懈努力得來的。",
+                "result":
+                {
+                    "clean.s2":1,
+                    "clean.s3":1,
+                    "s1+魅力":1,
+                    "s1+體魄":1,
+                    "s1+社交":1,
+                    "s1-縱慾的痕跡":1,
+                    "s1.uprare":1,
+                    "counter=7000079":0,
+                    "counter+7000080":1 //記錄舞姬的提升
+                },
+                "action":
+                {
+                    "event_on":5300325
+                }
+            }
+        ],
+        "settlement_extre": [
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"2b5a4d33-b4d2-4068-9863-f391a66137f0",
+                "condition":
+                {
+                    "type":"char",
+                    "is":2000129 //舞姬
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"美麗的舞姬"
+            },
+            "s2":
+            {
+                "guid":"37c4776a-4dd2-41d8-990d-49aa2bc524e4",
+                "condition":
+                {
+                    "type":"item",
+                    "裝備":1,
+                    "rare=":3
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"一件能夠提升魅力的白銀品級裝備"
+            },
+            "s3":
+            {
+                "guid":"9056b728-294c-4446-9605-5ed24b02f7e8",
+                "condition":
+                {
+                    "type":"item",
+                    "裝備":1,
+                    "rare=":2
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"一件能夠提升魅力的青銅品級裝備"
+            },
+            "s4":
+            {
+                "guid":"a0fcd829-9565-433a-97c6-91fb5b348486",
+                "condition":
+                {
+                    "type":"item",
+                    "cost.金幣":10
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"10枚金幣"
+            }
+        }
+    }

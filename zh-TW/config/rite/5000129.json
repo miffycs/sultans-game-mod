@@ -1,0 +1,69 @@
+ {
+        "id": 5000129,
+        "name": "做好準備",
+        "text": "為自己或者追隨者穿上裝備吧！\n【銅機遇】",
+        "tips": "",
+        "mapping_id":8001002,
+        "once_new":0,
+        "round_number": 0,
+        "waiting_round":0,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result":0,
+        "location": "自宅:[2,12]",
+        "icon": "rite_4",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "將帶有【裝備】標籤的卡牌放置到角色卡牌上可以進行裝備"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"c73a32de-b8b8-4dec-9d8e-d0e3a47b8864",
+                "condition":
+                {
+                },
+                "result_title":"",
+                "result_text": "裝備分為【武器】【飾品】【服裝】【動物】4類。\n每種類型的裝備一位角色一般只允許裝備1件。\n可以在卡牌詳情中查看當前角色可以裝備的裝備類型。\n裝備卡牌的屬性將會被角色卡牌繼承。\n你只能為自己或追隨者裝備卡牌。\n可以在角色詳情對裝備進行裝備，查看和卸除。",
+                "result":
+                {
+                    "card":2000040 //送1個機遇情報
+                },
+                "action":
+                {
+                }
+            }
+        ],
+        "settlement_extre": [
+        ],
+        "cards_slot":
+        {
+            "s1":
+                {
+                    "guid":"2d78e6e9-4ec8-4099-bfab-f0d94aa5771d",
+                    "condition":
+                    {
+                        "type":"char",
+                        "已裝備":1,
+                        "!is": 2000461 //排除貝姬夫人
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":1,
+                    "text":"穿上裝備的角色"
+                }
+        }
+    }

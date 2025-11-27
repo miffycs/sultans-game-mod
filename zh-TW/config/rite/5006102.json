@@ -1,0 +1,178 @@
+{
+    "id": 5006102,
+    "name": "金子、水晶與污泥",
+    "text": "這幢曾屬於故國御醫的古老宅邸如今修葺一新，看起來早已易主。",
+    "tips": "",
+    "mapping_id":8001111,
+    "once_new":0,
+    "round_number": 1,
+    "waiting_round":1,
+    "waiting_round_end_action":[
+        {
+                "condition":
+                {
+
+                },
+                "result_title":"",
+                "result_text": "",
+                "result":
+                {
+                    "counter+7000731":1  //完成的計數器
+                },
+                "action":
+                {
+
+                }
+            },
+    ],
+    "method_settlement": "",
+    "auto_begin": 0,
+    "auto_result":0,
+    "location": "上城區:[1,6]",
+    "icon": "rite_8",
+    "tag_tips": [
+    ],
+    "tag_tips_up":{
+        "tips":["社交","魅力"],
+        "type":"normal_result"
+    },
+    "tips_text":[
+        "如果是聞名遐邇的權力者，也許不需要什麼手段",
+        "權勢>=15，觸發後續",
+        "權勢<15，檢定：社交+魅力>=3",
+        "檢定成功：觸發後續",
+        "檢定失敗：退回【摺疊的紙條】"
+    ],
+    "open_conditions": [
+    ],
+    "random_text": {
+    },
+    "random_text_up":{
+        "r1":{
+            "text":"於是，你若無其事地向他問起原本住在這兒的人們……",
+            "type":"normal_result",
+            "type_tips":"社交和魅力提供完整的骰子數量。",
+            "low_target": 3,
+            "low_target_tips": "你至少需要3點成功才能得到你想要的訊息。"
+        }
+    },
+    "random_effect": {
+    },
+    "settlement_prior": [
+    ],
+    "settlement": [
+
+    ],
+    "settlement_extre": [
+        {
+            "guid":"dbdaba6c-bc94-4363-ad59-d99405fa69be",
+            "condition": {
+
+            },
+            "result_title":"",
+            "result_text": "見你前來拜訪，此地的主人殷勤地將你引進門內。他不無驕傲地告訴你，這處宅邸是故國覆滅之後蘇丹賞賜給他的，因為他父親是老蘇丹近衛隊裡的軍官，在入城的時候，這位父親趴在污泥裡，讓老蘇丹的馬蹄踩在自己背上，不至於弄髒王者那純金裝飾的馬具。\n你客氣地讚揚了這個故事，打量着這裡精心打理的花圃——在許多年前，這裡種的應該是草藥吧。還有隨處可見的大量水泉——你從未在其他貴族的宅邸裡見過這麼多水源——應該也是為了診療方便。看來你沒有找錯地方。",
+            "result":
+            {
+
+            },
+            "action": {
+
+            }
+        },
+        {
+            "guid":"3d6b4aa0-68b0-4814-ac2a-9e490d01fdb2",
+            "condition": {
+                "counter.7100003>=":15  //權勢大於等於15
+            },
+            "result_title":"",
+            "result_text": "於是，你若無其事地向他問起原本住在這兒的人們，而他非常樂意向你這位蘇丹面前的紅人示好，他給了你一個位於城市邊緣的地址，據說那些醫師被驅逐之後，就去了那邊。你點點頭，在他盛情挽留之下用過飯後，才離開這座不復昨日的宅邸。",
+            "result":
+            {
+                "counter+7000731":1  //完成的計數器
+            },
+            "action": {
+                "rite":5006103  //開啓小小守衛者
+            }
+        },
+       {
+            "guid":"93caa4f2-acb7-4bb0-92eb-4bf5f1f24bb6",
+            "condition": {
+                "counter.7100003<":15,  //權勢小於15
+                "r1:社交+魅力>=":[3,5]  //說服成功
+            },
+            "result_title":"你讓他放下了心防",
+            "result_text": "你們相談甚歡，三言兩語間，他幾乎把你當作知己……\n聽了你的問話，他給了你一個位於城市邊緣的地址，據說那些醫師被驅逐之後，就躲去了那邊。你點點頭，謝過之後，離開了這座不復昨日的宅邸。",
+            "result":
+            {
+                "counter+7000731":1  //完成的計數器
+            },
+            "action": {
+                "rite":5006103  //開啓小小守衛者
+            }
+        },
+        {
+            "guid":"89dd7b71-0a02-4201-b592-ee743035e7a8",
+            "condition": {
+                "counter.7100003<":15,  //權勢小於15
+                "r1:社交+魅力<":[3,5]  //說服失敗
+            },
+            "result_title":"你未能讓他放下心防",
+            "result_text": "他不願意和你聊前朝舊事，更不樂意談起那些被他驅逐的人們，只說不知道他們的下落。看來只能下次再談了。",
+            "result":
+            {
+                "counter+7000731":1  //完成的計數器
+            },
+            "action": {
+
+            }
+        },
+
+    ],
+    "cards_slot":
+    {
+        "s1":
+        {
+            "guid":"d2171f21-400c-497c-8f03-ea51e1b03a24",
+            "condition":
+            {
+                "type":"item",
+                "is":2001200
+            },
+            "open_adsorb":1,
+            "is_key":0,
+            "is_empty":0,
+            "is_enemy":1,
+            "text":"薩米爾的紙條"
+        },
+        "s2":
+        {
+            "guid":"141b6c63-d856-436e-87c9-edfbece90491",
+            "condition":
+            {
+                "type":"char",
+                "!怪物":1,
+                "!動物":1
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":0,
+            "is_enemy":0,
+            "text":"你可以親自，或派遣任意追隨者前去拜訪"
+        },
+        "s3":
+        {
+            "guid":"383f3b6a-77fd-479e-9e18-bc444c6e7dd1",
+            "condition":
+            {
+                "type":"item",
+                "cost.消耗品=":1,
+                "!金幣":1
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":0,
+            "text":"能令你在交談中更具優勢的消耗品"
+        }
+    }
+}

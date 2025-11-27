@@ -1,0 +1,283 @@
+ {
+        "id": 5000332,
+        "name": "一次征服的行為",
+        "text": "[xiaochou.name]悄悄組織了一支軍隊，去與一位地方領主爭奪這片土地的繼承權——[xiaochou.gender]真的弄到了被認可的繼承權！你不知道[xiaochou.name]策劃這件事已經多久了，也不知道[xiaochou.name]的目的。但現在，你仍然來得及干涉這件事……",
+        "tips": "",
+        "mapping_id":8001553,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":3,  //等待3天，感覺7天太長了
+        "waiting_round_end_action":[
+             {
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "",
+                "result":
+                {
+                    "counter+7000707":1  //物性
+                },
+                "action": {
+                    "prompt":{
+                        "id":"5000332_prompt_01",
+                        "text":"你決定不干涉此事……看看[xiaochou.name]能做到什麼地步。\n不久之後，你聽說了[xiaochou.gender]勝利的消息……",
+                        "icon":"pic/2001182"
+                    },
+                    "event_on":[5300833,5300834,5300835]  //激活不干涉小籌故事結尾
+                }
+            }
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result":0,
+        "location": "野外:[1,6]",
+        "icon": "rite_11",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+            "tips":["戰鬥","體魄"],
+            "type":"fight_result"
+        },
+        "tips_text":[
+            "你可以選擇一方支持以部隊或情報",
+            "如果你什麼都不做，三日之後，[xiaochou.name]很可能會贏的勝利",
+            "也只能支持一方",
+            "超時：小籌方勝利",
+            "檢定：（小籌方）戰鬥+體魄-（領主方）戰鬥+體魄>=1",
+            "支持領主方：",
+            "領主方獲勝：人性+1",
+            "領主方失敗：人性+1",
+            "支持小籌方：",
+            "小籌方獲勝：人性+1",
+            "小籌方失敗：物性+1"
+        ],
+        "open_conditions": [
+              {
+                "condition": {
+                    "any":{
+                        "s5":1,
+                        "s6":1
+                    }
+                },
+                "tips": "你只能支持其中一方"
+            }
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+             "r1":{
+                "text":"一次征服的嘗試",
+                "type":"fight_result",
+                "type_tips":"雙方的戰鬥和體魄會進行對抗。",
+                "low_target": 1,
+                "low_target_tips": "[xiaochou.name]至少1點成功才能成功征服。"
+            }
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"168cf422-8c1f-4f97-8d00-a23572fa0e87",
+                "condition":
+                {
+                    "s5":1 ,   //支持貴族領主
+                    "r1:戰鬥+體魄-e(戰鬥+體魄)>=":[1,5],  //小籌獲勝
+                },
+                "result_title":"你沒能阻止[xiaochou.gender]",
+                "result_text": "[xiaochou.name]的隊伍好像一顆水銀一般繞過了你們的夾擊，當你的前鋒撲空了的時候，城牆上的旗幟換了……上面寫着[xiaochou.name]的名字，你賜給[xiaochou.gender]的名字……",
+                "result":
+                {
+                    "no_show":{
+                        "clean.s2":1,
+                        "clean.s3":1,
+                        "clean.s4":1
+                    },
+                   "counter+7000706":1  //人性
+                },
+                "action":
+                {
+                    "event_on":[5300842,5300843]
+                }
+            },
+            {
+                "guid":"4d1ef5d0-200f-4672-adb7-20b99a9fd447",
+                "condition":
+                {
+                    "s5":1 ,   //支持貴族領主
+                    "r1:戰鬥+體魄-e(戰鬥+體魄)<":[1,5],  //小籌失敗
+                },
+                "result_title":"[xiaochou.gender]見過無數次戰爭，但仍然是初次參與",
+                "result_text": "你施展了一個計策，[xiaochou.name]立即看出了你所模仿的案例……但實際的戰鬥是不會按照歷史或者教科書那樣重演的。當[xiaochou.gender]試圖吃掉領主的軍隊時，你從背後踏破了[xiaochou.gender]的陣地……",
+                "result":
+                {
+                    "no_show":{
+                        "clean.s2":1,
+                        "clean.s3":1,
+                        "clean.s4":1
+                    },
+                   "counter+7000706":1  //人性
+                },
+                "action":
+                {
+                    "event_on":[5300844,5300845]
+                }
+            },
+             {
+                "guid":"6d3e172a-3854-43fc-992f-168325fbe7ec",
+                "condition":
+                {
+                    "s6":1 ,   //支持小籌
+                    "r1:戰鬥+體魄-e(戰鬥+體魄)>=":[1,5],  //小籌獲勝
+                },
+                "result_title":"為什麼不呢？",
+                "result_text": "你派出了自己的支援……並且輕易地就幫助[xiaochou.name]的軍隊攻佔了那名領主的城市……城頭旗幟變幻……上面寫着[xiaochou.name]的名字，你賜給[xiaochou.gender]的名字……",
+                "result":
+                {
+                    "no_show":{
+                        "clean.s2":1,
+                        "clean.s3":1,
+                        "clean.s4":1
+                    },
+                   "counter+7000706":1  //人性
+                },
+                "action":
+                {
+                    "event_on":[5300837,5300838]
+                }
+            },
+            {
+                "guid":"ebae02b3-5532-4988-83fc-8cb59b89f98b",
+                "condition":
+                {
+                    "s6":1 ,   //支持小籌
+                    "r1:戰鬥+體魄-e(戰鬥+體魄)<":[1,5],  //小籌失敗
+                },
+                "result_title":"草臺班子",
+                "result_text": "實際上，沒有你，[xiaochou.name]也很可能取得勝利的。但你就是要去湊這個熱鬧——不管是為了撈好處還是純粹的好玩，你的援軍都打亂了[xiaochou.name]的戰術部署，並且在敵人的衝鋒之下潰敗，擾亂了[xiaochou.name]的陣型……\n現在，你徹底與[xiaochou.gender]失去了聯繫……",
+                "result":
+                {
+                    "no_show":{
+                        "clean.s2":1,
+                        "clean.s3":1,
+                        "clean.s4":1
+                    },
+                   "counter+7000707":1  //物性
+                },
+                "action":
+                {
+                    "event_on":[5300840,5300841]
+                }
+            },
+        ],
+        "settlement_extre": [
+
+        ],
+        "cards_slot":
+        {
+            "s1":
+                {
+                    "guid":"05f6fb0b-019e-421f-9bf3-ef3d80a1e8a0",
+                    "condition":
+                    {
+                        "type":"char",
+                        "小籌":1
+                    },
+                    "open_adsorb":1,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"[xiaochou.gender]終於要親手實踐自己看過的一切了"
+                },
+            "s2":
+                {
+                    "guid":"a803da31-ba7a-4c00-9111-7b073ba68940",
+                    "condition":
+                    {
+                        "is":2001186,
+                        "小籌征服":1
+                    },
+                    "open_adsorb":1,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"一些被[xiaochou.name]的力量所蠱惑的凡人"
+                },
+                "s3":
+                {
+                    "guid":"d386f610-4017-4187-8973-000d1835699d",
+                    "condition":
+                    {
+                        "is":2001187,
+                        "小籌征服":1
+                    },
+                    "open_adsorb":1,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":1,
+                    "text":"完全不理解發生了什麼的領主"
+                },
+                "s4":
+                {
+                    "guid":"6507a0b3-15e5-4c11-9698-ef07acf3e1c4",
+                    "condition":
+                    {
+                        "is":2001188,
+                        "小籌征服":1
+                    },
+                    "open_adsorb":1,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":1,
+                    "text":"領主的部隊"
+                },
+                "s5":
+                {
+                    "guid":"a05d382a-e69c-49a6-8d3d-b07a5b3b76d2",
+                    "condition":
+                    {
+                        "any":{
+                            "type":"char",
+                            "type":"item"
+                        },
+                        "any":{
+                            "部隊":1,
+                            "all":{
+                                "cost.消耗品":1,
+                                "情報":1
+                            }
+                        },
+                        "!s6":1
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":1,
+                    "is_enemy":1,
+                    "text":"支持領主的部隊或情報"
+                },
+                "s6":
+                {
+                    "guid":"967d24e4-0a50-4fd1-a002-f12964b052f6",
+                    "condition":
+                    {
+                        "any":{
+                            "type":"char",
+                            "type":"item"
+                        },
+                        "any":{
+                            "部隊":1,
+                            "all":{
+                                "cost.消耗品":1,
+                                "情報":1
+                            }
+                        },
+                        "!s5":1
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":1,
+                    "is_enemy":0,
+                    "text":"支持[xiaochou.name]的部隊或情報"
+                }
+
+        }
+    }

@@ -1,0 +1,169 @@
+ {
+        "id": 5006616,
+        "name": "救濟日",
+        "text": "有人向你提議做一次公開的救濟，為飢餓的災民提供一些吃食，讓他們填飽肚子之餘，也能夠弘揚你的善名。",
+        "tips": "",
+        "mapping_id":8001346,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":3,
+        "waiting_round_end_action":[
+            {
+                "condition": {
+                    "counter.7000252=":1  //美味救濟日激活了，但沒有完成
+                },
+                "result_title":"",
+                "result_text": "",
+                "result":
+                {
+                },
+                "action": {
+                    "event_on": 5320172 //激活美味救濟日
+                }
+            },
+            {
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "",
+                "result":
+                {
+                },
+                "action": {
+                    "event_on": 5320156 //重複觸發
+                }
+            }
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0,//需要手動啓動
+        "location": "野外:[9,14]",
+        "icon": "rite_9",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+
+            "你可以藉機折斷蘇丹卡，但，你真要怎麼做麼？",
+            "普通線：虔信+1 善名+1 觸發鐵頭線"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"312380e4-e623-4e6a-bc6e-7f010ab6e87a",
+                "condition": {
+                    "s2.殺戮":1
+                },
+                "result_title":"",
+                "result_text": "糧食的施捨吸引了大批流民，混亂和爭搶無可避免。無需任何言語，你拔出了佩刀，將眼前任何在你面前濺起沙塵的人砍翻在地。\n最開始，看着四向奔逃的流民你還頗覺興奮，但砍着砍着，也沒了什麼趣味，殺再多也不過是一些不懂得反抗的流民。\n於是，你扔下了捲了刃的佩刀，丟下了一地的屍體和碎裂的蘇丹卡，無聊地離開了。",
+                "result":
+                {
+                    "clean.s2":1,
+                    "counter=7100001":0, //善名歸0
+                    "counter+7100002":3, //惡名+3
+                    "counter+7000240":1  //阻斷鐵頭線的相關計數器，救濟日將不再觸發
+                },
+                "action": {
+                }   //救濟日將不再觸發
+            },
+            {
+                "guid":"a009ec05-4667-42ac-97fc-0372b4eecbb3",
+                "condition": {
+                    "s2.縱慾":1
+                },
+                "result_title":"",
+                "result_text": "粥棚外的告示：“若能將姐妹妻女獻出一晚，便可獲得一滿袋糧食，地點：粥棚後的帳篷內。”\n很快，女人們擠滿了你的帳篷，她們圍繞着你，青澀地討好你，就為了一口吃的。\n這個世道就是這樣骯髒。卑賤者想活下去，女人靠出賣姿色，男人靠出賣女人。",
+                "result":
+                {
+                    "clean.s2":1,
+                    "card":2000083, //妻子的不滿
+                    "counter=7100001":0, //善名歸0
+                    "counter+7100002":1, //惡名+3
+                    "counter+7000240":1  //阻斷鐵頭線的相關計數器，救濟日將不再觸發
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"b8c4ec72-2e98-43ba-9ef1-a1ca7a533d1e",
+                "condition": {
+                    "!s2":1  //沒放蘇丹卡
+                },
+                "result_title":"",
+                "result_text": "流離失所的人們、吃不飽飯的人們排着隊來到你的粥棚，他們對你感激涕零，連聲高呼你的姓名。那段時間，沒有人不知道你的美名。",
+                "result":
+                {
+                    "s3+虔信":1,
+                    "counter+7100001":1, //善名
+                    "counter+7000239":1  //標識正常完成,用於激活鐵頭後續線
+                },
+                "action": {
+                    "event_on": 5320156 //重複觸發
+                }
+            }
+        ],
+        "settlement_extre": [
+        ],
+        "cards_slot":
+        {
+            "s1":
+                {
+                    "guid":"673c1f49-71ce-4e53-baee-5641f1edbade",
+                    "condition":
+                    {
+                        "type":"item",
+                        "cost.金幣":5
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"至少需要花費5枚金幣"
+                },
+            "s2":
+                {
+                    "guid":"e2ba221c-f05b-4be6-abc1-d7dd2d9f1f2e",
+                    "condition":
+                    {
+                        "type":"sudan",
+                        "rare=":1,
+                        "any":{
+                            "殺戮":1,
+                            "縱慾":1
+                        }
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":1,
+                    "is_enemy":0,
+                    "text":"你可以在這裡折斷岩石品質的殺戮或縱慾卡，但你真要這麼做嗎？\n【殺戮：善名歸0 惡名+3 救濟日事件不再觸發 鐵頭線中斷】\n【縱慾：妻子不滿 善名歸0 惡名+3 救濟日事件不再觸發 鐵頭線中斷】"
+                },
+                "s3":
+                {
+                    "guid":"26e3fea5-2765-478c-89c7-6b982e9b253b",
+                    "condition":
+                    {
+                        "type":"item",
+                        "any":{
+                            "is":2000725,
+                            "is":2000726,
+                            "is":2000727,
+                            "is":2000728,
+                        }
+                    },
+                    "open_adsorb":1,
+                    "is_key":0,
+                    "is_empty":1,
+                    "is_enemy":0,
+                    "text":"善行可令信仰更堅"
+                }
+        }
+    }

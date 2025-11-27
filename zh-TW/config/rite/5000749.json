@@ -1,0 +1,164 @@
+{
+    "id": 5000749,
+    "name": "一起玩個夠",
+    "text": "如果只有你一個人，也想不出什麼又風雅又能多多花錢的好主意，但當奈布哈尼一起來，花錢的好點子就彷彿噴泉一樣源源不絕。",
+    "tips": "",
+    "mapping_id":8001049,
+    "once_new":0,
+    "round_number": 1,
+    "waiting_round":1,
+    "waiting_round_end_action":[
+        {
+            "condition": {
+            },
+            "result_title":"",
+            "result_text": "",
+            "result":
+            {
+            },
+            "action": {
+                "event_on":5300211, //開啓不可靠的盟友
+                "prompt":{
+                    "id":"5000749_prompt_1",
+                    "text":"奈布哈尼白高興一場，扔下你繼續找樂子去。"
+                }
+            }
+        }
+    ],
+    "method_settlement": "",
+    "auto_begin": 1,
+    "auto_result":0,
+    "location": "上城區:[1,6]",
+    "icon": "rite_12",
+    "tag_tips": [
+
+    ],
+    "tag_tips_up":{
+
+    },
+    "tips_text":[
+        "可以藉此機會折斷一張奢靡蘇丹卡",
+        "如果你讓奈布哈尼欠下很多人情，也許他會認真的幫助你",
+        "花10金幣消卡，7天內奈布哈尼不會離開隊伍"
+    ],
+    "open_conditions": [
+    ],
+    "random_text": {
+
+    },
+    "random_text_up":{
+
+    },
+    "random_effect": {
+    },
+    "settlement_prior": [
+    ],
+    "settlement": [
+        {
+            "guid":"4517727b-a005-48fd-b553-6054bfd387f5",
+            "condition": {
+                "s3":1 //放了奢靡卡
+            },
+            "result_text": "你們搞來了好多鮮花，順便就引來了一大堆姑娘，然後是足夠填滿好幾個澡盆的美酒與流水一樣的美食，以及奈布哈尼能讓所有人都開心的天賦。\n你們的宴會聲量如此之大，以至於蘇丹帶着隨從來看熱鬧，在奈布哈尼的邀請下，他也跳進酒池裡，順便就拿走了你的奢靡卡，隨手摺斷。",
+            "result":
+            {
+                "counter+7000049":1, //友誼計數增加1
+                "clean.s3": 1 //移除奢靡卡
+            },
+            "action": {
+                "event_on":5300253, //開啓7天讀條
+                "event_off":5300211 //關閉不可靠的盟友
+            }
+        },
+        {
+            "guid":"3f95152e-1f08-47bc-84fe-e855d226fd93",
+            "condition": {
+                "!s3":1 //沒放奢靡卡
+            },
+            "result_text": "第二天醒來的時候，你已經失去了記憶，只有空空的錢袋，宿醉的頭痛以及和地板上與幾個不認識的女人糾纏在一起的奈布哈尼能讓你依稀確認昨天的狂歡。\n至少，近期他應該會留在你身邊幫忙了……希望這一切都值得。",
+            "result":
+            {
+                "counter+7000049":1 //友誼計數增加1
+            },
+            "action": {
+                "event_on":5300253, //開啓7天讀條
+                "event_off":5300211 //關閉不可靠的盟友
+            }
+        }
+    ],
+    "settlement_extre": [
+
+    ],
+    "cards_slot":
+    {
+        "s1":
+        {
+            "guid":"71102852-6c11-476a-b110-578ce71720ce",
+            "condition":
+            {
+                "is": 2000064
+            },
+            "open_adsorb":1,
+            "is_key":0,
+            "is_empty":0,
+            "is_enemy":0,
+            "text":"奈布哈尼興致勃勃"
+        },
+        "s2":
+        {
+            "guid":"07a5e249-6220-409c-9901-495baa7b2329",
+            "condition":
+            {
+                "type":"char",
+                "主角": 1
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":0,
+            "text":"由你帶領他去往奢靡之鄉"
+        },
+        "s3":
+        {
+                "guid":"07fb30b3-044f-4fdc-bf0e-b3fce93bc1ef",
+                "condition":
+                {
+                    "type":"sudan",
+                    "奢靡":1,
+                    "f:rare-s1.rare<=":0 //放品級不高於奈布哈尼的奢靡卡
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"奢靡蘇丹卡"
+        },
+        "s4":
+        {
+            "guid":"d45ba3f5-5a00-43f2-a074-cfe083468d38",
+            "condition":
+            {
+                "type":"item",
+                "cost.金幣=":10
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":0,
+            "is_enemy":0,
+            "text":"玩樂經費10金幣"
+        },
+        "s5":{
+            "guid":"029db0eb-dbe8-4db3-a8bd-30fe296ca01a",
+            "condition":
+            {
+                "type":"char",
+                "妓女":1
+            },
+            "open_adsorb":1,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":0,
+            "text":"意料之外的參與者"
+        }
+    }
+}

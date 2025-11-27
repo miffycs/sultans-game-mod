@@ -1,0 +1,105 @@
+ {
+        "id": 5004501,
+        "name": "向教會求助",
+        "text": "在敬拜神祇的日子裡，無數的水流沖刷着廟宇光潔的磚石，漫過信徒赤裸的雙足和匍匐的雙手。\n純淨者的祭司們站在神殿深處，在林立的純白石柱的中間，在湛藍的天幕和潔淨的日頭下，敷着金粉的皮膚正微微閃光。",
+        "tips": "",
+        "mapping_id":8001201,
+        "once_new":1,
+        "round_number": 1,
+        "waiting_round":0,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0,
+        "location": "神殿區:[2,10]",
+        "icon": "rite_9",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "靈視+1 獲得1級正教思潮"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"2e9220b2-92ab-4365-b3cf-7a5932513634",
+                "condition": {
+                    "counter.7000572>=":1  //和正教決裂了
+                },
+                "result_title":"",
+                "result_text": "因為你做過的那些事，這裡沒有人歡迎你，自然也不會有人解答你的疑惑。",
+                "result":
+                {
+                    "no_show":{
+                        "card":[2000725,"已擁有-1"]  //刷一個初級正教思潮用於決裂儀式
+                    }
+                },
+                "action": {
+
+                }
+            },
+            {
+                "guid":"b19c2ea4-ce3c-4f5b-b9f0-dfe8c08ea650",
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "伊曼是純淨者教會的主祭，出乎意料地，他有一張並不仁慈……甚至堪稱冷漠的臉龐。\n他接過你帶來的蘇丹卡，閉上眼沉默了很久，最後搖了搖頭：“我無法摧毀它。”他把這張卡片還給你，然後接了些從石柱滴落的泉水認真洗淨了手指，彷彿曾摸過這個世界上最骯髒的東西，“如果您需要祝福或者懺悔，我可以為您提供幫助。”\n他語氣有點太公事公辦了，可目光又如此平靜，你都不確定究竟因為沒有賄賂或者討好，他才不願意幫忙，還是說真的沒有辦法……",
+                "result":
+                {
+                    "counter+5000570":1,  //善線開啓
+                    "card":2000725,  //獲得初級正教思潮
+                    "counter+7100005":1  //靈視+1
+                },
+                "action": {
+                    "event_on":5310605,  //開啓懺悔的幕後
+                    "event_on":5310609  //開啓伊曼的祈禱
+                }
+            },
+
+        ],
+        "settlement_extre": [
+        ],
+        "cards_slot":
+        {
+            "s1":
+                {
+                    "guid":"54e4cda3-2c94-4607-a7f2-c1ad50272ce0",
+                    "condition":
+                    {
+                        "type":"char",
+                        "is":2000021  //伊曼
+                    },
+                    "open_adsorb":1,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"教會主祭"
+                },
+            "s2":
+                {
+                    "guid":"5722820e-0612-44b0-ad9d-2174037164a6",
+                    "condition":
+                    {
+                        "type":"char",
+                        "any":{
+                            "主角":1,
+                            "妻子":1
+                        }
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"你可以親自或者請梅姬幫你去教會尋求幫助"
+                }
+        }
+    }

@@ -1,0 +1,138 @@
+ {
+        "id": 5000622,
+        "name": "未亡人的造訪",
+        "text": "法圖娜女士聽說自己兒子的變化都是你導致的，於是登門拜訪……",
+        "tips": "",
+        "mapping_id":8001077,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":0,
+        "waiting_round_end_action":[ //儀式沒有處理，自動關閉後
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0, //自動執行
+        "location": "自宅:[2,12]",
+        "icon": "rite_16",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "根據你前面對扎齊伊的訓練，寡婦會有不同的反應",
+            "被帶壞>=6：反對+3 惡名+1 激情-1",
+            "被帶壞>=3：金幣+5",
+            "被帶壞>=3且扎齊伊受傷：金幣+5 反對+1 激情-1",
+            "被帶壞<3：5金幣 寡婦的友誼儀式"
+        ],
+        "open_conditions": [
+        ],
+        "random_text": {
+        },
+        "random_text_up":{
+        },
+        "random_effect": {
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"dd2f7768-bd2f-40bb-a685-230179004334",
+                "condition": {
+                    "counter.7000041>=":6 //被完全帶壞
+                },
+                "result_title":"你把孩子帶壞了",
+                "result_text": "孩子就是她的一切，而你讓他變得與母親離心離德。法圖娜到現在才看出了你混亂，邪惡的本質，並且宣佈與你勢不兩立。\n 雖然她四處說你的壞話，但這件事在貴族圈子裡倒也成為了一樁笑談。",
+                "result":
+                {
+                    "s1=支持":0,
+                    "s1+反對":3,
+                    "counter+7100002": 1, //惡名+1
+                    "s1-激情":1
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"50dac2db-37a1-4a02-9d52-4d2954f8457a",
+                "condition": {
+                    "!have.2000063.受傷":1,
+                    "counter.7000041>=":3 //帶壞了一點
+                },
+                "result_title":"成長總有代價",
+                "result_text": "從理智上，她知道你所做的，對孩子都是好事，但在情感上，她不希望你再糾纏她的兒子了。",
+                "result":
+                {
+                    "coin":5
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"22da7850-9d64-4aec-8f20-8ee7d30bdcd8",
+                "condition": {
+                    "have.2000063.受傷":1,
+                    "counter.7000041>=":3 //帶壞了一點
+                },
+                "result_title":"成長總有代價",
+                "result_text": "從理智上，她知道你所做的，對孩子都是好事，但在情感上，她不希望你再糾纏她的兒子了。",
+                "result":
+                {
+                    "coin":5,
+                    "s1=支持":0,
+                    "s1+反對":1,
+                    "s1-激情":1
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"b1e0d3fe-1845-46c5-a433-9d8a97445908",
+                "condition": {
+                    "counter.7000041<":3 //完全沒帶壞，教得特別好
+                },
+                "result_title":"她覺得您是良師益友",
+                "result_text": "婦人的一切希望都寄託在這個兒子身上，現在，她徹底放心了，有你在身邊，家族一定有一個光明的未來。她決定把命運賭在你身上。",
+                "result":
+                {
+                    "coin":5,
+                    "global_counter=7200156":1 //成就
+                },
+                "action": {
+                    "rite":5000624 //激活寡婦的友誼
+                }
+            }
+        ],
+        "settlement_extre": [
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"0028c412-123f-42ac-b2b3-ba711b200c93",
+                "condition":
+                {
+                    "is":2000062
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"寡婦"
+            },
+            "s2":
+            {
+                "guid":"42e6e9a3-0763-4b98-a992-b6d357bb93da",
+                "condition":
+                {
+                    "type":"char",
+                    "主角":1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"主角"
+            }
+        }
+    }

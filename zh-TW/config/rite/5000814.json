@@ -1,0 +1,151 @@
+{
+    "id": 5000814,
+    "name": "肝膽相照",
+    "text": "芮爾邀請你一同品鑑這顆熱氣騰騰的新鮮肝臟，她說這玩意兒對身體好，誰知道這是不是真的……",
+    "tips": "",
+    "mapping_id":8001131,
+    "once_new":0,
+    "round_number": 1,
+    "waiting_round":3,
+    "waiting_round_end_action":[
+        {
+            "condition": {
+            },
+            "result_title":"",
+            "result_text": "",
+            "result":
+            {
+                "s1+體魄":3,
+                "counter+7000467":1, //芮爾事件1完成的計數器
+                "counter=7000465":0, //芮爾部隊調動計數歸零
+            },
+            "action": {
+                "prompt":{
+                    "id":"5000814_prompt_01",
+                    "text":"在你沒注意的時候，芮爾已經解決了一切。",
+                    "icon":"cards/2000771"
+                }
+            }
+        }
+    ],
+    "method_settlement": "",
+    "auto_begin": 0,
+    "auto_result":0,
+    "location": "黑街:[2,5]",
+    "icon": "rite_18",
+    "tag_tips": [
+
+    ],
+    "tag_tips_up":{
+
+    },
+    "tips_text":[
+        "放哈比卜：芮爾體魄+5 其他角色體魄+1",
+        "普通線：芮爾體魄+3 其他角色體魄+1"
+    ],
+    "open_conditions": [
+
+    ],
+    "random_text": {
+
+    },
+    "random_text_up":{
+
+    },
+    "random_effect": {
+    },
+    "settlement_prior":
+    [
+
+    ],
+    "settlement": [
+        {
+            "guid":"b2f03e73-bdc1-4226-b3b0-633a6f64bc3d",
+            "condition": {
+                "s3.is":2000014  //如果放入哈比卜
+            },
+            "result_title":"這麼新鮮？哪裡搞的",
+            "result_text": "哈比卜二話不說接過這塊肝，細細地洗去血水，唸叨着該怎麼料理。芮爾拼命想要阻止他，但是廚房是哈比卜的領地……\n她無比後悔、無比怨念地瞪着你，直到哈比卜端盤上桌，炙烤的香氣包裹着切得極薄的新鮮肝片，讓芮爾馬上止住罵聲，擦了擦差點流到嘴邊的口水。\n總之，這頓飯芮爾吃得比平時都多。",
+            "result":
+            {
+                "s1+體魄":5,
+                "s2+體魄":1,
+                "s3+體魄":1,
+                "counter+7000467":1, //芮爾事件1完成的計數器
+                "counter=7000465":0 //芮爾部隊調動計數歸零
+            },
+            "action": {
+
+            }
+        },
+        {
+            "guid":"6fe9370a-4312-42ce-ad70-4561973fa838",
+            "condition": {
+
+            },
+            "result_title":"能好怎",
+            "result_text": "你問芮爾這玩意兒怎麼吃，她二話不說拿刀把它切成三份，硬塞進了你和你同伴的嘴裡……\n你用盡所有的自制力——主要是芮爾正盯着你們——才沒把它吐出來。芮爾還笑嘻嘻地問你好不好吃，媽的，野蠻人。",
+            "result":
+            {
+                "s1+體魄":3,
+                "s2+體魄":1,
+                "s3+體魄":1,
+                "counter+7000467":1, //芮爾事件1完成的計數器
+                "counter=7000465":0 //芮爾部隊調動計數歸零
+
+            },
+            "action": {
+
+            }
+        }
+    ],
+    "settlement_extre": [
+
+    ],
+    "cards_slot":
+    {
+        "s1":
+        {
+            "guid":"bde8e467-07e8-4063-af31-b1d7fdbec2ad",
+            "condition":
+            {
+                "type":"char",
+                "芮爾":1,
+                "is":2000771
+            },
+            "open_adsorb":1,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":0,
+            "text":"芮爾非常高興"
+        },
+        "s2":
+        {
+            "guid":"5e41f4ac-0405-476f-b7d2-ec0a653d702a",
+            "condition":
+            {
+                "type":"char",
+                "主角":1
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":0,
+            "is_enemy":0,
+            "text":"你必須親自來吃"
+        },
+        "s3":
+        {
+            "guid":"9830775f-5195-4472-9575-e4a6c64cec44",
+            "condition":
+            {
+                "type":"char",
+                "!主角":1
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":0,
+            "text":"你還能帶一位有福同享……有難同當的夥伴一起吃"
+        }
+    }
+}

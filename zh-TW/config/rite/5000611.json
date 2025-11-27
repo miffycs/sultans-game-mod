@@ -1,0 +1,149 @@
+ {
+        "id": 5000611,
+        "name": "武術指導",
+        "text": "你決定給扎齊伊找一位經驗豐富的高手指點武藝，或者，你打算親自上陣？",
+        "tips": "",
+        "mapping_id":8001252,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":0,
+        "waiting_round_end_action":[ //儀式沒有處理，自動關閉後
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0, //自動執行
+        "location": "上城區:[7,12]",
+        "icon": "rite_15",
+        "tag_tips": [
+            "體魄"
+        ],
+        "tag_tips_up":{
+            "tips":["體魄"],
+            "type":"normal_result"
+        },
+        "tips_text":[
+            "扎齊伊和指導的人體魄越高，訓練的效果越好。",
+            "上陣角色體魄檢定>=5點：扎齊伊體魄+3",
+            "上陣角色體魄檢定>=3點：扎齊伊體魄+2",
+            "上陣角色體魄檢定<3點：扎齊伊體魄+1"
+        ],
+        "open_conditions": [
+        ],
+        "random_text": {
+            "r1":"你們在演武場訓練"
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"你們在演武場訓練",
+                "type":"normal_result",
+                "type_tips":"你的體魄為你提供了完整的骰子數量。",
+                "low_target": 3,
+                "low_target_tips": "你至少需要3點成功。"
+            }
+        },
+        "random_effect": {
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"b226df6d-e5eb-4f22-a4af-21cb254dba8f",
+                "condition": {
+                    "r1:體魄>=":[5,5]
+                },
+                "result_title":"訓練非常成功！",
+                "result_text": "你們發現，這位年輕人潛力非凡……",
+                "result":
+                {
+                    "s1+體魄":3
+                },
+                "action": {
+                    "clean.rite":5000612,
+                    "clean.rite":5000613,
+                    "event_on":5300109 //激活下一輪請求
+                }
+            },
+            {
+                "guid":"2c2a2eb9-0a64-417f-b3c4-8f56423326d9",
+                "condition": {
+                    "r1:體魄>=":[3,5]
+                },
+                "result_title":"訓練比較成功",
+                "result_text": "他以後會是一個很好的鬥士！",
+                "result":
+                {
+                    "s1+體魄":2
+                },
+                "action": {
+                    "clean.rite":5000612,
+                    "clean.rite":5000613,
+                    "event_on":5300109 //激活下一輪請求
+                }
+            },
+            {
+                "guid":"42143ead-a922-495b-9a3e-b3efa7a1ac1d",
+                "condition": {
+                    "r1:體魄<":[3,5]
+                },
+                "result_title":"訓練的效果很一般",
+                "result_text": "他並不以蠻力見長，但他咬牙堅持，完成了所有的練習。",
+                "result":
+                {
+                    "s1+體魄":1
+                },
+                "action": {
+                    "clean.rite":5000612,
+                    "clean.rite":5000613,
+                    "event_on":5300109 //激活下一輪請求
+                }
+            }
+        ],
+        "settlement_extre": [
+
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"f440419c-ba96-4b7e-b245-79c6a35d66c8",
+                "condition":
+                {
+                    "is":2000063
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"扎齊伊"
+            },
+            "s2":
+            {
+                "guid":"900f75ee-d898-43d1-9dee-879884c3a3a9",
+                "condition":
+                {
+                    "type":"char",
+                    "!is":2000063
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"你可以親自，或者拜託任意追隨者訓練他"
+            },
+            "s3":
+            {
+                "guid":"5dc9c924-41d9-4435-8be7-237acfdd281d",
+                "condition":
+                {
+                    "type":"item",
+                    "cost.消耗品=":1,
+                        "!金幣":1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"協助訓練的消耗品"
+            }
+        }
+    }

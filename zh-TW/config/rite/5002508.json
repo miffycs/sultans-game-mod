@@ -1,0 +1,132 @@
+ {
+        "id": 5002508,
+        "name": "狼王的蹤跡",
+        "text": "大草原中的狼群裡出了一隻狼王，相傳擁有近似人類的智慧。每次有人想要狩獵狼王時，都會被察覺到，完全找不見蹤影。而如果狩獵失敗，更可能會被狼群反包圍。",
+        "tips": "",
+        "mapping_id":8001172,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":0, //可以一直掛着
+        "waiting_round_end_action":[
+
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0,
+        "location": "野外:[1,6]",
+        "icon": "rite_15",
+        "tag_tips": [
+            "智慧",
+            "生存"
+        ],
+        "tag_tips_up":{
+            "tips":["智慧","生存"],
+            "type":"normal_result"
+        },
+        "tips_text":[
+            "如果失敗，會被狼群伏擊的哦。",
+            "1點成功：觸發狼王后續，上陣角色生存+1",
+            "失敗：上陣角色生存+1，受傷"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+            "r1":"尋找狼穴"
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"尋找狼穴",
+                "type":"normal_result",
+                "type_tips":"你的智慧和生存為你提供了完整的骰子數量。",
+                "low_target": 1,
+                "low_target_tips": "你至少需要1點成功才能找到目標。"
+            }
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"5bb2567b-3339-4654-9420-34ab16df6ed3",
+                "condition": {
+                  "r1:智慧+生存>=":[1,5]
+                },
+                "result_title":"",
+                "result_text": "找到了狼穴的地址，下一步要進行圍剿了。",
+                "result":
+                {
+                    "s1+生存":1,
+                    "s2+生存":1,
+                    "counter+7000034":1        //已找到狼穴
+                },
+                "action": {
+                    "event_on":5300079  //開啓狼穴惡戰的幕後
+                }
+            },
+            {
+                "guid":"2086fcaf-e6c9-429e-81c9-416dc8931d13",
+                "condition": {
+                  "r1:智慧+生存<":[1,5]
+                },
+                "result_title":"",
+                "result_text": "搜索的過程中被群狼伏擊，差一點沒回來。",
+                "result":
+                {
+                    "s1+生存":1,
+                    "s2+生存":1,
+                    "s1+equip":2000098, //受傷
+                    "s2+equip":2000098 //受傷
+                },
+                "action": {
+                    "event_on":5300078 //開啓重開的幕後
+
+                }
+            }
+        ],
+        "settlement_extre": [
+
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"fa72f051-db42-41fd-843d-4a24679f5258",
+                "condition":
+                {
+                    "type":"char"
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"你可以親自，可以派遣足夠聰明的追隨者前往探索"
+            },
+        "s2":
+            {
+                "guid":"a5a457d4-ee58-46cf-a1fc-3e151aea5c36",
+                "condition":
+                {
+                    "type":"char"
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"多一個同伴，多一點勝算"
+            },
+        "s3":
+            {
+                "guid":"78e694b4-d26c-4d41-a7f5-7ed4fd2ca204",
+                "condition":
+                {
+                    "type":"item",
+                    "cost.消耗品=":1,
+                        "!金幣":1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"有些東西也許能在狩獵中派上用場"
+            }
+        }
+    }

@@ -1,0 +1,162 @@
+{
+    "id": 5000794,
+    "name": "天下武學驗證戰？",
+    "text": "你戰勝了挑戰者，而那名妓女，也如她單方面的約，來邀請你了來着……",
+    "tips": "",
+    "mapping_id":8001278,
+    "once_new":0,
+    "round_number": 1,
+    "waiting_round":3,
+    "waiting_round_end_action":[
+        {
+            "condition": {
+            },
+            "result_title":"",
+            "result_text": "",
+            "result":
+            {
+
+            },
+            "action": {
+                "event_on":5300212,
+                "prompt":{
+                    "id":"5000794_prompt_01",
+                    "text":"不不不，還是算了。你勸說那名妓女直接去找奈布哈尼，畢竟，他也是挑戰的勝利者。",
+                    "icon":"cards/2000001"
+                }
+            }
+        }
+    ],
+    "method_settlement": "",
+    "auto_begin": 0,
+    "auto_result":0,
+    "location": "上城區:[7,12]",
+    "icon": "rite_12",
+    "tag_tips": [
+
+    ],
+    "tag_tips_up":{
+        "tips":["體魄","魅力","社交"],
+        "type":"normal_result"
+    },
+    "tips_text":[
+        "主角體魄魅力社交>=3點成功：權勢+2",
+        "主角體魄魅力社交<=3點成功：俠名+1"
+    ],
+    "open_conditions": [
+    ],
+    "random_text": {
+
+    },
+    "random_text_up":{
+        "r1":{
+            "text":"武學驗證！",
+            "type":"normal_result",
+            "type_tips":"你的體魄、魅力與社交為你提供了完整的骰子數量",
+            "low_target": 3,
+            "low_target_tips": "你至少需要3點成功獲得“勝利”"
+        }
+    },
+    "random_effect": {
+    },
+    "settlement_prior":
+    [
+
+    ],
+    "settlement": [
+        {
+            "guid":"04672ee2-c366-4d3f-b8d8-048a2b709a83",
+            "condition": {
+                "r1:體魄+魅力+社交>=":[3,5]
+            },
+            "result_title":"三個人能玩的花樣比兩個人多多了",
+            "result_text": "美麗的妓女拉着你和奈布哈尼一起入席，說着嬌滴滴的柔媚情話，讓場面絲毫不顯尷尬。氣氛烘托到了這份上，你們當晚誰也沒有離開她的閨房。\n據說，那天晚上，這名妓女和世界上最強悍的兩位勇士對天下種種武學進行了精細的驗證，試遍了種種出招的姿勢……總之，你在黑街的妓女們當中、在她們頗有權勢的恩客們當中……都狠狠出名了。",
+            "result":
+            {
+               "counter+7100003":2  //權勢+2
+            },
+            "action": {
+                "counter+7000652":1, //成就-眠花宿柳-美豔的妓女
+                "event_on":5300212
+            }
+        },
+        {
+            "guid":"adea0274-88bc-4d8f-bdfd-b6832b477b45",
+            "condition": {
+                "r1:體魄+魅力+社交<":[3,5]
+            },
+            "result_title":"這對你來說有點太刺激了",
+            "result_text": "美麗的妓女拉着你和奈布哈尼一起入席，說着嬌滴滴的柔媚情話，讓場面絲毫不顯尷尬。氣氛烘托到了這份上，你們當晚誰也沒有離開她的閨房。\n在這之前你還沒試過三個人一起，尤其是其他兩位都是如此熱情、如此深情的模樣……\n據說，那天晚上，這名妓女和世界上最強悍的兩位勇士對天下種種武學進行了精細的驗證，試遍了種種出招的姿勢……每每提起這段情事，她總是掩脣微笑，態度曖昧，反而讓人們對你更加好奇，最近來你家附近閒逛的閒漢好像都變多了……",
+            "result":
+            {
+               "counter+7100004":1  //俠名+1
+            },
+            "action": {
+                "counter+7000652":1, //成就-眠花宿柳-美豔的妓女
+                "event_on":5300212
+            }
+        }
+    ],
+    "settlement_extre": [
+
+    ],
+    "cards_slot":
+    {
+        "s1":
+        {
+            "guid":"0e42f0d5-08e3-4504-b0f4-44af7c6b8b4f",
+            "condition":
+            {
+                "is": 2000789  //想出名的妓女
+            },
+            "open_adsorb":1,
+            "is_key":0,
+            "is_empty":0,
+            "is_enemy":1,
+            "text":"名聲大振的妓女"
+        },
+        "s2":
+        {
+            "guid":"afa5a0ce-679b-4400-bc23-6d6329f60bf7",
+            "condition":
+            {
+                "type":"char",
+                "is":2000064
+            },
+            "open_adsorb":1,
+            "is_key":0,
+            "is_empty":0,
+            "is_enemy":1,
+            "text":"你怎麼也在？"
+        },
+        "s3":
+        {
+            "guid":"8f36f74f-a3d5-4f49-a847-1c2fa1804a0b",
+            "condition":
+                {
+                    "type":"char",
+                    "主角":1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"你必須自己上陣"
+        } ,
+        "s4":
+        {
+            "guid":"c885d3d0-175d-423c-920b-4ad8b96baf02",
+            "condition":
+            {
+                "type":"item",
+                "cost.消耗品=":1,
+                "!金幣":1
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":1,
+            "is_enemy":0,
+            "text":"有些消耗品能幫上忙"
+        }
+    }
+}

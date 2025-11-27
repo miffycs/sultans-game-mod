@@ -1,0 +1,213 @@
+ {
+        "id": 5006676,
+        "name": "苗圃",
+        "text": "孩子們聚集在你的園中，受你照料、受你教育。這些幼苗長大後能結出怎樣的果實？眼下誰也不知道。",
+        "tips": "",
+        "mapping_id":8001516,
+        "once_new":0,
+        "round_number": 1, //立即執行
+        "waiting_round":0,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 1,
+        "auto_result": 0,
+        "location": "奇珍:9",
+        "type":"TREASURE",
+        "icon": "rite_5006676",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "這是奈費勒版苗圃儀式結束後會變為常規版",
+            "獲得革命的構思",
+            "苗圃會放置寬容"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"7b93c206-76e0-48de-8f9b-e38422c3a123",
+                "condition": {
+                },
+                "result_title":"第一堂課",
+                "result_text": "“只有寬容，孩子們，只有寬容才是真正的力量。不光是憐憫你的敵人，也要對自己展現出足夠的寬容……不要把自己逼上一條窄路，你們的人生可以是寬容的曠野。不要被具體的，狹隘的感情絆住，要愛所有人，將自己的心靈投入到偉大的目標上，才會獲得力量。”\n還沒進門你就聽見奈費勒慷慨激昂的聲音，說着些什麼狗屁倒竈的話。你用盡了一生的自制力才沒有在當堂拆他的臺，跟他大吵一架。",
+                "result":
+                {
+                    "card":2000877 //寬容
+                },
+                "action": {
+                    "counter+7000390":1, //獲得寬容
+                    "counter+7000421":1, //教育成功的計數
+                    "rite":5006677 //未來的苗圃，常規版
+                }
+            }
+        ],
+        "settlement_extre": [
+            {
+                "guid":"42b4d087-ab49-49a0-bfd9-476cabb8108f",
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "奈費勒對你所想一無所知。課程結束之後，他找到了你。此時的他似乎被一個嶄新的議題困住了，沉默着，思索着，直到最後一個孩子離開，空曠的宅邸裡只剩下依稀的月色，在樹影間輕輕晃動。\n奈費勒抬起頭，凝視着你，緩緩開口道，“你知道嗎？今天站在講臺上，看着這麼多稚嫩的小臉，我突然想通了一件事。”他聲音很輕，話語的分量卻很重，“我所期待的不是——或者說，不僅僅是推翻蘇丹的統治，不是改朝換代，讓這個國家在一個又一個或賢明或邪惡蘇丹的統治下輪迴輾轉……”\n“我想要徹底地改變這些孩子的命運，”他黑白分明的眼眸燃燒起了清晰的火光，“就像我們現在正在做的這樣。”",
+                "result":
+                {
+                    "card":2000884 //革命
+
+                },
+                "action": {
+
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"34c8d8f1-5cf3-4c33-9c04-e11f2a870e1e",
+                "condition":
+                {
+                    "type":"char",
+                    "is":2000312
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"奈費勒來到了你們共建的苗圃之中"
+            },
+            "s2":
+            {
+                "guid":"65332410-4ced-4b87-a0cd-1c2f86c89436",
+                "condition":
+                {
+                    "type":"item",
+                    "愛":1
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"你教育他們什麼是愛"
+            },
+            "s3":
+            {
+                "guid":"86e1dd74-5d92-4ae7-9170-e3511c495fe8",
+                "condition":
+                {
+                    "type":"item",
+                    "智":1
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"你告訴他們什麼是真正的智慧"
+            },
+            "s4":
+            {
+                "guid":"0823d95b-e81b-4b7c-bc7a-8747e4994409",
+                "condition":
+                {
+                    "type":"item",
+                    "信":1
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"你指引他們何為信仰"
+            },
+            "s5":
+            {
+                "guid":"5e6ca212-0d39-45eb-96f5-beee9b1a0cdd",
+                "condition":
+                {
+                    "type":"item",
+                    "力":1
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"你引導他們該依靠怎樣的力量"
+            },
+            "s6":
+            {
+                "guid":"14cf1ab8-dd7a-4f19-a367-95bb6295a485",
+                "condition":
+                {
+                    "type":"item",
+                    "樂":1
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"你帶領他們尋求怎樣的快樂"
+            },
+            "s7":
+            {
+                "guid":"c1ca863d-4637-4667-b1a1-0380e826ba51",
+                "condition":
+                {
+                    "type":"item",
+                    "已收容":1
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"收容的孤兒"
+            },
+            "s8":
+            {
+                "guid":"f7ec33a1-f106-4166-92bb-17221a970070",
+                "condition":
+                {
+                    "type":"item",
+                    "已收容":1
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"收容的孤兒"
+            },
+            "s9":
+            {
+                "guid":"397cdc29-4ba7-4ee3-b341-3739d5af2da8",
+                "condition":
+                {
+                    "type":"item",
+                    "已收容":1
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"收容的孤兒"
+            },
+            "s10":
+            {
+                "guid":"901e7314-86e4-40fe-84f1-d4c55b2a821f",
+                "condition":
+                {
+                    "type":"item",
+                    "已收容":1
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"收容的孤兒"
+            }
+        }
+    }

@@ -1,0 +1,167 @@
+ {
+        "id": 5000055,
+        "name": "房屋出租",
+        "text": "你張貼了房屋出租的告示，不久就有一位異國商人來尋租了",
+        "tips": "",
+        "mapping_id":8001031,
+        "once_new":0,
+        "round_number": 0,
+        "waiting_round":7,
+        "waiting_round_end_action":[
+            {
+                "condition":
+                {
+                },
+                "result_title":"",
+                "result_text": "",
+                "result":
+                {
+                    "counter=7000164":0
+                },
+                "action":
+                {
+                }
+            }
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result":0,
+        "location": "自宅:[2,12]",
+        "icon": "rite_1",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "石房屋：每5天 金幣+1",
+            "銅房屋：每5天 金幣+2",
+            "銀房屋：每5天 金幣+3",
+            "金房屋：每5天 金幣+4"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"1eba98b3-20a9-4251-936c-ec3341534a81",
+                "condition":
+                {
+                    "s2.rare=":1 //品級1的裝潢
+                },
+                "result_title":"",
+                "result_text": "名為巴拉特的異國商人挑剔着這棟空宅，一會兒說它採光不行，一會兒說它不夠穩固，這些缺點你當然心知肚明，不然這房子你幹嘛不自己住？\n你在租金方面做了退讓，就此約定，你將每5天過來收一次租，租金為1金幣，他最終還是答應了。",
+                "result":
+                {
+                    "global_counter=7200132":1, //成就
+                    "clean.s2":1,
+                    "card":2000029,
+                    "card":2000321,
+                    "counter+7000038":1 //標識異國商人出場了
+                },
+                "action":
+                {
+                    "event_on":5300088 //刷新異國商人的商店
+                }
+            },
+            {
+                "guid":"5570a155-590e-4a85-ab6e-6714a00d056e",
+                "condition":
+                {
+                    "s2.rare=":2 //品級2的裝潢
+                },
+                "result_title":"",
+                "result_text": "名為巴拉特的異國商人挑剔着這棟空宅，一會兒說它採光不行，一會兒說它不夠穩固，而這一切都是為了壓價而已！你一口咬定這個價格已經是非常實惠，他不信的話可以去城裡其他地方打聽打聽。他咬着牙百般猶豫，最後還是答應了下來。你們就此約定，你將每5天過來收一次租，租金為2金幣。",
+                "result":
+                {
+                    "global_counter=7200132":1, //成就
+                    "clean.s2":1,
+                    "coin":2,
+                    "card":2000322,
+                    "counter+7000038":1 //標識異國商人出場了
+                },
+                "action":
+                {
+                    "event_on":5300088
+                }
+            },
+            {
+                "guid":"752159f6-5880-4ab7-ac26-a122eceec3d0",
+                "condition":
+                {
+                    "s2.rare=":3 //品級3的裝潢
+                },
+                "result_title":"",
+                "result_text": "名為巴拉特的異國商人一眼就被這間寬敞、精美的宅邸吸引住了，他甚至沒跟你講價就同你達成了協議，此後你每5天可以來收一次租，租金為3金幣。",
+                "result":
+                {
+                    "global_counter=7200132":1, //成就
+                    "clean.s2":1,
+                    "coin":3,
+                    "card":2000323,
+                    "counter+7000038":1 //標識異國商人出場了
+                },
+                "action":
+                {
+                    "event_on":5300088
+                }
+            },
+            {
+                "guid":"868ac41f-cc2a-43fa-b959-565a6c0892f5",
+                "condition":
+                {
+                    "s2.rare=":4 //品級4的裝潢
+                },
+                "result_title":"",
+                "result_text": "如此豪華的房子令這位名為巴拉特的商人都有些望而卻步了！\n但你笑眯眯地勸他，不是誰都有資格被你這樣的權臣庇護，在你這裡做生意，絕不會有雞鳴狗盜之徒過來騷擾，想想看，出入你宅邸的都是怎樣高貴的人，在他們面前露露臉，他那些昂貴的工藝品還愁找不到冤大頭嗎？……他想着、想着，不知道是哪一樣觸動了他，最後，他咬着牙同你達成了協議。此後你每5天可以來收一次租，租金為4金幣。",
+                "result":
+                {
+                    "global_counter=7200132":1, //成就
+                    "clean.s2":1,
+                    "coin":4,
+                    "card":2000324,
+                    "counter+7000038":1 //標識異國商人出場了
+                },
+                "action":
+                {
+                    "event_on":5300088
+                }
+            }
+        ],
+        "settlement_extre": [
+        ],
+        "cards_slot":
+        {
+            "s1":
+                {
+                    "guid":"5b0b0759-e37a-410d-be3b-942bd98e0f43",
+                    "condition":
+                    {
+                        "is":2000005
+                    },
+                    "open_adsorb":1,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":1,
+                    "text":"異國商人"
+                },
+            "s2":
+            {
+                "guid":"664e624f-8b97-4598-b433-4237dd8882ed",
+                "condition":
+                {
+                    "type":"item",
+                    "空屋":1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":1,
+                "text":"待租的空房間"
+            }
+        }
+    }

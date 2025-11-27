@@ -1,0 +1,80 @@
+ {
+        "id": 5002032,
+        "name": "怒火蔓延",
+        "text": "你派出的士兵和將領被盡數剿滅，而那名領主的怒火併未就此熄滅。他向你的領地揮師而上，要求你拿出一大筆錢作為賠償。事到如今，你已自顧不暇，更別提庇護夏瑪了。",
+        "tips": "",
+        "mapping_id":8001008,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":0,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 1,
+        "auto_result": 0,
+        "location": "宮廷:[2,6]",
+        "icon": "rite_22",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "你無法阻止這一切的發生。",
+            "夏瑪死亡 權勢-1"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"d5d2e3ff-b576-4f14-89d6-3004e52dd28f",
+                "condition": {
+                },
+                "result_title":"就在你為賠款焦頭爛額之際，夏瑪來拜訪你了",
+                "result_text": "她不該來的。\n你抓住她的手告訴她，你已經為她準備了離開首都的馬車，讓她去更遠的地方避避風頭。但她只是搖搖頭，臉上滿是歉意。\n“對不起……是我連累您了。”她輕輕撫着你疲憊的面頰，聲音溫和而堅決，“您是我見過最好的人……所以，我不能再繼續連累您了。”\n你聽說，離開你家之後，她主動地去找到了她的父親。第二天，那名傲慢的領主提着夏瑪的頭顱，滿意地離開了你的領地。\n你為她發起的這場令人嘆惋的、失敗的戰爭，以這個美麗女人的死作為結尾，在民間成為了又一個紅顏禍水的傳說。",
+                "result":
+                {
+                    "clean.s1":1,
+                    "counter-7100003":1 //權勢-1
+                },
+                "action": {
+                }
+            }
+        ],
+        "settlement_extre": [
+        ],
+        "cards_slot":
+        {
+            "s1":
+                {
+                    "guid":"20ef3559-a683-41b2-8fa3-337e34bd74a5",
+                    "condition":
+                    {
+                        "is":2000082
+                    },
+                    "open_adsorb":1,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"夏瑪心意已決"
+                },
+            "s2":
+                {
+                    "guid":"957893ea-0a19-48ea-9c20-32adf5129b03",
+                    "condition":
+                    {
+                        "cost.金幣":[1,20]
+                    },
+                    "open_adsorb":1,
+                    "is_key":0,
+                    "is_empty":0,
+                    "is_enemy":0,
+                    "text":"賠款"
+                }
+        }
+    }

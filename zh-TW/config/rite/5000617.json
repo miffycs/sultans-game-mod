@@ -1,0 +1,157 @@
+ {
+        "id": 5000617,
+        "name": "社交教習",
+        "text": "今天，就要帶他進入成人的世界……歡愉之館會教會年輕人一切。",
+        "tips": "",
+        "mapping_id":8001186,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":0,
+        "waiting_round_end_action":[ //儀式沒有處理，自動關閉後
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0, //自動執行
+        "location": "商業區:[10,19]",
+        "icon": "rite_8",
+        "tag_tips": [
+            "社交",
+            "魅力"
+        ],
+        "tag_tips_up":{
+            "tips":["社交","魅力"],
+            "type":"normal_result"
+        },
+        "tips_text":[
+            "扎齊伊和指導的人社交和魅力越高，訓練的效果越好。",
+            "上陣角色社交魅力檢定>=5點：扎齊伊社交+2 魅力+3",
+            "上陣角色社交魅力檢定>=3點：扎齊伊社交+2 魅力+2",
+            "上陣角色社交魅力檢定<3點：扎齊伊社交+1 魅力+1",
+            "扎齊伊被帶壞+3"
+        ],
+        "open_conditions": [
+        ],
+        "random_text": {
+            "r1":"你們跑到歡愉之館裡去了"
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"你們跑到歡愉之館裡去了",
+                "type":"normal_result",
+                "type_tips":"你的社交和魅力為你提供了完整的骰子數量。",
+                "low_target": 3,
+                "low_target_tips": "你至少需要3點成功。"
+            }
+        },
+        "random_effect": {
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"daf66888-f3cb-4c14-8c97-6b82b102319f",
+                "condition": {
+                    "r1:社交+魅力>=":[5,5]
+                },
+                "result_title":"此子天賦異稟，前途不可限量",
+                "result_text": "現在，他知道了自己在這方面遠優於常人，而且這絕對不是妓女們的客套話……\n 心懷這份自信的青年，未來往往會一帆風順。",
+                "result":
+                {
+                    "s1+社交":2,
+                    "s1+魅力":3,
+                    "counter+7000041":3
+                },
+                "action": {
+                    "clean.rite":5000615,
+                    "clean.rite":5000616,
+                    "event_on":5300110 //激活下一輪請求
+                }
+            },
+            {
+                "guid":"b8f2a2f0-9a0e-4559-9397-a35755725ded",
+                "condition": {
+                    "r1:社交+魅力>=":[3,5]
+                },
+                "result_title":"他是大人了",
+                "result_text": "他在朱娜身上折騰了一個白天，又花了一個晚上和她聊天，現在他稍微知道了一點成年人的世界，不論好的，還是壞的。",
+                "result":
+                {
+                    "s1+社交":2,
+                    "s1+魅力":2,
+                    "counter+7000041":3
+                },
+                "action": {
+                    "clean.rite":5000615,
+                    "clean.rite":5000616,
+                    "event_on":5300110 //激活下一輪請求
+                }
+            },
+            {
+                "guid":"3dfe98b3-6f20-49df-af8a-fd1ae54c5af3",
+                "condition": {
+                    "r1:社交+魅力<":[3,5]
+                },
+                "result_title":"第一次並不總是那麼美好",
+                "result_text": "遊戲還沒開始，他就結束了。還好朱娜對此有豐富的經驗……\n 在溫柔的安慰與擁抱後，他第二次表現得好了很多，也知道了男人的幻想與現實總是有很大差異，以及一個好女人是多麼的重要。",
+                "result":
+                {
+                    "s1+社交":1,
+                    "s1+魅力":1,
+                    "counter+7000041":3
+                },
+                "action": {
+                    "clean.rite":5000615,
+                    "clean.rite":5000616,
+                    "event_on":5300110 //激活下一輪請求
+                }
+            }
+        ],
+        "settlement_extre": [
+
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"f8bd19eb-b1e9-431b-9797-dc4a17cfe798",
+                "condition":
+                {
+                    "is":2000063
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"扎齊伊"
+            },
+            "s2":
+            {
+                "guid":"d34df0d3-27a2-4541-9c60-d995937b7d85",
+                "condition":
+                {
+                    "type":"char",
+                    "!is":2000063
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"你可以親自，或者派遣任意追隨者指導他"
+            },
+            "s3":
+            {
+                "guid":"e1341020-23db-4c32-9e31-bc2276a0df4f",
+                "condition":
+                {
+                    "type":"item",
+                    "cost.消耗品=":1,
+                        "!金幣":1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"協助訓練的消耗品"
+            }
+        }
+    }

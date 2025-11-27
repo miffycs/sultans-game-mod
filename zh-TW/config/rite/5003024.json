@@ -1,0 +1,161 @@
+ {
+        "id": 5003024,
+        "name": "黑吃黑",
+        "text": "你聽聞了一起幫派犯罪活動，如果抓住機會，就能夠亂中取利。",
+        "tips": "",
+        "mapping_id":8001131,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":1,
+        "waiting_round_end_action":[
+            {
+                "condition": {
+                },
+                "result_title":"",
+                "result_text": "",
+                "result":
+                {
+                    "counter=7000115":0 //限制同一時間被激活的次數
+                },
+                "action": {
+                }
+            }
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 1,
+        "location": "黑街:[2,5]",
+        "icon": "rite_3",
+        "tag_tips": [
+            "隱匿"
+        ],
+        "tag_tips_up":{
+            "tips":["隱匿"],
+            "type":"normal_result"
+        },
+        "tips_text":[
+            "成功數越多，收穫越大。",
+            "失敗可能會受傷。",
+            ">=5點成功：權勢+1 金幣+3",
+            ">=3點成功：金幣+2",
+            ">=1點成功：金幣+1",
+            "0點成功：受傷"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+            "r1":"有組織的犯罪行為往往是權力的一種補充。而你嘗試尋找其中的關聯。"
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"喜聞樂見的檢定時間",
+                "type":"normal_result",
+                "type_tips":"你的隱匿為你提供完整的骰子數量。",
+                "low_target": 1,
+                "low_target_tips": "你至少需要1點成功，成功數越多，收益越大。"
+            }
+
+        },
+        "settlement_prior": [
+
+        ],
+        "settlement": [
+            {
+                "guid":"ce5b8710-faae-43eb-a0b0-c669ddaa6a84",
+                "condition": {
+                    "r1:隱匿>=":[5,5]
+                },
+                "result_title":"",
+                "result_text": "你收集了一些有價值的財物。",
+                "result":
+                {
+                    "counter=7000115":0, //限制同一時間被激活的次數
+                    "counter+7100003": 1, //權勢+1
+                    "金幣":3
+
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"73a76f5c-78e7-40e0-b7ff-3f486023ce50",
+                "condition": {
+                    "r1:隱匿>=":[3,5]
+                },
+                "result_title":"",
+                "result_text": "你收集了一些金幣。",
+                "result":
+                {
+                    "counter=7000115":0, //限制同一時間被激活的次數
+                    "金幣":2
+
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"8ce0b0de-8dbe-4504-be8d-08114aec5891",
+                "condition": {
+                    "r1:隱匿>=":[1,5]
+                },
+                "result_title":"",
+                "result_text": "你收集了一些金幣。",
+                "result":
+                {
+                    "counter=7000115":0, //限制同一時間被激活的次數
+                    "金幣":1
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"621bd141-bca4-4635-9dbf-5cb3475e9084",
+                "condition": {
+                    "r1:隱匿<":[1,5]
+                },
+                "result_title":"",
+                "result_text": "手不乾淨的時候，被抓住痛揍了一頓。",
+                "result":
+                {
+                    "counter=7000115":0, //限制同一時間被激活的次數
+                    "s1+equip": 2000098 //受傷
+                },
+                "action": {
+                }
+            }
+        ],
+        "settlement_extre": [
+
+        ],
+        "cards_slot":
+        {
+            "s1":
+                {
+                    "guid":"911ffb9e-3dd4-4d50-ab46-ce73ad5e5533",
+                    "condition":
+                    {
+                        "type":"char"
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":0, // 不能為空
+                    "is_enemy":0,
+                    "text":"需要一位善於跟蹤，竊聽與飛檐走壁的朋友"
+                },
+            "s2":
+                {
+                    "guid":"f1557448-e041-4ebb-b304-251b92abbd76",
+                    "condition":
+                    {
+                        "type":"item",
+                        "cost.消耗品=":1,
+                        "!金幣":1
+                    },
+                    "open_adsorb":0,
+                    "is_key":0,
+                    "is_empty":1,
+                    "is_enemy":0,
+                    "text":"有些東西能讓你得心應手。"
+                }
+        }
+    }

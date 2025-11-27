@@ -1,0 +1,155 @@
+ {
+        "id": 5000612,
+        "name": "唆使犯罪",
+        "text": "你告訴扎齊伊，武者最重要的就是藏匿自身、把握時機。因此，你決定帶領他，嘗試潛入某位少女的閨房……",
+        "tips": "",
+        "mapping_id":8001252,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":0,
+        "waiting_round_end_action":[ //儀式沒有處理，自動關閉後
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0, //自動執行
+        "location": "上城區:[7,12]",
+        "icon": "rite_15",
+        "tag_tips": [
+            "隱匿"
+        ],
+        "tag_tips_up":{
+            "tips":["隱匿"],
+            "type":"normal_result"
+        },
+        "tips_text":[
+            "扎齊伊和指導的人隱匿越高，訓練的效果越好。",
+            "上陣角色隱匿檢定>=5點：扎齊伊隱匿+3",
+            "上陣角色隱匿檢定>=3點：扎齊伊隱匿+2",
+            "上陣角色隱匿檢定<3點：扎齊伊隱匿+1",
+            "扎齊伊被帶壞+2"
+        ],
+        "open_conditions": [
+        ],
+        "random_text": {
+            "r1":"你們嘗試一次潛入某位貴族少女的閨房……"
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"你們嘗試一次潛入某位貴族少女的閨房……",
+                "type":"normal_result",
+                "type_tips":"你的隱匿為你提供了完整的骰子數量。",
+                "low_target": 5,
+                "low_target_tips": "你至少需要5點成功。"
+            }
+        },
+        "random_effect": {
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"41e05b34-1ab0-4538-908a-09b198cb971a",
+                "condition": {
+                    "r1:隱匿>=":[5,5]
+                },
+                "result_title":"訓練非常成功！",
+                "result_text": "他的腳步輕盈，緊跟着你穿過女眷的住所，沒有驚動一個人，沒有留下一個腳印，只在一張手絹上留下了一首情詩。",
+                "result":
+                {
+                    "s1+隱匿":3,
+                    "counter+7000041":2  //帶壞他的計數
+
+                },
+                "action": {
+                    "clean.rite":5000611,
+                    "clean.rite":5000613,
+                    "event_on":5300109 //激活下一輪請求
+                }
+            },
+            {
+                "guid":"1cbbf00e-5d16-4195-9ee4-571ffa48d6ac",
+                "condition": {
+                    "r1:隱匿>=":[3,5]
+                },
+                "result_title":"訓練比較成功",
+                "result_text": "他心臟跳得太快了，最後不小心在花壇邊留下了幾個腳印，但你從他興奮的表情可以知道，以後他不會少做這種事情。",
+                "result":
+                {
+                    "s1+隱匿":2,
+                    "counter+7000041":2
+                },
+                "action": {
+                    "clean.rite":5000611,
+                    "clean.rite":5000613,
+                    "event_on":5300109 //激活下一輪請求
+                }
+            },
+            {
+                "guid":"61e6346c-6030-42fe-b9f3-544de608ff94",
+                "condition": {
+                    "r1:隱匿<":[3,5]
+                },
+                "result_title":"訓練的效果不盡人意",
+                "result_text": "他打碎了幾個水罐，被當成盜賊追了三條街……儘管如此，他看起來還是蠻開心的。",
+                "result":
+                {
+                    "s1+隱匿":1,
+                    "counter+7000041":2,
+                    "s1+equip":2000098
+                },
+                "action": {
+                    "clean.rite":5000611,
+                    "clean.rite":5000613,
+                    "event_on":5300109 //激活下一輪請求
+                }
+            }
+        ],
+        "settlement_extre": [
+
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"79753474-fa30-41fc-81a5-986be1795688",
+                "condition":
+                {
+                    "is":2000063
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"扎齊伊"
+            },
+            "s2":
+            {
+                "guid":"a21f3626-717b-4b43-be0e-ab5c4100231f",
+                "condition":
+                {
+                    "type":"char",
+                    "!is":2000063
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"你可以親自，或者拜託任意追隨者訓練他"
+            },
+            "s3":
+            {
+                "guid":"178e014d-e07c-4e39-b79e-e57587189c5e",
+                "condition":
+                {
+                    "type":"item",
+                    "cost.消耗品=":1,
+                        "!金幣":1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"協助訓練的消耗品"
+            }
+        }
+    }

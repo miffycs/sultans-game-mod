@@ -1,0 +1,191 @@
+{
+    "id": 5000785,
+    "name": "精緻的禮物",
+    "text": "如此精美的藍紗，你準備將之送給誰呢？",
+    "tips": "",
+    "mapping_id":8001246,
+    "once_new":0,
+    "round_number": 1,
+    "waiting_round":1,
+    "waiting_round_end_action":[
+
+    ],
+    "method_settlement": "",
+    "auto_begin": 0,
+    "auto_result":0,
+    "location": "自宅:[2,12]",
+    "icon": "rite_12",
+    "tag_tips": [
+
+    ],
+    "tag_tips_up":{
+
+    },
+    "tips_text":[
+        "能為受贈者提高1點魅力。",
+        "主角：魅力+1 銅祕密 推劇情",
+        "妻子：魅力+1 辛福感+1 推劇情",
+        "奈布哈尼：魅力+1 權勢+1 推劇情",
+        "貴族：魅力+1 權勢+1 推劇情",
+        "平民：魅力+1 俠名+1 推劇情"
+    ],
+    "open_conditions": [
+    ],
+    "random_text": {
+
+    },
+    "random_text_up":{
+
+    },
+    "random_effect": {
+    },
+    "settlement_prior": [
+
+    ],
+    "settlement": [
+        {
+            "guid":"6d9bb4ad-7eff-414b-b371-cb944d1103d2",
+            "condition": {
+                "s2.主角":1
+            },
+            "result_title":"",
+            "result_text": "你把這精美的紗料留給自己，將它纏在自己手臂上。追逐時髦的人們總是攔住你詢問這是哪裡弄來的，為了套到這個情報，他們也同你分享了一些你不知道的事情。",
+            "result":
+            {
+                "s2+魅力":1,
+                "card":2000038,  //銅祕密
+                "counter+7000328":1 ,  //使用過精美的藍紗
+                "clean.s1":1
+            },
+            "action": {
+                "event_on":5300291  //工匠街區的意外
+            }
+        },
+        {
+            "guid":"aba52302-ca1f-4499-86cf-a4931c7d5470",
+            "condition": {
+                "s2.妻子":1
+            },
+            "result_title":"",
+            "result_text": "梅姬高興地幾乎叫了起來。\n“我早就聽鄰居家的女人在說什麼天下最精美的細紗……然後我的丈夫就把它送給了我！哦，還有什麼比這更讓人開心的事呢？”\n她哼着歌，用細紗去做衣服了。",
+            "result":
+            {
+                "s2+魅力":1,
+                "card":2000689,  //獲得妻子的幸福感,
+                "counter+7000328":1 ,  //使用過精美的藍紗
+                "clean.s1":1
+            },
+            "action": {
+                "event_on":5300291  //工匠街區的意外
+            }
+        },
+        {
+            "guid":"bebc8942-8496-44e7-8b57-06e2c34eb850",
+            "condition": {
+                "s2.is":2000064,  //送給奈布哈尼
+                "counter.7000328<":1 //第一次送
+            },
+            "result_title":"他沒有收下你的禮物",
+            "result_text": "奈布哈尼笑嘻嘻地告訴你，哈布娜也送了他一匹一樣好的紗料。",
+            "result":
+            {
+                "s2+魅力":1,
+                "counter+7100003":1,  //權勢+1
+                "counter+7000328":1   //使用過精美的藍紗
+            },
+            "action": {
+                //"event_on":5300291  //工匠街區的意外
+            }
+        },
+        {
+            "guid":"5e3205a2-49bf-4ec6-9f0f-73eb0c3f3a0e",
+            "condition": {
+                "s2.is":2000064,  //送給奈布哈尼
+                "counter.7000328>=":1 //後續送
+            },
+            "result_title":"",
+            "result_text": "就算繼續顯擺也不會有什麼好處哦，畢竟這是我們兩人都有的寶物，奈布哈尼如此說。",
+            "result":
+            {
+            },
+            "action": {
+                //"event_on":5300291  //工匠街區的意外
+            }
+        },
+        {
+            "guid":"d10fcaec-9113-46d1-94cd-f7c64c9521f4",
+            "condition": {
+                "s2.貴族":1  //送給其他貴族
+            },
+            "result_title":"",
+            "result_text": "[s2.name]感謝你的贈禮，並宣揚你的慷慨。",
+            "result":
+            {
+                "s2+魅力":1,
+                "counter+7100003":1,  //權勢+1
+                "counter+7000328":1 ,  //使用過精美的藍紗
+                "clean.s1":1
+            },
+            "action": {
+                "event_on":5300291  //工匠街區的意外
+            }
+        },
+        {
+            "guid":"4f4fad50-19aa-4c76-b56a-f050de5412ac",
+            "condition": {
+                "!s2.貴族":1  //送給其他平民
+            },
+            "result_title":"",
+            "result_text": "[s2.name]感謝你的贈禮，並宣揚你的慷慨。",
+            "result":
+            {
+                "s2+魅力":1,
+                "counter+7100004":1,  //俠名+1
+                "counter+7000328":1 ,  //使用過精美的藍紗
+                "clean.s1":1
+            },
+            "action": {
+                "event_on":5300291  //工匠街區的意外
+            }
+        }
+    ],
+    "settlement_extre": [
+
+    ],
+    "cards_slot":
+    {
+        "s1":
+        {
+            "guid":"11009477-fbeb-4987-bf4f-d2884024c173",
+            "condition":
+            {
+                "type":"item",
+                "is": 2000778    //精美的藍紗
+            },
+            "open_adsorb":1,
+            "is_key":0,
+            "is_empty":0,
+            "is_enemy":0,
+            "text":"精美的藍紗"
+        },
+        "s2":
+        {
+            "guid":"46806bad-0867-4578-98cf-20417514f251",
+            "condition":
+            {
+                "type":"char",
+                "any":{
+                    "追隨者":1,
+                    "主角":1
+                },
+                "!怪物":1,
+                "!動物":1
+            },
+            "open_adsorb":0,
+            "is_key":0,
+            "is_empty":0,
+            "is_enemy":0,
+            "text":"你可以將之送給任何人"
+        }
+    }
+}

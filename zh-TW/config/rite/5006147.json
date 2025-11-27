@@ -1,0 +1,173 @@
+{
+    "id": 5006147,
+    "name": "小狗的珠寶訂單",
+    "text": "有位貴族希望熱娜給自己的愛犬做一條赤金的項圈，上面要鑲着紫水晶，或者說，至少也得是紫水晶。",
+    "tips": "",
+    "mapping_id":8001574,
+    "once_new": 0,
+    "round_number": 2,
+    "waiting_round": 0,
+    "waiting_round_end_action": [
+    ],
+    "method_settlement": "",
+    "auto_begin": 0,
+    "auto_result": 0,
+    "location": "自宅:[2,12]",
+    "icon": "rite_19",
+    "tag_tips": [],
+    "tag_tips_up": {
+
+    },
+    "tips_text": [
+        "客人的訂單需要一塊紫水晶",
+        "如果能拿出比紫水晶更名貴的寶石，也能令其滿意，但也不能太過出格，它畢竟只是一條小狗",
+
+    ],
+    "open_conditions": [
+        {
+            "condition": {
+                "any":{
+                   "s3.紫水晶":1,
+                   "s3.紅寶石":1,
+                   "s3.祖母綠":1,
+                },
+            },
+            "tips": "請放入合適的寶石"
+        }
+    ],
+    "random_text": {},
+    "random_text_up": {
+
+    },
+    "settlement_prior": [
+
+    ],
+    "settlement": [
+         {
+            "guid":"39b9532e-5908-4a19-8c99-41297eb76a2a",
+            "condition": {
+                "s3.紫水晶":1,
+            },
+            "result_title": "務實的需求",
+            "result_text": "貴族客戶為這條紫水晶金項圈付了錢，熱娜分了一些給你。",
+            "result": {
+                "clean.s3":1,  //消除珠寶
+                "金幣":15,
+                "s1+靈感":5,
+                "counter+7000820":1  //完成一個貴族訂單的計數器
+            },
+            "action": {
+               "event_on":5320606  //啓動接珠寶訂單的幕後
+            }
+        },
+         {
+            "guid":"fea63999-519c-46e7-a4dc-dd9efd51db4c",
+            "condition": {
+                "s3.祖母綠":1,
+            },
+            "result_title": "汪汪",
+            "result_text": "那位貴族對這條祖母綠項圈非常滿意，連連說着“這樣才配得上我的狗。”\n他吹噓了半天小狗的血統有多麼高貴，直到小狗忍不住汪汪出聲，迫不及待想出去玩耍了。",
+            "result": {
+                "clean.s3":1,  //消除珠寶
+                "金幣":20,
+                "s1+靈感":10,
+                "counter+7000820":1  //完成一個貴族訂單的計數器
+            },
+            "action": {
+               "event_on":5320606  //啓動接珠寶訂單的幕後
+            }
+        },
+         {
+            "guid":"dc5e6a9d-eb93-419d-b1c6-28124670604f",
+            "condition": {
+                "s3.紅寶石":1,
+            },
+            "result_title": "紅寶石更襯它",
+            "result_text": "那位收到項圈的貴族給你們送來了一封熱情洋溢的感謝信，信中他盛讚你和熱娜的英明、敏銳和智慧，所以才能看出他的狗多麼高貴，從而用這麼好的寶石來雕琢項圈。\n他帶着他的狗出入宮廷，每當人們問起它的項圈，他都會毫無保留地讚美你幾句。",
+            "result": {
+                "clean.s3":1,  //消除珠寶
+                "金幣":25,
+                "s1+靈感":15,
+                "counter+7100003":1,  //權勢
+                "counter+7000820":1  //完成一個貴族訂單的計數器
+            },
+            "action": {
+               "event_on":5320606  //啓動接珠寶訂單的幕後
+            }
+        }
+    ],
+    "settlement_extre": [
+
+    ],
+    "cards_slot": {
+        "s1": {
+            "guid":"0cbe97a0-97bb-4567-a92b-dd05b8e67ae6",
+            "condition": {
+                "type": "char",
+                "is":2000019 //熱娜
+            },
+            "open_adsorb": 0,
+            "is_key": 0,
+            "is_empty": 0,
+            "is_enemy": 0,
+            "text": "熱娜",
+
+        },
+        "s2": {
+            "guid":"5c23418b-fa74-4965-a6e7-8c4f596e6413",
+            "condition": {
+                "type": "item",
+                "cost.金幣=":5
+            },
+            "open_adsorb": 0,
+            "is_key": 0,
+            "is_empty": 0,
+            "is_enemy": 0,
+            "text": "另需5枚金幣購買其他材料",
+        },
+        "s3": {
+            "guid":"a2558a89-a6e2-4dff-8949-17bd535c5560",
+            "condition": {
+                "type": "item",
+                "寶石":1,
+                "cost.可堆疊=":1
+            },
+            "open_adsorb": 0,
+            "is_key": 0,
+            "is_empty": 0,
+            "is_enemy": 0,
+            "text": "合適的寶石\n紫水晶：熱娜靈感+5，金幣+15\n祖母綠：熱娜靈感+10，金幣+20\n紅寶石：熱娜靈感+15，金幣+25，權勢+1",
+            "pops":[
+                {
+                    "condition":{
+                        "s3.紫水晶":1
+                    },
+                    "action":{
+                        "pop.5006147_s3_01.self":"沒錯，這位客人要的就是紫水晶",
+                    }
+                },
+                {
+                    "condition":{
+                        "any":{
+                            "s3.紅寶石":1,
+                            "s3.祖母綠":1,
+                        },
+                    },
+                    "action":{
+                        "pop.5006147_s3_02.self":"比紫水晶高貴，但又不至於出格，一定能讓客人滿意。",
+                    }
+                },
+                {
+                    "condition":{
+                        "!s3.紫水晶":1,
+                        "!s3.紅寶石":1,
+                        "!s3.祖母綠":1,
+                    },
+                    "action":{
+                        "pop.5006147_s3_03.self":"或太過低賤，配不上其主人的身份；或太過昂貴，讓其主人有點捨不得。",
+                    }
+                }
+            ]
+        }
+    }
+}

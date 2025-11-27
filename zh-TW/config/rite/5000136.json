@@ -1,0 +1,112 @@
+ {
+        "id": 5000136,
+        "name": "黃金貓爬架",
+        "text": "它只是一個雕像……你總感覺它蠢蠢欲動，彷彿看到了鳥兒的貓一般。",
+        "tips": "",
+        "once_new":0,
+        "round_number": 7,
+        "waiting_round":0,
+        "waiting_round_end_action":[
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result":0,
+        "location": "奇珍:3",
+        "type":"TREASURE",
+        "icon": "rite_2000402",
+        "tag_tips": [
+        ],
+        "tag_tips_up":{
+        },
+        "tips_text":[
+            "總得供奉點什麼東西吧，不供奉也沒關係，貓貓能有什麼壞心思呢。",
+            "金幣：靈視+1 貓戰士",
+            "貝姬夫人：靈視+1 貓爬架銷燬 貓貓裝備金貓戰士戰鬥+9"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+        },
+        "random_text_up":{
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"48378115-00e5-4703-a2e1-71ebcab78b6a",
+                "condition":
+                {
+                    "s2.金幣":1
+                },
+                "result_title":"它吃掉了這些值錢的小玩意兒",
+                "result_text": "接受了足夠的供奉，撫摸與稱讚之後，金色的貓戰士活了過來，準備為你而戰——以及接受更多的摸肚肚。",
+                "result":
+                {
+                    "counter+7100005":1, //靈視+1
+                    "card":2000423 //貓戰士
+                },
+                "action":
+                {
+                    "rite":5000136 //生成自己
+                }
+            },
+            {
+                "guid":"460259c9-4963-4f33-9396-935de012a5e6",
+                "condition":
+                {
+                    "s2.is":2000461
+                },
+                "result_title":"古代貓靈",
+                "result_text": "貝姬夫人試圖和金貓戰士雕像玩耍。\n貝姬夫人把金貓戰士雕像從很高的貓爬架上摔下去了！\n貝姬夫人逃走了！\n他逃走的時候踢翻了貓爬架！一切都砸碎了！\n在這之後，貝姬夫人變得怪怪的……他的眼睛時不時發出金色的，充滿力量的光芒……",
+                "result":
+                {
+                    "counter+7100005":1, //靈視+1
+                    "clean.s1":1,
+                    "s2+equip":2001183,
+                    "counter+7000679":1,//超級貝姬夫人前置標識
+                },
+                "action":
+                {
+
+                }
+            }
+        ],
+        "settlement_extre": [
+
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"5f5856ca-d73c-4c67-aa8a-801edad9de37",
+                "condition":
+                {
+                    "is":2000402 //黃金戰士雕像
+                },
+                "open_adsorb":1,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"黃金戰士雕像"
+            },
+            "s2":
+            {
+                "guid":"c34bca53-4cd2-441e-8b89-da3985cad017",
+                "condition":
+                {
+                    "any":{
+                        "all":{
+                            "type":"item",
+                            "cost.金幣":3
+                        },
+                        "is":2000461 //貝姬夫人
+                    }
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"供奉"
+            }
+        }
+    }

@@ -1,0 +1,175 @@
+ {
+        "id": 5002509,
+        "name": "狼穴惡戰",
+        "text": "終究是人類的智慧更勝一籌，你成功尋到了狼群的巢穴，迫使狼王和你進行正面戰鬥。",
+        "tips": "",
+        "mapping_id":8001172,
+        "once_new":0,
+        "round_number": 1,
+        "waiting_round":0,
+        "waiting_round_end_action":[
+
+        ],
+        "method_settlement": "",
+        "auto_begin": 0,
+        "auto_result": 0,
+        "location": "野外:[1,6]",
+        "icon": "rite_15",
+        "tag_tips": [
+            "體魄",
+            "戰鬥"
+        ],
+        "tag_tips_up":{
+            "tips":["體魄","戰鬥"],
+            "type":"normal_result"
+        },
+        "tips_text":[
+            "該和狼王與狼群進行一場惡戰了。",
+            "己方數值-（狼戰鬥4點）投骰後>=3：上陣角色戰鬥+1",
+            "己方數值-（狼戰鬥4點）投骰後>=1：上陣角色體魄+1，受傷"
+        ],
+        "open_conditions": [
+        ],
+        "random_text":{
+            "r1":"檢定時間。"
+        },
+        "random_text_up":{
+            "r1":{
+                "text":"檢定時間。",
+                "type":"normal_result",
+                "type_tips":"你的體魄和戰鬥為你提供了完整的骰子數量。",
+                "low_target": 1,
+                "low_target_tips": "你最少獲得1點成功就能獲勝。"
+            }
+        },
+        "settlement_prior": [
+        ],
+        "settlement": [
+            {
+                "guid":"661d4f26-a6cf-43dc-a7b9-82aac303593a",
+                "condition": {
+                  "r1:體魄+戰鬥-e(戰鬥)>=":[3,5]
+                },
+                "result_title":"",
+                "result_text": "完美擊殺了狼王，狩獵了狼群。",
+                "result":
+                {
+                    "s1+戰鬥":1,
+                    "s2+戰鬥":1,
+                    "counter+7000035":1         //狼王已死
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"f90866cc-30e8-4c68-ae65-ec04920b2ca1",
+                "condition": {
+                  "r1:體魄+戰鬥-e(戰鬥)>=":[1,5]
+                },
+                "result_title":"",
+                "result_text": "和狼群與狼王進行了惡戰，最終勝利。",
+                "result":
+                {
+                    "s1+equip":2000098,  //受傷
+                    "s2+equip":2000098,
+                    "s1+體魄":1,
+                    "s2+體魄":1,
+                    "counter+7000035":1        //狼王已死
+                },
+                "action": {
+                }
+            },
+            {
+                "guid":"5ad46cf6-8bb3-454f-b4ef-37039340a2dd",
+                "condition": {
+                  "r1:體魄+戰鬥-e(戰鬥)<":[1,5]
+                },
+                "result_title":"",
+                "result_text": "沒有打贏，快跑",
+                "result":
+                {
+                    "s1+equip":2000098,
+                    "s2+equip":2000098
+                },
+                "action": {
+                    "event_on":5300079 //這次失敗了，等下次通過幕後機制刷新出來後再來挑戰
+                }
+            }
+        ],
+        "settlement_extre": [
+            {
+                "guid":"fa75b0ba-164a-468b-8220-a8803cc05f98",
+                "condition": {
+                  "r1:體魄+戰鬥-e(戰鬥)>=":[1,5],
+                  "s4":1
+                },
+                "result_title":"",
+                "result_text": "消除征服卡",
+                "result":
+                {
+                    "clean.s4":1 //消除征服卡
+                },
+                "action": {
+                }
+            }
+        ],
+        "cards_slot":
+        {
+            "s1":
+            {
+                "guid":"d4383647-0edf-4882-8e9e-4119c47d8994",
+                "condition":
+                {
+                    "type":"char"
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":0,
+                "is_enemy":0,
+                "text":"你可以親自，可以派遣足夠強壯的追隨者前往討伐"
+            },
+        "s2":
+            {
+                "guid":"a4bc3b0d-dc9c-4215-a27e-5d378e9fa349",
+                "condition":
+                {
+                    "type":"char"
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"多一個同伴，多一點勝算"
+            },
+        "s3":
+            {
+                "guid":"6288a4f5-2d43-4134-a34b-a8a1f13ef0a4",
+                "condition":
+                {
+                    "type":"item",
+                    "cost.消耗品=":1,
+                        "!金幣":1
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"有些東西也許能在狩獵中派上用場"
+            },
+        "s4":
+            {
+                "guid":"90d6d250-cef9-41f9-8a81-2bb7709bc25f",
+                "condition":
+                {
+                    "type":"sudan",
+                    "征服":1,
+                    "rare<=":2 //放品級不高於青銅
+                },
+                "open_adsorb":0,
+                "is_key":0,
+                "is_empty":1,
+                "is_enemy":0,
+                "text":"你可以藉此折斷一張不高於青銅級別的征服卡"
+            }
+        }
+    }
